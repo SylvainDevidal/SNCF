@@ -1,0 +1,103 @@
+/*
+TODO :
+- Alternate liveries
+- 2CC style purchase
+*/
+
+template tmpl_vehicle_140C_8_views(frame) {
+     //xpos ypos xsize ysize xrel yrel
+    [3, 3 + frame * 27, 8, 24, -3, -16]
+    [13, 3 + frame * 27, 22, 17, -12, -11]
+    [37, 3 + frame * 27, 32, 14, -12, -9]
+    [71, 3 + frame * 27, 22, 17, -5, -10]
+    [95, 3 + frame * 27, 8, 24,  -3, -15]
+    [105, 3 + frame * 27, 22, 17, -14, -10]
+    [129, 3 + frame * 27, 32, 14, -25, -10]
+    [163, 3 + frame * 27, 22, 17, -8, -11]
+}
+
+template tmpl_vehicle_140C_TENDER_8_views() {
+     //xpos ypos xsize ysize xrel yrel
+    [3, 110, 8, 24, -3, -16]
+    [13, 110, 22, 17, -12, -11]
+    [37, 110, 32, 14, -15, -9]
+    [71, 110, 22, 17, -5, -10]
+    [95, 110, 8, 24,  -3, -15]
+    [105, 110, 22, 17, -14, -10]
+    [129, 110, 32, 14, -38, -10]
+    [163, 110, 22, 17, -8, -11]
+}
+
+template tmpl_vehicle_140C_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [129, 3, 32, 14, -24, -10]
+}
+
+spriteset (set_140C_graphics_0,        "gfx/140C.png") { tmpl_vehicle_140C_8_views(0) }
+spriteset (set_140C_graphics_1,        "gfx/140C.png") { tmpl_vehicle_140C_8_views(1) }
+spriteset (set_140C_graphics_2,        "gfx/140C.png") { tmpl_vehicle_140C_8_views(2) }
+spriteset (set_140C_graphics_3,        "gfx/140C.png") { tmpl_vehicle_140C_8_views(3) }
+spriteset (set_140C_tender_graphics,   "gfx/140C.png") { tmpl_vehicle_140C_TENDER_8_views() }
+spriteset (set_140C_graphics_purchase, "gfx/140C.png") { tmpl_vehicle_140C_purchase() }
+
+switch (FEAT_TRAINS, SELF, sw_140C_graphics_animated, motion_counter % 4) {
+    0: set_140C_graphics_0;
+    1: set_140C_graphics_1;
+    2: set_140C_graphics_2;
+    3: set_140C_graphics_3;
+}
+
+switch(FEAT_TRAINS, SELF, sw_140C_graphics, position_in_articulated_veh) {
+    0:      sw_140C_graphics_animated;
+    1:      set_140C_tender_graphics;
+}
+
+switch(FEAT_TRAINS, SELF, sw_140C_articulated_part, extra_callback_info1) {
+    1 : return item_140C;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+item(FEAT_TRAINS, item_140C) {
+    property {
+        name:                         string(STR_SNCF_TRAIN_140C_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(1913, 1, 1);
+        model_life:                   50;
+        vehicle_life:                 29;
+        reliability_decay:            7;
+        refittable_cargo_classes:     bitmask();
+        non_refittable_cargo_classes: bitmask();
+        loading_speed:                0; 
+        cost_factor:                  17;
+        running_cost_factor:          95;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        80 km/h;
+        misc_flags:                   bitmask();
+        refit_cost:                   0;
+        track_type:                   UNELECTRIFIED;
+        ai_special_flag:              AI_FLAG_PASSENGER | AI_FLAG_CARGO;
+        power:                        1500 hp;
+        running_cost_base:            RUNNING_COST_STEAM;
+        dual_headed:                  0;
+        cargo_capacity:               0;
+        weight:                       126.4 ton;
+        ai_engine_rank:               0;
+        engine_class:                 ENGINE_CLASS_STEAM;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0.207;
+        air_drag_coefficient:         0.06;
+        visual_effect_and_powered:    visual_effect_and_powered(VISUAL_EFFECT_STEAM, 2, DISABLE_WAGON_POWER);
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+    }
+    graphics {
+        default:                      sw_140C_graphics;
+        purchase:                     set_140C_graphics_purchase;
+        additional_text:              return string(STR_SNCF_TRAIN_140C_ADDITIONAL_TEXT);
+        articulated_part:             sw_140C_articulated_part;
+        visual_effect_and_powered:    return (position_in_articulated_veh == 0) ?
+                                          visual_effect_and_powered(VISUAL_EFFECT_STEAM, 2, DISABLE_WAGON_POWER) :
+                                          visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+        length:                       return (position_in_articulated_veh == 0) ? 7 : 3;
+    }
+}

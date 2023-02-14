@@ -1,0 +1,115 @@
+/*
+TODO :
+- alternative liveries
+- 2CC style purchase
+- fix smoke
+- No short pax/mail
+*/
+
+template tmpl_vehicle_231AC_8_views(frame) {
+    //xpos ypos xsize ysize xrel yrel
+    [2, 2 + frame * 26, 8, 24, -3, -16]
+    [12, 2 + frame * 26, 22, 17, -10, -10]
+    [36, 2 + frame * 26, 32, 14, -12, -9]
+    [70, 2 + frame * 26, 22, 17, -3, -8]
+    [94, 2 + frame * 26, 8, 24,  -3, -15]
+    [104, 2 + frame * 26, 22, 17, -19, -6]
+    [128, 2 + frame * 26, 32, 14, -22, -9]
+    [162, 2 + frame * 26, 22, 17, -11, -11]
+}
+
+template tmpl_vehicle_231AC_TENDER_8_views(frame) {
+    //xpos ypos xsize ysize xrel yrel
+    [2, 158 + frame * 26, 8, 24, -3, -16]
+    [12, 158 + frame * 26, 22, 17, -4, -14]
+    [36, 158 + frame * 26, 32, 14, 3, -9]
+    [70, 158 + frame * 26, 22, 17, -4, -9]
+    [94, 158 + frame * 26, 8, 24,  -3, -15]
+    [104, 158 + frame * 26, 22, 17, -19, -7]
+    [128, 158 + frame * 26, 32, 14, -37, -10]
+    [162, 158 + frame * 26, 22, 17, -19, -16]
+}
+
+template tmpl_vehicle_231AC_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [128, 2, 32, 14, -24, -10]
+}
+
+spriteset (set_231AC_graphics_0,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(0) }
+spriteset (set_231AC_graphics_1,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(1) }
+spriteset (set_231AC_graphics_2,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(2) }
+spriteset (set_231AC_graphics_3,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(3) }
+spriteset (set_231AC_graphics_4,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(4) }
+spriteset (set_231AC_graphics_5,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(5) }
+spriteset (set_231AC_tender_graphics_0, "gfx/231AC.png") { tmpl_vehicle_231AC_TENDER_8_views(0) }
+//spriteset (set_231AC_tender_graphics_1, "gfx/231AC.png") { tmpl_vehicle_231AC_TENDER_8_views(1) } // Buggy sprites
+spriteset (set_231AC_graphics_purchase, "gfx/231AC.png") { tmpl_vehicle_231AC_purchase() }
+
+switch (FEAT_TRAINS, SELF, sw_231AC_graphics_animated, motion_counter % 6) {
+    0: set_231AC_graphics_0;
+    1: set_231AC_graphics_1;
+    2: set_231AC_graphics_2;
+    3: set_231AC_graphics_3;
+    4: set_231AC_graphics_4;
+    5: set_231AC_graphics_5;
+}
+/*
+switch (FEAT_TRAINS, SELF, sw_231AC_tender_graphics_animated, motion_counter % 2) {
+    0: set_231AC_tender_graphics_0;
+    1: set_231AC_tender_graphics_1;
+}
+*/
+switch(FEAT_TRAINS, SELF, sw_231AC_graphics, position_in_articulated_veh) {
+    0: sw_231AC_graphics_animated;
+    1: set_231AC_tender_graphics_0;
+    //1: sw_231AC_tender_graphics_animated;
+}
+
+switch(FEAT_TRAINS, SELF, sw_231AC_articulated_part, extra_callback_info1) {
+    1 : return item_231AC;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+item(FEAT_TRAINS, item_231AC) {
+    property {
+        name:                         string(STR_SNCF_TRAIN_231AC_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(1914, 1, 1);
+        model_life:                   51;
+        vehicle_life:                 29;
+        reliability_decay:            14;
+        refittable_cargo_classes:     bitmask();
+        non_refittable_cargo_classes: bitmask();
+        loading_speed:                0; 
+        cost_factor:                  26;
+        running_cost_factor:          140;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        130 km/h;
+        misc_flags:                   bitmask();
+        refit_cost:                   0;
+        track_type:                   UNELECTRIFIED;
+        ai_special_flag:              AI_FLAG_PASSENGER | AI_FLAG_CARGO;
+        power:                        2500 hp;
+        running_cost_base:            RUNNING_COST_STEAM;
+        dual_headed:                  0;
+        cargo_capacity:               0;
+        weight:                       164 ton;
+        ai_engine_rank:               0;
+        engine_class:                 ENGINE_CLASS_STEAM;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0.172;
+        air_drag_coefficient:         0.06;
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+    }
+    graphics {
+        default:                      sw_231AC_graphics;
+        purchase:                     set_231AC_graphics_purchase;
+        additional_text:              return string(STR_SNCF_TRAIN_231AC_ADDITIONAL_TEXT);
+        articulated_part:             sw_231AC_articulated_part;
+        visual_effect_and_powered:    return (position_in_articulated_veh == 0) ?
+                                          visual_effect_and_powered(VISUAL_EFFECT_STEAM, 7, DISABLE_WAGON_POWER) :
+                                          visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+        length:                       return (position_in_articulated_veh == 0) ? 7 : 3;
+    }
+}

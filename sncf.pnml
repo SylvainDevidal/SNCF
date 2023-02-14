@@ -1,0 +1,68 @@
+/* Define grf */
+grf {
+    grfid: "SD\01\01";
+    /* GRF name and description strings are defined in the lang files */
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESC);
+    /* This is the first version, start numbering at 0. */
+    version: 0;
+    min_compatible_version: 0;
+
+    /* Define user-configurable parameters */
+    param {
+        /* There is one parameter, which can be used to alter the colour scheme */
+        param_colour_scheme {
+            type: int;
+            name: string(STR_PARAM_COLOUR_SCHEME_NAME);
+            desc: string(STR_PARAM_COLOUR_SCHEME_DESC);
+            /* There are currently three possible values:
+             * - 1cc
+             * - 2cc (default)
+             * - real-world
+             */
+            min_value: 0;
+            max_value: 2;
+            def_value: 1;
+            names: {
+                0: string(STR_PARAM_COLOUR_SCHEME_1CC);
+                1: string(STR_PARAM_COLOUR_SCHEME_2CC);
+                2: string(STR_PARAM_COLOUR_SCHEME_REAL);
+            };
+        }
+    }
+}
+
+#include "src/COMMON.nml"
+#include "src/RAILTYPES.nml"
+
+// Steam
+
+// Waiting for The Irish consent
+#include "src/040TA.nml"
+#include "src/131TB.nml"
+#include "src/140C.nml"
+#include "src/141R.nml"
+#include "src/141TA.nml"
+#include "src/150BP.nml"
+#include "src/151A.nml"
+#include "src/230BDG.nml"
+#include "src/231AC.nml"
+#include "src/231EGHK.nml"
+
+
+// Diesel
+
+// Waiting for The Irish consent
+#include "src/262DB.nml"
+
+
+// Electric
+
+#include "src/BB12000.nml"
+#include "src/CC40100.nml"
+
+// Need ask consent
+#include "src/BB26000.nml"
+
+// Waiting for acs121 consent
+#include "src/CORAIL.nml"

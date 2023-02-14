@@ -1,0 +1,70 @@
+##grflangid 0x01
+
+STR_GRF_NAME                 :{TITLE} {VERSION}
+STR_GRF_DESC                 :{ORANGE}{TITLE}{}{BLACK}SNCF newgrf, at last! Graphics credits to {STR_GRAPHICS_CREDIT}
+
+STR_PARAM_COLOUR_SCHEME_NAME :Colour scheme
+STR_PARAM_COLOUR_SCHEME_DESC :Select the type of colour scheme to use
+STR_PARAM_COLOUR_SCHEME_1CC  :One company colour
+STR_PARAM_COLOUR_SCHEME_2CC  :Two company colours
+STR_PARAM_COLOUR_SCHEME_REAL :Real-world colours
+
+# Steam (need credits)
+STR_SNCF_TRAIN_040TA_NAME                 :{STR_TRAIN_040TA} ({STR_STEAM})
+STR_SNCF_TRAIN_040TA_ADDITIONAL_TEXT      :Graphics by The Irish
+
+# Steam (need credits)
+STR_SNCF_TRAIN_131TB_NAME                 :{STR_TRAIN_131TB} ({STR_STEAM})
+STR_SNCF_TRAIN_131TB_ADDITIONAL_TEXT      :Graphics by The Irish
+
+# Steam (need credits)
+STR_SNCF_TRAIN_140C_NAME                  :{STR_TRAIN_140C} ({STR_STEAM})
+STR_SNCF_TRAIN_140C_ADDITIONAL_TEXT       :Graphics by The Irish
+
+# Steam (need credits)
+STR_SNCF_TRAIN_141TA_NAME                 :{STR_TRAIN_141TA} ({STR_STEAM})
+STR_SNCF_TRAIN_141TA_ADDITIONAL_TEXT      :Graphics by The Irish
+
+# Steam (need credits)
+STR_SNCF_TRAIN_141R_NAME                  :{STR_TRAIN_141R} ({STR_STEAM})
+STR_SNCF_TRAIN_141R_ADDITIONAL_TEXT       :Graphics by The Irish
+
+# Steam (need credits)
+STR_SNCF_TRAIN_150BP_NAME                 :{STR_TRAIN_150BP} ({STR_STEAM})
+STR_SNCF_TRAIN_150BP_ADDITIONAL_TEXT      :Graphics by The Irish
+
+# Steam (need credits)
+STR_SNCF_TRAIN_151A_NAME                  :{STR_TRAIN_151A} ({STR_STEAM})
+STR_SNCF_TRAIN_151A_ADDITIONAL_TEXT       :Graphics by The Irish
+
+# Steam (need credits)
+STR_SNCF_TRAIN_230BDG_NAME                :{STR_TRAIN_230BDG} ({STR_STEAM})
+STR_SNCF_TRAIN_230BDG_ADDITIONAL_TEXT     :Graphics by The Irish
+
+# Steam (need credits)
+STR_SNCF_TRAIN_231AC_NAME                 :{STR_TRAIN_231AC} ({STR_STEAM})
+STR_SNCF_TRAIN_231AC_ADDITIONAL_TEXT      :Graphics by The Irish
+
+# Steam (need credits)
+STR_SNCF_TRAIN_231EGHK_NAME               :{STR_TRAIN_231EGHK} ({STR_STEAM})
+STR_SNCF_TRAIN_231EGHK_ADDITIONAL_TEXT    :Graphics by The Irish
+
+# Steam (need credits)
+STR_SNCF_TRAIN_262DB_NAME                 :{STR_TRAIN_262BD} ({STR_DIESEL})
+STR_SNCF_TRAIN_262DB_ADDITIONAL_TEXT      :Graphics by The Irish
+
+# Electric (released)
+STR_SNCF_TRAIN_BB12000_NAME               :{STR_TRAIN_BB12000} ({STR_ELEC_25AC})
+STR_SNCF_TRAIN_BB12000_ADDITIONAL_TEXT    :Graphics by Emperor Jake
+
+# Electric (need credits)
+STR_SNCF_TRAIN_BB26000_NAME               :{STR_TRAIN_BB26000} ({STR_ELEC_DUAL})
+STR_SNCF_TRAIN_BB26000_ADDITIONAL_TEXT    :Who should I credit for graphics?
+
+# Electric (released)
+STR_SNCF_TRAIN_CC40100_NAME               :{STR_TRAIN_CC40100} ({STR_ELEC_QUADRI})
+STR_SNCF_TRAIN_CC40100_ADDITIONAL_TEXT    :Graphics by Emperor Jake
+
+# Wagon (need credits)
+STR_SNCF_WAGON_CORAIL_NAME                :{STR_WAGON_CORAIL} passengers
+STR_SNCF_WAGON_CORAIL_ADDITIONAL_TEXT     :Graphics by acs121

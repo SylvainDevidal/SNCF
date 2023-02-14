@@ -1,0 +1,15 @@
+railtypetable {
+    UNELECTRIFIED: [ RLA0, RLA1, RLA2, RLA3, RAIL ],
+    DC15: [ ERd0, ERd1, ERd2, ERd3, ELRL ],
+    DC03: [ ERD1, ERD2, ERD3, ELRL ],
+    DC15: [ ERd0, ERd1, ERd2, ERd3, ELRL ],
+    AC25: [ ERA1, ERA2, ERA3, ELRL ],
+    AC15: [ ERa0, ERa1, ERa2, ERa3, ELRL ],
+    DC15DC03: [ ER2D, ELRL ],
+    AC25DC03: [ ER2S, ELRL ],
+    AC25DC15: [ ER2s, ELRL ],
+    AC25AC15DC15: [ ER3a, ELRL ],
+    AC25DC03DC15: [ ER3D, ELRL ],
+    AC25AC15DC03DC15: [ ER4S, ELRL ],
+    FLGV: [ ERA4, ERa4, ELRL ],
+}

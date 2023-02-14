@@ -1,0 +1,89 @@
+/*
+TODO :
+- 2CC style purchase
+*/
+
+template tmpl_vehicle_262DB_8_views_front() {
+     //xpos ypos xsize ysize xrel yrel
+    [4, 4, 8, 24, -3, -11]
+    [19, 4, 22, 17, -12, -11]
+    [50, 4, 32, 12, -12, -8]
+    [91, 4, 22, 17, -4, -9]
+    [119, 4, 8, 24, -3, -15]
+    [134, 4, 22, 17, -14, -11]
+    [165, 4, 32, 12, -20, -8]
+    [203, 4, 22, 17, -6, -10]
+}
+
+template tmpl_vehicle_262DB_8_views_rear() {
+     //xpos ypos xsize ysize xrel yrel
+    [119, 36, 8, 24, -3, -15]
+    [134, 36, 22, 17, -14, -11]
+    [165, 36, 32, 12, -16, -8]
+    [203, 36, 22, 17, -6, -10]
+    [4, 36, 8, 24, -3, -11]
+    [19, 36, 22, 17, -12, -11]
+    [50, 36, 32, 12, -17, -8]
+    [91, 36, 22, 17, -4, -9]
+}
+
+template tmpl_vehicle_262DB_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [165, 4, 32, 12, -23, -8]
+}
+
+spriteset (set_262DB_graphics_front,    "gfx/262DB.png") { tmpl_vehicle_262DB_8_views_front() }
+spriteset (set_262DB_graphics_rear,     "gfx/262DB.png") { tmpl_vehicle_262DB_8_views_rear() }
+spriteset (set_262DB_graphics_purchase, "gfx/262DB.png") { tmpl_vehicle_262DB_purchase() }
+
+switch (FEAT_TRAINS, SELF, sw_262DB_graphics, position_in_articulated_veh % 2) {
+    0: set_262DB_graphics_front;
+    1: set_262DB_graphics_rear;
+}
+
+switch(FEAT_TRAINS, SELF, sw_262DB_articulated_part, extra_callback_info1) {
+    1 : return item_262DB;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+item(FEAT_TRAINS, item_262DB) {
+    property {
+        name:                         string(STR_SNCF_TRAIN_262DB_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(1938, 1, 1);
+        model_life:                   17;
+        vehicle_life:                 17;
+        reliability_decay:            25;
+        refittable_cargo_classes:     bitmask();
+        non_refittable_cargo_classes: bitmask();
+        loading_speed:                0; 
+        cost_factor:                  53;
+        running_cost_factor:          140;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        130 km/h;
+        misc_flags:                   bitmask();
+        refit_cost:                   0;
+        track_type:                   UNELECTRIFIED;
+        ai_special_flag:              AI_FLAG_PASSENGER;
+        power:                        4400 hp;
+        running_cost_base:            RUNNING_COST_DIESEL;
+        dual_headed:                  0;
+        cargo_capacity:               0;
+        weight:                       225 ton;
+        ai_engine_rank:               0;
+        engine_class:                 ENGINE_CLASS_DIESEL;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0.270;
+        air_drag_coefficient:         0.06;
+        visual_effect_and_powered:    visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 2, ENABLE_WAGON_POWER);
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+        length:                       7;
+    }
+    graphics {
+        default:                      sw_262DB_graphics;
+        purchase:                     set_262DB_graphics_purchase;
+        additional_text:              return string(STR_SNCF_TRAIN_262DB_ADDITIONAL_TEXT);
+        articulated_part:             sw_262DB_articulated_part;
+    }
+}
