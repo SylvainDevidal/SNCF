@@ -1,31 +1,30 @@
 /*
 TODO :
-- alternative liveries
 - 2CC style purchase
 */
 
-template tmpl_vehicle_231AC_8_views(frame) {
+template tmpl_vehicle_231AC_8_views(frame, livery) {
     //xpos ypos xsize ysize xrel yrel
-    [2, 2 + frame * 26, 8, 24, -3, -16]
-    [12, 2 + frame * 26, 22, 17, -10, -10]
-    [36, 2 + frame * 26, 32, 14, -12, -9]
-    [70, 2 + frame * 26, 22, 17, -3, -8]
-    [94, 2 + frame * 26, 8, 24,  -3, -15]
-    [104, 2 + frame * 26, 22, 17, -19, -6]
-    [128, 2 + frame * 26, 32, 14, -22, -9]
-    [162, 2 + frame * 26, 22, 17, -11, -11]
+    [2 + livery % 2 * 203, 2 + frame * 26 + int(livery / 2) * 186, 8, 24, -3, -16]
+    [12 + livery % 2 * 203, 2 + frame * 26 + int(livery / 2) * 186, 22, 17, -10, -10]
+    [36 + livery % 2 * 203, 2 + frame * 26 + int(livery / 2) * 186, 32, 14, -12, -10]
+    [70 + livery % 2 * 203, 2 + frame * 26 + int(livery / 2) * 186, 22, 17, -3, -7]
+    [94 + livery % 2 * 203, 2 + frame * 26 + int(livery / 2) * 186, 8, 24,  -3, -13]
+    [104 + livery % 2 * 203, 2 + frame * 26 + int(livery / 2) * 186, 22, 17, -19, -6]
+    [128 + livery % 2 * 203, 2 + frame * 26 + int(livery / 2) * 186, 32, 14, -24, -9]
+    [162 + livery % 2 * 203, 2 + frame * 26 + int(livery / 2) * 186, 22, 17, -11, -11]
 }
 
-template tmpl_vehicle_231AC_TENDER_8_views(frame) {
+template tmpl_vehicle_231AC_TENDER_8_views(livery) {
     //xpos ypos xsize ysize xrel yrel
-    [2, 158 + frame * 26, 8, 24, -3, -16]
-    [12, 158 + frame * 26, 22, 17, -4, -14]
-    [36, 158 + frame * 26, 32, 14, 3, -9]
-    [70, 158 + frame * 26, 22, 17, -4, -9]
-    [94, 158 + frame * 26, 8, 24,  -3, -15]
-    [104, 158 + frame * 26, 22, 17, -19, -7]
-    [128, 158 + frame * 26, 32, 14, -37, -10]
-    [162, 158 + frame * 26, 22, 17, -19, -16]
+    [2 + livery % 2 * 203, 158 + int(livery / 2) * 186, 8, 24, -3, -21]
+    [12 + livery % 2 * 203, 158 + int(livery / 2) * 186, 22, 17, -4, -14]
+    [36 + livery % 2 * 203, 158 + int(livery / 2) * 186, 32, 14, 2, -10]
+    [70 + livery % 2 * 203, 158 + int(livery / 2) * 186, 22, 17, -4, -7]
+    [94 + livery % 2 * 203, 158 + int(livery / 2) * 186, 8, 24,  -3, -11]
+    [104 + livery % 2 * 203, 158 + int(livery / 2) * 186, 22, 17, -19, -7]
+    [128 + livery % 2 * 203, 158 + int(livery / 2) * 186, 32, 14, -38, -10]
+    [162 + livery % 2 * 203, 158 + int(livery / 2) * 186, 22, 17, -19, -15]
 }
 
 template tmpl_vehicle_231AC_purchase() {
@@ -33,34 +32,161 @@ template tmpl_vehicle_231AC_purchase() {
     [128, 2, 32, 14, -24, -10]
 }
 
-spriteset (set_231AC_graphics_0,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(0) }
-spriteset (set_231AC_graphics_1,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(1) }
-spriteset (set_231AC_graphics_2,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(2) }
-spriteset (set_231AC_graphics_3,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(3) }
-spriteset (set_231AC_graphics_4,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(4) }
-spriteset (set_231AC_graphics_5,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(5) }
+spriteset (set_231AC_graphics_0_0,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(0, 0) }
+spriteset (set_231AC_graphics_1_0,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(1, 0) }
+spriteset (set_231AC_graphics_2_0,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(2, 0) }
+spriteset (set_231AC_graphics_3_0,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(3, 0) }
+spriteset (set_231AC_graphics_4_0,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(4, 0) }
+spriteset (set_231AC_graphics_5_0,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(5, 0) }
+spriteset (set_231AC_graphics_0_1,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(0, 1) }
+spriteset (set_231AC_graphics_1_1,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(1, 1) }
+spriteset (set_231AC_graphics_2_1,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(2, 1) }
+spriteset (set_231AC_graphics_3_1,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(3, 1) }
+spriteset (set_231AC_graphics_4_1,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(4, 1) }
+spriteset (set_231AC_graphics_5_1,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(5, 1) }
+spriteset (set_231AC_graphics_0_2,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(0, 2) }
+spriteset (set_231AC_graphics_1_2,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(1, 2) }
+spriteset (set_231AC_graphics_2_2,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(2, 2) }
+spriteset (set_231AC_graphics_3_2,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(3, 2) }
+spriteset (set_231AC_graphics_4_2,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(4, 2) }
+spriteset (set_231AC_graphics_5_2,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(5, 2) }
+spriteset (set_231AC_graphics_0_3,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(0, 3) }
+spriteset (set_231AC_graphics_1_3,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(1, 3) }
+spriteset (set_231AC_graphics_2_3,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(2, 3) }
+spriteset (set_231AC_graphics_3_3,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(3, 3) }
+spriteset (set_231AC_graphics_4_3,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(4, 3) }
+spriteset (set_231AC_graphics_5_3,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(5, 3) }
+spriteset (set_231AC_graphics_0_4,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(0, 4) }
+spriteset (set_231AC_graphics_1_4,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(1, 4) }
+spriteset (set_231AC_graphics_2_4,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(2, 4) }
+spriteset (set_231AC_graphics_3_4,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(3, 4) }
+spriteset (set_231AC_graphics_4_4,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(4, 4) }
+spriteset (set_231AC_graphics_5_4,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(5, 4) }
+spriteset (set_231AC_graphics_0_5,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(0, 5) }
+spriteset (set_231AC_graphics_1_5,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(1, 5) }
+spriteset (set_231AC_graphics_2_5,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(2, 5) }
+spriteset (set_231AC_graphics_3_5,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(3, 5) }
+spriteset (set_231AC_graphics_4_5,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(4, 5) }
+spriteset (set_231AC_graphics_5_5,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(5, 5) }
+spriteset (set_231AC_graphics_0_6,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(0, 6) }
+spriteset (set_231AC_graphics_1_6,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(1, 6) }
+spriteset (set_231AC_graphics_2_6,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(2, 6) }
+spriteset (set_231AC_graphics_3_6,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(3, 6) }
+spriteset (set_231AC_graphics_4_6,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(4, 6) }
+spriteset (set_231AC_graphics_5_6,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(5, 6) }
+spriteset (set_231AC_graphics_0_7,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(0, 7) }
+spriteset (set_231AC_graphics_1_7,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(1, 7) }
+spriteset (set_231AC_graphics_2_7,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(2, 7) }
+spriteset (set_231AC_graphics_3_7,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(3, 7) }
+spriteset (set_231AC_graphics_4_7,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(4, 7) }
+spriteset (set_231AC_graphics_5_7,        "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(5, 7) }
 spriteset (set_231AC_tender_graphics_0, "gfx/231AC.png") { tmpl_vehicle_231AC_TENDER_8_views(0) }
-//spriteset (set_231AC_tender_graphics_1, "gfx/231AC.png") { tmpl_vehicle_231AC_TENDER_8_views(1) } // Buggy sprites
+spriteset (set_231AC_tender_graphics_1, "gfx/231AC.png") { tmpl_vehicle_231AC_TENDER_8_views(1) }
+spriteset (set_231AC_tender_graphics_2, "gfx/231AC.png") { tmpl_vehicle_231AC_TENDER_8_views(2) }
+spriteset (set_231AC_tender_graphics_3, "gfx/231AC.png") { tmpl_vehicle_231AC_TENDER_8_views(3) }
+spriteset (set_231AC_tender_graphics_4, "gfx/231AC.png") { tmpl_vehicle_231AC_TENDER_8_views(4) }
+spriteset (set_231AC_tender_graphics_5, "gfx/231AC.png") { tmpl_vehicle_231AC_TENDER_8_views(5) }
+spriteset (set_231AC_tender_graphics_6, "gfx/231AC.png") { tmpl_vehicle_231AC_TENDER_8_views(6) }
+spriteset (set_231AC_tender_graphics_7, "gfx/231AC.png") { tmpl_vehicle_231AC_TENDER_8_views(7) }
 spriteset (set_231AC_graphics_purchase, "gfx/231AC.png") { tmpl_vehicle_231AC_purchase() }
 
-switch (FEAT_TRAINS, SELF, sw_231AC_graphics_animated, motion_counter % 6) {
-    0: set_231AC_graphics_0;
-    1: set_231AC_graphics_1;
-    2: set_231AC_graphics_2;
-    3: set_231AC_graphics_3;
-    4: set_231AC_graphics_4;
-    5: set_231AC_graphics_5;
+switch (FEAT_TRAINS, SELF, sw_231AC_graphics_0, motion_counter % 6) {
+    0: set_231AC_graphics_0_0;
+    1: set_231AC_graphics_1_0;
+    2: set_231AC_graphics_2_0;
+    3: set_231AC_graphics_3_0;
+    4: set_231AC_graphics_4_0;
+    5: set_231AC_graphics_5_0;
 }
-/*
-switch (FEAT_TRAINS, SELF, sw_231AC_tender_graphics_animated, motion_counter % 2) {
-    0: set_231AC_tender_graphics_0;
-    1: set_231AC_tender_graphics_1;
+
+switch (FEAT_TRAINS, SELF, sw_231AC_graphics_1, motion_counter % 6) {
+    0: set_231AC_graphics_0_1;
+    1: set_231AC_graphics_1_1;
+    2: set_231AC_graphics_2_1;
+    3: set_231AC_graphics_3_1;
+    4: set_231AC_graphics_4_1;
+    5: set_231AC_graphics_5_1;
 }
-*/
-switch(FEAT_TRAINS, SELF, sw_231AC_graphics, position_in_articulated_veh) {
-    0: sw_231AC_graphics_animated;
+
+switch (FEAT_TRAINS, SELF, sw_231AC_graphics_2, motion_counter % 6) {
+    0: set_231AC_graphics_0_2;
+    1: set_231AC_graphics_1_2;
+    2: set_231AC_graphics_2_2;
+    3: set_231AC_graphics_3_2;
+    4: set_231AC_graphics_4_2;
+    5: set_231AC_graphics_5_2;
+}
+
+switch (FEAT_TRAINS, SELF, sw_231AC_graphics_3, motion_counter % 6) {
+    0: set_231AC_graphics_0_3;
+    1: set_231AC_graphics_1_3;
+    2: set_231AC_graphics_2_3;
+    3: set_231AC_graphics_3_3;
+    4: set_231AC_graphics_4_3;
+    5: set_231AC_graphics_5_3;
+}
+
+switch (FEAT_TRAINS, SELF, sw_231AC_graphics_4, motion_counter % 6) {
+    0: set_231AC_graphics_0_4;
+    1: set_231AC_graphics_1_4;
+    2: set_231AC_graphics_2_4;
+    3: set_231AC_graphics_3_4;
+    4: set_231AC_graphics_4_4;
+    5: set_231AC_graphics_5_4;
+}
+
+switch (FEAT_TRAINS, SELF, sw_231AC_graphics_5, motion_counter % 6) {
+    0: set_231AC_graphics_0_5;
+    1: set_231AC_graphics_1_5;
+    2: set_231AC_graphics_2_5;
+    3: set_231AC_graphics_3_5;
+    4: set_231AC_graphics_4_5;
+    5: set_231AC_graphics_5_5;
+}
+
+switch (FEAT_TRAINS, SELF, sw_231AC_graphics_6, motion_counter % 6) {
+    0: set_231AC_graphics_0_6;
+    1: set_231AC_graphics_1_6;
+    2: set_231AC_graphics_2_6;
+    3: set_231AC_graphics_3_6;
+    4: set_231AC_graphics_4_6;
+    5: set_231AC_graphics_5_6;
+}
+
+switch (FEAT_TRAINS, SELF, sw_231AC_graphics_7, motion_counter % 6) {
+    0: set_231AC_graphics_0_7;
+    1: set_231AC_graphics_1_7;
+    2: set_231AC_graphics_2_7;
+    3: set_231AC_graphics_3_7;
+    4: set_231AC_graphics_4_7;
+    5: set_231AC_graphics_5_7;
+}
+
+random_switch (FEAT_TRAINS, SELF, sw_231AC_graphics_random) {
+    1: sw_231AC_graphics_0;
+    2: sw_231AC_graphics_1;
+    3: sw_231AC_graphics_2;
+    4: sw_231AC_graphics_3;
+    5: sw_231AC_graphics_4;
+    6: sw_231AC_graphics_5;
+    7: sw_231AC_graphics_6;
+    8: sw_231AC_graphics_7;
+}
+
+random_switch (FEAT_TRAINS, SELF, sw_231AC_tender_random) {
     1: set_231AC_tender_graphics_0;
-    //1: sw_231AC_tender_graphics_animated;
+    2: set_231AC_tender_graphics_1;
+    3: set_231AC_tender_graphics_2;
+    4: set_231AC_tender_graphics_3;
+    5: set_231AC_tender_graphics_4;
+    6: set_231AC_tender_graphics_5;
+    7: set_231AC_tender_graphics_6;
+    8: set_231AC_tender_graphics_7;
+}
+
+switch(FEAT_TRAINS, SELF, sw_231AC_graphics, position_in_articulated_veh) {
+    0: sw_231AC_graphics_random;
+    1: sw_231AC_tender_random;
 }
 
 switch(FEAT_TRAINS, SELF, sw_231AC_articulated_part, extra_callback_info1) {
@@ -106,7 +232,7 @@ item(FEAT_TRAINS, item_231AC) {
         additional_text:              return string(STR_SNCF_TRAIN_231AC_ADDITIONAL_TEXT);
         articulated_part:             sw_231AC_articulated_part;
         visual_effect_and_powered:    return (position_in_articulated_veh == 0) ?
-                                          visual_effect_and_powered(VISUAL_EFFECT_STEAM, -4, DISABLE_WAGON_POWER) :
+                                          visual_effect_and_powered(VISUAL_EFFECT_STEAM, -5, DISABLE_WAGON_POWER) :
                                           visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
         length:                       return (position_in_articulated_veh == 0) ? 7 : 3;
         can_attach_wagon:             sw_attach_no_mail;
