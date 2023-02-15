@@ -35,4 +35,4 @@ STR_TRAIN_CC40100     :CC40100
 STR_WAGON_CORAIL      :Voiture Corail
 
 # Stuff
-STR_GRAPHICS_CREDIT   :acs121, Emperor Jake, The Irish
+STR_GRAPHICS_CREDIT   :Emperor Jake, The Irish
