@@ -85,5 +85,6 @@ item(FEAT_TRAINS, item_262DB) {
         purchase:                     set_262DB_graphics_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_262DB_ADDITIONAL_TEXT);
         articulated_part:             sw_262DB_articulated_part;
+        can_attach_wagon:             sw_attach_only_passenger;
     }
 }
