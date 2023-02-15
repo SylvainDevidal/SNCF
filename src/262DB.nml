@@ -6,25 +6,25 @@ TODO :
 template tmpl_vehicle_262DB_8_views_front() {
      //xpos ypos xsize ysize xrel yrel
     [4, 4, 8, 24, -3, -11]
-    [19, 4, 22, 17, -12, -11]
+    [19, 4, 22, 17, -10, -10]
     [50, 4, 32, 12, -12, -8]
-    [91, 4, 22, 17, -4, -9]
+    [91, 4, 22, 17, -2, -6]
     [119, 4, 8, 24, -3, -15]
-    [134, 4, 22, 17, -14, -11]
+    [134, 4, 22, 17, -19, -6]
     [165, 4, 32, 12, -20, -8]
-    [203, 4, 22, 17, -6, -10]
+    [203, 4, 22, 17, -12, -11]
 }
 
 template tmpl_vehicle_262DB_8_views_rear() {
      //xpos ypos xsize ysize xrel yrel
     [119, 36, 8, 24, -3, -15]
-    [134, 36, 22, 17, -14, -11]
+    [134, 36, 22, 17, -12, -9]
     [165, 36, 32, 12, -16, -8]
-    [203, 36, 22, 17, -6, -10]
+    [203, 36, 22, 17, -4, -7]
     [4, 36, 8, 24, -3, -11]
-    [19, 36, 22, 17, -12, -11]
+    [19, 36, 22, 17, -19, -6]
     [50, 36, 32, 12, -17, -8]
-    [91, 36, 22, 17, -4, -9]
+    [91, 36, 22, 17, -10, -10]
 }
 
 template tmpl_vehicle_262DB_purchase() {
@@ -75,7 +75,6 @@ item(FEAT_TRAINS, item_262DB) {
         extra_power_per_wagon:        0 kW;
         tractive_effort_coefficient:  0.270;
         air_drag_coefficient:         0.06;
-        visual_effect_and_powered:    visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 2, ENABLE_WAGON_POWER);
         extra_weight_per_wagon:       0 ton;
         bitmask_vehicle_info:         0;
         length:                       7;
@@ -85,6 +84,9 @@ item(FEAT_TRAINS, item_262DB) {
         purchase:                     set_262DB_graphics_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_262DB_ADDITIONAL_TEXT);
         articulated_part:             sw_262DB_articulated_part;
+        visual_effect_and_powered:    return (position_in_articulated_veh == 0) ?
+                                          visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 1, ENABLE_WAGON_POWER) :
+                                          visual_effect_and_powered(VISUAL_EFFECT_DIESEL, -3, ENABLE_WAGON_POWER);
         can_attach_wagon:             sw_attach_only_passenger;
     }
 }
