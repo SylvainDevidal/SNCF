@@ -1,3 +1,8 @@
+/*
+TODO:
+- Support reverse and draw cabin in "front" mode
+*/
+
 template tmpl_vehicle_CORAIL_4_views(livery) {
     //xpos ypos xsize ysize xrel yrel
     [6, 4 + livery * 30, 7, 23,  -3, -12]
@@ -32,7 +37,7 @@ template tmpl_vehicle_CORAIL_8_views_cabin_rear() {
 
 template tmpl_vehicle_CORAIL_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [49, 4, 32, 11, -18, -7]
+    [49, 4, 32, 11, -19, -7]
 }
 
 random_switch (FEAT_TRAINS, SELF, sw_CORAIL_graphics_random) {
@@ -43,7 +48,7 @@ random_switch (FEAT_TRAINS, SELF, sw_CORAIL_graphics_random) {
 }
 
 switch (FEAT_TRAINS, SELF, sw_CORAIL_graphics, position_in_consist_from_end) {
-    0: set_CORAIL_graphics_cabin_rear; // Use front with reverse flag?
+    0: set_CORAIL_graphics_cabin_rear;
     default: sw_CORAIL_graphics_random;
 }
 

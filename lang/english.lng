@@ -9,6 +9,9 @@ STR_PARAM_COLOUR_SCHEME_1CC  :One company colour
 STR_PARAM_COLOUR_SCHEME_2CC  :Two company colours
 STR_PARAM_COLOUR_SCHEME_REAL :Real-world colours
 
+# Errors messages
+ERR_NO_EXPRESS                            :This engine can't pull express cargo
+
 # Steam (need credits)
 STR_SNCF_TRAIN_040TA_NAME                 :{STR_TRAIN_040TA} ({STR_STEAM})
 STR_SNCF_TRAIN_040TA_ADDITIONAL_TEXT      :Graphics by The Irish
