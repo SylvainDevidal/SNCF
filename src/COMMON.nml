@@ -1,13 +1,22 @@
 disable_item(FEAT_TRAINS, 0, 26);
 disable_item(FEAT_TRAINS, 54, 115);
 
-//disable_item(FEAT_TRAINS);
-
 train_width_32_px = 1;
-traininfo_y_offset = 1;
 
 switch (FEAT_TRAINS, SELF, sw_attach_no_express, cargo_classes & bitmask(CC_EXPRESS))
 {
     0: CB_RESULT_ATTACH_ALLOW;
     default: string(ERR_NO_EXPRESS);
+}
+
+switch (FEAT_TRAINS, SELF, sw_attach_no_mail, cargo_classes & bitmask(CC_MAIL))
+{
+    0: CB_RESULT_ATTACH_ALLOW;
+    default: string(ERR_NO_MAIL);
+}
+
+switch (FEAT_TRAINS, SELF, sw_attach_only_passenger, cargo_classes & bitmask(CC_PASSENGERS))
+{
+    1: CB_RESULT_ATTACH_ALLOW;
+    default: string(ERR_ONLY_PASSENGERS);
 }

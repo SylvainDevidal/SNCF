@@ -11,6 +11,8 @@ STR_PARAM_COLOUR_SCHEME_REAL :Real-world colours
 
 # Errors messages
 ERR_NO_EXPRESS                            :This engine can't pull express cargo
+ERR_NO_MAIL                               :This engine can't pull mail vans
+ERR_ONLY_PASSENGERS                       :This engine can pull passenger coaches only
 
 # Steam (need credits)
 STR_SNCF_TRAIN_040TA_NAME                 :{STR_TRAIN_040TA} ({STR_STEAM})
