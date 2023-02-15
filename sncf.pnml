@@ -36,8 +36,6 @@ grf {
 #include "src/RAILTYPES.nml"
 
 // Steam
-
-// Waiting for The Irish consent
 #include "src/040TA.nml"
 #include "src/131TB.nml"
 #include "src/140C.nml"
@@ -51,13 +49,10 @@ grf {
 
 
 // Diesel
-
-// Waiting for The Irish consent
 #include "src/262DB.nml"
 
 
 // Electric
-
 #include "src/BB12000.nml"
 #include "src/CC40100.nml"
 
