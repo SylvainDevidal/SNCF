@@ -1,7 +1,7 @@
 ##grflangid 0x01
 
 STR_GRF_NAME                 :{TITLE} {VERSION}
-STR_GRF_DESC                 :{ORANGE}{TITLE}{}{BLACK}SNCF newgrf, at last! Graphics credits to {STR_GRAPHICS_CREDIT}
+STR_GRF_DESC                 :{ORANGE}{TITLE}SNCF{}{BLACK}At last! Graphics credits to {STR_GRAPHICS_CREDIT}
 
 STR_PARAM_COLOUR_SCHEME_NAME :Colour scheme
 STR_PARAM_COLOUR_SCHEME_DESC :Select the type of colour scheme to use
@@ -17,7 +17,7 @@ ERR_ONLY_EXPRESS_MAIL_PASSENGER           :This engine can pull passenger coache
 
 # Steam (need credits)
 STR_SNCF_TRAIN_040TA_NAME                 :{STR_TRAIN_040TA} ({STR_STEAM})
-STR_SNCF_TRAIN_040TA_ADDITIONAL_TEXT      :Graphics by The Irish
+STR_SNCF_TRAIN_040TA_ADDITIONAL_TEXT      :This engine can't pull express cargo.{}Graphics by The Irish
 
 # Steam (need credits)
 STR_SNCF_TRAIN_131TB_NAME                 :{STR_TRAIN_131TB} ({STR_STEAM})
@@ -49,15 +49,15 @@ STR_SNCF_TRAIN_230BDG_ADDITIONAL_TEXT     :Graphics by The Irish
 
 # Steam (need credits)
 STR_SNCF_TRAIN_231AC_NAME                 :{STR_TRAIN_231AC} ({STR_STEAM})
-STR_SNCF_TRAIN_231AC_ADDITIONAL_TEXT      :Graphics by The Irish
+STR_SNCF_TRAIN_231AC_ADDITIONAL_TEXT      :This engine can't pull mail vans.{}Graphics by The Irish
 
 # Steam (need credits)
 STR_SNCF_TRAIN_231EGHK_NAME               :{STR_TRAIN_231EGHK} ({STR_STEAM})
-STR_SNCF_TRAIN_231EGHK_ADDITIONAL_TEXT    :Graphics by The Irish
+STR_SNCF_TRAIN_231EGHK_ADDITIONAL_TEXT    :This engine can pull passengers, mails or express cargo only.{}Graphics by The Irish
 
 # Steam (need credits)
 STR_SNCF_TRAIN_262DB_NAME                 :{STR_TRAIN_262BD} ({STR_DIESEL})
-STR_SNCF_TRAIN_262DB_ADDITIONAL_TEXT      :Graphics by The Irish
+STR_SNCF_TRAIN_262DB_ADDITIONAL_TEXT      :This engine can pull passengers coaches only.{}Graphics by The Irish
 
 # Electric (released)
 STR_SNCF_TRAIN_BB12000_NAME               :{STR_TRAIN_BB12000} ({STR_ELEC_25AC})
@@ -72,5 +72,9 @@ STR_SNCF_TRAIN_CC40100_NAME               :{STR_TRAIN_CC40100} ({STR_ELEC_QUADRI
 STR_SNCF_TRAIN_CC40100_ADDITIONAL_TEXT    :Graphics by Emperor Jake
 
 # Wagon (need credits)
-STR_SNCF_WAGON_CORAIL_NAME                :{STR_WAGON_CORAIL} passengers
+STR_SNCF_WAGON_CORAIL_NAME                :{STR_WAGON_CORAIL} (passengers)
 STR_SNCF_WAGON_CORAIL_ADDITIONAL_TEXT     :Graphics by The Irish
+
+# Wagon (need credits)
+STR_SNCF_WAGON_FOURGON_NAME                :{STR_WAGON_CORAIL} (mail)
+STR_SNCF_WAGON_FOURGON_ADDITIONAL_TEXT     :Graphics by The Irish
