@@ -1,0 +1,69 @@
+/*
+TODO:
+- Support reverse and draw cabin in "front" mode
+*/
+
+template tmpl_vehicle_FOURGON_4_views(livery) {
+    //xpos ypos xsize ysize xrel yrel
+    [4, 5 + livery * 32, 8, 24,  -3, -12]
+    [19, 5 + livery * 32, 22, 17, -16, -8]
+    [50, 5 + livery * 32, 32, 12, -18, -8]
+    [87, 5 + livery * 32, 22, 17, -7, -9]
+}
+
+template tmpl_vehicle_FOURGON_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [50, 5, 32, 12, -19, -7]
+}
+
+random_switch (FEAT_TRAINS, SELF, sw_FOURGON_graphics_random) {
+    1: set_FOURGON_graphics_0;
+    2: set_FOURGON_graphics_1;
+    3: set_FOURGON_graphics_2;
+    4: set_FOURGON_graphics_3;
+}
+
+spriteset (set_FOURGON_graphics_0,           "gfx/FOURGON.png") { tmpl_vehicle_FOURGON_4_views(0) }
+spriteset (set_FOURGON_graphics_1,           "gfx/FOURGON.png") { tmpl_vehicle_FOURGON_4_views(1) }
+spriteset (set_FOURGON_graphics_2,           "gfx/FOURGON.png") { tmpl_vehicle_FOURGON_4_views(2) }
+spriteset (set_FOURGON_graphics_3,           "gfx/FOURGON.png") { tmpl_vehicle_FOURGON_4_views(3) }
+spriteset (set_FOURGON_graphics_purchase,    "gfx/FOURGON.png") { tmpl_vehicle_FOURGON_purchase() }
+
+item(FEAT_TRAINS, item_FOURGON) {
+    property {
+        name:                         string(STR_SNCF_WAGON_FOURGON_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(1975, 1, 1);
+        model_life:                   VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                 30;
+        reliability_decay:            20;
+        refittable_cargo_classes:     bitmask(CC_MAIL);
+        non_refittable_cargo_classes: bitmask();
+        loading_speed:                5;
+        cost_factor:                  45;
+        running_cost_factor:          100;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        200 km/h;
+        misc_flags:                   bitmask();
+        refit_cost:                   0;
+        track_type:                   UNELECTRIFIED;
+        ai_special_flag:              AI_FLAG_CARGO;
+        power:                        0;
+        running_cost_base:            RUNNING_COST_NONE;
+        dual_headed:                  0;
+        cargo_capacity:               88;
+        weight:                       42 ton;
+        ai_engine_rank:               0;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0;
+        air_drag_coefficient:         0;
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+        length:                       VEHICLE_LENGTH;
+    }
+    graphics {
+        default:                      sw_FOURGON_graphics_random;
+        purchase:                     set_FOURGON_graphics_purchase;
+        additional_text:              return string(STR_SNCF_WAGON_FOURGON_ADDITIONAL_TEXT);
+   }
+}
