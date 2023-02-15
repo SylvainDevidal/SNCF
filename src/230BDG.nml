@@ -1,32 +1,30 @@
 /*
 TODO :
-- alternative liveries
 - 2CC style purchase
-- fix smoke
 */
 
-template tmpl_vehicle_230BDG_8_views(frame) {
+template tmpl_vehicle_230BDG_8_views(frame, livery) {
     //xpos ypos xsize ysize xrel yrel
-    [5, 5 + frame * 29, 8, 24, -3, -16]
-    [18, 5 + frame * 29, 22, 17, -10, -12]
-    [45, 5 + frame * 29, 32, 14, -7, -9]
-    [82, 5 + frame * 29, 22, 17, -3, -8]
-    [109, 5 + frame * 29, 8, 24,  -3, -15]
-    [122, 5 + frame * 29, 22, 17, -17, -8]
-    [149, 5 + frame * 29, 32, 14, -26, -10]
-    [185, 5 + frame * 29, 22, 17, -8, -11]
+    [5 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 8, 24, -3, -17]
+    [18 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 22, 17, -10, -12]
+    [45 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 32, 14, -7, -9]
+    [82 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 22, 17, -3, -7]
+    [109 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 8, 24,  -3, -13]
+    [122 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 22, 17, -17, -7]
+    [149 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 32, 14, -27, -9]
+    [185 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 22, 17, -14, -13]
 }
 
-template tmpl_vehicle_230BDG_TENDER_8_views() {
+template tmpl_vehicle_230BDG_TENDER_8_views(livery) {
     //xpos ypos xsize ysize xrel yrel
-    [5, 121, 8, 24, -3, -16]
-    [18, 121, 22, 17, -4, -14]
-    [45, 121, 32, 14, -16, -9]
-    [82, 121, 22, 17, -4, -9]
-    [109, 121, 8, 24,  -3, -15]
-    [122, 121, 22, 17, -17, -9]
-    [149, 121, 32, 14, -37, -10]
-    [185, 121, 22, 17, -8, -11]
+    [5 + livery % 2 * 207, 121 + int(livery / 2) * 145, 8, 24, -3, -22]
+    [18 + livery % 2 * 207, 121 + int(livery / 2) * 145, 22, 17, -4, -14]
+    [45 + livery % 2 * 207, 121 + int(livery / 2) * 145, 32, 14, -16, -9]
+    [82 + livery % 2 * 207, 121 + int(livery / 2) * 145, 22, 17, -4, -9]
+    [109 + livery % 2 * 207, 121 + int(livery / 2) * 145, 8, 24,  -3, -13]
+    [122 + livery % 2 * 207, 121 + int(livery / 2) * 145, 22, 17, ((livery == 3) ? 1 : 0) + -17, -8]
+    [149 + livery % 2 * 207, 121 + int(livery / 2) * 145, 32, 14, ((livery == 3) ? -2 : 0) + -38, -10]
+    [185 + livery % 2 * 207, 121 + int(livery / 2) * 145, 22, 17, -18, -15]
 }
 
 template tmpl_vehicle_230BDG_purchase() {
@@ -34,23 +32,101 @@ template tmpl_vehicle_230BDG_purchase() {
     [149, 5, 32, 14, -24, -10]
 }
 
-spriteset (set_230BDG_graphics_0,        "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(0) }
-spriteset (set_230BDG_graphics_1,        "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(1) }
-spriteset (set_230BDG_graphics_2,        "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(2) }
-spriteset (set_230BDG_graphics_3,        "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(3) }
-spriteset (set_230BDG_tender_graphics,   "gfx/230BDG.png") { tmpl_vehicle_230BDG_TENDER_8_views() }
+spriteset (set_230BDG_graphics_0_0,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(0, 0) }
+spriteset (set_230BDG_graphics_1_0,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(1, 0) }
+spriteset (set_230BDG_graphics_2_0,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(2, 0) }
+spriteset (set_230BDG_graphics_3_0,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(3, 0) }
+spriteset (set_230BDG_graphics_0_1,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(0, 1) }
+spriteset (set_230BDG_graphics_1_1,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(1, 1) }
+spriteset (set_230BDG_graphics_2_1,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(2, 1) }
+spriteset (set_230BDG_graphics_3_1,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(3, 1) }
+spriteset (set_230BDG_graphics_0_2,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(0, 2) }
+spriteset (set_230BDG_graphics_1_2,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(1, 2) }
+spriteset (set_230BDG_graphics_2_2,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(2, 2) }
+spriteset (set_230BDG_graphics_3_2,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(3, 2) }
+spriteset (set_230BDG_graphics_0_3,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(0, 3) }
+spriteset (set_230BDG_graphics_1_3,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(1, 3) }
+spriteset (set_230BDG_graphics_2_3,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(2, 3) }
+spriteset (set_230BDG_graphics_3_3,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(3, 3) }
+spriteset (set_230BDG_graphics_0_4,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(0, 4) }
+spriteset (set_230BDG_graphics_1_4,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(1, 4) }
+spriteset (set_230BDG_graphics_2_4,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(2, 4) }
+spriteset (set_230BDG_graphics_3_4,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(3, 4) }
+spriteset (set_230BDG_graphics_0_5,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(0, 5) }
+spriteset (set_230BDG_graphics_1_5,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(1, 5) }
+spriteset (set_230BDG_graphics_2_5,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(2, 5) }
+spriteset (set_230BDG_graphics_3_5,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(3, 5) }
+spriteset (set_230BDG_tender_graphics_0, "gfx/230BDG.png") { tmpl_vehicle_230BDG_TENDER_8_views(0) }
+spriteset (set_230BDG_tender_graphics_1, "gfx/230BDG.png") { tmpl_vehicle_230BDG_TENDER_8_views(1) }
+spriteset (set_230BDG_tender_graphics_2, "gfx/230BDG.png") { tmpl_vehicle_230BDG_TENDER_8_views(2) }
+spriteset (set_230BDG_tender_graphics_3, "gfx/230BDG.png") { tmpl_vehicle_230BDG_TENDER_8_views(3) }
+spriteset (set_230BDG_tender_graphics_4, "gfx/230BDG.png") { tmpl_vehicle_230BDG_TENDER_8_views(4) }
+spriteset (set_230BDG_tender_graphics_5, "gfx/230BDG.png") { tmpl_vehicle_230BDG_TENDER_8_views(5) }
 spriteset (set_230BDG_graphics_purchase, "gfx/230BDG.png") { tmpl_vehicle_230BDG_purchase() }
 
-switch (FEAT_TRAINS, SELF, sw_230BDG_graphics_animated, motion_counter % 4) {
-    0: set_230BDG_graphics_0;
-    1: set_230BDG_graphics_1;
-    2: set_230BDG_graphics_2;
-    3: set_230BDG_graphics_3;
+switch (FEAT_TRAINS, SELF, sw_230BDG_graphics_0, motion_counter % 4) {
+    0: set_230BDG_graphics_0_0;
+    1: set_230BDG_graphics_1_0;
+    2: set_230BDG_graphics_2_0;
+    3: set_230BDG_graphics_3_0;
+}
+
+switch (FEAT_TRAINS, SELF, sw_230BDG_graphics_1, motion_counter % 4) {
+    0: set_230BDG_graphics_0_1;
+    1: set_230BDG_graphics_1_1;
+    2: set_230BDG_graphics_2_1;
+    3: set_230BDG_graphics_3_1;
+}
+
+switch (FEAT_TRAINS, SELF, sw_230BDG_graphics_2, motion_counter % 4) {
+    0: set_230BDG_graphics_0_2;
+    1: set_230BDG_graphics_1_2;
+    2: set_230BDG_graphics_2_2;
+    3: set_230BDG_graphics_3_2;
+}
+
+switch (FEAT_TRAINS, SELF, sw_230BDG_graphics_3, motion_counter % 4) {
+    0: set_230BDG_graphics_0_3;
+    1: set_230BDG_graphics_1_3;
+    2: set_230BDG_graphics_2_3;
+    3: set_230BDG_graphics_3_3;
+}
+
+switch (FEAT_TRAINS, SELF, sw_230BDG_graphics_4, motion_counter % 4) {
+    0: set_230BDG_graphics_0_4;
+    1: set_230BDG_graphics_1_4;
+    2: set_230BDG_graphics_2_4;
+    3: set_230BDG_graphics_3_4;
+}
+
+switch (FEAT_TRAINS, SELF, sw_230BDG_graphics_5, motion_counter % 4) {
+    0: set_230BDG_graphics_0_5;
+    1: set_230BDG_graphics_1_5;
+    2: set_230BDG_graphics_2_5;
+    3: set_230BDG_graphics_3_5;
+}
+
+random_switch (FEAT_TRAINS, SELF, sw_230BDG_graphics_random) {
+    1: sw_230BDG_graphics_0;
+    2: sw_230BDG_graphics_1;
+    3: sw_230BDG_graphics_2;
+    4: sw_230BDG_graphics_3;
+    5: sw_230BDG_graphics_4;
+    6: sw_230BDG_graphics_5;
+}
+
+random_switch (FEAT_TRAINS, SELF, sw_230BDG_graphics_tender_random) {
+    1: set_230BDG_tender_graphics_0;
+    2: set_230BDG_tender_graphics_1;
+    3: set_230BDG_tender_graphics_2;
+    4: set_230BDG_tender_graphics_3;
+    5: set_230BDG_tender_graphics_4;
+    6: set_230BDG_tender_graphics_5;
 }
 
 switch(FEAT_TRAINS, SELF, sw_230BDG_graphics, position_in_articulated_veh) {
-    0:      sw_230BDG_graphics_animated;
-    1:      set_230BDG_tender_graphics;
+    0:      sw_230BDG_graphics_random;
+    1:      sw_230BDG_graphics_tender_random;
 }
 
 switch(FEAT_TRAINS, SELF, sw_230BDG_articulated_part, extra_callback_info1) {
@@ -97,7 +173,7 @@ item(FEAT_TRAINS, item_230BDG) {
         additional_text:              return string(STR_SNCF_TRAIN_230BDG_ADDITIONAL_TEXT);
         articulated_part:             sw_230BDG_articulated_part;
         visual_effect_and_powered:    return (position_in_articulated_veh == 0) ?
-                                          visual_effect_and_powered(VISUAL_EFFECT_STEAM, 2, DISABLE_WAGON_POWER) :
+                                          visual_effect_and_powered(VISUAL_EFFECT_STEAM, -4, DISABLE_WAGON_POWER) :
                                           visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
         length:                       return (position_in_articulated_veh == 0) ? 6 : 3;
     }
