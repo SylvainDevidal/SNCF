@@ -64,8 +64,13 @@ grf {
 // Need ask consent
 #include "src/BB26000.nml"
 
-// Waiting for The Irish consent
-#include "src/CORAIL.nml"
 
-// Waiting for The Irish consent
+// TGV
+
+// Need ask consent
+#include "src/TGV.nml"
+
+
+// Wagons
+#include "src/CORAIL.nml"
 #include "src/FOURGON.nml"
