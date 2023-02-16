@@ -14,7 +14,7 @@ ERR_NO_EXPRESS                            :This engine can't pull express cargo
 ERR_NO_MAIL                               :This engine can't pull mail vans
 ERR_ONLY_PASSENGER                        :This engine can pull passenger coaches only
 ERR_ONLY_EXPRESS_MAIL_PASSENGER           :This engine can pull passenger coaches, mail vans and express cargo only
-ERR_TGV_CANNOT_ATTACH_OTHER               :... only other TGVs can be attached to TGV.
+ERR_TGV_PSE_CANNOT_ATTACH_OTHER           :... only other TGV Sud-Est can be attached to TGV Sud-Est.
 
 # Steam (need credits)
 STR_SNCF_TRAIN_040TA_NAME                 :{STR_TRAIN_040TA} ({STR_STEAM})
@@ -73,8 +73,8 @@ STR_SNCF_TRAIN_CC40100_NAME               :{STR_TRAIN_CC40100} ({STR_ELEC_QUADRI
 STR_SNCF_TRAIN_CC40100_ADDITIONAL_TEXT    :Graphics by Emperor Jake
 
 # TGV (need credits)
-STR_SNCF_TRAIN_TGV_NAME                   :{STR_TRAIN_TGV} ({STR_ELEC_LGV})
-STR_SNCF_TRAIN_TGV_ADDITIONAL_TEXT        :Who should I credit for graphics?
+STR_SNCF_TRAIN_TGV_PSE_NAME                :{STR_TRAIN_TGV_PSE} ({STR_ELEC_LGV})
+STR_SNCF_TRAIN_TGV_PSE_ADDITIONAL_TEXT     :Who should I credit for graphics?
 
 # Wagon (need credits)
 STR_SNCF_WAGON_CORAIL_NAME                :{STR_WAGON_CORAIL} (passengers)

@@ -1,0 +1,226 @@
+template tmpl_vehicle_TGV_PSE_front() {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 7, 8, 23, -3, -8]
+    [15, 7, 22, 21, -15, -13]
+    [38, 7, 32, 16, -21, -12]
+    [71, 7, 22, 21, -7, -14]
+    [94, 7, 8, 23, -3, -16]
+    [103, 7, 22, 21, -16, -13]
+    [126, 7, 32, 16, -16, -12]
+    [159, 7, 22, 21, -5, -13]
+}
+
+template tmpl_vehicle_TGV_PSE_1st_1() {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 31, 8, 24, -3, -8]
+    [15, 31, 22, 19, -15, -11]
+    [39, 31, 29, 12, -18, -8]
+    [70, 31, 22, 18, -7, -11]
+    [94, 31, 8, 24, -3, -16]
+    [104, 31, 23, 18, -16, -10]
+    [129, 31, 30, 12, -16, -8]
+    [161, 31, 22, 19, -6, -12]
+}
+
+template tmpl_vehicle_TGV_PSE_1st_2() {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 81, 8, 24, -3, -8]
+    [15, 81, 22, 17, -14, -10]
+    [38, 81, 30, 11, -20, -7]
+    [69, 81, 22, 17, -7, -10]
+    [92, 81, 8, 24, -3, -16]
+    [101, 81, 22, 17, -14, -10]
+    [125, 81, 30, 11, -14, -7]
+    [156, 81, 22, 17, -7, -11]
+}
+
+template tmpl_vehicle_TGV_PSE_1st_3() {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 81, 8, 24, -3, -8]
+    [15, 81, 22, 17, -14, -10]
+    [38, 81, 30, 11, -18, -7]
+    [69, 81, 22, 17, -7, -10]
+    [92, 81, 8, 24, -3, -16]
+    [101, 81, 22, 17, -14, -10]
+    [125, 81, 30, 11, -16, -7]
+    [156, 81, 22, 17, -7, -11]
+}
+
+template tmpl_vehicle_TGV_PSE_bar() {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 56, 8, 24, -3, -8]
+    [15, 56, 22, 17, -14, -10]
+    [38, 56, 30, 11, -20, -7]
+    [69, 56, 22, 17, -7, -10]
+    [92, 56, 8, 24, -3, -16]
+    [101, 56, 22, 17, -14, -10]
+    [125, 56, 30, 11, -14, -7]
+    [156, 56, 22, 17, -7, -11]
+}
+
+template tmpl_vehicle_TGV_PSE_2nd_4() {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 106, 8, 24, -3, -8]
+    [15, 106, 22, 17, -14, -10]
+    [38, 106, 30, 11, -18, -7]
+    [69, 106, 22, 17, -7, -10]
+    [92, 106, 8, 24, -3, -16]
+    [101, 106, 22, 17, -14, -10]
+    [125, 106, 30, 11, -16, -7]
+    [156, 106, 22, 17, -7, -11]
+}
+
+template tmpl_vehicle_TGV_PSE_2nd_3() {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 106, 8, 24, -3, -8]
+    [15, 106, 22, 17, -14, -10]
+    [38, 106, 30, 11, -20, -7]
+    [69, 106, 22, 17, -7, -10]
+    [92, 106, 8, 24, -3, -16]
+    [101, 106, 22, 17, -14, -10]
+    [125, 106, 30, 11, -14, -7]
+    [156, 106, 22, 17, -7, -11]
+}
+
+template tmpl_vehicle_TGV_PSE_2nd_2() {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 106, 8, 24, -3, -8]
+    [15, 106, 22, 17, -14, -10]
+    [38, 106, 30, 11, -18, -7]
+    [69, 106, 22, 17, -7, -10]
+    [92, 106, 8, 24, -3, -16]
+    [101, 106, 22, 17, -14, -10]
+    [125, 106, 30, 11, -16, -7]
+    [156, 106, 22, 17, -7, -11]
+}
+
+template tmpl_vehicle_TGV_PSE_2nd_1() {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 131, 8, 24, -3, -8]
+    [15, 131, 22, 18, -13, -11]
+    [39, 131, 30, 12, -20, -8]
+    [71, 131, 22, 19, -6, -11]
+    [94, 131, 8, 24, -3, -16]
+    [103, 131, 22, 19, -15, -11]
+    [126, 131, 29, 13, -14, -9]
+    [156, 131, 21, 18, -7, -12]
+}
+
+template tmpl_vehicle_TGV_PSE_rear() {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 156, 8, 23, -3, -8]
+    [15, 156, 22, 21, -11, -15]
+    [38, 156, 32, 16, -20, -12]
+    [71, 156, 22, 21, -6, -13]
+    [94, 156, 8, 23, -3, -16]
+    [103, 156, 22, 21, -17, -12]
+    [126, 156, 32, 16, -17, -12]
+    [159, 156, 22, 21, -7, -15]
+}
+
+template tmpl_vehicle_TGV_PSE_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [126, 7, 32, 16, -24, -10]
+}
+
+/* Define the spritesets, these allow referring to these sprites later on */
+spriteset (set_TGV_PSE_front,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_PSE_front() }
+spriteset (set_TGV_PSE_1st_1,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_PSE_1st_1() }
+spriteset (set_TGV_PSE_1st_2,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_PSE_1st_2() }
+spriteset (set_TGV_PSE_1st_3,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_PSE_1st_3() }
+spriteset (set_TGV_PSE_bar,      "gfx/TGVevofin.png") { tmpl_vehicle_TGV_PSE_bar() }
+spriteset (set_TGV_PSE_2nd_4,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_PSE_2nd_4() }
+spriteset (set_TGV_PSE_2nd_3,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_PSE_2nd_3() }
+spriteset (set_TGV_PSE_2nd_2,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_PSE_2nd_2() }
+spriteset (set_TGV_PSE_2nd_1,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_PSE_2nd_1() }
+spriteset (set_TGV_PSE_rear,     "gfx/TGVevofin.png") { tmpl_vehicle_TGV_PSE_rear() }
+spriteset (set_TGV_PSE_purchase, "gfx/TGVevofin.png") { tmpl_vehicle_TGV_PSE_purchase() }
+
+/* Choose between front, middle and back parts */
+switch(FEAT_TRAINS, SELF, sw_TGV_PSE_graphics, position_in_articulated_veh) {
+    0: set_TGV_PSE_front;
+    1: set_TGV_PSE_1st_1;
+    2: set_TGV_PSE_1st_2;
+    3: set_TGV_PSE_1st_3;
+    4: set_TGV_PSE_bar;
+    5: set_TGV_PSE_2nd_4;
+    6: set_TGV_PSE_2nd_3;
+    7: set_TGV_PSE_2nd_2;
+    8: set_TGV_PSE_2nd_1;
+    9: set_TGV_PSE_rear;
+}
+
+switch(FEAT_TRAINS, SELF, sw_TGV_PSE_articulated_part, extra_callback_info1) {
+    1 .. 9: return item_TGV_PSE;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch(FEAT_TRAINS, SELF, sw_TGV_PSE_can_attach_wagon, vehicle_type_id) {
+    item_TGV_PSE: return CB_RESULT_ATTACH_ALLOW;
+    return string(ERR_TGV_PSE_CANNOT_ATTACH_OTHER);
+}
+
+switch(FEAT_TRAINS, SELF, sw_TGV_PSE_length, position_in_articulated_veh) {
+    1: 7;
+    3: 7;
+    5: 7;
+    7: 7;
+    default: 8;
+}
+
+switch(FEAT_TRAINS, SELF, sw_TGV_PSE_capacity, position_in_articulated_veh) {
+    1: 30;
+    2: 40;
+    3: 40;
+    6: 66;
+    7: 66;
+    8: 66;
+    9: 60;
+    default: 0;
+}
+
+item(FEAT_TRAINS, item_TGV_PSE) {
+    property {
+        name:                         string(STR_SNCF_TRAIN_TGV_PSE_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(1978, 1, 1);
+        model_life:                   23;
+        vehicle_life:                 20;
+        reliability_decay:            19;
+        refittable_cargo_classes:     bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: bitmask();
+        loading_speed:                6; 
+        cost_factor:                  185;
+        running_cost_factor:          170;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        270 km/h;
+        misc_flags:                   bitmask(TRAIN_FLAG_MU);
+        refit_cost:                   0;
+        track_type:                   FLGV_SE;
+        ai_special_flag:              AI_FLAG_PASSENGER;
+        power:                        8582 kW;
+        running_cost_base:            RUNNING_COST_ELECTRIC;
+        dual_headed:                  0;
+        weight:                       285 ton;
+        ai_engine_rank:               0;
+        engine_class:                 ENGINE_CLASS_ELECTRIC;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0.212;
+        air_drag_coefficient:         0.06;
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+    }
+    graphics {
+        default:                      sw_TGV_PSE_graphics;
+        purchase:                     set_TGV_PSE_purchase;
+        additional_text:              return string(STR_SNCF_TRAIN_TGV_PSE_ADDITIONAL_TEXT);
+        articulated_part:             sw_TGV_PSE_articulated_part;
+        can_attach_wagon:             sw_TGV_PSE_can_attach_wagon;
+        visual_effect_and_powered:    return (position_in_consist % 10 == 0) ?
+                                          visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 2, DISABLE_WAGON_POWER) :
+                                          visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+        length:                       sw_TGV_PSE_length;
+        cargo_capacity:               sw_TGV_PSE_capacity;
+        purchase_cargo_capacity:      368;
+    }
+}

@@ -63,7 +63,7 @@ grf {
 // TGV
 
 // Need ask consent
-#include "src/TGV.nml"
+#include "src/TGV_PSE.nml"
 
 
 // Wagons

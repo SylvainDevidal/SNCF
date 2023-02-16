@@ -11,5 +11,6 @@ railtypetable {
     AC25AC15DC15: [ ER3a, ELRL ],
     AC25DC03DC15: [ ER3D, ELRL ],
     AC25AC15DC03DC15: [ ER4S, ELRL ],
-    FLGV: [ ERA4, ERa4, ELRL ],
+    FLGV_SE: [ ERd3, ERA3, ELRL ],
+    //FLGV: [ ERA4, ERa4, ELRL ],
 }
