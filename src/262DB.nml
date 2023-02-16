@@ -1,5 +1,5 @@
 template tmpl_vehicle_262DB_8_views_front() {
-     //xpos ypos xsize ysize xrel yrel
+    //xpos ypos xsize ysize xrel yrel
     [4, 4, 8, 24, -3, -11]
     [19, 4, 22, 17, -10, -10]
     [50, 4, 32, 12, -12, -8]
@@ -11,7 +11,7 @@ template tmpl_vehicle_262DB_8_views_front() {
 }
 
 template tmpl_vehicle_262DB_8_views_rear() {
-     //xpos ypos xsize ysize xrel yrel
+    //xpos ypos xsize ysize xrel yrel
     [119, 36, 8, 24, -3, -15]
     [134, 36, 22, 17, -12, -9]
     [165, 36, 32, 12, -16, -8]

@@ -50,6 +50,7 @@ grf {
 
 // Diesel
 #include "src/262DB.nml"
+#include "src/X2000.nml"
 
 
 // Electric

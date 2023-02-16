@@ -155,8 +155,13 @@ switch(FEAT_TRAINS, SELF, sw_TGV_PSE_articulated_part, extra_callback_info1) {
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
+switch(FEAT_TRAINS, SELF, sw_TGV_PSE_check_length, num_vehs_in_consist) {
+    0 .. 20: return CB_RESULT_NO_TEXT;
+    return string(ERR_TGV_PSE_TOO_LONG);
+}
+
 switch(FEAT_TRAINS, SELF, sw_TGV_PSE_can_attach_wagon, vehicle_type_id) {
-    item_TGV_PSE: return CB_RESULT_ATTACH_ALLOW;
+    item_TGV_PSE: CB_RESULT_ATTACH_ALLOW;
     return string(ERR_TGV_PSE_CANNOT_ATTACH_OTHER);
 }
 
@@ -214,6 +219,7 @@ item(FEAT_TRAINS, item_TGV_PSE) {
         additional_text:              return string(STR_SNCF_TRAIN_TGV_PSE_ADDITIONAL_TEXT);
         articulated_part:             sw_TGV_PSE_articulated_part;
         can_attach_wagon:             sw_TGV_PSE_can_attach_wagon;
+        start_stop:                   sw_TGV_PSE_check_length;
         visual_effect_and_powered:    return (position_in_consist % 10 == 0) ?
                                           visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 2, DISABLE_WAGON_POWER) :
                                           visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
