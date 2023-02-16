@@ -1,5 +1,5 @@
-VERSION  :0.0.1
-TITLE    :My GRF
+VERSION                   :0.0.1
+TITLE                     :My GRF
 
 # Rail type
 STR_STEAM                 :Steam
@@ -12,33 +12,34 @@ STR_ELEC_15DC25AC         :1,5 kV DC / 25 kV AC
 STR_ELEC_15DC03DC15AC25AC :1,5 kV DC / 3 kV DC / 15 kV AC / 25 kV AC
 
 # Steam
-STR_TRAIN_040TA       :040TA
-STR_TRAIN_131TB       :131TB
-STR_TRAIN_140C        :140C
-STR_TRAIN_141TA       :141TA
-STR_TRAIN_141R        :141R
-STR_TRAIN_150BP       :150BP
-STR_TRAIN_151A        :151A
-STR_TRAIN_230BDG      :230BDG
-STR_TRAIN_231AC       :231AC
-STR_TRAIN_231EGHK     :231EGHK
+STR_TRAIN_040TA           :040TA
+STR_TRAIN_131TB           :131TB
+STR_TRAIN_140C            :140C
+STR_TRAIN_141TA           :141TA
+STR_TRAIN_141R            :141R
+STR_TRAIN_150BP           :150BP
+STR_TRAIN_151A            :151A
+STR_TRAIN_230BDG          :230BDG
+STR_TRAIN_231AC           :231AC
+STR_TRAIN_231EGHK         :231EGHK
+STR_TRAIN_231CHAPELON     :231 Chapelon
 
 # Diesel
-STR_TRAIN_262BD       :262BD
-STR_TRAIN_X2000       :X2000 Iroquois
-STR_TRAIN_TAR         :TAR
+STR_TRAIN_262BD           :262BD
+STR_TRAIN_X2000           :X2000 Iroquois
+STR_TRAIN_TAR             :TAR
 
 # Electric
-STR_TRAIN_BB12000     :BB12000
-STR_TRAIN_BB26000     :BB26000
-STR_TRAIN_CC40100     :CC40100
+STR_TRAIN_BB12000         :BB12000
+STR_TRAIN_BB26000         :BB26000
+STR_TRAIN_CC40100         :CC40100
 
 #TGV
-STR_TRAIN_TGV_PSE      :TGV Sud-Est
+STR_TRAIN_TGV_PSE          :TGV Sud-Est
 
 # Wagons
-STR_WAGON_CORAIL      :Voiture Corail
-STR_WAGON_FOURGON     :Voiture Fourgon
+STR_WAGON_CORAIL          :Voiture Corail
+STR_WAGON_FOURGON         :Voiture Fourgon
 
 # Stuff
-STR_GRAPHICS_CREDIT   :Emperor Jake, The Irish, Hovering Teacup. If you regognize a graphics of your own and are not credited please contact this GRF author on the forums.
+STR_GRAPHICS_CREDIT       :Emperor Jake, The Irish, Hovering Teacup, acs121, Coalroads Artist, Snail. If you regognize graphics of your own and are not credited please contact this GRF author on the forums.

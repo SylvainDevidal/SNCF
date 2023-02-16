@@ -46,7 +46,7 @@ grf {
 #include "src/230BDG.nml"
 #include "src/231AC.nml"
 #include "src/231EGHK.nml"
-
+#include "src/231CHAPELON.nml"
 
 // Diesel
 #include "src/262DB.nml"
@@ -60,13 +60,13 @@ grf {
 #include "src/BB12000.nml"
 #include "src/CC40100.nml"
 
-// Need ask consent (who?)
+// Wait for acs121 consent
 #include "src/BB26000.nml"
 
 
 // TGV
 
-// Need ask consent
+// Wait for Coalroads Artist consent
 #include "src/TGV_PSE.nml"
 
 

@@ -1,0 +1,182 @@
+template tmpl_vehicle_231CHAPELON_8_views_front(frame, livery) {
+    //xpos ypos xsize ysize xrel yrel
+    [  5 + livery * 208, 5 + frame * 29,  8, 24,  -3, -17]
+    [ 18 + livery * 208, 5 + frame * 29, 22, 17, -13,  -9]
+    [ 45 + livery * 208, 5 + frame * 29, 32, 14, -16,  -9]
+    [ 82 + livery * 208, 5 + frame * 29, 22, 17,  -4,  -8]
+    [109 + livery * 208, 5 + frame * 29,  8, 24,  -3, -10]
+    [122 + livery * 208, 5 + frame * 29, 22, 17, -18,  -7]
+    [149 + livery * 208, 5 + frame * 29, 32, 14, -23, -9]
+    [186 + livery * 208, 5 + frame * 29, 22, 17,  -9, -10]
+}
+
+template tmpl_vehicle_231CHAPELON_8_views_middle(livery) {
+    //xpos ypos xsize ysize xrel yrel
+    [  5 + livery * 208, 179,  8, 24,  -3, -15]
+    [ 18 + livery * 208, 179, 22, 17,  -4, -14]
+    [ 45 + livery * 208, 179, 32, 14, -8,  -9]
+    [ 82 + livery * 208, 179, 22, 17,  -4,  -9]
+    [109 + livery * 208, 179,  8, 24,  -3, -8]
+    [122 + livery * 208, 179, 22, 17, -17,  -8]
+    [149 + livery * 208, 179, 32, 14, -20, -9]
+    [186 + livery * 208, 179, 22, 17, -9, -12]
+}
+
+template tmpl_vehicle_231CHAPELON_8_views_rear(frame, livery) {
+    //xpos ypos xsize ysize xrel yrel
+    [  5 + livery * 208, 208 + frame * 29,  8, 24,  -3, -13]
+    [ 18 + livery * 208, 208 + frame * 29, 22, 17, -13,  -9]
+    [ 45 + livery * 208, 208 + frame * 29, 32, 14, -15,  -9]
+    [ 82 + livery * 208, 208 + frame * 29, 22, 17,  -4,  -7]
+    [109 + livery * 208, 208 + frame * 29,  8, 24,  -3, -10]
+    [122 + livery * 208, 208 + frame * 29, 22, 17, -18,  -7]
+    [149 + livery * 208, 208 + frame * 29, 32, 14, -24, -9]
+    [186 + livery * 208, 208 + frame * 29, 22, 17,  -9, -10]
+}
+
+template tmpl_vehicle_231CHAPELON_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [0, 0, 54, 14, -43, -10]
+}
+
+spriteset (set_231CHAPELON_graphics_front_0_0, "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_front(0, 0) }
+spriteset (set_231CHAPELON_graphics_front_1_0, "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_front(1, 0) }
+spriteset (set_231CHAPELON_graphics_front_2_0, "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_front(2, 0) }
+spriteset (set_231CHAPELON_graphics_front_3_0, "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_front(3, 0) }
+spriteset (set_231CHAPELON_graphics_front_4_0, "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_front(4, 0) }
+spriteset (set_231CHAPELON_graphics_front_5_0, "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_front(5, 0) }
+spriteset (set_231CHAPELON_graphics_front_0_1, "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_front(0, 1) }
+spriteset (set_231CHAPELON_graphics_front_1_1, "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_front(1, 1) }
+spriteset (set_231CHAPELON_graphics_front_2_1, "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_front(2, 1) }
+spriteset (set_231CHAPELON_graphics_front_3_1, "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_front(3, 1) }
+spriteset (set_231CHAPELON_graphics_front_4_1, "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_front(4, 1) }
+spriteset (set_231CHAPELON_graphics_front_5_1, "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_front(5, 1) }
+spriteset (set_231CHAPELON_graphics_middle_0,  "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_middle(0) }
+spriteset (set_231CHAPELON_graphics_middle_1,  "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_middle(1) }
+spriteset (set_231CHAPELON_graphics_rear_0_0,  "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_rear(0, 0) }
+spriteset (set_231CHAPELON_graphics_rear_1_0,  "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_rear(1, 0) }
+spriteset (set_231CHAPELON_graphics_rear_2_0,  "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_rear(2, 0) }
+spriteset (set_231CHAPELON_graphics_rear_3_0,  "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_rear(3, 0) }
+spriteset (set_231CHAPELON_graphics_rear_4_0,  "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_rear(4, 0) }
+spriteset (set_231CHAPELON_graphics_rear_5_0,  "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_rear(5, 0) }
+spriteset (set_231CHAPELON_graphics_rear_0_1,  "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_rear(0, 1) }
+spriteset (set_231CHAPELON_graphics_rear_1_1,  "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_rear(1, 1) }
+spriteset (set_231CHAPELON_graphics_rear_2_1,  "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_rear(2, 1) }
+spriteset (set_231CHAPELON_graphics_rear_3_1,  "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_rear(3, 1) }
+spriteset (set_231CHAPELON_graphics_rear_4_1,  "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_rear(4, 1) }
+spriteset (set_231CHAPELON_graphics_rear_5_1,  "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_rear(5, 1) }
+spriteset (set_231CHAPELON_graphics_purchase,  "gfx/231CHAPELON_purchase.png") { tmpl_vehicle_231CHAPELON_purchase() }
+
+switch (FEAT_TRAINS, SELF, sw_231CHAPELON_graphics_front_0, motion_counter % 6) {
+    0: set_231CHAPELON_graphics_front_0_0;
+    1: set_231CHAPELON_graphics_front_1_0;
+    2: set_231CHAPELON_graphics_front_2_0;
+    3: set_231CHAPELON_graphics_front_3_0;
+    4: set_231CHAPELON_graphics_front_4_0;
+    5: set_231CHAPELON_graphics_front_5_0;
+}
+
+switch (FEAT_TRAINS, SELF, sw_231CHAPELON_graphics_front_1, motion_counter % 6) {
+    0: set_231CHAPELON_graphics_front_0_1;
+    1: set_231CHAPELON_graphics_front_1_1;
+    2: set_231CHAPELON_graphics_front_2_1;
+    3: set_231CHAPELON_graphics_front_3_1;
+    4: set_231CHAPELON_graphics_front_4_1;
+    5: set_231CHAPELON_graphics_front_5_1;
+}
+
+switch (FEAT_TRAINS, SELF, sw_231CHAPELON_graphics_rear_0, motion_counter % 6) {
+    0: set_231CHAPELON_graphics_rear_0_0;
+    1: set_231CHAPELON_graphics_rear_1_0;
+    2: set_231CHAPELON_graphics_rear_2_0;
+    3: set_231CHAPELON_graphics_rear_3_0;
+    4: set_231CHAPELON_graphics_rear_4_0;
+    5: set_231CHAPELON_graphics_rear_5_0;
+}
+
+switch (FEAT_TRAINS, SELF, sw_231CHAPELON_graphics_rear_1, motion_counter % 6) {
+    0: set_231CHAPELON_graphics_rear_0_1;
+    1: set_231CHAPELON_graphics_rear_1_1;
+    2: set_231CHAPELON_graphics_rear_2_1;
+    3: set_231CHAPELON_graphics_rear_3_1;
+    4: set_231CHAPELON_graphics_rear_4_1;
+    5: set_231CHAPELON_graphics_rear_5_1;
+}
+
+random_switch (FEAT_TRAINS, SELF, sw_231CHAPELON_graphics_front_random) {
+    1: sw_231CHAPELON_graphics_front_0;
+    2: sw_231CHAPELON_graphics_front_1;
+}
+
+random_switch (FEAT_TRAINS, SELF, sw_231CHAPELON_graphics_middle_random) {
+    1: set_231CHAPELON_graphics_middle_0;
+    2: set_231CHAPELON_graphics_middle_1;
+}
+
+random_switch (FEAT_TRAINS, SELF, sw_231CHAPELON_graphics_rear_random) {
+    1: sw_231CHAPELON_graphics_rear_0;
+    2: sw_231CHAPELON_graphics_rear_1;
+}
+
+switch (FEAT_TRAINS, SELF, sw_231CHAPELON_graphics, position_in_articulated_veh % 3) {
+    0: sw_231CHAPELON_graphics_front_random;
+    1: sw_231CHAPELON_graphics_middle_random;
+    2: sw_231CHAPELON_graphics_rear_random;
+}
+
+switch (FEAT_TRAINS, SELF, sw_231CHAPELON_length, position_in_articulated_veh % 3) {
+    0: 5;
+    1: 4;
+    2: 5;
+}
+
+switch(FEAT_TRAINS, SELF, sw_231CHAPELON_articulated_part, extra_callback_info1) {
+    1 .. 2 : return item_231CHAPELON;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+item(FEAT_TRAINS, item_231CHAPELON) {
+    property {
+        name:                         string(STR_SNCF_TRAIN_231CHAPELON_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(1909, 1, 1);
+        model_life:                   24;
+        vehicle_life:                 20;
+        reliability_decay:            11;
+        refittable_cargo_classes:     bitmask();
+        non_refittable_cargo_classes: bitmask();
+        loading_speed:                0; 
+        cost_factor:                  26;
+        running_cost_factor:          95;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        140 km/h;
+        misc_flags:                   bitmask();
+        refit_cost:                   0;
+        track_type:                   UNELECTRIFIED;
+        ai_special_flag:              AI_FLAG_PASSENGER;
+        power:                        410 hp;
+        running_cost_base:            RUNNING_COST_STEAM;
+        dual_headed:                  0;
+        cargo_capacity:               48;
+        weight:                       25 ton;
+        ai_engine_rank:               0;
+        engine_class:                 ENGINE_CLASS_STEAM;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0.270;
+        air_drag_coefficient:         0.06;
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+        length:                       4;
+    }
+    graphics {
+        default:                      sw_231CHAPELON_graphics;
+        purchase:                     set_231CHAPELON_graphics_purchase;
+        additional_text:              return string(STR_SNCF_TRAIN_231CHAPELON_ADDITIONAL_TEXT);
+        articulated_part:             sw_231CHAPELON_articulated_part;
+        visual_effect_and_powered:    return (position_in_articulated_veh == 0) ?
+                                          visual_effect_and_powered(VISUAL_EFFECT_STEAM, -3, DISABLE_WAGON_POWER) :
+                                          visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+        can_attach_wagon:             sw_attach_only_express_mail_passenger;
+        length:                       sw_231CHAPELON_length;
+    }
+}
