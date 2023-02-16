@@ -1,0 +1,60 @@
+template tmpl_vehicle_BB27000_8_views() {
+     //xpos ypos xsize ysize xrel yrel
+    [4, 5, 8, 25,  -3, -12]
+    [19, 5, 22, 20, -14, -13]
+    [50, 5, 32, 15, -19, -11]
+    [92, 5, 22, 17, -7, -9]
+    [125, 5, 8, 24,  -3, -12]
+    [140, 5, 22, 17, -15, -9]
+    [171, 5, 32, 15, -18, -11]
+    [212, 5, 22, 20, -7, -12]
+}
+
+template tmpl_vehicle_BB27000_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [171, 5, 32, 15, -29, -9]
+}
+
+spriteset (set_BB27000_graphics,          "gfx/BB27000.png") { tmpl_vehicle_BB27000_8_views() }
+spriteset (set_BB27000_graphics_purchase, "gfx/BB27000.png") { tmpl_vehicle_BB27000_purchase() }
+
+item(FEAT_TRAINS, item_BB27000) {
+    property {
+        name:                         string(STR_SNCF_TRAIN_BB27000_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(2001, 1, 1);
+        model_life:                   VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                 37;
+        reliability_decay:            9;
+        refittable_cargo_classes:     bitmask();
+        non_refittable_cargo_classes: bitmask();
+        loading_speed:                0; 
+        cost_factor:                  90;
+        running_cost_factor:          143;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        140 km/h;
+        misc_flags:                   bitmask();
+        refit_cost:                   0;
+        track_type:                   AC25DC15;
+        ai_special_flag:              AI_FLAG_PASSENGER | AI_FLAG_CARGO;
+        power:                        5630 hp;
+        running_cost_base:            RUNNING_COST_ELECTRIC;
+        dual_headed:                  0;
+        cargo_capacity:               0;
+        weight:                       90 ton;
+        ai_engine_rank:               0;
+        engine_class:                 ENGINE_CLASS_ELECTRIC;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0.350;
+        air_drag_coefficient:         0.06;
+        visual_effect_and_powered:    visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 2, DISABLE_WAGON_POWER);
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+    }
+    graphics {
+        default:                      set_BB27000_graphics;
+        purchase:                     set_BB27000_graphics_purchase;
+        additional_text:              return string(STR_SNCF_TRAIN_BB27000_ADDITIONAL_TEXT);
+        can_attach_wagon:             sw_attach_no_passenger;
+   }
+}

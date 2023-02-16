@@ -60,6 +60,7 @@ grf {
 // Electric
 #include "src/BB12000.nml"
 #include "src/CC40100.nml"
+#include "src/BB27000.nml"
 
 // Wait for acs121 consent
 #include "src/BB26000.nml"
