@@ -29,7 +29,7 @@ template tmpl_vehicle_230BDG_TENDER_8_views(livery) {
 
 template tmpl_vehicle_230BDG_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [149, 5, 32, 14, -24, -10]
+    [149, 5, 32, 14, -29, -10]
 }
 
 spriteset (set_230BDG_graphics_0_0,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(0, 0) }
