@@ -1,0 +1,86 @@
+template tmpl_vehicle_232TC_8_views(frame, livery) {
+    //xpos ypos xsize ysize xrel yrel
+    [5 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 116, 8, 24, -3, -16]
+    [18 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 116, 22, 17, -11, -10]
+    [45 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 116, 32, 14, -10, -9]
+    [82 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 116, 22, 17, -6, -9]
+    [109 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 116, 8, 24, -3, -12]
+    [122 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 116, 22, 17, -19, -6]
+    [149 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 116, 32, 14, -24, -10]
+    [186 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 116, 22, 17, -11, -12]
+}
+
+template tmpl_vehicle_232TC_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [149, 5, 32, 14, -29, -10]
+}
+
+spriteset (set_232TC_graphics_0_0,      "gfx/232TC.png") { tmpl_vehicle_232TC_8_views(0, 0) }
+spriteset (set_232TC_graphics_1_0,      "gfx/232TC.png") { tmpl_vehicle_232TC_8_views(1, 0) }
+spriteset (set_232TC_graphics_2_0,      "gfx/232TC.png") { tmpl_vehicle_232TC_8_views(2, 0) }
+spriteset (set_232TC_graphics_3_0,      "gfx/232TC.png") { tmpl_vehicle_232TC_8_views(3, 0) }
+spriteset (set_232TC_graphics_0_1,      "gfx/232TC.png") { tmpl_vehicle_232TC_8_views(0, 1) }
+spriteset (set_232TC_graphics_1_1,      "gfx/232TC.png") { tmpl_vehicle_232TC_8_views(1, 1) }
+spriteset (set_232TC_graphics_2_1,      "gfx/232TC.png") { tmpl_vehicle_232TC_8_views(2, 1) }
+spriteset (set_232TC_graphics_3_1,      "gfx/232TC.png") { tmpl_vehicle_232TC_8_views(3, 1) }
+spriteset (set_232TC_graphics_purchase, "gfx/232TC.png") { tmpl_vehicle_232TC_purchase() }
+
+switch (FEAT_TRAINS, SELF, sw_232TC_graphics_0, motion_counter % 4) {
+    0: set_232TC_graphics_0_0;
+    1: set_232TC_graphics_1_0;
+    2: set_232TC_graphics_2_0;
+    3: set_232TC_graphics_3_0;
+}
+
+switch (FEAT_TRAINS, SELF, sw_232TC_graphics_1, motion_counter % 4) {
+    0: set_232TC_graphics_0_1;
+    1: set_232TC_graphics_1_1;
+    2: set_232TC_graphics_2_1;
+    3: set_232TC_graphics_3_1;
+}
+
+random_switch (FEAT_TRAINS, SELF, sw_232TC_graphics_random) {
+    1: sw_232TC_graphics_0;
+    2: sw_232TC_graphics_1;
+}
+
+item(FEAT_TRAINS, item_232TC) {
+    property {
+        name:                         string(STR_SNCF_TRAIN_232TC_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(1923, 1, 1);
+        model_life:                   43;
+        vehicle_life:                 24;
+        reliability_decay:            12;
+        refittable_cargo_classes:     bitmask();
+        non_refittable_cargo_classes: bitmask();
+        loading_speed:                0; 
+        cost_factor:                  16;
+        running_cost_factor:          100;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        100 km/h;
+        misc_flags:                   bitmask();
+        refit_cost:                   0;
+        track_type:                   UNELECTRIFIED;
+        ai_special_flag:              AI_FLAG_PASSENGER | AI_FLAG_CARGO;
+        power:                        1200 hp;
+        running_cost_base:            RUNNING_COST_STEAM;
+        dual_headed:                  0;
+        cargo_capacity:               0;
+        weight:                       83.2 ton;
+        ai_engine_rank:               0;
+        engine_class:                 ENGINE_CLASS_STEAM;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0.142;
+        air_drag_coefficient:         0.06;
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+        length:                       6;
+        visual_effect_and_powered:    visual_effect_and_powered(VISUAL_EFFECT_STEAM,-3, DISABLE_WAGON_POWER);
+    }
+    graphics {
+        default:                      sw_232TC_graphics_random;
+        purchase:                     set_232TC_graphics_purchase;
+        additional_text:              return string(STR_SNCF_TRAIN_232TC_ADDITIONAL_TEXT);
+    }
+}
