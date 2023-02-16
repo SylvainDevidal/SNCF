@@ -59,7 +59,7 @@ item(FEAT_TRAINS, item_X2000) {
         model_life:                   37;
         vehicle_life:                 20;
         reliability_decay:            6;
-        refittable_cargo_classes:     bitmask();
+        refittable_cargo_classes:     bitmask(CC_PASSENGERS);
         non_refittable_cargo_classes: bitmask();
         loading_speed:                0; 
         cost_factor:                  11;

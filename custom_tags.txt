@@ -25,6 +25,8 @@ STR_TRAIN_231EGHK     :231EGHK
 
 # Diesel
 STR_TRAIN_262BD       :262BD
+STR_TRAIN_X2000       :X2000 Iroquois
+STR_TRAIN_TAR         :TAR
 
 # Electric
 STR_TRAIN_BB12000     :BB12000
@@ -39,4 +41,4 @@ STR_WAGON_CORAIL      :Voiture Corail
 STR_WAGON_FOURGON     :Voiture Fourgon
 
 # Stuff
-STR_GRAPHICS_CREDIT   :Emperor Jake, The Irish
+STR_GRAPHICS_CREDIT   :Emperor Jake, The Irish, Hovering Teacup. If you regognize a graphics of your own and are not credited please contact this GRF author on the forums.

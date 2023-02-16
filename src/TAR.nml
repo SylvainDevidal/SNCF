@@ -1,0 +1,108 @@
+template tmpl_vehicle_TAR_8_views_front() {
+    //xpos ypos xsize ysize xrel yrel
+    [7, 77, 8, 24, -3, -12]
+    [22, 77, 22, 17, -15, -6]
+    [53, 77, 29, 11, -15, -8]
+    [91, 77, 22, 17, -4, -7]
+    [125, 77, 8, 24, -3, -11]
+    [140, 77, 22, 17, -16, -6]
+    [171, 77, 32, 12, -18, -8]
+    [208, 77, 22, 17, -6, -8]
+}
+
+template tmpl_vehicle_TAR_8_views_rear() {
+    //xpos ypos xsize ysize xrel yrel
+    [125, 77, 8, 24, -3, -11]
+    [140, 77, 22, 17, -16, -6]
+    [171, 77, 32, 12, -18, -8]
+    [208, 77, 22, 17, -6, -8]
+    [7, 77, 8, 24, -3, -12]
+    [22, 77, 22, 17, -15, -6]
+    [53, 77, 32, 12, -15, -8]
+    [91, 77, 22, 17, -4, -7]
+}
+
+template tmpl_vehicle_TAR_8_views_coach() {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 118, 8, 24, -3, -10]
+    [21, 118, 22, 17, -16, -6]
+    [56, 118, 28, 12, -14, -8]
+    [94, 118, 22, 17, -6, -8]
+}
+
+template tmpl_vehicle_TAR_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [171, 77, 32, 12, -29, -8]
+}
+
+spriteset (set_TAR_graphics_front,    "gfx/iroqtar.png") { tmpl_vehicle_TAR_8_views_front() }
+spriteset (set_TAR_graphics_coach,     "gfx/iroqtar.png") { tmpl_vehicle_TAR_8_views_coach() }
+spriteset (set_TAR_graphics_rear,     "gfx/iroqtar.png") { tmpl_vehicle_TAR_8_views_rear() }
+spriteset (set_TAR_graphics_purchase, "gfx/iroqtar.png") { tmpl_vehicle_TAR_purchase() }
+
+switch (FEAT_TRAINS, SELF, sw_TAR_graphics, position_in_articulated_veh % 3) {
+    0: set_TAR_graphics_front;
+    1: set_TAR_graphics_coach;
+    2: set_TAR_graphics_rear;
+}
+
+switch(FEAT_TRAINS, SELF, sw_TAR_articulated_part, extra_callback_info1) {
+    1 .. 2 : return item_TAR;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch(FEAT_TRAINS, SELF, sw_TAR_check_length, num_vehs_in_consist) {
+    0 .. 6: return CB_RESULT_NO_TEXT;
+    return string(ERR_TAR_TOO_LONG);
+}
+
+switch(FEAT_TRAINS, SELF, sw_TAR_can_attach_wagon, vehicle_type_id) {
+    item_TAR: CB_RESULT_ATTACH_ALLOW;
+    return string(ERR_TAR_CANNOT_ATTACH_OTHER);
+}
+
+item(FEAT_TRAINS, item_TAR) {
+    property {
+        name:                         string(STR_SNCF_TRAIN_TAR_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(1935, 1, 1);
+        model_life:                   24;
+        vehicle_life:                 20;
+        reliability_decay:            11;
+        refittable_cargo_classes:     bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: bitmask();
+        loading_speed:                0; 
+        cost_factor:                  26;
+        running_cost_factor:          95;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        140 km/h;
+        misc_flags:                   bitmask();
+        refit_cost:                   0;
+        track_type:                   UNELECTRIFIED;
+        ai_special_flag:              AI_FLAG_PASSENGER;
+        power:                        410 hp;
+        running_cost_base:            RUNNING_COST_DIESEL;
+        dual_headed:                  0;
+        cargo_capacity:               48;
+        weight:                       25 ton;
+        ai_engine_rank:               0;
+        engine_class:                 ENGINE_CLASS_DIESEL;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0.270;
+        air_drag_coefficient:         0.06;
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+        length:                       7;
+    }
+    graphics {
+        default:                      sw_TAR_graphics;
+        purchase:                     set_TAR_graphics_purchase;
+        additional_text:              return string(STR_SNCF_TRAIN_TAR_ADDITIONAL_TEXT);
+        articulated_part:             sw_TAR_articulated_part;
+        visual_effect_and_powered:    return (position_in_articulated_veh == 0) ?
+                                          visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 1, ENABLE_WAGON_POWER) :
+                                          visual_effect_and_powered(VISUAL_EFFECT_DIESEL, -3, ENABLE_WAGON_POWER);
+        can_attach_wagon:             sw_TAR_can_attach_wagon;
+        start_stop:                   sw_TAR_check_length;
+    }
+}

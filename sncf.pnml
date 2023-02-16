@@ -50,14 +50,17 @@ grf {
 
 // Diesel
 #include "src/262DB.nml"
+
+// Need consent
 #include "src/X2000.nml"
+#include "src/TAR.nml"
 
 
 // Electric
 #include "src/BB12000.nml"
 #include "src/CC40100.nml"
 
-// Need ask consent
+// Need ask consent (who?)
 #include "src/BB26000.nml"
 
 
