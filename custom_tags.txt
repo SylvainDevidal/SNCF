@@ -2,15 +2,14 @@ VERSION  :0.0.1
 TITLE    :My GRF
 
 # Rail type
-STR_STEAM        :Steam
-STR_DIESEL       :Diesel
-STR_ELEC_15DC    :1,5 kV DC
-STR_ELEC_3DC     :3 kV DC
-STR_ELEC_15AC    :15 kV AC
-STR_ELEC_25AC    :25 kV AC
-STR_ELEC_DUAL    :1,5 kV DC / 25 kV AC
-STR_ELEC_QUADRI  :1,5 kV DC / 3 kV DC / 15 kV AC / 25 kV AC
-STR_ELEC_LGV     :High speed
+STR_STEAM                 :Steam
+STR_DIESEL                :Diesel
+STR_ELEC_15DC             :1,5 kV DC
+STR_ELEC_3DC              :3 kV DC
+STR_ELEC_15AC             :15 kV AC
+STR_ELEC_25AC             :25 kV AC
+STR_ELEC_15DC25AC         :1,5 kV DC / 25 kV AC
+STR_ELEC_15DC03DC15AC25AC :1,5 kV DC / 3 kV DC / 15 kV AC / 25 kV AC
 
 # Steam
 STR_TRAIN_040TA       :040TA

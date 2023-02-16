@@ -66,21 +66,21 @@ STR_SNCF_TRAIN_BB12000_NAME               :{STR_TRAIN_BB12000} ({STR_ELEC_25AC})
 STR_SNCF_TRAIN_BB12000_ADDITIONAL_TEXT    :Graphics by Emperor Jake
 
 # Electric (need credits)
-STR_SNCF_TRAIN_BB26000_NAME               :{STR_TRAIN_BB26000} ({STR_ELEC_DUAL})
+STR_SNCF_TRAIN_BB26000_NAME               :{STR_TRAIN_BB26000} ({STR_ELEC_15DC25AC})
 STR_SNCF_TRAIN_BB26000_ADDITIONAL_TEXT    :Who should I credit for graphics?
 
 # Electric (released)
-STR_SNCF_TRAIN_CC40100_NAME               :{STR_TRAIN_CC40100} ({STR_ELEC_QUADRI})
+STR_SNCF_TRAIN_CC40100_NAME               :{STR_TRAIN_CC40100} ({STR_ELEC_15DC03DC15AC25AC})
 STR_SNCF_TRAIN_CC40100_ADDITIONAL_TEXT    :Graphics by Emperor Jake
 
 # TGV (need credits)
-STR_SNCF_TRAIN_TGV_PSE_NAME                :{STR_TRAIN_TGV_PSE} ({STR_ELEC_LGV})
-STR_SNCF_TRAIN_TGV_PSE_ADDITIONAL_TEXT     :Who should I credit for graphics?
+STR_SNCF_TRAIN_TGV_PSE_NAME               :{STR_TRAIN_TGV_PSE} ({STR_ELEC_15DC25AC})
+STR_SNCF_TRAIN_TGV_PSE_ADDITIONAL_TEXT    :Who should I credit for graphics?
 
 # Wagon (need credits)
 STR_SNCF_WAGON_CORAIL_NAME                :{STR_WAGON_CORAIL} (passengers)
 STR_SNCF_WAGON_CORAIL_ADDITIONAL_TEXT     :Graphics by The Irish
 
 # Wagon (need credits)
-STR_SNCF_WAGON_FOURGON_NAME                :{STR_WAGON_CORAIL} (mail)
-STR_SNCF_WAGON_FOURGON_ADDITIONAL_TEXT     :Graphics by The Irish
+STR_SNCF_WAGON_FOURGON_NAME               :{STR_WAGON_CORAIL} (mail)
+STR_SNCF_WAGON_FOURGON_ADDITIONAL_TEXT    :Graphics by The Irish
