@@ -15,6 +15,12 @@ switch (FEAT_TRAINS, SELF, sw_attach_no_mail, cargo_classes & bitmask(CC_MAIL))
     default: string(ERR_NO_MAIL);
 }
 
+switch (FEAT_TRAINS, SELF, sw_attach_no_passenger, cargo_classes & bitmask(CC_PASSENGERS))
+{
+    0: CB_RESULT_ATTACH_ALLOW;
+    default: string(ERR_NO_PASSENGER);
+}
+
 switch (FEAT_TRAINS, SELF, sw_attach_only_passenger, cargo_classes & bitmask(CC_PASSENGERS))
 {
     0: string(ERR_ONLY_PASSENGER);

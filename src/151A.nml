@@ -1,8 +1,3 @@
-/*
-TODO :
-- 2CC style purchase
-*/
-
 template tmpl_vehicle_151A_8_views(frame) {
     //xpos ypos xsize ysize xrel yrel
     [5, 5 + frame * 29, 8, 24, -3, -16]

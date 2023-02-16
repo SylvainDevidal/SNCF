@@ -1,8 +1,3 @@
-/*
-TODO :
-- Better handle liveries
-*/
-
 template tmpl_vehicle_BB26000_8_views() {
      //xpos ypos xsize ysize xrel yrel
     [1, 1, 8, 24,  -3, -12]
@@ -17,17 +12,16 @@ template tmpl_vehicle_BB26000_8_views() {
 
 template tmpl_vehicle_BB26000_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [1, 64, 87, 12, -50, -6]
+    [24, 64, 30, 12, -27, -6]
 }
 
 spriteset (set_BB26000_graphics_beton,        "gfx/BB26000_Beton.png") { tmpl_vehicle_BB26000_8_views() }
 spriteset (set_BB26000_graphics_multiservice, "gfx/BB26000_Multiservices.png") { tmpl_vehicle_BB26000_8_views() }
 spriteset (set_BB26000_graphics_purchase,     "gfx/BB26000_Beton.png") { tmpl_vehicle_BB26000_purchase() }
 
-/* TODO : Date ? Refit ? Limiter type chargement par livrée ? */
-switch(FEAT_TRAINS, SELF, sw_BB26000_graphics, build_year % 2) {
-    0: set_BB26000_graphics_beton;
-    1: set_BB26000_graphics_multiservice;
+random_switch (FEAT_TRAINS, SELF, sw_BB26000_graphics) {
+    1: set_BB26000_graphics_beton;
+    2: set_BB26000_graphics_multiservice;
 }
 
 item(FEAT_TRAINS, item_BB26000) {

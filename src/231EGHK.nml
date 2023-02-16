@@ -1,8 +1,3 @@
-/*
-TODO :
-- 2CC style purchase
-*/
-
 template tmpl_vehicle_231EGHK_8_views(frame, livery) {
     //xpos ypos xsize ysize xrel yrel
     [2 + livery % 2 * 204, 4 + frame * 26 + int(livery / 2) * 186, 8, 24, -3, -16]

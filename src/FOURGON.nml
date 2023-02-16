@@ -1,8 +1,3 @@
-/*
-TODO:
-- Support reverse and draw cabin in "front" mode
-*/
-
 template tmpl_vehicle_FOURGON_4_views(livery) {
     //xpos ypos xsize ysize xrel yrel
     [4, 5 + livery * 32, 8, 24,  -3, -12]

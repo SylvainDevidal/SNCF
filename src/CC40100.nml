@@ -12,7 +12,7 @@ template tmpl_vehicle_CC40100_8_views() {
 
 template tmpl_vehicle_CC40100_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [1, 64, 87, 12, -51, -6]
+    [23, 64, 32, 12, -29, -6]
 }
 
 spriteset (set_CC40100_graphics,          "gfx/CC40100.png") { tmpl_vehicle_CC40100_8_views() }

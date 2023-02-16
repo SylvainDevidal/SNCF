@@ -2,7 +2,6 @@
 TODO :
 - Correct colours (no 2CC)
 - Forbid "passengers" cargo in wagons
-- 2CC style purchase
 */
 
 template tmpl_vehicle_BB12000_8_views() {
@@ -62,5 +61,6 @@ item(FEAT_TRAINS, item_BB12000) {
         default:                      set_BB12000_graphics;
         purchase:                     set_BB12000_graphics_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_BB12000_ADDITIONAL_TEXT);
+        can_attach_wagon:             sw_attach_no_passenger;
     }
 }

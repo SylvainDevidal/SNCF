@@ -169,12 +169,9 @@ switch(FEAT_TRAINS, SELF, sw_TGV_PSE_length, position_in_articulated_veh) {
 }
 
 switch(FEAT_TRAINS, SELF, sw_TGV_PSE_capacity, position_in_articulated_veh) {
-    1: 30;
-    2: 40;
-    3: 40;
-    6: 66;
-    7: 66;
-    8: 66;
+    1: 32;
+    2 .. 3: 40;
+    6 .. 8: 66;
     9: 60;
     default: 0;
 }
@@ -196,7 +193,7 @@ item(FEAT_TRAINS, item_TGV_PSE) {
         speed:                        270 km/h;
         misc_flags:                   bitmask(TRAIN_FLAG_MU);
         refit_cost:                   0;
-        track_type:                   FLGV_SE;
+        track_type:                   AC25DC15;
         ai_special_flag:              AI_FLAG_PASSENGER;
         power:                        8582 kW;
         running_cost_base:            RUNNING_COST_ELECTRIC;
@@ -209,6 +206,7 @@ item(FEAT_TRAINS, item_TGV_PSE) {
         air_drag_coefficient:         0.06;
         extra_weight_per_wagon:       0 ton;
         bitmask_vehicle_info:         0;
+        cargo_capacity:               1;
     }
     graphics {
         default:                      sw_TGV_PSE_graphics;
@@ -221,6 +219,6 @@ item(FEAT_TRAINS, item_TGV_PSE) {
                                           visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
         length:                       sw_TGV_PSE_length;
         cargo_capacity:               sw_TGV_PSE_capacity;
-        purchase_cargo_capacity:      368;
+        purchase_cargo_capacity:      return 37;
     }
 }
