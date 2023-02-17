@@ -47,6 +47,9 @@ STR_SNCF_TRAIN_231EGHK_NAME                :{STR_TRAIN_231EGHK} ({STR_STEAM})
 STR_SNCF_TRAIN_231EGHK_ADDITIONAL_TEXT     :This engine can pull passengers, mails or express cargo only.{}Graphics by The Irish
 STR_SNCF_TRAIN_232TC_NAME                  :{STR_TRAIN_232TC} ({STR_STEAM})
 STR_SNCF_TRAIN_232TC_ADDITIONAL_TEXT       :Graphics by The Irish
+STR_SNCF_TRAIN_240A_NAME                   :{STR_TRAIN_240A} ({STR_STEAM})
+STR_SNCF_TRAIN_240A_ADDITIONAL_TEXT        :Graphics by The Irish
+
 # Need consent
 STR_SNCF_TRAIN_231CHAPELON_NAME            :{STR_TRAIN_231CHAPELON} ({STR_STEAM})
 STR_SNCF_TRAIN_231CHAPELON_ADDITIONAL_TEXT :This engine can pull passengers, mails or express cargo only.{}Graphics by Snail

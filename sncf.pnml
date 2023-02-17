@@ -48,6 +48,7 @@ grf {
 #include "src/231EGHK.nml"
 #include "src/231CHAPELON.nml"
 #include "src/232TC.nml"
+#include "src/240A.nml"
 
 // Diesel
 #include "src/262DB.nml"
