@@ -28,6 +28,7 @@ STR_TRAIN_240A            :240A
 STR_TRAIN_240P            :240P
 STR_TRAIN_241AC           :241AC
 STR_TRAIN_241P            :241P
+STR_TRAIN_242A            :242A
 
 # Diesel
 STR_TRAIN_262BD           :262BD
