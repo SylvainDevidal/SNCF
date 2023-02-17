@@ -57,6 +57,8 @@ STR_SNCF_TRAIN_241P_NAME                   :{STR_TRAIN_241P} ({STR_STEAM})
 STR_SNCF_TRAIN_241P_ADDITIONAL_TEXT        :Graphics by The Irish
 STR_SNCF_TRAIN_242A_NAME                   :{STR_TRAIN_242A} ({STR_STEAM})
 STR_SNCF_TRAIN_242A_ADDITIONAL_TEXT        :This engine can pull passengers, mails or express cargo only.{}Graphics by The Irish
+STR_SNCF_TRAIN_242TA_NAME                  :{STR_TRAIN_242TA} ({STR_STEAM})
+STR_SNCF_TRAIN_242TA_ADDITIONAL_TEXT       :Graphics by The Irish
 
 # Need consent
 STR_SNCF_TRAIN_231CHAPELON_NAME            :{STR_TRAIN_231CHAPELON} ({STR_STEAM})
