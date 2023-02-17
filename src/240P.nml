@@ -1,0 +1,126 @@
+template tmpl_vehicle_240P_8_views(frame, livery) {
+    //xpos ypos xsize ysize xrel yrel
+    [2 + livery * 204, 4 + frame * 26, 8, 24, -3, -16]
+    [12 + livery * 204, 4 + frame * 26, 22, 17, -10, -9]
+    [36 + livery * 204, 4 + frame * 26, 32, 14, -11, -9]
+    [70 + livery * 204, 4 + frame * 26, 22, 17, -3, -7]
+    [94 + livery * 204, 4 + frame * 26, 8, 24, -3, -13]
+    [104 + livery * 204, 4 + frame * 26, 22, 17, -18, -8]
+    [128 + livery * 204, 4 + frame * 26, 32, 14, -24, -9]
+    [162 + livery * 204, 4 + frame * 26, 22, 17, -13, -10]
+}
+
+template tmpl_vehicle_240P_TENDER_8_views(livery) {
+    //xpos ypos xsize ysize xrel yrel
+    [2 + livery * 204, 160, 8, 24, -3, -21]
+    [12 + livery * 204, 160, 22, 17, -6, -12]
+    [36 + livery * 204, 160, 32, 14, 2, -10]
+    [70 + livery * 204, 160, 22, 17, -2, -7]
+    [94 + livery * 204, 160, 8, 24, -3, -11]
+    [104 + livery * 204, 160, 22, 17, -19, -8]
+    [128 + livery * 204, 160, 32, 14, -38, -10]
+    [162 + livery * 204, 160, 22, 17, -19, -15]
+}
+
+template tmpl_vehicle_240P_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [128, 4, 32, 14, -29, -10]
+}
+
+spriteset (set_240P_graphics_0_0,        "gfx/240P.png") { tmpl_vehicle_240P_8_views(0, 0) }
+spriteset (set_240P_graphics_1_0,        "gfx/240P.png") { tmpl_vehicle_240P_8_views(1, 0) }
+spriteset (set_240P_graphics_2_0,        "gfx/240P.png") { tmpl_vehicle_240P_8_views(2, 0) }
+spriteset (set_240P_graphics_3_0,        "gfx/240P.png") { tmpl_vehicle_240P_8_views(3, 0) }
+spriteset (set_240P_graphics_4_0,        "gfx/240P.png") { tmpl_vehicle_240P_8_views(4, 0) }
+spriteset (set_240P_graphics_5_0,        "gfx/240P.png") { tmpl_vehicle_240P_8_views(5, 0) }
+spriteset (set_240P_graphics_0_1,        "gfx/240P.png") { tmpl_vehicle_240P_8_views(0, 1) }
+spriteset (set_240P_graphics_1_1,        "gfx/240P.png") { tmpl_vehicle_240P_8_views(1, 1) }
+spriteset (set_240P_graphics_2_1,        "gfx/240P.png") { tmpl_vehicle_240P_8_views(2, 1) }
+spriteset (set_240P_graphics_3_1,        "gfx/240P.png") { tmpl_vehicle_240P_8_views(3, 1) }
+spriteset (set_240P_graphics_4_1,        "gfx/240P.png") { tmpl_vehicle_240P_8_views(4, 1) }
+spriteset (set_240P_graphics_5_1,        "gfx/240P.png") { tmpl_vehicle_240P_8_views(5, 1) }
+spriteset (set_240P_tender_graphics_0, "gfx/240P.png") { tmpl_vehicle_240P_TENDER_8_views(0) }
+spriteset (set_240P_tender_graphics_1, "gfx/240P.png") { tmpl_vehicle_240P_TENDER_8_views(1) }
+spriteset (set_240P_graphics_purchase, "gfx/240P.png") { tmpl_vehicle_240P_purchase() }
+
+switch (FEAT_TRAINS, SELF, sw_240P_graphics_0, motion_counter % 6) {
+    0: set_240P_graphics_0_0;
+    1: set_240P_graphics_1_0;
+    2: set_240P_graphics_2_0;
+    3: set_240P_graphics_3_0;
+    4: set_240P_graphics_4_0;
+    5: set_240P_graphics_5_0;
+}
+
+switch (FEAT_TRAINS, SELF, sw_240P_graphics_1, motion_counter % 6) {
+    0: set_240P_graphics_0_1;
+    1: set_240P_graphics_1_1;
+    2: set_240P_graphics_2_1;
+    3: set_240P_graphics_3_1;
+    4: set_240P_graphics_4_1;
+    5: set_240P_graphics_5_1;
+}
+
+random_switch (FEAT_TRAINS, SELF, sw_240P_graphics_random) {
+    1: sw_240P_graphics_0;
+    2: sw_240P_graphics_1;
+}
+
+random_switch (FEAT_TRAINS, SELF, sw_240P_tender_random) {
+    1: set_240P_tender_graphics_0;
+    2: set_240P_tender_graphics_1;
+}
+
+switch(FEAT_TRAINS, SELF, sw_240P_graphics, position_in_articulated_veh) {
+    0: sw_240P_graphics_random;
+    1: sw_240P_tender_random;
+}
+
+switch(FEAT_TRAINS, SELF, sw_240P_articulated_part, extra_callback_info1) {
+    1 : return item_240P;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+item(FEAT_TRAINS, item_240P) {
+    property {
+        name:                         string(STR_SNCF_TRAIN_240P_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(1940, 1, 1);
+        model_life:                   41;
+        vehicle_life:                 30;
+        reliability_decay:            20;
+        refittable_cargo_classes:     NO_CARGO_CLASS;
+        non_refittable_cargo_classes: ALL_CARGO_CLASSES;
+        loading_speed:                0; 
+        cost_factor:                  41;
+        running_cost_factor:          185;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        100 km/h;
+        misc_flags:                   bitmask();
+        refit_cost:                   0;
+        track_type:                   UNELECTRIFIED;
+        ai_special_flag:              AI_FLAG_PASSENGER | AI_FLAG_CARGO;
+        power:                        4700 hp;
+        running_cost_base:            RUNNING_COST_STEAM;
+        dual_headed:                  0;
+        cargo_capacity:               0;
+        weight:                       179 ton;
+        ai_engine_rank:               0;
+        engine_class:                 ENGINE_CLASS_STEAM;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0.256;
+        air_drag_coefficient:         0.06;
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+    }
+    graphics {
+        default:                      sw_240P_graphics;
+        purchase:                     set_240P_graphics_purchase;
+        additional_text:              return string(STR_SNCF_TRAIN_240P_ADDITIONAL_TEXT);
+        articulated_part:             sw_240P_articulated_part;
+        visual_effect_and_powered:    return (position_in_articulated_veh == 0) ?
+                                          visual_effect_and_powered(VISUAL_EFFECT_STEAM, -3, DISABLE_WAGON_POWER) :
+                                          visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+        length:                       return (position_in_articulated_veh == 0) ? 6 : 3;
+    }
+}

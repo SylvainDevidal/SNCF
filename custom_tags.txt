@@ -25,6 +25,7 @@ STR_TRAIN_231EGHK         :231EGHK
 STR_TRAIN_231CHAPELON     :231 Chapelon
 STR_TRAIN_232TC           :232TC
 STR_TRAIN_240A            :240A
+STR_TRAIN_240P            :240P
 
 # Diesel
 STR_TRAIN_262BD           :262BD
