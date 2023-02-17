@@ -15,11 +15,16 @@ switch (FEAT_TRAINS, SELF, sw_attach_no_mail, cargo_classes & bitmask(CC_MAIL))
     default: string(ERR_NO_MAIL);
 }
 
-// BUG: Displays a message when trying to attach 2 engines together
-switch (FEAT_TRAINS, SELF, sw_attach_no_passenger, cargo_classes & bitmask(CC_PASSENGERS))
+switch (FEAT_TRAINS, SELF, sw_attach_no_passenger_check_capacity, cargo_capacity)
 {
     0: CB_RESULT_ATTACH_ALLOW;
     default: string(ERR_NO_PASSENGER);
+}
+
+switch (FEAT_TRAINS, SELF, sw_attach_no_passenger, cargo_classes & bitmask(CC_PASSENGERS))
+{
+    0: CB_RESULT_ATTACH_ALLOW;
+    default: sw_attach_no_passenger_check_capacity;
 }
 
 switch (FEAT_TRAINS, SELF, sw_attach_only_passenger, cargo_classes & bitmask(CC_PASSENGERS))
