@@ -58,6 +58,7 @@ grf {
 
 
 // Electric
+#include "src/CC7100.nml"
 #include "src/BB12000.nml"
 #include "src/CC40100.nml"
 #include "src/BB27000.nml"
