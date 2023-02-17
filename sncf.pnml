@@ -51,6 +51,7 @@ grf {
 
 // Diesel
 #include "src/262DB.nml"
+#include "src/CC65000.nml"
 
 // Need consent
 #include "src/X2000.nml"

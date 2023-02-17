@@ -52,6 +52,8 @@ STR_SNCF_TRAIN_231CHAPELON_ADDITIONAL_TEXT :This engine can pull passengers, mai
 # Diesel
 STR_SNCF_TRAIN_262DB_NAME                  :{STR_TRAIN_262BD} ({STR_DIESEL})
 STR_SNCF_TRAIN_262DB_ADDITIONAL_TEXT       :This engine can pull passengers coaches only.{}Graphics by The Irish
+STR_SNCF_TRAIN_CC65000_NAME                :{STR_TRAIN_CC65000} ({STR_DIESEL})
+STR_SNCF_TRAIN_CC65000_ADDITIONAL_TEXT     :Graphics by The Irish
 
 # Need consent
 STR_SNCF_TRAIN_X2000_NAME                  :{STR_TRAIN_X2000} ({STR_DIESEL})
