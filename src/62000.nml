@@ -1,0 +1,60 @@
+template tmpl_vehicle_62000_8_views() {
+     //xpos ypos xsize ysize xrel yrel
+    [4, 3, 8, 23,  -3, -12]
+    [21, 3, 22, 21, -16, -11]
+    [58, 3, 32, 12, -18, -8]
+    [101, 3, 22, 21, -7, -13]
+    [137, 3, 8, 23,  -3, -12]
+    [149, 3, 22, 21, -16, -11]
+    [181, 3, 32, 12, -17, -8]
+    [231, 3, 22, 21, -7, -13]
+}
+
+template tmpl_vehicle_62000_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [181, 3, 32, 12, -28, -8]
+}
+
+spriteset (set_62000_graphics,          "gfx/62000.png") { tmpl_vehicle_62000_8_views() }
+spriteset (set_62000_graphics_purchase, "gfx/62000.png") { tmpl_vehicle_62000_purchase() }
+
+item(FEAT_TRAINS, item_62000) {
+    property {
+        name:                         string(STR_SNCF_TRAIN_62000_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(1946, 1, 1);
+        model_life:                   47;
+        vehicle_life:                 25;
+        reliability_decay:            19;
+        refittable_cargo_classes:     NO_CARGO_CLASS;
+        non_refittable_cargo_classes: ALL_CARGO_CLASSES;
+        loading_speed:                0; 
+        cost_factor:                  13;
+        running_cost_factor:          90;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        96 km/h;
+        misc_flags:                   bitmask();
+        refit_cost:                   0;
+        track_type:                   UNELECTRIFIED;
+        ai_special_flag:              AI_FLAG_PASSENGER | AI_FLAG_CARGO;
+        power:                        660 hp;
+        running_cost_base:            RUNNING_COST_DIESEL;
+        dual_headed:                  0;
+        cargo_capacity:               0;
+        weight:                       109 ton;
+        ai_engine_rank:               0;
+        engine_class:                 ENGINE_CLASS_DIESEL;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0.208;
+        air_drag_coefficient:         0.06;
+        visual_effect_and_powered:    visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 0, DISABLE_WAGON_POWER);
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+        length:                       8;
+    }
+    graphics {
+        default:                      set_62000_graphics;
+        purchase:                     set_62000_graphics_purchase;
+        additional_text:              return string(STR_SNCF_TRAIN_62000_ADDITIONAL_TEXT);
+   }
+}
