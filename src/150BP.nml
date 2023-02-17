@@ -86,8 +86,8 @@ item(FEAT_TRAINS, item_150BP) {
         model_life:                   40;
         vehicle_life:                 26;
         reliability_decay:            10;
-        refittable_cargo_classes:     bitmask();
-        non_refittable_cargo_classes: bitmask();
+        refittable_cargo_classes:     NO_CARGO_CLASS;
+        non_refittable_cargo_classes: ALL_CARGO_CLASSES;
         loading_speed:                0; 
         cost_factor:                  24;
         running_cost_factor:          140;

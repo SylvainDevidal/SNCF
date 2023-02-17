@@ -109,8 +109,8 @@ item(FEAT_TRAINS, item_141R) {
         model_life:                   44;
         vehicle_life:                 33;
         reliability_decay:            14;
-        refittable_cargo_classes:     bitmask();
-        non_refittable_cargo_classes: bitmask();
+        refittable_cargo_classes:     NO_CARGO_CLASS;
+        non_refittable_cargo_classes: ALL_CARGO_CLASSES;
         loading_speed:                0; 
         cost_factor:                  24;
         running_cost_factor:          120;

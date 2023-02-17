@@ -26,8 +26,8 @@ item(FEAT_TRAINS, item_BB27000) {
         model_life:                   VEHICLE_NEVER_EXPIRES;
         vehicle_life:                 37;
         reliability_decay:            9;
-        refittable_cargo_classes:     bitmask();
-        non_refittable_cargo_classes: bitmask();
+        refittable_cargo_classes:     NO_CARGO_CLASS;
+        non_refittable_cargo_classes: ALL_CARGO_CLASSES;
         loading_speed:                0; 
         cost_factor:                  90;
         running_cost_factor:          143;

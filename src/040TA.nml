@@ -76,8 +76,8 @@ item(FEAT_TRAINS, item_040TA) {
         model_life:                   48;
         vehicle_life:                 18;
         reliability_decay:            9;
-        refittable_cargo_classes:     bitmask();
-        non_refittable_cargo_classes: bitmask();
+        refittable_cargo_classes:     NO_CARGO_CLASS;
+        non_refittable_cargo_classes: ALL_CARGO_CLASSES;
         loading_speed:                0; 
         cost_factor:                  7;
         running_cost_factor:          80;

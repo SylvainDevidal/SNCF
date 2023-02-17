@@ -49,8 +49,8 @@ item(FEAT_TRAINS, item_262DB) {
         model_life:                   17;
         vehicle_life:                 17;
         reliability_decay:            25;
-        refittable_cargo_classes:     bitmask();
-        non_refittable_cargo_classes: bitmask();
+        refittable_cargo_classes:     NO_CARGO_CLASS;
+        non_refittable_cargo_classes: ALL_CARGO_CLASSES;
         loading_speed:                0; 
         cost_factor:                  53;
         running_cost_factor:          140;
