@@ -7,29 +7,6 @@ grf {
     /* This is the first version, start numbering at 0. */
     version: 0;
     min_compatible_version: 0;
-
-    /* Define user-configurable parameters */
-    param {
-        /* There is one parameter, which can be used to alter the colour scheme */
-        param_colour_scheme {
-            type: int;
-            name: string(STR_PARAM_COLOUR_SCHEME_NAME);
-            desc: string(STR_PARAM_COLOUR_SCHEME_DESC);
-            /* There are currently three possible values:
-             * - 1cc
-             * - 2cc (default)
-             * - real-world
-             */
-            min_value: 0;
-            max_value: 2;
-            def_value: 1;
-            names: {
-                0: string(STR_PARAM_COLOUR_SCHEME_1CC);
-                1: string(STR_PARAM_COLOUR_SCHEME_2CC);
-                2: string(STR_PARAM_COLOUR_SCHEME_REAL);
-            };
-        }
-    }
 }
 
 #include "src/COMMON.nml"
@@ -60,6 +37,7 @@ grf {
 #include "src/62000.nml"
 #include "src/CC65000.nml"
 #include "src/RTG.nml"
+#include "src/X72500.nml"
 
 // Need consent
 #include "src/X2000.nml"

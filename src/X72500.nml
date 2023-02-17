@@ -1,0 +1,155 @@
+template tmpl_vehicle_X72500_8_views_front() {
+    //xpos ypos xsize ysize xrel yrel
+    [5, 5, 8, 24, -3, -12]
+    [20, 5, 22, 17, -17, -6]
+    [51, 5, 32, 12, -16, -8]
+    [93, 5, 22, 17, -4, -7]
+    [125, 5, 8, 24, -3, -11]
+    [140, 5, 22, 17, -15, -7]
+    [171, 5, 32, 12, -16, -8]
+    [213, 5, 22, 17, -4, -7]
+}
+
+template tmpl_vehicle_X72500_8_views_rear() {
+    //xpos ypos xsize ysize xrel yrel
+    [125, 36, 8, 24, -3, -11]
+    [140, 36, 22, 17, -16, -7]
+    [171, 36, 32, 12, -16, -8]
+    [213, 36, 22, 17, -4, -7]
+    [5, 36, 8, 24, -3, -12]
+    [20, 36, 22, 17, -17, -5]
+    [51, 36, 32, 12, -16, -8]
+    [93, 36, 22, 17, -4, -7]
+}
+
+template tmpl_vehicle_X72500_4_views_coach() {
+    //xpos ypos xsize ysize xrel yrel
+    [5, 66, 8, 24, -3, -12]
+    [20, 66, 22, 17, -16, -7]
+    [51, 66, 32, 12, -16, -8]
+    [93, 66, 22, 17, -4, -7]
+}
+
+template tmpl_vehicle_X72500_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [171, 5, 32, 12, -29, -9]
+}
+
+template tmpl_vehicle_X72500_pixel() {
+    //xpos ypos xsize ysize xrel yrel
+    [5, 5, 1, 1, 0, 0]
+}
+
+spriteset (set_X72500_graphics_front,    "gfx/X72500.png") { tmpl_vehicle_X72500_8_views_front() }
+spriteset (set_X72500_graphics_coach,    "gfx/X72500.png") { tmpl_vehicle_X72500_4_views_coach() }
+spriteset (set_X72500_graphics_rear,     "gfx/X72500.png") { tmpl_vehicle_X72500_8_views_rear() }
+spriteset (set_X72500_graphics_purchase, "gfx/X72500.png") { tmpl_vehicle_X72500_purchase() }
+spriteset (set_X72500_invisible,         "gfx/X72500.png") { tmpl_vehicle_X72500_pixel() }
+
+switch(FEAT_TRAINS, SELF, set_X72500_graphics_middle, cargo_subtype) {
+    0: set_X72500_invisible;
+    default: set_X72500_graphics_coach;
+}
+
+switch (FEAT_TRAINS, SELF, sw_X72500_graphics, position_in_articulated_veh) {
+    0: set_X72500_graphics_front;
+    1: set_X72500_graphics_middle;
+    2: set_X72500_graphics_rear;
+}
+
+switch(FEAT_TRAINS, SELF, sw_X72500_articulated_part, extra_callback_info1) {
+    1 .. 2 : return item_X72500;
+    default: return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch(FEAT_TRAINS, SELF, sw_X72500_check_length, num_vehs_in_consist) {
+    0 .. 9: return CB_RESULT_NO_TEXT;
+    default: return string(ERR_X72500_TOO_LONG);
+}
+
+switch(FEAT_TRAINS, SELF, sw_X72500_can_attach_wagon, vehicle_type_id) {
+    item_X72500 : CB_RESULT_ATTACH_ALLOW;
+    default: return string(ERR_X72500_CANNOT_ATTACH_OTHER);
+}
+
+switch (FEAT_TRAINS, SELF, sw_X72500_visual_effect_and_powered, position_in_articulated_veh) {
+    0: visual_effect_and_powered(VISUAL_EFFECT_DIESEL, -3, DISABLE_WAGON_POWER);
+    3: visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 1, DISABLE_WAGON_POWER);
+    default: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}
+
+switch(FEAT_TRAINS, SELF, sw_X72500_cargo_subtype_text, cargo_subtype) {
+    0: return string(STR_SUBTYPE_2_PART);
+    1: return string(STR_SUBTYPE_3_PART);
+    default: return CB_RESULT_NO_TEXT;
+}
+
+switch(FEAT_TRAINS, SELF, sw_X72500_capacity, cargo_subtype) {
+    0: 50;
+    1:  76;
+    default: CB_RESULT_NO_TEXT;
+}
+
+switch(FEAT_TRAINS, SELF, sw_X72500_shorten_2_part_vehicle, position_in_articulated_veh % 3) {
+    0: return 7;
+    1: return 1;
+    default: return 8;
+}
+
+switch(FEAT_TRAINS, SELF, sw_X72500_shorten_vehicle, cargo_subtype) {
+    0: sw_X72500_shorten_2_part_vehicle;
+    default: return 8;
+}
+
+switch(FEAT_TRAINS, SELF, sw_X72500_weight, cargo_subtype) {
+    0: return 116;
+    default: return 161;
+}
+
+item(FEAT_TRAINS, item_X72500) {
+    property {
+        name:                         string(STR_SNCF_TRAIN_X72500_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(1997, 1, 1);
+        model_life:                   VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                 28;
+        reliability_decay:            14;
+        refittable_cargo_classes:     bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: bitmask();
+        loading_speed:                0; 
+        cost_factor:                  51;
+        running_cost_factor:          97;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        160 km/h;
+        misc_flags:                   bitmask(TRAIN_FLAG_MU);
+        refit_cost:                   0;
+        track_type:                   UNELECTRIFIED;
+        ai_special_flag:              AI_FLAG_PASSENGER;
+        power:                        1200 kW;
+        running_cost_base:            RUNNING_COST_DIESEL;
+        dual_headed:                  0;
+        cargo_capacity:               50;
+        weight:                       225 ton;
+        ai_engine_rank:               0;
+        engine_class:                 ENGINE_CLASS_DIESEL;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0.270;
+        air_drag_coefficient:         0.06;
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+        length:                       8;
+    }
+    graphics {
+        default:                      sw_X72500_graphics;
+        purchase:                     set_X72500_graphics_purchase;
+        cargo_subtype_text:           sw_X72500_cargo_subtype_text;
+        additional_text:              return string(STR_SNCF_TRAIN_X72500_ADDITIONAL_TEXT);
+        start_stop:                   sw_X72500_check_length;
+        articulated_part:             sw_X72500_articulated_part;
+        can_attach_wagon:             sw_X72500_can_attach_wagon;
+        cargo_capacity:               sw_X72500_capacity;
+        visual_effect_and_powered:    sw_X72500_visual_effect_and_powered;
+        length:                       sw_X72500_shorten_vehicle;
+        weight:                       sw_X72500_weight;
+    }
+}
