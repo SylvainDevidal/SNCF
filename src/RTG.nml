@@ -1,0 +1,119 @@
+template tmpl_vehicle_RTG_8_views_front() {
+    //xpos ypos xsize ysize xrel yrel
+    [3, 4, 8, 24, -3, -12]
+    [18, 4, 22, 17, -15, -6]
+    [49, 4, 32, 13, -17, -8]
+    [90, 4, 22, 17, -4, -7]
+    [118, 4, 8, 24, -3, -11]
+    [133, 4, 22, 17, -16, -6]
+    [164, 4, 32, 13, -18, -8]
+    [202, 4, 22, 17, -4, -7]
+}
+
+template tmpl_vehicle_RTG_8_views_rear() {
+    //xpos ypos xsize ysize xrel yrel
+    [118, 36, 8, 24, -3, -11]
+    [133, 36, 22, 17, -16, -6]
+    [164, 36, 32, 13, -18, -8]
+    [202, 36, 22, 17, -4, -7]
+    [3, 36, 8, 24, -3, -12]
+    [18, 36, 22, 17, -15, -6]
+    [49, 36, 32, 13, -17, -8]
+    [90, 36, 22, 17, -4, -7]
+}
+
+template tmpl_vehicle_RTG_4_views_coach() {
+    //xpos ypos xsize ysize xrel yrel
+    [3, 67, 8, 24, -3, -12]
+    [18, 67, 22, 17, -15, -6]
+    [49, 67, 32, 12, -17, -7]
+    [90, 67, 22, 17, -4, -7]
+}
+
+template tmpl_vehicle_RTG_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [164, 4, 32, 13, -29, -9]
+}
+
+spriteset (set_RTG_graphics_front,    "gfx/RTG.png") { tmpl_vehicle_RTG_8_views_front() }
+spriteset (set_RTG_graphics_coach,    "gfx/RTG.png") { tmpl_vehicle_RTG_4_views_coach() }
+spriteset (set_RTG_graphics_rear,     "gfx/RTG.png") { tmpl_vehicle_RTG_8_views_rear() }
+spriteset (set_RTG_graphics_purchase, "gfx/RTG.png") { tmpl_vehicle_RTG_purchase() }
+
+switch (FEAT_TRAINS, SELF, sw_RTG_graphics, position_in_articulated_veh % 5) {
+    0: set_RTG_graphics_front;
+    1: set_RTG_graphics_coach;
+    2: set_RTG_graphics_coach;
+    3: set_RTG_graphics_coach;
+    4: set_RTG_graphics_rear;
+}
+
+switch(FEAT_TRAINS, SELF, sw_RTG_articulated_part, extra_callback_info1) {
+    1 .. 4 : return item_RTG;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch(FEAT_TRAINS, SELF, sw_RTG_check_length, num_vehs_in_consist) {
+    0 .. 10: return CB_RESULT_NO_TEXT;
+    return string(ERR_RTG_TOO_LONG);
+}
+
+switch(FEAT_TRAINS, SELF, sw_RTG_can_attach_RTG, vehicle_type_id) {
+    item_RTG : CB_RESULT_ATTACH_ALLOW;
+    default: return string(ERR_RTG_CANNOT_ATTACH_OTHER);
+}
+
+switch(FEAT_TRAINS, SELF, sw_RTG_can_attach_wagon, build_year) {
+    0 .. 1985 : return string(ERR_RTG_CANNOT_ATTACH_OTHER);
+    default: sw_RTG_can_attach_RTG;
+}
+
+switch (FEAT_TRAINS, SELF, sw_RTG_visual_effect_and_powered, position_in_articulated_veh) {
+    0: visual_effect_and_powered(VISUAL_EFFECT_DIESEL, -3, DISABLE_WAGON_POWER);
+    4: visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 1, DISABLE_WAGON_POWER);
+    default: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}
+
+item(FEAT_TRAINS, item_RTG) {
+    property {
+        name:                         string(STR_SNCF_TRAIN_RTG_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(1973, 1, 1);
+        model_life:                   44;
+        vehicle_life:                 20;
+        reliability_decay:            11;
+        refittable_cargo_classes:     bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: bitmask();
+        loading_speed:                0; 
+        cost_factor:                  26;
+        running_cost_factor:          125;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        225 km/h;
+        misc_flags:                   bitmask(TRAIN_FLAG_MU);
+        refit_cost:                   0;
+        track_type:                   UNELECTRIFIED;
+        ai_special_flag:              AI_FLAG_PASSENGER;
+        power:                        3220 hp;
+        running_cost_base:            RUNNING_COST_DIESEL;
+        dual_headed:                  0;
+        cargo_capacity:               64; // 320 total
+        weight:                       225 ton;
+        ai_engine_rank:               0;
+        engine_class:                 ENGINE_CLASS_DIESEL;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0.270;
+        air_drag_coefficient:         0.06;
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+        length:                       8;
+    }
+    graphics {
+        default:                      sw_RTG_graphics;
+        purchase:                     set_RTG_graphics_purchase;
+        additional_text:              return string(STR_SNCF_TRAIN_RTG_ADDITIONAL_TEXT);
+        articulated_part:             sw_RTG_articulated_part;
+        visual_effect_and_powered:    sw_RTG_visual_effect_and_powered;
+        can_attach_wagon:             sw_RTG_can_attach_wagon;
+        start_stop:                   sw_RTG_check_length;
+    }
+}

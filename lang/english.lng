@@ -21,6 +21,8 @@ ERR_X2000_CANNOT_ATTACH_OTHER              :Only other X2000 can be attached to 
 ERR_X2000_TOO_LONG                         :A X2000 consist can't have more than 3 units.
 ERR_TAR_CANNOT_ATTACH_OTHER                :Only other TAR can be attached to TAR.
 ERR_TAR_TOO_LONG                           :A TAR consist can't have more than 3 units.
+ERR_RTG_CANNOT_ATTACH_OTHER                :Only other RTG can be attached to RTG, and RTG build before 1986 can't be coupled.
+ERR_RTG_TOO_LONG                           :A RTG consist can't have more than 2 units.
 
 # Steam
 STR_SNCF_TRAIN_040TA_NAME                  :{STR_TRAIN_040TA} ({STR_STEAM})
@@ -54,6 +56,8 @@ STR_SNCF_TRAIN_262DB_NAME                  :{STR_TRAIN_262BD} ({STR_DIESEL})
 STR_SNCF_TRAIN_262DB_ADDITIONAL_TEXT       :This engine can pull passengers coaches only.{}Graphics by The Irish
 STR_SNCF_TRAIN_CC65000_NAME                :{STR_TRAIN_CC65000} ({STR_DIESEL})
 STR_SNCF_TRAIN_CC65000_ADDITIONAL_TEXT     :Graphics by The Irish
+STR_SNCF_TRAIN_RTG_NAME                    :{STR_TRAIN_RTG} ({STR_DIESEL})
+STR_SNCF_TRAIN_RTG_ADDITIONAL_TEXT         :{}Graphics by Ther Irish
 
 # Need consent
 STR_SNCF_TRAIN_X2000_NAME                  :{STR_TRAIN_X2000} ({STR_DIESEL})

@@ -30,6 +30,7 @@ STR_TRAIN_262BD           :262BD
 STR_TRAIN_CC65000         :CC65000
 STR_TRAIN_X2000           :X2000 Iroquois
 STR_TRAIN_TAR             :TAR
+STR_TRAIN_RTG             :RTG
 
 # Electric
 STR_TRAIN_CC7100          :CC7100
