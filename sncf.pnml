@@ -50,6 +50,7 @@ grf {
 #include "src/232TC.nml"
 #include "src/240A.nml"
 #include "src/240P.nml"
+#include "src/241AC.nml"
 
 // Diesel
 #include "src/262DB.nml"
