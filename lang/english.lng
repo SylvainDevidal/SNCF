@@ -18,10 +18,12 @@ ERR_X2000_CANNOT_ATTACH_OTHER              :Only other X2000 can be attached to 
 ERR_X2000_TOO_LONG                         :A X2000 consist can't have more than 3 units.
 ERR_TAR_CANNOT_ATTACH_OTHER                :Only other TAR can be attached to TAR.
 ERR_TAR_TOO_LONG                           :A TAR consist can't have more than 3 units.
-ERR_RTG_CANNOT_ATTACH_OTHER                :Only other RTG can be attached to RTG, and RTG build before 1986 can't be coupled.
-ERR_RTG_TOO_LONG                           :A RTG consist can't have more than 2 units.
+ERR_T2000_CANNOT_ATTACH_OTHER              :Only other T2000 can be attached to T2000, and T2000 build before 1986 can't be coupled.
+ERR_T2000_TOO_LONG                         :A T2000 consist can't have more than 2 units.
 ERR_X72500_CANNOT_ATTACH_OTHER             :Only other X72500 can be attached to X72500.
 ERR_X72500_TOO_LONG                        :A X72500 consist can't have more than 3 units.
+ERR_Z8100_CANNOT_ATTACH_OTHER              :Only other Z8100 can be attached to Z8100.
+ERR_Z8100_TOO_LONG                         :A Z8100 consist can't have more than 2 units.
 
 # Steam
 STR_SNCF_TRAIN_040TA_NAME                  :{STR_TRAIN_040TA} ({STR_STEAM})
@@ -70,8 +72,8 @@ STR_SNCF_TRAIN_62000_NAME                  :{STR_TRAIN_62000} ({STR_DIESEL})
 STR_SNCF_TRAIN_62000_ADDITIONAL_TEXT       :Graphics by The Irish
 STR_SNCF_TRAIN_CC65000_NAME                :{STR_TRAIN_CC65000} ({STR_DIESEL})
 STR_SNCF_TRAIN_CC65000_ADDITIONAL_TEXT     :Graphics by The Irish
-STR_SNCF_TRAIN_RTG_NAME                    :{STR_TRAIN_RTG} ({STR_DIESEL})
-STR_SNCF_TRAIN_RTG_ADDITIONAL_TEXT         :Graphics by The Irish
+STR_SNCF_TRAIN_T2000_NAME                  :{STR_TRAIN_T2000} ({STR_DIESEL})
+STR_SNCF_TRAIN_T2000_ADDITIONAL_TEXT       :Graphics by The Irish
 STR_SNCF_TRAIN_X72500_NAME                 :{STR_TRAIN_X72500} ({STR_DIESEL})
 STR_SNCF_TRAIN_X72500_ADDITIONAL_TEXT      :Graphics by The Irish
 
@@ -92,6 +94,8 @@ STR_SNCF_TRAIN_CC40100_NAME                :{STR_TRAIN_CC40100} ({STR_ELEC_15DC0
 STR_SNCF_TRAIN_CC40100_ADDITIONAL_TEXT     :Graphics by Emperor Jake
 STR_SNCF_TRAIN_BB27000_NAME                :{STR_TRAIN_BB27000} ({STR_ELEC_15DC25AC})
 STR_SNCF_TRAIN_BB27000_ADDITIONAL_TEXT     :Graphics by The Irish
+STR_SNCF_TRAIN_Z8100_NAME                  :{STR_TRAIN_Z8100} ({STR_DIESEL})
+STR_SNCF_TRAIN_Z8100_ADDITIONAL_TEXT       :Graphics by The Irish
 
 # Need consent
 STR_SNCF_TRAIN_BB26000_NAME                :{STR_TRAIN_BB26000} ({STR_ELEC_15DC25AC})

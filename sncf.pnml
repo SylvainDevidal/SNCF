@@ -13,53 +13,78 @@ grf {
 #include "src/RAILTYPES.nml"
 
 // Steam
+// 001
 #include "src/040TA.nml"
+// 002
 #include "src/131TB.nml"
-#include "src/140C.nml"
-#include "src/141R.nml"
-#include "src/141TA.nml"
-#include "src/150BP.nml"
-#include "src/151A.nml"
+// 003
 #include "src/230BDG.nml"
+// 004 ??
 #include "src/231AC.nml"
+// 004 ??
 #include "src/231EGHK.nml"
-#include "src/231CHAPELON.nml"
+// 006
+#include "src/140C.nml"
+// 007
+#include "src/141TA.nml"
+// 008
 #include "src/232TC.nml"
-#include "src/240A.nml"
-#include "src/240P.nml"
+// 009
 #include "src/241AC.nml"
-#include "src/241P.nml"
-#include "src/242A.nml"
+// 010
 #include "src/242TA.nml"
+// 011
+#include "src/151A.nml"
+// 012
+#include "src/240A.nml"
+// 013
+#include "src/150BP.nml"
+// 014 ??
+#include "src/231CHAPELON.nml"
+// 016
+#include "src/240P.nml"
+// 017
+#include "src/141R.nml"
+// 018
+#include "src/242A.nml"
+// 019
+#include "src/241P.nml"
 
 // Diesel
+// 020      Need consent
+#include "src/X2000.nml"
+// 023      Need consent
+#include "src/TAR.nml"
+// 024
 #include "src/262DB.nml"
+// 030 ??
 #include "src/62000.nml"
+// 032
 #include "src/CC65000.nml"
-#include "src/RTG.nml"
+// 042
+#include "src/T2000.nml"
+// 045
 #include "src/X72500.nml"
 
-// Need consent
-#include "src/X2000.nml"
-#include "src/TAR.nml"
-
-
 // Electric
+// 065
 #include "src/CC7100.nml"
+// 067
 #include "src/BB12000.nml"
-#include "src/CC40100.nml"
-#include "src/BB27000.nml"
-
-// Wait for acs121 consent
-#include "src/BB26000.nml"
-
-
-// TGV
-
-// Wait for Coalroads Artist consent
+// 078      Need consent
 #include "src/TGV_PSE.nml"
+// 079
+#include "src/Z8100.nml"
+// 074
+#include "src/CC40100.nml"
+// 082      Need consent
+#include "src/BB26000.nml"
+// 087
+#include "src/BB27000.nml"
 
 
 // Wagons
+// 116
 #include "src/CORAIL.nml"
+// 117
 #include "src/FOURGON.nml"

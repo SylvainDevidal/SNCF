@@ -1,0 +1,117 @@
+template tmpl_vehicle_Z8100_8_views_front() {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 8, 8, 24, -3, -12]
+    [21, 8, 22, 17, -15, -6]
+    [52, 8, 32, 12, -16, -8]
+    [94, 8, 22, 17, -4, -7]
+    [127, 8, 8, 24, -3, -11]
+    [142, 8, 22, 17, -16, -6]
+    [173, 8, 32, 12, -16, -8]
+    [214, 8, 22, 17, -4, -7]
+}
+
+template tmpl_vehicle_Z8100_8_views_rear() {
+    //xpos ypos xsize ysize xrel yrel
+    [127, 38, 8, 24, -3, -11]
+    [142, 38, 22, 17, -16, -6]
+    [173, 38, 32, 12, -16, -8]
+    [214, 38, 22, 17, -4, -7]
+    [6, 38, 8, 24, -3, -12]
+    [21, 38, 22, 17, -15, -6]
+    [52, 38, 32, 12, -16, -8]
+    [94, 38, 22, 17, -4, -7]
+}
+
+template tmpl_vehicle_Z8100_4_views_coach(livery) {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 69 + livery * 33, 8, 24, -3, -12]
+    [21, 69 + livery * 33, 22, 17, -15, -6]
+    [52, 69 + livery * 33, 32, 15, -16, -11]
+    [94, 69 + livery * 33, 22, 17, -4, -11]
+    [127, 69 + livery * 33, 8, 24, -3, -11]
+    [142, 69 + livery * 33, 22, 17, -16, -6]
+    [173, 69 + livery * 33, 32, 15, -16, -11]
+    [214, 69 + livery * 33, 22, 17, -4, -7]
+}
+
+template tmpl_vehicle_Z8100_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [173, 8, 32, 12, -29, -6]
+}
+
+spriteset (set_Z8100_graphics_front,    "gfx/Z8100.png") { tmpl_vehicle_Z8100_8_views_front() }
+spriteset (set_Z8100_graphics_coach_0,  "gfx/Z8100.png") { tmpl_vehicle_Z8100_4_views_coach(0) }
+spriteset (set_Z8100_graphics_coach_1,  "gfx/Z8100.png") { tmpl_vehicle_Z8100_4_views_coach(1) }
+spriteset (set_Z8100_graphics_rear,     "gfx/Z8100.png") { tmpl_vehicle_Z8100_8_views_rear() }
+spriteset (set_Z8100_graphics_purchase, "gfx/Z8100.png") { tmpl_vehicle_Z8100_purchase() }
+
+switch (FEAT_TRAINS, SELF, sw_Z8100_graphics, position_in_articulated_veh) {
+    0: set_Z8100_graphics_front;
+    1: set_Z8100_graphics_coach_0;
+    2: set_Z8100_graphics_coach_1;
+    3: set_Z8100_graphics_rear;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Z8100_articulated_part, extra_callback_info1) {
+    1 .. 3 : return item_Z8100;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Z8100_check_length, num_vehs_in_consist) {
+    0 .. 8: return CB_RESULT_NO_TEXT;
+    return string(ERR_Z8100_TOO_LONG);
+}
+
+switch(FEAT_TRAINS, SELF, sw_Z8100_can_attach_wagon, vehicle_type_id) {
+    item_Z8100 : CB_RESULT_ATTACH_ALLOW;
+    default: return string(ERR_Z8100_CANNOT_ATTACH_OTHER);
+}
+
+switch (FEAT_TRAINS, SELF, sw_Z8100_visual_effect_and_powered, position_in_articulated_veh) {
+    1 .. 2: visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 0, DISABLE_WAGON_POWER);
+    default: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}
+
+item(FEAT_TRAINS, item_Z8100) {
+    property {
+        name:                         string(STR_SNCF_TRAIN_Z8100_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(1979, 1, 1);
+        model_life:                   41;
+        vehicle_life:                 32;
+        reliability_decay:            12;
+        refittable_cargo_classes:     bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: bitmask();
+        loading_speed:                0; 
+        cost_factor:                  49;
+        running_cost_factor:          131;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        140 km/h;
+        misc_flags:                   bitmask(TRAIN_FLAG_MU);
+        refit_cost:                   0;
+        track_type:                   AC25DC15;
+        ai_special_flag:              AI_FLAG_PASSENGER;
+        power:                        1883 hp;
+        running_cost_base:            RUNNING_COST_ELECTRIC;
+        dual_headed:                  0;
+        cargo_capacity:               105; // 420 total (312 seats and 108 folding)
+        weight:                       54 ton;
+        ai_engine_rank:               0;
+        engine_class:                 ENGINE_CLASS_ELECTRIC;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0.270;
+        air_drag_coefficient:         0.06;
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+        length:                       8;
+    }
+    graphics {
+        default:                      sw_Z8100_graphics;
+        purchase:                     set_Z8100_graphics_purchase;
+        additional_text:              return string(STR_SNCF_TRAIN_Z8100_ADDITIONAL_TEXT);
+        articulated_part:             sw_Z8100_articulated_part;
+        visual_effect_and_powered:    sw_Z8100_visual_effect_and_powered;
+        can_attach_wagon:             sw_Z8100_can_attach_wagon;
+        start_stop:                   sw_Z8100_check_length;
+    }
+}
