@@ -81,6 +81,8 @@ grf {
 #include "src/BB26000.nml"
 // 087
 #include "src/BB27000.nml"
+// 088
+#include "src/Z21500.nml"
 
 
 // Wagons

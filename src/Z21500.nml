@@ -1,0 +1,115 @@
+template tmpl_vehicle_Z21500_8_views_front() {
+    //xpos ypos xsize ysize xrel yrel
+    [5, 4, 8, 24, -3, -12]
+    [20, 4, 22, 17, -16, -5]
+    [51, 4, 32, 12, -16, -8]
+    [88, 4, 22, 17, -4, -7]
+    [119, 4, 8, 24, -3, -11]
+    [134, 4, 22, 17, -16, -6]
+    [165, 4, 32, 12, -16, -8]
+    [207, 4, 22, 17, -4, -6]
+}
+
+template tmpl_vehicle_Z21500_8_views_rear() {
+    //xpos ypos xsize ysize xrel yrel
+    [119, 34, 8, 24, -3, -11]
+    [134, 34, 22, 17, -16, -6]
+    [165, 34, 32, 12, -16, -8]
+    [207, 34, 22, 17, -4, -6]
+    [5, 34, 8, 24, -3, -12]
+    [20, 34, 22, 17, -16, -5]
+    [51, 34, 32, 12, -16, -8]
+    [88, 34, 22, 17, -4, -7]
+}
+
+template tmpl_vehicle_Z21500_8_views_coach() {
+    //xpos ypos xsize ysize xrel yrel
+    [5, 66, 8, 24, -3, -12]
+    [20, 66, 22, 20, -16, -8]
+    [51, 66, 32, 15, -16, -11]
+    [88, 66, 22, 17, -4, -7]
+    [119, 66, 8, 24, -3, -11]
+    [134, 66, 22, 17, -16, -6]
+    [165, 66, 32, 15, -16, -11]
+    [207, 66, 22, 20, -4, -9]
+}
+
+template tmpl_vehicle_Z21500_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [165, 4, 32, 12, -29, -6]
+}
+
+spriteset (set_Z21500_graphics_front,    "gfx/Z21500.png") { tmpl_vehicle_Z21500_8_views_front() }
+spriteset (set_Z21500_graphics_coach,  "gfx/Z21500.png") { tmpl_vehicle_Z21500_8_views_coach() }
+spriteset (set_Z21500_graphics_rear,     "gfx/Z21500.png") { tmpl_vehicle_Z21500_8_views_rear() }
+spriteset (set_Z21500_graphics_purchase, "gfx/Z21500.png") { tmpl_vehicle_Z21500_purchase() }
+
+switch (FEAT_TRAINS, SELF, sw_Z21500_graphics, position_in_articulated_veh) {
+    0: set_Z21500_graphics_front;
+    1: set_Z21500_graphics_coach;
+    2: set_Z21500_graphics_rear;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Z21500_articulated_part, extra_callback_info1) {
+    1 .. 2 : return item_Z21500;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Z21500_check_length, num_vehs_in_consist) {
+    0 .. 9: return CB_RESULT_NO_TEXT;
+    return string(ERR_Z21500_TOO_LONG);
+}
+
+switch(FEAT_TRAINS, SELF, sw_Z21500_can_attach_wagon, vehicle_type_id) {
+    item_Z21500 : CB_RESULT_ATTACH_ALLOW;
+    default: return string(ERR_Z21500_CANNOT_ATTACH_OTHER);
+}
+
+switch (FEAT_TRAINS, SELF, sw_Z21500_visual_effect_and_powered, position_in_articulated_veh) {
+    1 : visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 0, DISABLE_WAGON_POWER);
+    default: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}
+
+item(FEAT_TRAINS, item_Z21500) {
+    property {
+        name:                         string(STR_SNCF_TRAIN_Z21500_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(2002, 1, 1);
+        model_life:                   VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                 31;
+        reliability_decay:            15;
+        refittable_cargo_classes:     bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: bitmask();
+        loading_speed:                0; 
+        cost_factor:                  62;
+        running_cost_factor:          131;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        200 km/h;
+        misc_flags:                   bitmask(TRAIN_FLAG_MU);
+        refit_cost:                   0;
+        track_type:                   AC25DC15;
+        ai_special_flag:              AI_FLAG_PASSENGER;
+        power:                        1180 hp;
+        running_cost_base:            RUNNING_COST_ELECTRIC;
+        dual_headed:                  0;
+        cargo_capacity:               67; // 201 total
+        weight:                       169 ton;
+        ai_engine_rank:               0;
+        engine_class:                 ENGINE_CLASS_ELECTRIC;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0.120;
+        air_drag_coefficient:         0.06;
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+        length:                       8;
+    }
+    graphics {
+        default:                      sw_Z21500_graphics;
+        purchase:                     set_Z21500_graphics_purchase;
+        additional_text:              return string(STR_SNCF_TRAIN_Z21500_ADDITIONAL_TEXT);
+        articulated_part:             sw_Z21500_articulated_part;
+        visual_effect_and_powered:    sw_Z21500_visual_effect_and_powered;
+        can_attach_wagon:             sw_Z21500_can_attach_wagon;
+        start_stop:                   sw_Z21500_check_length;
+    }
+}
