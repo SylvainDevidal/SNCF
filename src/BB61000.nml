@@ -1,0 +1,66 @@
+template tmpl_vehicle_BB61000_8_views(livery) {
+    //xpos ypos xsize ysize xrel yrel
+    [2, 1 + livery * 28, 8, 24, -3, -10]
+    [13, 1 + livery * 28, 22, 17, -16, -8]
+    [37, 1 + livery * 28, 32, 12, -19, -10]
+    [71, 1 + livery * 28, 22, 17, -7, -11]
+    [96, 1 + livery * 28, 8, 24, -3, -14]
+    [107, 1 + livery * 28, 22, 17, -14, -10]
+    [131, 1 + livery * 28, 32, 12, -17, -8]
+    [165, 1 + livery * 28, 22, 17, -5, -9]
+}
+
+template tmpl_vehicle_BB61000_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [131, 29, 32, 12, -23, -7]
+}
+
+spriteset (set_BB61000_graphics_0,        "gfx/BB61000.png") { tmpl_vehicle_BB61000_8_views(0) }
+spriteset (set_BB61000_graphics_1,        "gfx/BB61000.png") { tmpl_vehicle_BB61000_8_views(1) }
+spriteset (set_BB61000_graphics_purchase, "gfx/BB61000.png") { tmpl_vehicle_BB61000_purchase() }
+
+random_switch (FEAT_TRAINS, SELF, sw_BB61000_graphics) {
+    1: set_BB61000_graphics_0;
+    2: set_BB61000_graphics_1;
+}
+item(FEAT_TRAINS, item_BB61000) {
+    property {
+        name:                         string(STR_SNCF_TRAIN_BB61000_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(2002, 1, 1);
+        model_life:                   VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                 24;
+        reliability_decay:            12;
+        refittable_cargo_classes:     NO_CARGO_CLASS;
+        non_refittable_cargo_classes: ALL_CARGO_CLASSES;
+        loading_speed:                0; 
+        cost_factor:                  47;
+        running_cost_factor:          78;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        100 km/h;
+        misc_flags:                   bitmask();
+        refit_cost:                   0;
+        track_type:                   UNELECTRIFIED;
+        ai_special_flag:              AI_FLAG_CARGO;
+        power:                        2010 hp;
+        running_cost_base:            RUNNING_COST_DIESEL;
+        dual_headed:                  0;
+        cargo_capacity:               0;
+        weight:                       87 ton;
+        ai_engine_rank:               0;
+        engine_class:                 ENGINE_CLASS_DIESEL;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0.240;
+        air_drag_coefficient:         0.06;
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+        length:                       7;
+        visual_effect_and_powered:    visual_effect_and_powered(VISUAL_EFFECT_DIESEL, -3, DISABLE_WAGON_POWER);
+    }
+    graphics {
+        default:                      sw_BB61000_graphics;
+        purchase:                     set_BB61000_graphics_purchase;
+        additional_text:              return string(STR_SNCF_TRAIN_BB61000_ADDITIONAL_TEXT);
+        can_attach_wagon:             sw_attach_no_passenger;
+    }
+}

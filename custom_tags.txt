@@ -39,6 +39,7 @@ STR_TRAIN_X2000           :X2000 Iroquois
 STR_TRAIN_TAR             :TAR
 STR_TRAIN_T2000           :T2000
 STR_TRAIN_X72500          :X72500
+STR_TRAIN_BB61000          :BB61000
 
 
 # Electric

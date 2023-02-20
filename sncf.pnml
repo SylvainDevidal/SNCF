@@ -65,6 +65,8 @@ grf {
 #include "src/T2000.nml"
 // 045
 #include "src/X72500.nml"
+// 047
+#include "src/BB61000.nml"
 
 // Electric
 // 050
