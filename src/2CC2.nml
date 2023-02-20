@@ -1,0 +1,68 @@
+template tmpl_vehicle_2CC2_8_views(livery) {
+    //xpos ypos xsize ysize xrel yrel
+    [2, 2 + livery * 27, 8, 24, -3, -14]
+    [12, 2 + livery * 27, 23, 20, -16, -8]
+    [37, 2 + livery * 27, 32, 15, -17, -11]
+    [71, 2 + livery * 27, 23, 20, -5, -9]
+    [96, 2 + livery * 27, 8, 24, -3, -14]
+    [106, 2 + livery * 27, 23, 20, -20, -7]
+    [131, 2 + livery * 27, 32, 15, -19, -11]
+    [165, 2 + livery * 27, 23, 20, -6, -10]
+}
+
+template tmpl_vehicle_2CC2_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [131, 2, 32, 14, -29, -10]
+}
+
+spriteset (set_2CC2_graphics_0,        "gfx/2CC2.png") { tmpl_vehicle_2CC2_8_views(0) }
+spriteset (set_2CC2_graphics_1,        "gfx/2CC2.png") { tmpl_vehicle_2CC2_8_views(1) }
+spriteset (set_2CC2_graphics_2,        "gfx/2CC2.png") { tmpl_vehicle_2CC2_8_views(2) }
+spriteset (set_2CC2_graphics_purchase, "gfx/2CC2.png") { tmpl_vehicle_2CC2_purchase() }
+
+random_switch (FEAT_TRAINS, SELF, sw_2CC2_graphics) {
+    1: set_2CC2_graphics_0;
+    2: set_2CC2_graphics_1;
+    3: set_2CC2_graphics_2;
+}
+
+item(FEAT_TRAINS, item_2CC2) {
+    property {
+        name:                         string(STR_SNCF_TRAIN_2CC2_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(1929, 1, 1);
+        model_life:                   45;
+        vehicle_life:                 40;
+        reliability_decay:            21;
+        refittable_cargo_classes:     NO_CARGO_CLASS;
+        non_refittable_cargo_classes: ALL_CARGO_CLASSES;
+        loading_speed:                0; 
+        cost_factor:                  57;
+        running_cost_factor:          175;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        130 km/h;
+        misc_flags:                   bitmask();
+        refit_cost:                   0;
+        track_type:                   DC15;
+        ai_special_flag:              AI_FLAG_PASSENGER | AI_FLAG_CARGO;
+        power:                        4950 hp;
+        running_cost_base:            RUNNING_COST_ELECTRIC;
+        dual_headed:                  0;
+        cargo_capacity:               0;
+        weight:                       158.2 ton;
+        ai_engine_rank:               0;
+        engine_class:                 ENGINE_CLASS_ELECTRIC;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0.275;
+        air_drag_coefficient:         0.06;
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+        length:                       7;
+        visual_effect_and_powered:    visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, -4, DISABLE_WAGON_POWER);
+    }
+    graphics {
+        default:                      sw_2CC2_graphics;
+        purchase:                     set_2CC2_graphics_purchase;
+        additional_text:              return string(STR_SNCF_TRAIN_2CC2_ADDITIONAL_TEXT);
+    }
+}
