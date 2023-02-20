@@ -68,6 +68,8 @@ grf {
 
 // Electric
 // 056
+#include "src/2BB2.nml"
+// 056
 #include "src/1ABBA1.nml"
 // 057
 #include "src/1CC1.nml"
