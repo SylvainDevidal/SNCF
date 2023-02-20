@@ -67,6 +67,8 @@ grf {
 #include "src/X72500.nml"
 
 // Electric
+// 050
+#include "src/BB1280.nml"
 // 056
 #include "src/2BB2.nml"
 // 056
