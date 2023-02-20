@@ -1,0 +1,98 @@
+template tmpl_vehicle_1CC1_8_views_front(livery) {
+    //xpos ypos xsize ysize xrel yrel
+    [2, 2 + livery * 53, 8, 24, -3, -23]
+    [12, 2 + livery * 53, 22, 20, -17, -7]
+    [37, 2 + livery * 53, 32, 15, -15, -10]
+    [72, 2 + livery * 53, 22, 20, -2, -10]
+    [95, 2 + livery * 53, 8, 24, -3, -13]
+    [105, 2 + livery * 53, 22, 20, -19, -9]
+    [130, 2 + livery * 53, 32, 15, -18, -10]
+    [164, 2 + livery * 53, 22, 20, -5, -9]
+}
+
+template tmpl_vehicle_1CC1_8_views_rear(livery) {
+    //xpos ypos xsize ysize xrel yrel
+    [2, 27 + livery * 53, 8, 24, -3, -15]
+    [12, 27 + livery * 53, 22, 20, -16, -7]
+    [37, 27 + livery * 53, 32, 15, -2, -10]
+    [72, 27 + livery * 53, 22, 20, -2, -10]
+    [95, 27 + livery * 53, 8, 24, -3, -8]
+    [105, 27 + livery * 53, 22, 20, -20, -8]
+    [130, 27 + livery * 53, 32, 15, -31, -10]
+    [164, 27 + livery * 53, 22, 20, -5, -8]
+}
+
+template tmpl_vehicle_1CC1_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [149, 2, 32, 15, -29, -10]
+}
+
+spriteset (set_1CC1_graphics_front_0,  "gfx/1CC1.png") { tmpl_vehicle_1CC1_8_views_front(0) }
+spriteset (set_1CC1_graphics_rear_0,   "gfx/1CC1.png") { tmpl_vehicle_1CC1_8_views_rear(0) }
+spriteset (set_1CC1_graphics_front_1,  "gfx/1CC1.png") { tmpl_vehicle_1CC1_8_views_front(1) }
+spriteset (set_1CC1_graphics_rear_1,   "gfx/1CC1.png") { tmpl_vehicle_1CC1_8_views_rear(1) }
+spriteset (set_1CC1_graphics_purchase, "gfx/1CC1_mockup.png") { tmpl_vehicle_1CC1_purchase() }
+
+random_switch (FEAT_TRAINS, SELF, sw_1CC1_graphics_front) {
+    1: set_1CC1_graphics_front_0;
+    2: set_1CC1_graphics_front_1;
+}
+
+random_switch (FEAT_TRAINS, SELF, sw_1CC1_graphics_rear) {
+    1: set_1CC1_graphics_rear_0;
+    2: set_1CC1_graphics_rear_1;
+}
+
+switch (FEAT_TRAINS, SELF, sw_1CC1_graphics, position_in_articulated_veh % 2) {
+    0: sw_1CC1_graphics_front;
+    1: sw_1CC1_graphics_rear;
+}
+
+switch(FEAT_TRAINS, SELF, sw_1CC1_articulated_part, extra_callback_info1) {
+    1 : return item_1CC1;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+item(FEAT_TRAINS, item_1CC1) {
+    property {
+        name:                         string(STR_SNCF_TRAIN_1CC1_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(1927, 1, 1);
+        model_life:                   46;
+        vehicle_life:                 42;
+        reliability_decay:            17;
+        refittable_cargo_classes:     NO_CARGO_CLASS;
+        non_refittable_cargo_classes: ALL_CARGO_CLASSES;
+        loading_speed:                0; 
+        cost_factor:                  31;
+        running_cost_factor:          152;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        80 km/h;
+        misc_flags:                   bitmask();
+        refit_cost:                   0;
+        track_type:                   DC15;
+        ai_special_flag:              AI_FLAG_PASSENGER;
+        power:                        2225 hp;
+        running_cost_base:            RUNNING_COST_ELECTRIC;
+        dual_headed:                  0;
+        cargo_capacity:               0;
+        weight:                       129 ton;
+        ai_engine_rank:               0;
+        engine_class:                 ENGINE_CLASS_ELECTRIC;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0.283;
+        air_drag_coefficient:         0.06;
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+        length:                       4;
+    }
+    graphics {
+        default:                      sw_1CC1_graphics;
+        purchase:                     set_1CC1_graphics_purchase;
+        additional_text:              return string(STR_SNCF_TRAIN_1CC1_ADDITIONAL_TEXT);
+        articulated_part:             sw_1CC1_articulated_part;
+        visual_effect_and_powered:    return (position_in_articulated_veh == 0) ?
+                                          visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, -3, DISABLE_WAGON_POWER) :
+                                          visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    }
+}

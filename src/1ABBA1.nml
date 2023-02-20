@@ -38,11 +38,13 @@ spriteset (set_1ABBA1_graphics_purchase, "gfx/1ABBA1_mockup.png") { tmpl_vehicle
 random_switch (FEAT_TRAINS, SELF, sw_1ABBA1_graphics_front) {
     1: set_1ABBA1_graphics_front_0;
     2: set_1ABBA1_graphics_front_1;
+    3: set_1ABBA1_graphics_front_2;
 }
 
 random_switch (FEAT_TRAINS, SELF, sw_1ABBA1_graphics_rear) {
     1: set_1ABBA1_graphics_rear_0;
     2: set_1ABBA1_graphics_rear_1;
+    3: set_1ABBA1_graphics_rear_2;
 }
 
 switch (FEAT_TRAINS, SELF, sw_1ABBA1_graphics, position_in_articulated_veh % 2) {
