@@ -1,0 +1,96 @@
+template tmpl_vehicle_Z7300_8_views_front() {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 6, 8, 24, -3, -12]
+    [21, 6, 23, 17, -16, -6]
+    [52, 6, 32, 15, -16, -10]
+    [93, 6, 22, 20, -4, -10]
+    [121, 6, 8, 24, -3, -11]
+    [136, 6, 22, 20, -16, -9]
+    [167, 6, 32, 15, -16, -10]
+    [205, 6, 23, 17, -4, -7]
+}
+
+template tmpl_vehicle_Z7300_8_views_rear() {
+    //xpos ypos xsize ysize xrel yrel
+    [121, 35, 8, 24, -3, -11]
+    [136, 35, 22, 20, -16, -9]
+    [167, 35, 32, 15, -16, -10]
+    [205, 35, 23, 17, -4, -7]
+    [6, 35, 8, 24, -3, -12]
+    [21, 35, 23, 17, -16, -6]
+    [52, 35, 32, 15, -16, -10]
+    [93, 35, 22, 20, -4, -10]
+}
+
+template tmpl_vehicle_Z7300_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [167, 6, 32, 15, -29, -9]
+}
+
+spriteset (set_Z7300_graphics_front,    "gfx/Z7300.png") { tmpl_vehicle_Z7300_8_views_front() }
+spriteset (set_Z7300_graphics_rear,     "gfx/Z7300.png") { tmpl_vehicle_Z7300_8_views_rear() }
+spriteset (set_Z7300_graphics_purchase, "gfx/Z7300.png") { tmpl_vehicle_Z7300_purchase() }
+
+switch (FEAT_TRAINS, SELF, sw_Z7300_graphics, position_in_articulated_veh) {
+    0: set_Z7300_graphics_front;
+    1: set_Z7300_graphics_rear;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Z7300_articulated_part, extra_callback_info1) {
+    1: return item_Z7300;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Z7300_check_length, num_vehs_in_consist) {
+    0 .. 6: return CB_RESULT_NO_TEXT;
+    return string(ERR_Z7300_TOO_LONG);
+}
+
+switch(FEAT_TRAINS, SELF, sw_Z7300_can_attach_wagon, vehicle_type_id) {
+    item_Z7300 : CB_RESULT_ATTACH_ALLOW;
+    default: return string(ERR_Z7300_CANNOT_ATTACH_OTHER);
+}
+
+item(FEAT_TRAINS, item_Z7300) {
+    property {
+        name:                         string(STR_SNCF_TRAIN_Z7300_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(1980, 1, 1);
+        model_life:                   40;
+        vehicle_life:                 35;
+        reliability_decay:            13;
+        refittable_cargo_classes:     bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: bitmask();
+        loading_speed:                0; 
+        cost_factor:                  46;
+        running_cost_factor:          123;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        160 km/h;
+        misc_flags:                   bitmask(TRAIN_FLAG_MU);
+        refit_cost:                   0;
+        track_type:                   DC15;
+        ai_special_flag:              AI_FLAG_PASSENGER;
+        power:                        1709 hp;
+        running_cost_base:            RUNNING_COST_ELECTRIC;
+        dual_headed:                  0;
+        cargo_capacity:               75;
+        weight:                       64 ton;
+        ai_engine_rank:               0;
+        engine_class:                 ENGINE_CLASS_ELECTRIC;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0.063;
+        air_drag_coefficient:         0.06;
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+        length:                       8;
+        visual_effect_and_powered:    visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 0, DISABLE_WAGON_POWER);
+    }
+    graphics {
+        default:                      sw_Z7300_graphics;
+        purchase:                     set_Z7300_graphics_purchase;
+        additional_text:              return string(STR_SNCF_TRAIN_Z7300_ADDITIONAL_TEXT);
+        articulated_part:             sw_Z7300_articulated_part;
+        can_attach_wagon:             sw_Z7300_can_attach_wagon;
+        start_stop:                   sw_Z7300_check_length;
+    }
+}

@@ -40,7 +40,7 @@ template tmpl_vehicle_Z21500_purchase() {
 }
 
 spriteset (set_Z21500_graphics_front,    "gfx/Z21500.png") { tmpl_vehicle_Z21500_8_views_front() }
-spriteset (set_Z21500_graphics_coach,  "gfx/Z21500.png") { tmpl_vehicle_Z21500_8_views_coach() }
+spriteset (set_Z21500_graphics_coach,    "gfx/Z21500.png") { tmpl_vehicle_Z21500_8_views_coach() }
 spriteset (set_Z21500_graphics_rear,     "gfx/Z21500.png") { tmpl_vehicle_Z21500_8_views_rear() }
 spriteset (set_Z21500_graphics_purchase, "gfx/Z21500.png") { tmpl_vehicle_Z21500_purchase() }
 

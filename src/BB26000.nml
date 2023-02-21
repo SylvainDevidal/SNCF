@@ -77,6 +77,5 @@ item(FEAT_TRAINS, item_BB26000) {
         default:                      sw_BB26000_graphics;
         purchase:                     set_BB26000_graphics_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_BB26000_ADDITIONAL_TEXT);
-        //colour_mapping:               sw_blank_colour_mapping;
    }
 }
