@@ -1,13 +1,25 @@
 template tmpl_vehicle_BB26000_8_views() {
      //xpos ypos xsize ysize xrel yrel
-    [1, 1, 8, 24,  -3, -12]
+    [1, 1, 8, 24, -3, -14]
     [10, 1, 22, 20, -14, -13]
     [33, 1, 32, 16, -17, -12]
     [66, 1, 22, 20, -7, -13]
-    [89, 1, 8, 24,  -3, -12]
+    [89, 1, 8, 24, -3, -12]
     [98, 1, 22, 20, -15, -12]
     [121, 1, 32, 16, -16, -12]
     [154, 1, 22, 20, -7, -13]
+}
+
+template tmpl_vehicle_BB26000_8_views_envoyage(side) {
+     //xpos ypos xsize ysize xrel yrel
+    [6, 4 + side * 45, 8, 24, -3, -14]
+    [21, 4 + side * 45, 22, 19, -14, -11]
+    [52, 4 + side * 45, 32, 15, -17, -11]
+    [90, 4 + side * 45, 22, 19, -7, -11]
+    [120, 4 + side * 45, 8, 24, -3, -10]
+    [135, 4 + side * 45, 22, 19, -15, -10]
+    [166, 4 + side * 45, 32, 15, -16, -11]
+    [203, 4 + side * 45, 22, 19, -7, -11]
 }
 
 template tmpl_vehicle_BB26000_purchase() {
@@ -17,11 +29,15 @@ template tmpl_vehicle_BB26000_purchase() {
 
 spriteset (set_BB26000_graphics_beton,        "gfx/BB26000_Beton.png") { tmpl_vehicle_BB26000_8_views() }
 spriteset (set_BB26000_graphics_multiservice, "gfx/BB26000_Multiservices.png") { tmpl_vehicle_BB26000_8_views() }
+spriteset (set_BB26000_graphics_envoyage_0,   "gfx/BB26000_envoyage.png") { tmpl_vehicle_BB26000_8_views_envoyage(0) }
+spriteset (set_BB26000_graphics_envoyage_1,   "gfx/BB26000_envoyage.png") { tmpl_vehicle_BB26000_8_views_envoyage(1) }
 spriteset (set_BB26000_graphics_purchase,     "gfx/BB26000_Beton.png") { tmpl_vehicle_BB26000_purchase() }
 
 random_switch (FEAT_TRAINS, SELF, sw_BB26000_graphics) {
     1: set_BB26000_graphics_beton;
     2: set_BB26000_graphics_multiservice;
+    3: set_BB26000_graphics_envoyage_0;
+    4: set_BB26000_graphics_envoyage_1;
 }
 
 item(FEAT_TRAINS, item_BB26000) {
