@@ -85,6 +85,8 @@ grf {
 #include "src/2D2_5500.nml"
 // 065
 #include "src/CC7100.nml"
+// 064
+#include "src/BB8100.nml"
 // 067
 #include "src/BB12000.nml"
 // 074

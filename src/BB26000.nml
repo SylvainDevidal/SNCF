@@ -27,11 +27,11 @@ template tmpl_vehicle_BB26000_purchase() {
     [24, 64, 30, 12, -27, -6]
 }
 
-spriteset (set_BB26000_graphics_beton,        "gfx/BB26000_Beton.png") { tmpl_vehicle_BB26000_8_views() }
-spriteset (set_BB26000_graphics_multiservice, "gfx/BB26000_Multiservices.png") { tmpl_vehicle_BB26000_8_views() }
+spriteset (set_BB26000_graphics_beton,        "gfx/BB26000_beton.png") { tmpl_vehicle_BB26000_8_views() }
+spriteset (set_BB26000_graphics_multiservice, "gfx/BB26000_multiservices.png") { tmpl_vehicle_BB26000_8_views() }
 spriteset (set_BB26000_graphics_envoyage_0,   "gfx/BB26000_envoyage.png") { tmpl_vehicle_BB26000_8_views_envoyage(0) }
 spriteset (set_BB26000_graphics_envoyage_1,   "gfx/BB26000_envoyage.png") { tmpl_vehicle_BB26000_8_views_envoyage(1) }
-spriteset (set_BB26000_graphics_purchase,     "gfx/BB26000_Beton.png") { tmpl_vehicle_BB26000_purchase() }
+spriteset (set_BB26000_graphics_purchase,     "gfx/BB26000_beton.png") { tmpl_vehicle_BB26000_purchase() }
 
 random_switch (FEAT_TRAINS, SELF, sw_BB26000_graphics) {
     1: set_BB26000_graphics_beton;

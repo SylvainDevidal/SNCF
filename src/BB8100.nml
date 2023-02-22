@@ -1,0 +1,60 @@
+template tmpl_vehicle_BB8100_8_views() {
+     //xpos ypos xsize ysize xrel yrel
+    [3, 3, 8, 24,  -3, -14]
+    [18, 3, 22, 17, -15, -9]
+    [49, 3, 32, 15, -15, -11]
+    [91, 3, 22, 20, -6, -12]
+    [123, 3, 8, 24,  -3, -12]
+    [138, 3, 22, 20, -17, -11]
+    [169, 3, 32, 15, -19, -11]
+    [211, 3, 22, 17, -8, -10]
+}
+
+template tmpl_vehicle_BB8100_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [169, 3, 32, 15, -23, -9]
+}
+
+spriteset (set_BB8100_graphics,          "gfx/BB8100.png") { tmpl_vehicle_BB8100_8_views() }
+spriteset (set_BB8100_graphics_purchase, "gfx/BB8100.png") { tmpl_vehicle_BB8100_purchase() }
+
+item(FEAT_TRAINS, item_BB8100) {
+    property {
+        name:                         string(STR_SNCF_TRAIN_BB8100_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(1948, 1, 1);
+        model_life:                   60;
+        vehicle_life:                 36;
+        reliability_decay:            12;
+        refittable_cargo_classes:     NO_CARGO_CLASS;
+        non_refittable_cargo_classes: ALL_CARGO_CLASSES;
+        loading_speed:                0; 
+        cost_factor:                  41;
+        running_cost_factor:          140;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        105 km/h;
+        misc_flags:                   bitmask();
+        refit_cost:                   0;
+        track_type:                   DC15;
+        ai_special_flag:              AI_FLAG_PASSENGER | AI_FLAG_CARGO;
+        power:                        2815 hp;
+        running_cost_base:            RUNNING_COST_ELECTRIC;
+        dual_headed:                  0;
+        cargo_capacity:               0;
+        weight:                       92 ton;
+        ai_engine_rank:               0;
+        engine_class:                 ENGINE_CLASS_ELECTRIC;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0.165;
+        air_drag_coefficient:         0.06;
+        visual_effect_and_powered:    visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 2, DISABLE_WAGON_POWER);
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+        length:                       6;
+    }
+    graphics {
+        default:                      set_BB8100_graphics;
+        purchase:                     set_BB8100_graphics_purchase;
+        additional_text:              return string(STR_SNCF_TRAIN_BB8100_ADDITIONAL_TEXT);
+   }
+}
