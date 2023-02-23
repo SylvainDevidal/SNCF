@@ -18,6 +18,15 @@ template tmpl_vehicle_CC40100_purchase() {
 spriteset (set_CC40100_graphics,          "gfx/CC40100.png") { tmpl_vehicle_CC40100_8_views() }
 spriteset (set_CC40100_graphics_purchase, "gfx/CC40100.png") { tmpl_vehicle_CC40100_purchase() }
 
+switch (FEAT_TRAINS, SELF, sw_CC40100_power, current_railtype) {
+    ELEC: 6504;
+    AC25: 6504;
+    AC15: 6504;
+    DC03: 4922;
+    DC15: 4922;
+    default: 6504;
+}
+
 item(FEAT_TRAINS, item_CC40100) {
     property {
         name:                         string(STR_SNCF_TRAIN_CC40100_NAME);
@@ -55,5 +64,6 @@ item(FEAT_TRAINS, item_CC40100) {
         default:                      set_CC40100_graphics;
         purchase:                     set_CC40100_graphics_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_CC40100_ADDITIONAL_TEXT);
+        power:                        sw_CC40100_power;
     }
 }
