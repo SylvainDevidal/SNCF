@@ -181,6 +181,14 @@ switch(FEAT_TRAINS, SELF, sw_TGV_Reseau_capacity, position_in_articulated_veh) {
     default: 0;
 }
 
+switch (FEAT_TRAINS, SELF, sw_TGV_Reseau_power, current_railtype) {
+    ELEC: 11801;
+    AC25: 11801;
+    DC15: 4938;
+    DC03: 4938;     
+    default: 11801;
+}
+
 item(FEAT_TRAINS, item_TGV_Reseau) {
     property {
         name:                         string(STR_SNCF_TRAIN_TGV_RESEAU_NAME);
@@ -225,6 +233,7 @@ item(FEAT_TRAINS, item_TGV_Reseau) {
                                           visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
         length:                       sw_TGV_Reseau_length;
         cargo_capacity:               sw_TGV_Reseau_capacity;
-        purchase_cargo_capacity:      return 40;
+        purchase_cargo_capacity:      40;
+        power:                        sw_TGV_Reseau_power;
     }
 }

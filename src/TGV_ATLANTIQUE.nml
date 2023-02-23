@@ -129,6 +129,13 @@ switch(FEAT_TRAINS, SELF, sw_TGV_ATLANTIQUE_can_attach_wagon, vehicle_type_id) {
     return string(ERR_TGV_ATLANTIQUE_CANNOT_ATTACH_OTHER);
 }
 
+switch (FEAT_TRAINS, SELF, sw_TGV_ATLANTIQUE_power, current_railtype) {
+    ELEC: 11801;
+    AC25: 11801;
+    DC15: 5203;
+    default: 11801;
+}
+
 item(FEAT_TRAINS, item_TGV_ATLANTIQUE) {
     property {
         name:                         string(STR_SNCF_TRAIN_TGV_ATLANTIQUE_NAME);
@@ -172,5 +179,6 @@ item(FEAT_TRAINS, item_TGV_ATLANTIQUE) {
         visual_effect_and_powered:    return (position_in_consist % 12 == 0) ?
                                           visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 2, DISABLE_WAGON_POWER) :
                                           visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+        power:                        sw_TGV_ATLANTIQUE_power;
     }
 }

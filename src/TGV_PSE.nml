@@ -181,6 +181,14 @@ switch(FEAT_TRAINS, SELF, sw_TGV_PSE_capacity, position_in_articulated_veh) {
     default: 0;
 }
 
+switch (FEAT_TRAINS, SELF, sw_TGV_PSE_power, current_railtype) {    
+    ELEC: 8650;
+    AC25: 8650;
+    DC15: 4157;
+    AC15: 3755;
+    default: 8650;
+}
+
 item(FEAT_TRAINS, item_TGV_PSE) {
     property {
         name:                         string(STR_SNCF_TRAIN_TGV_PSE_NAME);
@@ -198,7 +206,7 @@ item(FEAT_TRAINS, item_TGV_PSE) {
         speed:                        270 km/h;
         misc_flags:                   bitmask(TRAIN_FLAG_MU);
         refit_cost:                   0;
-        track_type:                   AC25DC15;
+        track_type:                   AC25AC15DC15;
         ai_special_flag:              AI_FLAG_PASSENGER;
         power:                        6420 kW;
         running_cost_base:            RUNNING_COST_ELECTRIC;
@@ -226,5 +234,6 @@ item(FEAT_TRAINS, item_TGV_PSE) {
         length:                       sw_TGV_PSE_length;
         cargo_capacity:               sw_TGV_PSE_capacity;
         purchase_cargo_capacity:      return 37;
+        power:                        sw_TGV_PSE_power;
     }
 }
