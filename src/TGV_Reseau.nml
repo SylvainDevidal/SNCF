@@ -1,0 +1,230 @@
+template tmpl_vehicle_TGV_Reseau_front() {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 181, 8, 23, -3, -8]
+    [15, 181, 22, 21, -17, -10]
+    [38, 181, 32, 16, -17, -12]
+    [71, 181, 22, 21, -8, -13]
+    [94, 181, 8, 23, -3, -16]
+    [103, 181, 22, 21, -15, -12]
+    [126, 181, 32, 16, -16, -12]
+    [159, 181, 22, 21, -6, -12]
+}
+
+template tmpl_vehicle_TGV_Reseau_1st_1() {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 205, 8, 24, -3, -8]
+    [15, 205, 22, 19, -18, -9]
+    [39, 205, 29, 12, -14, -8]
+    [70, 205, 22, 18, -7, -10]
+    [94, 205, 8, 24, -3, -16]
+    [104, 205, 23, 18, -15, -9]
+    [129, 205, 30, 12, -16, -8]
+    [161, 205, 22, 19, -6, -10]
+}
+
+template tmpl_vehicle_TGV_Reseau_1st_2() {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 230, 8, 24, -3, -8]
+    [15, 230, 22, 17, -15, -8]
+    [38, 230, 30, 11, -16, -7]
+    [69, 230, 22, 17, -7, -9]
+    [92, 230, 8, 24, -3, -16]
+    [101, 230, 22, 17, -15, -8]
+    [124, 230, 30, 11, -14, -7]
+    [155, 230, 22, 17, -6, -8]
+}
+
+template tmpl_vehicle_TGV_Reseau_1st_3() {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 230, 8, 24, -3, -8]
+    [15, 230, 22, 17, -15, -8]
+    [38, 230, 30, 11, -14, -7]
+    [69, 230, 22, 17, -6, -8]
+    [92, 230, 8, 24, -3, -16]
+    [101, 230, 22, 17, -15, -8]
+    [124, 230, 30, 11, -16, -7]
+    [155, 230, 22, 17, -6, -8]
+}
+
+template tmpl_vehicle_TGV_Reseau_bar() {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 255, 8, 24, -3, -8]
+    [15, 255, 22, 17, -15, -8]
+    [38, 255, 30, 11, -16, -7]
+    [69, 255, 22, 17, -6, -8]
+    [92, 255, 8, 24, -3, -16]
+    [101, 255, 22, 17, -15, -8]
+    [125, 255, 30, 11, -14, -7]
+    [156, 255, 21, 17, -6, -8]
+}
+
+template tmpl_vehicle_TGV_Reseau_2nd_4() {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 280, 8, 24, -3, -8]
+    [15, 280, 22, 17, -15, -8]
+    [38, 280, 30, 11, -14, -7]
+    [69, 280, 22, 17, -6, -8]
+    [92, 280, 8, 24, -3, -16]
+    [101, 280, 22, 17, -15, -8]
+    [125, 280, 30, 11, -16, -7]
+    [156, 280, 22, 17, -6, -8]
+}
+
+template tmpl_vehicle_TGV_Reseau_2nd_3() {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 280, 8, 24, -3, -8]
+    [15, 280, 22, 17, -15, -8]
+    [38, 280, 30, 11, -16, -7]
+    [69, 280, 22, 17, -6, -8]
+    [92, 280, 8, 24, -3, -16]
+    [101, 280, 22, 17, -15, -8]
+    [125, 280, 30, 11, -14, -7]
+    [156, 280, 22, 17, -6, -8]
+}
+
+template tmpl_vehicle_TGV_Reseau_2nd_2() {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 280, 8, 24, -3, -8]
+    [15, 280, 22, 17, -15, -8]
+    [38, 280, 30, 11, -14, -7]
+    [69, 280, 22, 17, -6, -8]
+    [92, 280, 8, 24, -3, -16]
+    [101, 280, 22, 17, -15, -8]
+    [125, 280, 30, 11, -16, -7]
+    [156, 280, 22, 17, -7, -9]
+}
+
+template tmpl_vehicle_TGV_Reseau_2nd_1() {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 330, 8, 23, -3, -8]
+    [15, 330, 23, 18, -15, -9]
+    [39, 330, 30, 12, -16, -8]
+    [70, 330, 22, 19, -6, -10]
+    [93, 330, 8, 23, -3, -16]
+    [102, 330, 22, 19, -17, -9]
+    [125, 330, 29, 12, -14, -8]
+    [155, 330, 22, 18, -7, -10]
+}
+
+template tmpl_vehicle_TGV_Reseau_rear() {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 355, 8, 23, -3, -8]
+    [15, 355, 22, 21, -15, -12]
+    [38, 355, 32, 16, -16, -12]
+    [71, 355, 22, 21, -6, -12]
+    [94, 355, 8, 23, -3, -16]
+    [103, 355, 22, 21, -17, -10]
+    [126, 355, 32, 16, -17, -12]
+    [160, 355, 22, 21, -8, -13]
+}
+
+template tmpl_vehicle_TGV_Reseau_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [126, 181, 32, 16, -29, -10]
+}
+
+/* Define the spritesets, these allow referring to these sprites later on */
+spriteset (set_TGV_Reseau_front,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_front() }
+spriteset (set_TGV_Reseau_1st_1,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_1st_1() }
+spriteset (set_TGV_Reseau_1st_2,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_1st_2() }
+spriteset (set_TGV_Reseau_1st_3,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_1st_3() }
+spriteset (set_TGV_Reseau_bar,      "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_bar() }
+spriteset (set_TGV_Reseau_2nd_4,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_2nd_4() }
+spriteset (set_TGV_Reseau_2nd_3,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_2nd_3() }
+spriteset (set_TGV_Reseau_2nd_2,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_2nd_2() }
+spriteset (set_TGV_Reseau_2nd_1,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_2nd_1() }
+spriteset (set_TGV_Reseau_rear,     "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_rear() }
+spriteset (set_TGV_Reseau_purchase, "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_purchase() }
+
+/* Choose between front, middle and back parts */
+switch(FEAT_TRAINS, SELF, sw_TGV_Reseau_graphics, position_in_articulated_veh) {
+    0: set_TGV_Reseau_front;
+    1: set_TGV_Reseau_1st_1;
+    2: set_TGV_Reseau_1st_2;
+    3: set_TGV_Reseau_1st_3;
+    4: set_TGV_Reseau_bar;
+    5: set_TGV_Reseau_2nd_4;
+    6: set_TGV_Reseau_2nd_3;
+    7: set_TGV_Reseau_2nd_2;
+    8: set_TGV_Reseau_2nd_1;
+    9: set_TGV_Reseau_rear;
+}
+
+switch(FEAT_TRAINS, SELF, sw_TGV_Reseau_articulated_part, extra_callback_info1) {
+    1 .. 9: return item_TGV_Reseau;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch(FEAT_TRAINS, SELF, sw_TGV_Reseau_check_length, num_vehs_in_consist) {
+    0 .. 20: return CB_RESULT_NO_TEXT;
+    return string(ERR_TGV_RESEAU_TOO_LONG);
+}
+
+switch(FEAT_TRAINS, SELF, sw_TGV_Reseau_can_attach_wagon, vehicle_type_id) {
+    item_TGV_Reseau: CB_RESULT_ATTACH_ALLOW;
+    return string(ERR_TGV_RESEAU_CANNOT_ATTACH_OTHER);
+}
+
+switch(FEAT_TRAINS, SELF, sw_TGV_Reseau_length, position_in_articulated_veh) {
+    1: 7;
+    3: 7;
+    5: 7;
+    7: 7;
+    default: 8;
+}
+
+switch(FEAT_TRAINS, SELF, sw_TGV_Reseau_capacity, position_in_articulated_veh) {
+    1: 44;
+    2 .. 3: 42;
+    5 .. 7: 68;
+    8: 68;
+    default: 0;
+}
+
+item(FEAT_TRAINS, item_TGV_Reseau) {
+    property {
+        name:                         string(STR_SNCF_TRAIN_TGV_RESEAU_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(1992, 1, 1);
+        model_life:                   23;
+        vehicle_life:                 20;
+        reliability_decay:            19;
+        refittable_cargo_classes:     bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: bitmask();
+        loading_speed:                6; 
+        cost_factor:                  185;
+        running_cost_factor:          170;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        320 km/h;
+        misc_flags:                   bitmask(TRAIN_FLAG_MU);
+        refit_cost:                   0;
+        track_type:                   AC25DC03DC15;
+        ai_special_flag:              AI_FLAG_PASSENGER;
+        power:                        8800 kW;
+        running_cost_base:            RUNNING_COST_ELECTRIC;
+        dual_headed:                  0;
+        weight:                       285 ton;
+        ai_engine_rank:               0;
+        engine_class:                 ENGINE_CLASS_ELECTRIC;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0.212;
+        air_drag_coefficient:         0.06;
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+        cargo_capacity:               1;
+    }
+    graphics {
+        default:                      sw_TGV_Reseau_graphics;
+        purchase:                     set_TGV_Reseau_purchase;
+        additional_text:              return string(STR_SNCF_TRAIN_TGV_RESEAU_ADDITIONAL_TEXT);
+        articulated_part:             sw_TGV_Reseau_articulated_part;
+        can_attach_wagon:             sw_TGV_Reseau_can_attach_wagon;
+        start_stop:                   sw_TGV_Reseau_check_length;
+        visual_effect_and_powered:    return (position_in_consist % 10 == 0) ?
+                                          visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 2, DISABLE_WAGON_POWER) :
+                                          visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+        length:                       sw_TGV_Reseau_length;
+        cargo_capacity:               sw_TGV_Reseau_capacity;
+        purchase_cargo_capacity:      return 40;
+    }
+}
