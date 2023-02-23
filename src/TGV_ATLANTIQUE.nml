@@ -1,0 +1,176 @@
+template tmpl_vehicle_TGV_ATLANTIQUE_front_lighted() {
+    //xpos ypos xsize ysize xrel yrel
+    [1, 1, 8, 22, -3, -13]
+    [10, 1, 22, 15, -17, -4]
+    [34, 1, 32, 15, -16, -11]
+    [67, 1, 22, 17, -7, -10]
+    [90, 1, 8, 22, -3, -17]
+    [99, 1, 22, 17, -16, -7]
+    [122, 1, 32, 15, -16, -11]
+    [156, 1, 22, 15, -7, -8]
+}
+
+template tmpl_vehicle_TGV_ATLANTIQUE_front() {
+    //xpos ypos xsize ysize xrel yrel
+    [1, 47, 8, 22, -3, -13]
+    [10, 47, 22, 15, -17, -4]
+    [34, 47, 32, 15, -15, -11]
+    [67, 47, 22, 17, -7, -10]
+    [90, 47, 8, 22, -3, -17]
+    [99, 47, 22, 17, -16, -7]
+    [122, 47, 32, 15, -16, -11]
+    [156, 47, 22, 15, -7, -8]
+}
+
+template tmpl_vehicle_TGV_ATLANTIQUE_middle_f() {
+    //xpos ypos xsize ysize xrel yrel
+    [1, 93, 8, 22, -3, -13]
+    [10, 93, 22, 16, -17, -6]
+    [34, 93, 32, 13, -15, -9]
+    [67, 93, 22, 16, -7, -9]
+    [90, 93, 8, 22, -3, -17]
+    [99, 93, 22, 16, -16, -6]
+    [122, 93, 32, 13, -16, -9]
+    [156, 93, 22, 16, -7, -10]
+}
+
+template tmpl_vehicle_TGV_ATLANTIQUE_middle_r() {
+    //xpos ypos xsize ysize xrel yrel
+    [90, 93, 8, 22, -3, -17]
+    [99, 93, 22, 16, -16, -6]
+    [122, 93, 32, 13, -16, -9]
+    [156, 93, 22, 16, -7, -10]
+    [1, 93, 8, 22, -3, -13]
+    [10, 93, 22, 16, -17, -6]
+    [34, 93, 32, 13, -15, -9]
+    [67, 93, 22, 16, -7, -9]
+}
+
+template tmpl_vehicle_TGV_ATLANTIQUE_middle() {
+    //xpos ypos xsize ysize xrel yrel
+    [1, 116, 8, 20, -3, -12]
+    [10, 116, 22, 15, -15, -6]
+    [33, 116, 33, 12, -16, -8]
+    [67, 116, 22, 15, -7, -9]
+}
+
+template tmpl_vehicle_TGV_ATLANTIQUE_rear_lighted() {
+    //xpos ypos xsize ysize xrel yrel
+    [90, 24, 8, 22, -3, -18]
+    [99, 24, 22, 19, -16, -9]
+    [122, 24, 32, 15, -16, -11]
+    [156, 24, 22, 15, -7, -8]
+    [1, 24, 8, 22, -3, -13]
+    [10, 24, 22, 15, -17, -4]
+    [34, 24, 32, 17, -16, -13]
+    [67, 24, 22, 19, -7, -12]
+}
+
+template tmpl_vehicle_TGV_ATLANTIQUE_rear() {
+    //xpos ypos xsize ysize xrel yrel
+    [90, 70, 8, 22, -3, -18]
+    [99, 70, 22, 19, -16, -9]
+    [122, 70, 32, 15, -16, -11]
+    [156, 70, 22, 15, -7, -8]
+    [1, 70, 8, 22, -3, -13]
+    [10, 70, 22, 15, -17, -4]
+    [34, 70, 32, 17, -15, -13]
+    [67, 70, 22, 19, -7, -12]
+}
+
+template tmpl_vehicle_TGV_ATLANTIQUE_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [122, 1, 32, 15, -29, -9]
+}
+
+/* Define the spritesets, these allow referring to these sprites later on */
+spriteset (set_TGV_ATLANTIQUE_front_lighted, "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_front_lighted() }
+spriteset (set_TGV_ATLANTIQUE_front,         "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_front() }
+spriteset (set_TGV_ATLANTIQUE_middle_f,      "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_middle_f() }
+spriteset (set_TGV_ATLANTIQUE_middle_r,      "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_middle_r() }
+spriteset (set_TGV_ATLANTIQUE_middle,        "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_middle() }
+spriteset (set_TGV_ATLANTIQUE_rear_lighted,  "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_rear_lighted() }
+spriteset (set_TGV_ATLANTIQUE_rear,          "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_rear() }
+spriteset (set_TGV_ATLANTIQUE_purchase,      "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_purchase() }
+
+/* Only the frontmost vehicle should have its lights on */
+switch(FEAT_TRAINS, SELF, sw_TGV_ATLANTIQUE_front, position_in_consist) {
+    0: set_TGV_ATLANTIQUE_front_lighted;
+    default: set_TGV_ATLANTIQUE_front;
+}
+
+/* Only the rearmost vehicle should have red lights */
+switch(FEAT_TRAINS, SELF, sw_TGV_ATLANTIQUE_rear, position_in_consist_from_end) {
+    0: set_TGV_ATLANTIQUE_rear_lighted;
+    default: set_TGV_ATLANTIQUE_rear;
+}
+
+/* Choose between front, middle and back parts */
+switch(FEAT_TRAINS, SELF, sw_TGV_ATLANTIQUE_graphics, position_in_articulated_veh) {
+    0: sw_TGV_ATLANTIQUE_front;
+    1: set_TGV_ATLANTIQUE_middle_f;
+    10: set_TGV_ATLANTIQUE_middle_r;
+    11: sw_TGV_ATLANTIQUE_rear;
+    default: set_TGV_ATLANTIQUE_middle;
+}
+
+switch(FEAT_TRAINS, SELF, sw_TGV_ATLANTIQUE_articulated_part, extra_callback_info1) {
+    1 .. 11: return item_TGV_ATLANTIQUE;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch(FEAT_TRAINS, SELF, sw_TGV_ATLANTIQUE_check_length, num_vehs_in_consist) {
+    0 .. 24: return CB_RESULT_NO_TEXT;
+    return string(ERR_TGV_ATLANTIQUE_TOO_LONG);
+}
+
+switch(FEAT_TRAINS, SELF, sw_TGV_ATLANTIQUE_can_attach_wagon, vehicle_type_id) {
+    item_TGV_ATLANTIQUE: CB_RESULT_ATTACH_ALLOW;
+    return string(ERR_TGV_ATLANTIQUE_CANNOT_ATTACH_OTHER);
+}
+
+item(FEAT_TRAINS, item_TGV_ATLANTIQUE) {
+    property {
+        name:                         string(STR_SNCF_TRAIN_TGV_ATLANTIQUE_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(1988, 1, 1);
+        model_life:                   32;
+        vehicle_life:                 28;
+        reliability_decay:            16;
+        refittable_cargo_classes:     bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: bitmask();
+        loading_speed:                6; 
+        cost_factor:                  215;
+        running_cost_factor:          165;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        300 km/h;
+        misc_flags:                   bitmask(TRAIN_FLAG_MU);
+        refit_cost:                   0;
+        track_type:                   AC25DC15;
+        ai_special_flag:              AI_FLAG_PASSENGER;
+        power:                        8800 kW;
+        running_cost_base:            RUNNING_COST_ELECTRIC;
+        dual_headed:                  0;
+        weight:                       444 ton;
+        ai_engine_rank:               0;
+        engine_class:                 ENGINE_CLASS_ELECTRIC;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0.212;
+        air_drag_coefficient:         0.06;
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+        cargo_capacity:               41;
+        length:                       8;
+    }
+    graphics {
+        default:                      sw_TGV_ATLANTIQUE_graphics;
+        purchase:                     set_TGV_ATLANTIQUE_purchase;
+        additional_text:              return string(STR_SNCF_TRAIN_TGV_ATLANTIQUE_ADDITIONAL_TEXT);
+        articulated_part:             sw_TGV_ATLANTIQUE_articulated_part;
+        can_attach_wagon:             sw_TGV_ATLANTIQUE_can_attach_wagon;
+        start_stop:                   sw_TGV_ATLANTIQUE_check_length;
+        visual_effect_and_powered:    return (position_in_consist % 12 == 0) ?
+                                          visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 2, DISABLE_WAGON_POWER) :
+                                          visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+    }
+}

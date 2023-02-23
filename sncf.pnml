@@ -99,6 +99,8 @@ grf {
 #include "src/Z7300.nml"
 // 082      Need consent
 #include "src/BB26000.nml"
+// 083
+#include "src/TGV_ATLANTIQUE.nml"
 // 087
 #include "src/BB27000.nml"
 // 088

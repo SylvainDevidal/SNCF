@@ -62,6 +62,7 @@ STR_TRAIN_Z21500          :Z21500
 
 #TGV
 STR_TRAIN_TGV_PSE          :TGV Sud-Est
+STR_TRAIN_TGV_ATLANTIQUE   :TGV Atlantique
 
 # Wagons
 STR_WAGON_CORAIL          :Voiture Corail
