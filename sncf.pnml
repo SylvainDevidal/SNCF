@@ -89,6 +89,8 @@ grf {
 #include "src/BB8100.nml"
 // 067
 #include "src/BB12000.nml"
+// 073
+#include "src/BB8500.nml"
 // 074
 #include "src/CC40100.nml"
 // 078      Need consent
