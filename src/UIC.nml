@@ -1,0 +1,64 @@
+template tmpl_vehicle_UIC_4_views(livery) {
+    //xpos ypos xsize ysize xrel yrel
+    [6, 3 + livery * 32, 8, 24,  -3, -14]
+    [21, 3 + livery * 32, 23, 17, -17, -8]
+    [52, 3 + livery * 32, 32, 12, -18, -8]
+    [93, 3 + livery * 32, 23, 17, -7, -9]
+}
+
+template tmpl_vehicle_UIC_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [52, 35, 32, 12, -19, -7]
+}
+
+spriteset (set_UIC_graphics_0,        "gfx/UIC_COACH.png") { tmpl_vehicle_UIC_4_views(0) }
+spriteset (set_UIC_graphics_1,        "gfx/UIC_COACH.png") { tmpl_vehicle_UIC_4_views(1) }
+spriteset (set_UIC_graphics_2,        "gfx/UIC_COACH.png") { tmpl_vehicle_UIC_4_views(2) }
+spriteset (set_UIC_graphics_3,        "gfx/UIC_COACH.png") { tmpl_vehicle_UIC_4_views(3) }
+spriteset (set_UIC_graphics_purchase, "gfx/UIC_COACH.png") { tmpl_vehicle_UIC_purchase() }
+
+random_switch (FEAT_TRAINS, SELF, sw_UIC_graphics_random) {
+    1: set_UIC_graphics_0;
+    2: set_UIC_graphics_1;
+    3: set_UIC_graphics_2;
+    4: set_UIC_graphics_3;
+}
+
+item(FEAT_TRAINS, item_UIC) {
+    property {
+        name:                         string(STR_SNCF_WAGON_UIC_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(1924, 1, 1);
+        model_life:                   40;
+        vehicle_life:                 25;
+        reliability_decay:            20;
+        refittable_cargo_classes:     bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: bitmask();
+        loading_speed:                5;
+        cost_factor:                  200;
+        running_cost_factor:          70;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        160 km/h;
+        misc_flags:                   bitmask();
+        refit_cost:                   0;
+        track_type:                   UNELECTRIFIED;
+        ai_special_flag:              AI_FLAG_PASSENGER;
+        power:                        0;
+        running_cost_base:            RUNNING_COST_NONE;
+        dual_headed:                  0;
+        cargo_capacity:               80;
+        weight:                       42 ton;
+        ai_engine_rank:               0;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0;
+        air_drag_coefficient:         0;
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+        length:                       VEHICLE_LENGTH;
+    }
+    graphics {
+        default:                      sw_UIC_graphics_random;
+        purchase:                     set_UIC_graphics_purchase;
+        additional_text:              return string(STR_SNCF_WAGON_UIC_ADDITIONAL_TEXT);
+   }
+}

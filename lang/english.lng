@@ -147,6 +147,8 @@ STR_SNCF_TRAIN_TGV_RESEAU_ADDITIONAL_TEXT     :Power: 8800 kW on AC and 3680 kW 
 # Wagon
 STR_SNCF_WAGON_OCEM_NAME                      :{STR_WAGON_OCEM} (passengers)
 STR_SNCF_WAGON_OCEM_ADDITIONAL_TEXT           :Graphics by The Irish
+STR_SNCF_WAGON_UIC_NAME                       :{STR_WAGON_UIC} (passengers)
+STR_SNCF_WAGON_UIC_ADDITIONAL_TEXT            :Graphics by The Irish
 STR_SNCF_WAGON_CORAIL_NAME                    :{STR_WAGON_CORAIL} (passengers)
 STR_SNCF_WAGON_CORAIL_ADDITIONAL_TEXT         :Graphics by The Irish
 STR_SNCF_WAGON_FOURGON_NAME                   :{STR_WAGON_FOURGON} (mail)

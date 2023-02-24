@@ -43,8 +43,8 @@ item(FEAT_TRAINS, item_OCEM) {
         refittable_cargo_classes:     bitmask(CC_PASSENGERS);
         non_refittable_cargo_classes: bitmask();
         loading_speed:                5;
-        cost_factor:                  20;
-        running_cost_factor:          70;
+        cost_factor:                  150;
+        running_cost_factor:          60;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
         speed:                        140 km/h;
         misc_flags:                   bitmask();
@@ -54,7 +54,7 @@ item(FEAT_TRAINS, item_OCEM) {
         power:                        0;
         running_cost_base:            RUNNING_COST_NONE;
         dual_headed:                  0;
-        cargo_capacity:               75;
+        cargo_capacity:               64;
         weight:                       44 ton;
         ai_engine_rank:               0;
         extra_power_per_wagon:        0 kW;

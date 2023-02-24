@@ -71,7 +71,7 @@ item(FEAT_TRAINS, item_CORAIL) {
         refittable_cargo_classes:     bitmask(CC_PASSENGERS);
         non_refittable_cargo_classes: bitmask();
         loading_speed:                5;
-        cost_factor:                  45;
+        cost_factor:                  250;
         running_cost_factor:          100;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
         speed:                        200 km/h;
