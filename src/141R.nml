@@ -128,7 +128,7 @@ item(FEAT_TRAINS, item_141R) {
         ai_engine_rank:               0;
         engine_class:                 ENGINE_CLASS_STEAM;
         extra_power_per_wagon:        0 kW;
-        tractive_effort_coefficient:  0.228;
+        tractive_effort_coefficient:  0.3;
         air_drag_coefficient:         0.06;
         visual_effect_and_powered:    visual_effect_and_powered(VISUAL_EFFECT_STEAM, 2, DISABLE_WAGON_POWER);
         extra_weight_per_wagon:       0 ton;

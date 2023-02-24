@@ -1,0 +1,72 @@
+template tmpl_vehicle_OCEM_DOUBLE_4_views() {
+    //xpos ypos xsize ysize xrel yrel
+    [4, 71, 8, 25,  -3, -14]
+    [19, 71, 23, 18, -17, -9]
+    [50, 71, 32, 13, -18, -9]
+    [87, 71, 23, 18, -7, -10]
+}
+
+template tmpl_vehicle_OCEM_DOUBLE_8_views_rear() {
+     //xpos ypos xsize ysize xrel yrel
+    [118, 38, 8, 25,  -3, -14]
+    [133, 38, 23, 18, -16, -10]
+    [164, 38, 32, 13, -18, -9]
+    [202, 38, 23, 18, -7, -10]
+    [3, 38, 8, 25, -3, -14]
+    [18, 38, 23, 18, -18, -9]
+    [50, 38, 32, 13, -18, -9]
+    [90, 38, 23, 18, -7, -10]
+}
+
+template tmpl_vehicle_OCEM_DOUBLE_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [50, 71, 32, 12, -19, -7]
+}
+
+switch (FEAT_TRAINS, SELF, sw_OCEM_DOUBLE_graphics, position_in_consist_from_end) {
+    0: set_OCEM_DOUBLE_graphics_rear;
+    default: set_OCEM_DOUBLE_graphics;
+}
+
+spriteset (set_OCEM_DOUBLE_graphics,          "gfx/OCEM_DOUBLEDECK.png") { tmpl_vehicle_OCEM_DOUBLE_4_views() }
+spriteset (set_OCEM_DOUBLE_graphics_rear,     "gfx/OCEM_DOUBLEDECK.png") { tmpl_vehicle_OCEM_DOUBLE_8_views_rear() }
+spriteset (set_OCEM_DOUBLE_graphics_purchase, "gfx/OCEM_DOUBLEDECK.png") { tmpl_vehicle_OCEM_DOUBLE_purchase() }
+
+item(FEAT_TRAINS, item_OCEM_DOUBLE) {
+    property {
+        name:                         string(STR_SNCF_WAGON_OCEM_DOUBLE_NAME);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        introduction_date:            date(1924, 1, 1);
+        model_life:                   40;
+        vehicle_life:                 25;
+        reliability_decay:            20;
+        refittable_cargo_classes:     bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: bitmask();
+        loading_speed:                5;
+        cost_factor:                  180;
+        running_cost_factor:          60;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        140 km/h;
+        misc_flags:                   bitmask();
+        refit_cost:                   0;
+        track_type:                   UNELECTRIFIED;
+        ai_special_flag:              AI_FLAG_PASSENGER;
+        power:                        0;
+        running_cost_base:            RUNNING_COST_NONE;
+        dual_headed:                  0;
+        cargo_capacity:               92;
+        weight:                       44 ton;
+        ai_engine_rank:               0;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0;
+        air_drag_coefficient:         0;
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+        length:                       VEHICLE_LENGTH;
+    }
+    graphics {
+        default:                      sw_OCEM_DOUBLE_graphics;
+        purchase:                     set_OCEM_DOUBLE_graphics_purchase;
+        additional_text:              return string(STR_SNCF_WAGON_OCEM_DOUBLE_ADDITIONAL_TEXT);
+   }
+}

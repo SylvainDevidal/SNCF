@@ -51,7 +51,7 @@ item(FEAT_TRAINS, item_2BB2) {
         ai_engine_rank:               0;
         engine_class:                 ENGINE_CLASS_ELECTRIC;
         extra_power_per_wagon:        0 kW;
-        tractive_effort_coefficient:  0.193;
+        tractive_effort_coefficient:  0.3;
         air_drag_coefficient:         0.06;
         extra_weight_per_wagon:       0 ton;
         bitmask_vehicle_info:         0;
