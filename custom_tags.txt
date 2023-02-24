@@ -70,6 +70,7 @@ STR_TRAIN_TGV_ATLANTIQUE   :TGV Atlantique
 STR_TRAIN_TGV_RESEAU       :TGV Réseau
 
 # Wagons
+STR_WAGON_OCEM            :Voiture OCEM « Talbot »
 STR_WAGON_CORAIL          :Voiture Corail
 STR_WAGON_FOURGON         :Voiture Fourgon
 

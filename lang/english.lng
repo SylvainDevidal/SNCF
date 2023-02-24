@@ -145,7 +145,9 @@ STR_SNCF_TRAIN_TGV_RESEAU_NAME                :{STR_TRAIN_TGV_RESEAU} ({STR_ELEC
 STR_SNCF_TRAIN_TGV_RESEAU_ADDITIONAL_TEXT     :Power: 8800 kW on AC and 3680 kW on DC. Graphics by Coalroads Artist
 
 # Wagon
+STR_SNCF_WAGON_OCEM_NAME                      :{STR_WAGON_OCEM} (passengers)
+STR_SNCF_WAGON_OCEM_ADDITIONAL_TEXT           :Graphics by The Irish
 STR_SNCF_WAGON_CORAIL_NAME                    :{STR_WAGON_CORAIL} (passengers)
 STR_SNCF_WAGON_CORAIL_ADDITIONAL_TEXT         :Graphics by The Irish
-STR_SNCF_WAGON_FOURGON_NAME                   :{STR_WAGON_CORAIL} (mail)
+STR_SNCF_WAGON_FOURGON_NAME                   :{STR_WAGON_FOURGON} (mail)
 STR_SNCF_WAGON_FOURGON_ADDITIONAL_TEXT        :Graphics by The Irish
