@@ -1,7 +1,7 @@
 template tmpl_vehicle_OCEM_DOUBLE_4_views() {
     //xpos ypos xsize ysize xrel yrel
     [4, 71, 8, 25,  -3, -14]
-    [19, 71, 23, 18, -17, -9]
+    [19, 71, 23, 18, -18, -9]
     [50, 71, 32, 13, -18, -9]
     [87, 71, 23, 18, -7, -10]
 }

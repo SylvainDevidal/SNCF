@@ -61,6 +61,8 @@ grf {
 #include "src/62000.nml"
 // 032
 #include "src/CC65000.nml"
+// 037
+#include "src/BB67000.nml"
 // 042
 #include "src/T2000.nml"
 // 045
