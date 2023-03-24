@@ -1,8 +1,16 @@
 ##grflangid 0x01
 
+# GRF description
 STR_GRF_NAME                                  :{TITLE} {VERSION}
 STR_GRF_DESC                                  :{ORANGE}{TITLE}SNCF{}{BLACK}At last! Graphics credits to {STR_GRAPHICS_CREDIT}
 
+# Parameters
+STR_PARAM_NAME_INTRODUCTION_DATES             :Introduction dates
+STR_PARAM_DESC_INTRODUCTION_DATES             :Use historical (could be frustrating) or gameplay oriented introduction dates
+STR_PARAM_VALUE_INTRODUCTION_DATES_REAL       :Historic
+STR_PARAM_VALUE_INTRODUCTION_DATES_GAMEPLAY   :Gameplay
+
+# Generic strings
 STR_SUBTYPE_2_PART                            : (2 parts)
 STR_SUBTYPE_3_PART                            : (3 parts)
 

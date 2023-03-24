@@ -22,7 +22,7 @@ item(FEAT_TRAINS, item_BB1280) {
     property {
         name:                         string(STR_SNCF_TRAIN_BB1280_NAME);
         climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
-        introduction_date:            date(1901, 1, 1);
+        introduction_date:            (param_introduction_dates == 0) ? date(1901, 1, 1) : date(1909, 1, 1);
         model_life:                   55;
         vehicle_life:                 31;
         reliability_decay:            15;

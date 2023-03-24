@@ -28,7 +28,7 @@ item(FEAT_TRAINS, item_FOURGON) {
     property {
         name:                         string(STR_SNCF_WAGON_FOURGON_NAME);
         climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
-        introduction_date:            date(1975, 1, 1);
+        introduction_date:            (param_introduction_dates == 0) ? date(1975, 1, 1) : date(1899, 1, 1);
         model_life:                   VEHICLE_NEVER_EXPIRES;
         vehicle_life:                 30;
         reliability_decay:            20;

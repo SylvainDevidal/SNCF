@@ -7,6 +7,21 @@ grf {
     /* This is the first version, start numbering at 0. */
     version: 0;
     min_compatible_version: 0;
+
+    param 0 {
+        param_introduction_dates {
+            type: int;
+            name: string(STR_PARAM_NAME_INTRODUCTION_DATES);
+            desc: string(STR_PARAM_DESC_INTRODUCTION_DATES);
+            min_value: 0;
+            max_value: 1;
+            def_value: 1;
+            names: {
+                0: string(STR_PARAM_VALUE_INTRODUCTION_DATES_REAL);
+                1: string(STR_PARAM_VALUE_INTRODUCTION_DATES_GAMEPLAY);
+            };
+        }
+    }
 }
 
 #include "src/COMMON.nml"
