@@ -141,3 +141,5 @@ grf {
 #include "src/CORAIL.nml"
 // 204
 #include "src/FOURGON.nml"
+// 205
+#include "src/FOURGON_CORAIL.nml"

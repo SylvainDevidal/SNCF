@@ -66,9 +66,9 @@ STR_TRAIN_Z7300           :Z7300
 STR_TRAIN_Z21500          :Z21500
 
 #TGV
-STR_TRAIN_TGV_PSE          :TGV Sud-Est
-STR_TRAIN_TGV_ATLANTIQUE   :TGV Atlantique
-STR_TRAIN_TGV_RESEAU       :TGV Réseau
+STR_TRAIN_TGV_PSE         :TGV Sud-Est
+STR_TRAIN_TGV_ATLANTIQUE  :TGV Atlantique
+STR_TRAIN_TGV_RESEAU      :TGV Réseau
 
 # Wagons
 STR_WAGON_OCEM            :Voiture OCEM « Talbot »
@@ -76,6 +76,7 @@ STR_WAGON_OCEM_DOUBLE     :Voiture OCEM Double Deck
 STR_WAGON_UIC             :Voiture UIC-Y
 STR_WAGON_CORAIL          :Voiture Corail
 STR_WAGON_FOURGON         :Voiture Fourgon
+STR_WAGON_FOURGON_CORAIL  :Voiture Fourgon Corail
 
 # Stuff
 STR_GRAPHICS_CREDIT       :Emperor Jake, The Irish, Hovering Teacup, acs121, Coalroads Artist, Snail. If you regognize graphics of your own and are not credited please contact this GRF author on the forums.
