@@ -2,12 +2,7 @@ disable_item(FEAT_TRAINS, 0, 26);
 disable_item(FEAT_TRAINS, 54, 115);
 
 train_width_32_px = 1;
-
-switch (FEAT_TRAINS, SELF, sw_attach_no_express, cargo_classes & bitmask(CC_EXPRESS))
-{
-    0: CB_RESULT_ATTACH_ALLOW;
-    default: string(ERR_NO_EXPRESS);
-}
+traininfo_y_offset = 2;
 
 switch (FEAT_TRAINS, SELF, sw_attach_no_mail, cargo_classes & bitmask(CC_MAIL))
 {
