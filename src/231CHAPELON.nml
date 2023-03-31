@@ -176,7 +176,6 @@ item(FEAT_TRAINS, item_231CHAPELON) {
         visual_effect_and_powered:    return (position_in_articulated_veh == 0) ?
                                           visual_effect_and_powered(VISUAL_EFFECT_STEAM, -3, DISABLE_WAGON_POWER) :
                                           visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
-        can_attach_wagon:             sw_attach_only_express_mail_passenger;
         length:                       sw_231CHAPELON_length;
     }
 }

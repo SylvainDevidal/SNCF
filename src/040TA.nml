@@ -106,6 +106,5 @@ item(FEAT_TRAINS, item_040TA) {
         default:                      sw_040TA_graphics_random;
         purchase:                     set_040TA_graphics_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_040TA_ADDITIONAL_TEXT);
-        can_attach_wagon:             sw_attach_no_express;
     }
 }

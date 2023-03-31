@@ -61,6 +61,5 @@ item(FEAT_TRAINS, item_BB61000) {
         default:                      sw_BB61000_graphics;
         purchase:                     set_BB61000_graphics_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_BB61000_ADDITIONAL_TEXT);
-        can_attach_wagon:             sw_attach_no_passenger;
     }
 }

@@ -82,6 +82,5 @@ item(FEAT_TRAINS, item_262DB) {
         visual_effect_and_powered:    return (position_in_articulated_veh == 0) ?
                                           visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 1, ENABLE_WAGON_POWER) :
                                           visual_effect_and_powered(VISUAL_EFFECT_DIESEL, -3, ENABLE_WAGON_POWER);
-        can_attach_wagon:             sw_attach_only_passenger;
     }
 }

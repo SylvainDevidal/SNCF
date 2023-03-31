@@ -15,11 +15,6 @@ STR_SUBTYPE_2_PART                            : (2 parts)
 STR_SUBTYPE_3_PART                            : (3 parts)
 
 # Errors messages
-ERR_NO_EXPRESS                                :This engine can't pull express cargo
-ERR_NO_MAIL                                   :This engine can't pull mail vans
-ERR_NO_PASSENGER                              :This engine can't pull passenger coaches
-ERR_ONLY_PASSENGER                            :This engine can pull passenger coaches only
-ERR_ONLY_EXPRESS_MAIL_PASSENGER               :This engine can pull passenger coaches, mail vans and express cargo only
 ERR_TGV_PSE_CANNOT_ATTACH_OTHER               :Only other TGV Sud-Est can be attached to TGV Sud-Est.
 ERR_TGV_PSE_TOO_LONG                          :A TGV Sud-Est consist can't have more than 2 units.
 ERR_TGV_ATLANTIQUE_CANNOT_ATTACH_OTHER        :Only other TGV Atlantique can be attached to TGV Atlantique.
@@ -43,7 +38,7 @@ ERR_Z21500_TOO_LONG                           :A Z21500 consist can't have more 
 
 # Steam
 STR_SNCF_TRAIN_040TA_NAME                     :{STR_TRAIN_040TA} ({STR_STEAM})
-STR_SNCF_TRAIN_040TA_ADDITIONAL_TEXT          :This engine can't pull express cargo.{}Graphics by The Irish
+STR_SNCF_TRAIN_040TA_ADDITIONAL_TEXT          :Graphics by The Irish
 STR_SNCF_TRAIN_131TB_NAME                     :{STR_TRAIN_131TB} ({STR_STEAM})
 STR_SNCF_TRAIN_131TB_ADDITIONAL_TEXT          :Graphics by The Irish
 STR_SNCF_TRAIN_140C_NAME                      :{STR_TRAIN_140C} ({STR_STEAM})
@@ -59,9 +54,9 @@ STR_SNCF_TRAIN_151A_ADDITIONAL_TEXT           :Graphics by The Irish
 STR_SNCF_TRAIN_230BDG_NAME                    :{STR_TRAIN_230BDG} ({STR_STEAM})
 STR_SNCF_TRAIN_230BDG_ADDITIONAL_TEXT         :Graphics by The Irish
 STR_SNCF_TRAIN_231AC_NAME                     :{STR_TRAIN_231AC} ({STR_STEAM})
-STR_SNCF_TRAIN_231AC_ADDITIONAL_TEXT          :This engine can't pull mail vans.{}Graphics by The Irish
+STR_SNCF_TRAIN_231AC_ADDITIONAL_TEXT          :Graphics by The Irish
 STR_SNCF_TRAIN_231EGHK_NAME                   :{STR_TRAIN_231EGHK} ({STR_STEAM})
-STR_SNCF_TRAIN_231EGHK_ADDITIONAL_TEXT        :This engine can pull passengers, mails or express cargo only.{}Graphics by The Irish
+STR_SNCF_TRAIN_231EGHK_ADDITIONAL_TEXT        :Graphics by The Irish
 STR_SNCF_TRAIN_232TC_NAME                     :{STR_TRAIN_232TC} ({STR_STEAM})
 STR_SNCF_TRAIN_232TC_ADDITIONAL_TEXT          :Graphics by The Irish
 STR_SNCF_TRAIN_240A_NAME                      :{STR_TRAIN_240A} ({STR_STEAM})
@@ -73,17 +68,17 @@ STR_SNCF_TRAIN_241AC_ADDITIONAL_TEXT          :Graphics by The Irish
 STR_SNCF_TRAIN_241P_NAME                      :{STR_TRAIN_241P} ({STR_STEAM})
 STR_SNCF_TRAIN_241P_ADDITIONAL_TEXT           :Graphics by The Irish
 STR_SNCF_TRAIN_242A_NAME                      :{STR_TRAIN_242A} ({STR_STEAM})
-STR_SNCF_TRAIN_242A_ADDITIONAL_TEXT           :This engine can pull passengers, mails or express cargo only.{}Graphics by The Irish
+STR_SNCF_TRAIN_242A_ADDITIONAL_TEXT           :Graphics by The Irish
 STR_SNCF_TRAIN_242TA_NAME                     :{STR_TRAIN_242TA} ({STR_STEAM})
 STR_SNCF_TRAIN_242TA_ADDITIONAL_TEXT          :Graphics by The Irish
 
 # Need consent
 STR_SNCF_TRAIN_231CHAPELON_NAME               :{STR_TRAIN_231CHAPELON} ({STR_STEAM})
-STR_SNCF_TRAIN_231CHAPELON_ADDITIONAL_TEXT    :This engine can pull passengers, mails or express cargo only.{}Graphics by Snail
+STR_SNCF_TRAIN_231CHAPELON_ADDITIONAL_TEXT    :Graphics by Snail
 
 # Diesel
 STR_SNCF_TRAIN_262DB_NAME                     :{STR_TRAIN_262BD} ({STR_DIESEL})
-STR_SNCF_TRAIN_262DB_ADDITIONAL_TEXT          :This engine can pull passengers coaches only.{}Graphics by The Irish
+STR_SNCF_TRAIN_262DB_ADDITIONAL_TEXT          :Graphics by The Irish
 STR_SNCF_TRAIN_62000_NAME                     :{STR_TRAIN_62000} ({STR_DIESEL})
 STR_SNCF_TRAIN_62000_ADDITIONAL_TEXT          :Graphics by The Irish
 STR_SNCF_TRAIN_CC65000_NAME                   :{STR_TRAIN_CC65000} ({STR_DIESEL})
@@ -131,11 +126,11 @@ STR_SNCF_TRAIN_BB8100_ADDITIONAL_TEXT         :Graphics by The Irish
 STR_SNCF_TRAIN_BB12000_NAME                   :{STR_TRAIN_BB12000} ({STR_ELEC_25AC})
 STR_SNCF_TRAIN_BB12000_ADDITIONAL_TEXT        :Graphics by Emperor Jake
 STR_SNCF_TRAIN_CC40100_NAME                   :{STR_TRAIN_CC40100} ({STR_ELEC_15DC03DC15AC25AC})
-STR_SNCF_TRAIN_CC40100_ADDITIONAL_TEXT        :Power: 4850 kW on AC and 3670 kW on DC. Graphics by Emperor Jake
+STR_SNCF_TRAIN_CC40100_ADDITIONAL_TEXT        :Power: 4850 kW on AC and 3670 kW on DC.{}Graphics by Emperor Jake
 STR_SNCF_TRAIN_BB27000_NAME                   :{STR_TRAIN_BB27000} ({STR_ELEC_15DC25AC})
 STR_SNCF_TRAIN_BB27000_ADDITIONAL_TEXT        :Graphics by The Irish
 STR_SNCF_TRAIN_Z8100_NAME                     :{STR_TRAIN_Z8100} ({STR_ELEC_15DC25AC})
-STR_SNCF_TRAIN_Z8100_ADDITIONAL_TEXT          :Power: 2824 kW on AC and 2480 kW on DC Graphics by The Irish
+STR_SNCF_TRAIN_Z8100_ADDITIONAL_TEXT          :Power: 2824 kW on AC and 2480 kW on DC.{}Graphics by The Irish
 STR_SNCF_TRAIN_Z7300_NAME                     :{STR_TRAIN_Z7300} ({STR_ELEC_15DC})
 STR_SNCF_TRAIN_Z7300_ADDITIONAL_TEXT          :Graphics by The Irish
 STR_SNCF_TRAIN_Z21500_NAME                    :{STR_TRAIN_Z21500} ({STR_ELEC_15DC25AC})
@@ -148,11 +143,11 @@ STR_SNCF_TRAIN_BB26000_ADDITIONAL_TEXT        :Graphics by acs121
 # TGV
 # Need consent
 STR_SNCF_TRAIN_TGV_PSE_NAME                   :{STR_TRAIN_TGV_PSE} ({STR_ELEC_15DC15AC25AC})
-STR_SNCF_TRAIN_TGV_PSE_ADDITIONAL_TEXT        :Power: 6450 kW on AC 25 kV, 2800 kW on AC 15 kV and 3100 kW on DC 1,5 kV. Graphics by Coalroads Artist
+STR_SNCF_TRAIN_TGV_PSE_ADDITIONAL_TEXT        :Power: 6450 kW on AC 25 kV, 2800 kW on AC 15 kV and 3100 kW on DC 1,5 kV.{}Graphics by Coalroads Artist
 STR_SNCF_TRAIN_TGV_ATLANTIQUE_NAME            :{STR_TRAIN_TGV_ATLANTIQUE} ({STR_ELEC_15DC25AC})
-STR_SNCF_TRAIN_TGV_ATLANTIQUE_ADDITIONAL_TEXT :Power: 8800 kW on AC and 3880 kW on DC. Graphics by Coalroads Artist
+STR_SNCF_TRAIN_TGV_ATLANTIQUE_ADDITIONAL_TEXT :Power: 8800 kW on AC and 3880 kW on DC.{}Graphics by Coalroads Artist
 STR_SNCF_TRAIN_TGV_RESEAU_NAME                :{STR_TRAIN_TGV_RESEAU} ({STR_ELEC_15DC03DC25AC})
-STR_SNCF_TRAIN_TGV_RESEAU_ADDITIONAL_TEXT     :Power: 8800 kW on AC and 3680 kW on DC. Graphics by Coalroads Artist
+STR_SNCF_TRAIN_TGV_RESEAU_ADDITIONAL_TEXT     :Power: 8800 kW on AC and 3680 kW on DC.{}Graphics by Coalroads Artist
 
 # Wagon
 STR_SNCF_WAGON_OCEM_NAME                      :{STR_WAGON_OCEM} (passengers)

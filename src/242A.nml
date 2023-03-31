@@ -96,6 +96,5 @@ item(FEAT_TRAINS, item_242A) {
                                           visual_effect_and_powered(VISUAL_EFFECT_STEAM, -3, DISABLE_WAGON_POWER) :
                                           visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
         length:                       return (position_in_articulated_veh == 0) ? 8 : 4;
-        can_attach_wagon:             sw_attach_only_express_mail_passenger;
     }
 }
