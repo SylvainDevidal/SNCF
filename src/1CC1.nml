@@ -33,19 +33,19 @@ spriteset (set_1CC1_graphics_front_1,  "gfx/1CC1.png") { tmpl_vehicle_1CC1_8_vie
 spriteset (set_1CC1_graphics_rear_1,   "gfx/1CC1.png") { tmpl_vehicle_1CC1_8_views_rear(1) }
 spriteset (set_1CC1_graphics_purchase, "gfx/1CC1_mockup.png") { tmpl_vehicle_1CC1_purchase() }
 
-random_switch (FEAT_TRAINS, SELF, sw_1CC1_graphics_front) {
+switch (FEAT_TRAINS, SELF, sw_1CC1_graphics_set_0, position_in_articulated_veh) {
     1: set_1CC1_graphics_front_0;
-    2: set_1CC1_graphics_front_1;
+    2: set_1CC1_graphics_front_0;
 }
 
-random_switch (FEAT_TRAINS, SELF, sw_1CC1_graphics_rear) {
-    1: set_1CC1_graphics_rear_0;
+switch (FEAT_TRAINS, SELF, sw_1CC1_graphics_set_1, position_in_articulated_veh) {
+    1: set_1CC1_graphics_rear_1;
     2: set_1CC1_graphics_rear_1;
 }
 
-switch (FEAT_TRAINS, SELF, sw_1CC1_graphics, position_in_articulated_veh % 2) {
-    0: sw_1CC1_graphics_front;
-    1: sw_1CC1_graphics_rear;
+random_switch (FEAT_TRAINS, SELF, sw_1CC1_graphics) {
+    1: sw_1CC1_graphics_set_0;
+    2: sw_1CC1_graphics_set_1;
 }
 
 switch(FEAT_TRAINS, SELF, sw_1CC1_articulated_part, extra_callback_info1) {

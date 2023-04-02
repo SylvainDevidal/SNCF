@@ -31,7 +31,7 @@ spriteset (set_X2000_graphics_front,    "gfx/iroqtar.png") { tmpl_vehicle_X2000_
 spriteset (set_X2000_graphics_rear,     "gfx/iroqtar.png") { tmpl_vehicle_X2000_8_views_rear() }
 spriteset (set_X2000_graphics_purchase, "gfx/iroqtar.png") { tmpl_vehicle_X2000_purchase() }
 
-switch (FEAT_TRAINS, SELF, sw_X2000_graphics, position_in_articulated_veh % 2) {
+switch (FEAT_TRAINS, SELF, sw_X2000_graphics, position_in_articulated_veh) {
     0: set_X2000_graphics_front;
     1: set_X2000_graphics_rear;
 }

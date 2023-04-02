@@ -54,60 +54,72 @@ spriteset (set_140C_tender_graphics_3, "gfx/140C.png") { tmpl_vehicle_140C_TENDE
 spriteset (set_140C_tender_graphics_4, "gfx/140C.png") { tmpl_vehicle_140C_TENDER_8_views(4) }
 spriteset (set_140C_graphics_purchase, "gfx/140C.png") { tmpl_vehicle_140C_purchase() }
 
-switch (FEAT_TRAINS, SELF, sw_140C_graphics_0, motion_counter % 4) {
+switch (FEAT_TRAINS, SELF, sw_140C_front_graphics_0, motion_counter % 4) {
     0: set_140C_graphics_0_0;
     1: set_140C_graphics_1_0;
     2: set_140C_graphics_2_0;
     3: set_140C_graphics_3_0;
 }
 
-switch (FEAT_TRAINS, SELF, sw_140C_graphics_1, motion_counter % 4) {
+switch (FEAT_TRAINS, SELF, sw_140C_front_graphics_1, motion_counter % 4) {
     0: set_140C_graphics_0_1;
     1: set_140C_graphics_1_1;
     2: set_140C_graphics_2_1;
     3: set_140C_graphics_3_1;
 }
 
-switch (FEAT_TRAINS, SELF, sw_140C_graphics_2, motion_counter % 4) {
+switch (FEAT_TRAINS, SELF, sw_140C_front_graphics_2, motion_counter % 4) {
     0: set_140C_graphics_0_2;
     1: set_140C_graphics_1_2;
     2: set_140C_graphics_2_2;
     3: set_140C_graphics_3_2;
 }
 
-switch (FEAT_TRAINS, SELF, sw_140C_graphics_3, motion_counter % 4) {
+switch (FEAT_TRAINS, SELF, sw_140C_front_graphics_3, motion_counter % 4) {
     0: set_140C_graphics_0_3;
     1: set_140C_graphics_1_3;
     2: set_140C_graphics_2_3;
     3: set_140C_graphics_3_3;
 }
 
-switch (FEAT_TRAINS, SELF, sw_140C_graphics_4, motion_counter % 4) {
+switch (FEAT_TRAINS, SELF, sw_140C_front_graphics_4, motion_counter % 4) {
     0: set_140C_graphics_0_4;
     1: set_140C_graphics_1_4;
     2: set_140C_graphics_2_4;
     3: set_140C_graphics_3_4;
 }
 
-random_switch (FEAT_TRAINS, SELF, sw_140C_graphics_random) {
+switch (FEAT_TRAINS, SELF, sw_140C_graphics_0, position_in_articulated_veh) {
+    0:      sw_140C_front_graphics_0;
+    1:      set_140C_tender_graphics_0;
+}
+
+switch (FEAT_TRAINS, SELF, sw_140C_graphics_1, position_in_articulated_veh) {
+    0:      sw_140C_front_graphics_1;
+    1:      set_140C_tender_graphics_1;
+}
+
+switch (FEAT_TRAINS, SELF, sw_140C_graphics_2, position_in_articulated_veh) {
+    0:      sw_140C_front_graphics_2;
+    1:      set_140C_tender_graphics_2;
+}
+
+switch (FEAT_TRAINS, SELF, sw_140C_graphics_3, position_in_articulated_veh) {
+    0:      sw_140C_front_graphics_3;
+    1:      set_140C_tender_graphics_3;
+}
+
+switch (FEAT_TRAINS, SELF, sw_140C_graphics_4, position_in_articulated_veh) {
+    0:      sw_140C_front_graphics_4;
+    1:      set_140C_tender_graphics_4;
+}
+
+random_switch (FEAT_TRAINS, SELF, sw_140C_graphics) {
     1: sw_140C_graphics_0;
     2: sw_140C_graphics_1;
     3: sw_140C_graphics_2;
     4: sw_140C_graphics_3;
     5: sw_140C_graphics_4;
-}
-
-random_switch (FEAT_TRAINS, SELF, sw_140C_graphics_tender_random) {
-    1: set_140C_tender_graphics_0;
-    2: set_140C_tender_graphics_1;
-    3: set_140C_tender_graphics_2;
-    4: set_140C_tender_graphics_3;
-    5: set_140C_tender_graphics_4;
-}
-
-switch(FEAT_TRAINS, SELF, sw_140C_graphics, position_in_articulated_veh) {
-    0:      sw_140C_graphics_random;
-    1:      sw_140C_graphics_tender_random;
 }
 
 switch(FEAT_TRAINS, SELF, sw_140C_articulated_part, extra_callback_info1) {

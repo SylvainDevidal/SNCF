@@ -31,7 +31,7 @@ spriteset (set_262DB_graphics_front,    "gfx/262DB.png") { tmpl_vehicle_262DB_8_
 spriteset (set_262DB_graphics_rear,     "gfx/262DB.png") { tmpl_vehicle_262DB_8_views_rear() }
 spriteset (set_262DB_graphics_purchase, "gfx/262DB.png") { tmpl_vehicle_262DB_purchase() }
 
-switch (FEAT_TRAINS, SELF, sw_262DB_graphics, position_in_articulated_veh % 2) {
+switch (FEAT_TRAINS, SELF, sw_262DB_graphics, position_in_articulated_veh) {
     0: set_262DB_graphics_front;
     1: set_262DB_graphics_rear;
 }
