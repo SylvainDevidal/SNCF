@@ -14,7 +14,19 @@ template tmpl_vehicle_140C_tender_8_views(livery) {
      //xpos ypos xsize ysize xrel yrel
     [3 + livery % 2 * 189, 110 + int(livery / 2) * 144, 8, 24, -3, -22]
     [13 + livery % 2 * 189, 110 + int(livery / 2) * 144, 22, 17, -3, -14]
-    [37 + livery % 2 * 189, 110 + int(livery / 2) * 144, 32, 14, 4, -10]
+    [37 + livery % 2 * 189, 110 + int(livery / 2) * 144, 32, 14, 5, -10]
+    [71 + livery % 2 * 189, 110 + int(livery / 2) * 144, 22, 17, -5, -10]
+    [95 + livery % 2 * 189, 110 + int(livery / 2) * 144, 8, 24,  -3, -16]
+    [105 + livery % 2 * 189, 110 + int(livery / 2) * 144, 22, 17, -14, -10]
+    [129 + livery % 2 * 189, 110 + int(livery / 2) * 144, 32, 14, -35, -10]
+    [163 + livery % 2 * 189, 110 + int(livery / 2) * 144, 22, 17, -13, -12]
+}
+
+template tmpl_vehicle_140C_tender_bis_8_views(livery) {
+     //xpos ypos xsize ysize xrel yrel
+    [3 + livery % 2 * 189, 110 + int(livery / 2) * 144, 8, 24, -3, -22]
+    [13 + livery % 2 * 189, 110 + int(livery / 2) * 144, 22, 17, -3, -14]
+    [37 + livery % 2 * 189, 110 + int(livery / 2) * 144, 32, 14, -14, -10]
     [71 + livery % 2 * 189, 110 + int(livery / 2) * 144, 22, 17, -5, -10]
     [95 + livery % 2 * 189, 110 + int(livery / 2) * 144, 8, 24,  -3, -16]
     [105 + livery % 2 * 189, 110 + int(livery / 2) * 144, 22, 17, -14, -10]
@@ -47,8 +59,8 @@ spriteset (set_140C_graphics_0_4,      "gfx/140C.png") { tmpl_vehicle_140C_front
 spriteset (set_140C_graphics_1_4,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(1, 4) }
 spriteset (set_140C_graphics_2_4,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(2, 4) }
 spriteset (set_140C_graphics_3_4,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(3, 4) }
-spriteset (set_140C_tender_graphics_0, "gfx/140C.png") { tmpl_vehicle_140C_tender_8_views(0) }
-spriteset (set_140C_tender_graphics_1, "gfx/140C.png") { tmpl_vehicle_140C_tender_8_views(1) }
+spriteset (set_140C_tender_graphics_0, "gfx/140C.png") { tmpl_vehicle_140C_tender_bis_8_views(0) }
+spriteset (set_140C_tender_graphics_1, "gfx/140C.png") { tmpl_vehicle_140C_tender_bis_8_views(1) }
 spriteset (set_140C_tender_graphics_2, "gfx/140C.png") { tmpl_vehicle_140C_tender_8_views(2) }
 spriteset (set_140C_tender_graphics_3, "gfx/140C.png") { tmpl_vehicle_140C_tender_8_views(3) }
 spriteset (set_140C_tender_graphics_4, "gfx/140C.png") { tmpl_vehicle_140C_tender_8_views(4) }
