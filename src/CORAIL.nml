@@ -1,33 +1,21 @@
 template tmpl_vehicle_CORAIL_4_views(livery) {
     //xpos ypos xsize ysize xrel yrel
-    [6, 4 + livery * 30, 7, 23,  -3, -12]
+    [6, 4 + livery * 30, 7, 23,  -3, -11]
     [19, 4 + livery * 30, 23, 17, -17, -8]
-    [49, 4 + livery * 30, 32, 12, -15, -8]
-    [89, 4 + livery * 30, 23, 17, -7, -9]
-}
-
-template tmpl_vehicle_CORAIL_8_views_cabin_front() {
-     //xpos ypos xsize ysize xrel yrel
-    [3, 2, 8, 24, -3, -12]
-    [18, 2, 22, 17, -16, -9]
-    [49, 2, 32, 12, -17, -8]
-    [86, 2, 22, 17, -7, -9]
-    [117, 2, 8, 24,  -3, -14]
-    [132, 2, 22, 17, -15, -8]
-    [163, 2, 32, 12, -17, -8]
-    [199, 2, 22, 17, -7, -9]
+    [49, 4 + livery * 30, 32, 12, -16, -8]
+    [89, 4 + livery * 30, 23, 17, -3, -7]
 }
 
 template tmpl_vehicle_CORAIL_8_views_cabin_rear() {
      //xpos ypos xsize ysize xrel yrel
-    [117, 33, 8, 24,  -3, -12]
+    [117, 33, 8, 24,  -3, -11]
     [132, 33, 22, 17, -17, -7]
-    [163, 33, 32, 12, -17, -8]
-    [199, 33, 22, 17, -7, -9]
-    [3, 33, 8, 24, -3, -12]
-    [18, 33, 22, 17, -17, -7]
-    [49, 33, 32, 12, -15, -8]
-    [86, 33, 22, 17, -7, -9]
+    [163, 33, 32, 12, -15, -8]
+    [199, 33, 22, 17, -3, -7]
+    [3, 33, 8, 24, -3, -11]
+    [18, 33, 22, 17, -17, -8]
+    [49, 33, 32, 12, -16, -8]
+    [86, 33, 22, 17, -3, -7]
 }
 
 template tmpl_vehicle_CORAIL_purchase() {
@@ -51,7 +39,6 @@ spriteset (set_CORAIL_graphics_0,           "gfx/CORAIL_COACH.png") { tmpl_vehic
 spriteset (set_CORAIL_graphics_1,           "gfx/CORAIL_COACH.png") { tmpl_vehicle_CORAIL_4_views(1) }
 spriteset (set_CORAIL_graphics_2,           "gfx/CORAIL_COACH.png") { tmpl_vehicle_CORAIL_4_views(2) }
 spriteset (set_CORAIL_graphics_3,           "gfx/CORAIL_COACH.png") { tmpl_vehicle_CORAIL_4_views(3) }
-spriteset (set_CORAIL_graphics_cabin_front, "gfx/CORAIL_CABIN.png") { tmpl_vehicle_CORAIL_8_views_cabin_front() }
 spriteset (set_CORAIL_graphics_cabin_rear,  "gfx/CORAIL_CABIN.png") { tmpl_vehicle_CORAIL_8_views_cabin_rear() }
 spriteset (set_CORAIL_graphics_purchase,    "gfx/CORAIL_COACH.png") { tmpl_vehicle_CORAIL_purchase() }
 
