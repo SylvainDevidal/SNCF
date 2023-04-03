@@ -1,13 +1,13 @@
 template tmpl_vehicle_131TB_8_views(frame, livery) {
      //xpos ypos xsize ysize xrel yrel
-    [5 + livery * 208, 5 + frame * 29, 8, 24, -3, -16]
-    [18 + livery * 208, 5 + frame * 29, 22, 17, -9, -12]
-    [45 + livery * 208, 5 + frame * 29, 32, 14, -7, -10]
-    [82 + livery * 208, 5 + frame * 29, 22, 17, -5, -8]
-    [109 + livery * 208, 5 + frame * 29, 8, 24,  -3, -15]
-    [122 + livery * 208, 5 + frame * 29, 22, 17, -19, -6]
+    [5 + livery * 208, 5 + frame * 29, 8, 24, -3, -19]
+    [18 + livery * 208, 5 + frame * 29, 22, 17, -11, -11]
+    [45 + livery * 208, 5 + frame * 29, 32, 14, -4, -10]
+    [82 + livery * 208, 5 + frame * 29, 22, 17, -2, -6]
+    [109 + livery * 208, 5 + frame * 29, 8, 24,  -3, -10]
+    [122 + livery * 208, 5 + frame * 29, 22, 17, -20, -6]
     [149 + livery * 208, 5 + frame * 29, 32, 14, -28, -10]
-    [186 + livery * 208, 5 + frame * 29, 22, 17, -12, -12]
+    [186 + livery * 208, 5 + frame * 29, 22, 17, -10, -11]
 }
 
 template tmpl_vehicle_131TB_purchase() {
