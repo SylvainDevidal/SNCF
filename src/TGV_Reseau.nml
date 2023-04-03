@@ -124,17 +124,17 @@ template tmpl_vehicle_TGV_Reseau_purchase() {
 }
 
 /* Define the spritesets, these allow referring to these sprites later on */
-spriteset (set_TGV_Reseau_front,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_front() }
-spriteset (set_TGV_Reseau_1st_1,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_1st_1() }
-spriteset (set_TGV_Reseau_1st_2,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_1st_2() }
-spriteset (set_TGV_Reseau_1st_3,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_1st_3() }
-spriteset (set_TGV_Reseau_bar,      "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_bar() }
-spriteset (set_TGV_Reseau_2nd_4,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_2nd_4() }
-spriteset (set_TGV_Reseau_2nd_3,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_2nd_3() }
-spriteset (set_TGV_Reseau_2nd_2,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_2nd_2() }
-spriteset (set_TGV_Reseau_2nd_1,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_2nd_1() }
-spriteset (set_TGV_Reseau_rear,     "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_rear() }
-spriteset (set_TGV_Reseau_purchase, "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_purchase() }
+spriteset(set_TGV_Reseau_front,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_front() }
+spriteset(set_TGV_Reseau_1st_1,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_1st_1() }
+spriteset(set_TGV_Reseau_1st_2,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_1st_2() }
+spriteset(set_TGV_Reseau_1st_3,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_1st_3() }
+spriteset(set_TGV_Reseau_bar,      "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_bar() }
+spriteset(set_TGV_Reseau_2nd_4,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_2nd_4() }
+spriteset(set_TGV_Reseau_2nd_3,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_2nd_3() }
+spriteset(set_TGV_Reseau_2nd_2,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_2nd_2() }
+spriteset(set_TGV_Reseau_2nd_1,    "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_2nd_1() }
+spriteset(set_TGV_Reseau_rear,     "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_rear() }
+spriteset(set_TGV_Reseau_purchase, "gfx/TGVevofin.png") { tmpl_vehicle_TGV_Reseau_purchase() }
 
 /* Choose between front, middle and back parts */
 switch(FEAT_TRAINS, SELF, sw_TGV_Reseau_graphics, position_in_articulated_veh) {
@@ -181,7 +181,7 @@ switch(FEAT_TRAINS, SELF, sw_TGV_Reseau_capacity, position_in_articulated_veh) {
     default: 0;
 }
 
-switch (FEAT_TRAINS, SELF, sw_TGV_Reseau_power, current_railtype) {
+switch(FEAT_TRAINS, SELF, sw_TGV_Reseau_power, current_railtype) {
     ELEC: 11801;
     AC25: 11801;
     DC15: 4938;

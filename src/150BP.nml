@@ -32,26 +32,26 @@ template tmpl_vehicle_150BP_purchase() {
     [149, 5, 32, 14, -29, -10]
 }
 
-spriteset (set_150BP_front_graphics_0_0,        "gfx/150BP.png") { tmpl_vehicle_150BP_8_views(0, 0) }
-spriteset (set_150BP_front_graphics_1_0,        "gfx/150BP.png") { tmpl_vehicle_150BP_8_views(1, 0) }
-spriteset (set_150BP_front_graphics_2_0,        "gfx/150BP.png") { tmpl_vehicle_150BP_8_views(2, 0) }
-spriteset (set_150BP_front_graphics_3_0,        "gfx/150BP.png") { tmpl_vehicle_150BP_8_views(3, 0) }
-spriteset (set_150BP_front_graphics_0_1,        "gfx/150BP.png") { tmpl_vehicle_150BP_8_views(0, 1) }
-spriteset (set_150BP_front_graphics_1_1,        "gfx/150BP.png") { tmpl_vehicle_150BP_8_views(1, 1) }
-spriteset (set_150BP_front_graphics_2_1,        "gfx/150BP.png") { tmpl_vehicle_150BP_8_views(2, 1) }
-spriteset (set_150BP_front_graphics_3_1,        "gfx/150BP.png") { tmpl_vehicle_150BP_8_views(3, 1) }
-spriteset (set_150BP_tender_graphics_0,   "gfx/150BP.png") { tmpl_vehicle_150BP_TENDER_8_views(0) }
-spriteset (set_150BP_tender_graphics_1,   "gfx/150BP.png") { tmpl_vehicle_150BP_TENDER_8_views(1) }
-spriteset (set_150BP_graphics_purchase, "gfx/150BP.png") { tmpl_vehicle_150BP_purchase() }
+spriteset(set_150BP_front_graphics_0_0,        "gfx/150BP.png") { tmpl_vehicle_150BP_8_views(0, 0) }
+spriteset(set_150BP_front_graphics_1_0,        "gfx/150BP.png") { tmpl_vehicle_150BP_8_views(1, 0) }
+spriteset(set_150BP_front_graphics_2_0,        "gfx/150BP.png") { tmpl_vehicle_150BP_8_views(2, 0) }
+spriteset(set_150BP_front_graphics_3_0,        "gfx/150BP.png") { tmpl_vehicle_150BP_8_views(3, 0) }
+spriteset(set_150BP_front_graphics_0_1,        "gfx/150BP.png") { tmpl_vehicle_150BP_8_views(0, 1) }
+spriteset(set_150BP_front_graphics_1_1,        "gfx/150BP.png") { tmpl_vehicle_150BP_8_views(1, 1) }
+spriteset(set_150BP_front_graphics_2_1,        "gfx/150BP.png") { tmpl_vehicle_150BP_8_views(2, 1) }
+spriteset(set_150BP_front_graphics_3_1,        "gfx/150BP.png") { tmpl_vehicle_150BP_8_views(3, 1) }
+spriteset(set_150BP_tender_graphics_0,   "gfx/150BP.png") { tmpl_vehicle_150BP_TENDER_8_views(0) }
+spriteset(set_150BP_tender_graphics_1,   "gfx/150BP.png") { tmpl_vehicle_150BP_TENDER_8_views(1) }
+spriteset(set_150BP_graphics_purchase, "gfx/150BP.png") { tmpl_vehicle_150BP_purchase() }
 
-switch (FEAT_TRAINS, SELF, sw_150BP_front_graphics_0, motion_counter % 4) {
+switch(FEAT_TRAINS, SELF, sw_150BP_front_graphics_0, motion_counter % 4) {
     0: set_150BP_front_graphics_0_0;
     1: set_150BP_front_graphics_1_0;
     2: set_150BP_front_graphics_2_0;
     3: set_150BP_front_graphics_3_0;
 }
 
-switch (FEAT_TRAINS, SELF, sw_150BP_front_graphics_1, motion_counter % 4) {
+switch(FEAT_TRAINS, SELF, sw_150BP_front_graphics_1, motion_counter % 4) {
     0: set_150BP_front_graphics_0_1;
     1: set_150BP_front_graphics_1_1;
     2: set_150BP_front_graphics_2_1;
@@ -68,7 +68,7 @@ switch(FEAT_TRAINS, SELF, sw_150BP_graphics_1, position_in_articulated_veh) {
     1:      set_150BP_tender_graphics_1;
 }
 
-random_switch (FEAT_TRAINS, SELF, sw_150BP_graphics) {
+random_switch(FEAT_TRAINS, SELF, sw_150BP_graphics) {
     1: sw_150BP_graphics_0;
     2: sw_150BP_graphics_1;
 }

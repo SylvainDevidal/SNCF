@@ -35,12 +35,12 @@ template tmpl_vehicle_TAR_purchase() {
     [171, 77, 32, 12, -29, -8]
 }
 
-spriteset (set_TAR_graphics_front,    "gfx/iroqtar.png") { tmpl_vehicle_TAR_8_views_front() }
-spriteset (set_TAR_graphics_coach,     "gfx/iroqtar.png") { tmpl_vehicle_TAR_8_views_coach() }
-spriteset (set_TAR_graphics_rear,     "gfx/iroqtar.png") { tmpl_vehicle_TAR_8_views_rear() }
-spriteset (set_TAR_graphics_purchase, "gfx/iroqtar.png") { tmpl_vehicle_TAR_purchase() }
+spriteset(set_TAR_graphics_front,    "gfx/iroqtar.png") { tmpl_vehicle_TAR_8_views_front() }
+spriteset(set_TAR_graphics_coach,     "gfx/iroqtar.png") { tmpl_vehicle_TAR_8_views_coach() }
+spriteset(set_TAR_graphics_rear,     "gfx/iroqtar.png") { tmpl_vehicle_TAR_8_views_rear() }
+spriteset(set_TAR_graphics_purchase, "gfx/iroqtar.png") { tmpl_vehicle_TAR_purchase() }
 
-switch (FEAT_TRAINS, SELF, sw_TAR_graphics, position_in_articulated_veh % 3) {
+switch(FEAT_TRAINS, SELF, sw_TAR_graphics, position_in_articulated_veh % 3) {
     0: set_TAR_graphics_front;
     1: set_TAR_graphics_coach;
     2: set_TAR_graphics_rear;

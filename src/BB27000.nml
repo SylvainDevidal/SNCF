@@ -15,8 +15,8 @@ template tmpl_vehicle_BB27000_purchase() {
     [171, 5, 32, 15, -29, -9]
 }
 
-spriteset (set_BB27000_graphics,          "gfx/BB27000.png") { tmpl_vehicle_BB27000_8_views() }
-spriteset (set_BB27000_graphics_purchase, "gfx/BB27000.png") { tmpl_vehicle_BB27000_purchase() }
+spriteset(set_BB27000_graphics,          "gfx/BB27000.png") { tmpl_vehicle_BB27000_8_views() }
+spriteset(set_BB27000_graphics_purchase, "gfx/BB27000.png") { tmpl_vehicle_BB27000_purchase() }
 
 item(FEAT_TRAINS, item_BB27000) {
     property {

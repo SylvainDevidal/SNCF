@@ -11,16 +11,16 @@ template tmpl_vehicle_FOURGON_purchase() {
     [50, 37, 32, 12, -19, -7]
 }
 
-random_switch (FEAT_TRAINS, SELF, sw_FOURGON_graphics_random) {
+random_switch(FEAT_TRAINS, SELF, sw_FOURGON_graphics_random) {
     1: set_FOURGON_graphics_0;
     2: set_FOURGON_graphics_1;
     3: set_FOURGON_graphics_2;
 }
 
-spriteset (set_FOURGON_graphics_0,           "gfx/FOURGON.png") { tmpl_vehicle_FOURGON_4_views(1) }
-spriteset (set_FOURGON_graphics_1,           "gfx/FOURGON.png") { tmpl_vehicle_FOURGON_4_views(2) }
-spriteset (set_FOURGON_graphics_2,           "gfx/FOURGON.png") { tmpl_vehicle_FOURGON_4_views(3) }
-spriteset (set_FOURGON_graphics_purchase,    "gfx/FOURGON.png") { tmpl_vehicle_FOURGON_purchase() }
+spriteset(set_FOURGON_graphics_0,           "gfx/FOURGON.png") { tmpl_vehicle_FOURGON_4_views(1) }
+spriteset(set_FOURGON_graphics_1,           "gfx/FOURGON.png") { tmpl_vehicle_FOURGON_4_views(2) }
+spriteset(set_FOURGON_graphics_2,           "gfx/FOURGON.png") { tmpl_vehicle_FOURGON_4_views(3) }
+spriteset(set_FOURGON_graphics_purchase,    "gfx/FOURGON.png") { tmpl_vehicle_FOURGON_purchase() }
 
 item(FEAT_TRAINS, item_FOURGON) {
     property {

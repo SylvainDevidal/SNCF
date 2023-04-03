@@ -15,11 +15,11 @@ template tmpl_vehicle_2BB2_purchase() {
     [128, 2, 32, 14, -27, -10]
 }
 
-spriteset (set_2BB2_graphics_0,        "gfx/2BB2.png") { tmpl_vehicle_2BB2_8_views(0) }
-spriteset (set_2BB2_graphics_1,        "gfx/2BB2.png") { tmpl_vehicle_2BB2_8_views(1) }
-spriteset (set_2BB2_graphics_purchase, "gfx/2BB2.png") { tmpl_vehicle_2BB2_purchase() }
+spriteset(set_2BB2_graphics_0,        "gfx/2BB2.png") { tmpl_vehicle_2BB2_8_views(0) }
+spriteset(set_2BB2_graphics_1,        "gfx/2BB2.png") { tmpl_vehicle_2BB2_8_views(1) }
+spriteset(set_2BB2_graphics_purchase, "gfx/2BB2.png") { tmpl_vehicle_2BB2_purchase() }
 
-random_switch (FEAT_TRAINS, SELF, sw_2BB2_graphics) {
+random_switch(FEAT_TRAINS, SELF, sw_2BB2_graphics) {
     1: set_2BB2_graphics_0;
     2: set_2BB2_graphics_1;
 }

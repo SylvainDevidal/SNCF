@@ -27,23 +27,23 @@ template tmpl_vehicle_241P_purchase() {
     [149, 5, 32, 14, -29, -10]
 }
 
-spriteset (set_241P_graphics_0_0,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(0, 0) }
-spriteset (set_241P_graphics_1_0,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(1, 0) }
-spriteset (set_241P_graphics_2_0,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(2, 0) }
-spriteset (set_241P_graphics_3_0,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(3, 0) }
-spriteset (set_241P_graphics_4_0,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(4, 0) }
-spriteset (set_241P_graphics_5_0,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(5, 0) }
-spriteset (set_241P_graphics_0_1,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(0, 1) }
-spriteset (set_241P_graphics_1_1,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(1, 1) }
-spriteset (set_241P_graphics_2_1,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(2, 1) }
-spriteset (set_241P_graphics_3_1,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(3, 1) }
-spriteset (set_241P_graphics_4_1,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(4, 1) }
-spriteset (set_241P_graphics_5_1,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(5, 1) }
-spriteset (set_241P_tender_graphics_0, "gfx/241P.png") { tmpl_vehicle_241P_TENDER_8_views(0) }
-spriteset (set_241P_tender_graphics_1, "gfx/241P.png") { tmpl_vehicle_241P_TENDER_8_views(1) }
-spriteset (set_241P_graphics_purchase, "gfx/241P.png") { tmpl_vehicle_241P_purchase() }
+spriteset(set_241P_graphics_0_0,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(0, 0) }
+spriteset(set_241P_graphics_1_0,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(1, 0) }
+spriteset(set_241P_graphics_2_0,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(2, 0) }
+spriteset(set_241P_graphics_3_0,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(3, 0) }
+spriteset(set_241P_graphics_4_0,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(4, 0) }
+spriteset(set_241P_graphics_5_0,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(5, 0) }
+spriteset(set_241P_graphics_0_1,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(0, 1) }
+spriteset(set_241P_graphics_1_1,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(1, 1) }
+spriteset(set_241P_graphics_2_1,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(2, 1) }
+spriteset(set_241P_graphics_3_1,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(3, 1) }
+spriteset(set_241P_graphics_4_1,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(4, 1) }
+spriteset(set_241P_graphics_5_1,        "gfx/241P.png") { tmpl_vehicle_241P_8_views(5, 1) }
+spriteset(set_241P_tender_graphics_0, "gfx/241P.png") { tmpl_vehicle_241P_TENDER_8_views(0) }
+spriteset(set_241P_tender_graphics_1, "gfx/241P.png") { tmpl_vehicle_241P_TENDER_8_views(1) }
+spriteset(set_241P_graphics_purchase, "gfx/241P.png") { tmpl_vehicle_241P_purchase() }
 
-switch (FEAT_TRAINS, SELF, sw_241P_graphics_0, motion_counter % 6) {
+switch(FEAT_TRAINS, SELF, sw_241P_graphics_0, motion_counter % 6) {
     0: set_241P_graphics_0_0;
     1: set_241P_graphics_1_0;
     2: set_241P_graphics_2_0;
@@ -52,7 +52,7 @@ switch (FEAT_TRAINS, SELF, sw_241P_graphics_0, motion_counter % 6) {
     5: set_241P_graphics_5_0;
 }
 
-switch (FEAT_TRAINS, SELF, sw_241P_graphics_1, motion_counter % 6) {
+switch(FEAT_TRAINS, SELF, sw_241P_graphics_1, motion_counter % 6) {
     0: set_241P_graphics_0_1;
     1: set_241P_graphics_1_1;
     2: set_241P_graphics_2_1;
@@ -61,12 +61,12 @@ switch (FEAT_TRAINS, SELF, sw_241P_graphics_1, motion_counter % 6) {
     5: set_241P_graphics_5_1;
 }
 
-random_switch (FEAT_TRAINS, SELF, sw_241P_graphics_random) {
+random_switch(FEAT_TRAINS, SELF, sw_241P_graphics_random) {
     1: sw_241P_graphics_0;
     2: sw_241P_graphics_1;
 }
 
-random_switch (FEAT_TRAINS, SELF, sw_241P_tender_random) {
+random_switch(FEAT_TRAINS, SELF, sw_241P_tender_random) {
     1: set_241P_tender_graphics_0;
     2: set_241P_tender_graphics_1;
 }

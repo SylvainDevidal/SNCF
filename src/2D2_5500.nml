@@ -15,8 +15,8 @@ template tmpl_vehicle_2D2_5500_purchase() {
     [169, 4, 32, 15, -28, -10]
 }
 
-spriteset (set_2D2_5500_graphics,          "gfx/2D2_5500.png") { tmpl_vehicle_2D2_5500_8_views() }
-spriteset (set_2D2_5500_graphics_purchase, "gfx/2D2_5500.png") { tmpl_vehicle_2D2_5500_purchase() }
+spriteset(set_2D2_5500_graphics,          "gfx/2D2_5500.png") { tmpl_vehicle_2D2_5500_8_views() }
+spriteset(set_2D2_5500_graphics_purchase, "gfx/2D2_5500.png") { tmpl_vehicle_2D2_5500_purchase() }
 
 item(FEAT_TRAINS, item_2D2_5500) {
     property {

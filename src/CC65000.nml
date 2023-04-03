@@ -15,8 +15,8 @@ template tmpl_vehicle_CC65000_purchase() {
     [165, 4, 32, 12, -28, -8]
 }
 
-spriteset (set_CC65000_graphics,          "gfx/CC65000.png") { tmpl_vehicle_CC65000_8_views() }
-spriteset (set_CC65000_graphics_purchase, "gfx/CC65000.png") { tmpl_vehicle_CC65000_purchase() }
+spriteset(set_CC65000_graphics,          "gfx/CC65000.png") { tmpl_vehicle_CC65000_8_views() }
+spriteset(set_CC65000_graphics_purchase, "gfx/CC65000.png") { tmpl_vehicle_CC65000_purchase() }
 
 item(FEAT_TRAINS, item_CC65000) {
     property {

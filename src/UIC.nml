@@ -11,13 +11,13 @@ template tmpl_vehicle_UIC_purchase() {
     [52, 35, 32, 12, -19, -7]
 }
 
-spriteset (set_UIC_graphics_0,        "gfx/UIC_COACH.png") { tmpl_vehicle_UIC_4_views(0) }
-spriteset (set_UIC_graphics_1,        "gfx/UIC_COACH.png") { tmpl_vehicle_UIC_4_views(1) }
-spriteset (set_UIC_graphics_2,        "gfx/UIC_COACH.png") { tmpl_vehicle_UIC_4_views(2) }
-spriteset (set_UIC_graphics_3,        "gfx/UIC_COACH.png") { tmpl_vehicle_UIC_4_views(3) }
-spriteset (set_UIC_graphics_purchase, "gfx/UIC_COACH.png") { tmpl_vehicle_UIC_purchase() }
+spriteset(set_UIC_graphics_0,        "gfx/UIC_COACH.png") { tmpl_vehicle_UIC_4_views(0) }
+spriteset(set_UIC_graphics_1,        "gfx/UIC_COACH.png") { tmpl_vehicle_UIC_4_views(1) }
+spriteset(set_UIC_graphics_2,        "gfx/UIC_COACH.png") { tmpl_vehicle_UIC_4_views(2) }
+spriteset(set_UIC_graphics_3,        "gfx/UIC_COACH.png") { tmpl_vehicle_UIC_4_views(3) }
+spriteset(set_UIC_graphics_purchase, "gfx/UIC_COACH.png") { tmpl_vehicle_UIC_purchase() }
 
-random_switch (FEAT_TRAINS, SELF, sw_UIC_graphics_random) {
+random_switch(FEAT_TRAINS, SELF, sw_UIC_graphics_random) {
     1: set_UIC_graphics_0;
     2: set_UIC_graphics_1;
     3: set_UIC_graphics_2;

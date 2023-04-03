@@ -15,12 +15,12 @@ template tmpl_vehicle_2CC2_purchase() {
     [131, 2, 32, 15, -29, -10]
 }
 
-spriteset (set_2CC2_graphics_0,        "gfx/2CC2.png") { tmpl_vehicle_2CC2_8_views(0) }
-spriteset (set_2CC2_graphics_1,        "gfx/2CC2.png") { tmpl_vehicle_2CC2_8_views(1) }
-spriteset (set_2CC2_graphics_2,        "gfx/2CC2.png") { tmpl_vehicle_2CC2_8_views(2) }
-spriteset (set_2CC2_graphics_purchase, "gfx/2CC2.png") { tmpl_vehicle_2CC2_purchase() }
+spriteset(set_2CC2_graphics_0,        "gfx/2CC2.png") { tmpl_vehicle_2CC2_8_views(0) }
+spriteset(set_2CC2_graphics_1,        "gfx/2CC2.png") { tmpl_vehicle_2CC2_8_views(1) }
+spriteset(set_2CC2_graphics_2,        "gfx/2CC2.png") { tmpl_vehicle_2CC2_8_views(2) }
+spriteset(set_2CC2_graphics_purchase, "gfx/2CC2.png") { tmpl_vehicle_2CC2_purchase() }
 
-random_switch (FEAT_TRAINS, SELF, sw_2CC2_graphics) {
+random_switch(FEAT_TRAINS, SELF, sw_2CC2_graphics) {
     1: set_2CC2_graphics_0;
     2: set_2CC2_graphics_1;
     3: set_2CC2_graphics_2;

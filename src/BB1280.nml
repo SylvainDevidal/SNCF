@@ -15,8 +15,8 @@ template tmpl_vehicle_BB1280_purchase() {
     [135, 1, 32, 14, -17, -10]
 }
 
-spriteset (set_BB1280_graphics,          "gfx/BB1280.png") { tmpl_vehicle_BB1280_8_views() }
-spriteset (set_BB1280_graphics_purchase, "gfx/BB1280.png") { tmpl_vehicle_BB1280_purchase() }
+spriteset(set_BB1280_graphics,          "gfx/BB1280.png") { tmpl_vehicle_BB1280_8_views() }
+spriteset(set_BB1280_graphics_purchase, "gfx/BB1280.png") { tmpl_vehicle_BB1280_purchase() }
 
 item(FEAT_TRAINS, item_BB1280) {
     property {

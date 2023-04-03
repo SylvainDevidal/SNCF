@@ -39,12 +39,12 @@ template tmpl_vehicle_Z21500_purchase() {
     [165, 4, 32, 12, -29, -6]
 }
 
-spriteset (set_Z21500_graphics_front,    "gfx/Z21500.png") { tmpl_vehicle_Z21500_8_views_front() }
-spriteset (set_Z21500_graphics_coach,    "gfx/Z21500.png") { tmpl_vehicle_Z21500_8_views_coach() }
-spriteset (set_Z21500_graphics_rear,     "gfx/Z21500.png") { tmpl_vehicle_Z21500_8_views_rear() }
-spriteset (set_Z21500_graphics_purchase, "gfx/Z21500.png") { tmpl_vehicle_Z21500_purchase() }
+spriteset(set_Z21500_graphics_front,    "gfx/Z21500.png") { tmpl_vehicle_Z21500_8_views_front() }
+spriteset(set_Z21500_graphics_coach,    "gfx/Z21500.png") { tmpl_vehicle_Z21500_8_views_coach() }
+spriteset(set_Z21500_graphics_rear,     "gfx/Z21500.png") { tmpl_vehicle_Z21500_8_views_rear() }
+spriteset(set_Z21500_graphics_purchase, "gfx/Z21500.png") { tmpl_vehicle_Z21500_purchase() }
 
-switch (FEAT_TRAINS, SELF, sw_Z21500_graphics, position_in_articulated_veh) {
+switch(FEAT_TRAINS, SELF, sw_Z21500_graphics, position_in_articulated_veh) {
     0: set_Z21500_graphics_front;
     1: set_Z21500_graphics_coach;
     2: set_Z21500_graphics_rear;
@@ -65,7 +65,7 @@ switch(FEAT_TRAINS, SELF, sw_Z21500_can_attach_wagon, vehicle_type_id) {
     default: return string(ERR_Z21500_CANNOT_ATTACH_OTHER);
 }
 
-switch (FEAT_TRAINS, SELF, sw_Z21500_visual_effect_and_powered, position_in_articulated_veh) {
+switch(FEAT_TRAINS, SELF, sw_Z21500_visual_effect_and_powered, position_in_articulated_veh) {
     1 : visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 0, DISABLE_WAGON_POWER);
     default: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
 }

@@ -23,24 +23,24 @@ template tmpl_vehicle_CORAIL_purchase() {
     [49, 4, 32, 12, -19, -7]
 }
 
-random_switch (FEAT_TRAINS, SELF, sw_CORAIL_graphics_random) {
+random_switch(FEAT_TRAINS, SELF, sw_CORAIL_graphics_random) {
     1: set_CORAIL_graphics_0;
     2: set_CORAIL_graphics_1;
     3: set_CORAIL_graphics_2;
     4: set_CORAIL_graphics_3;
 }
 
-switch (FEAT_TRAINS, SELF, sw_CORAIL_graphics, position_in_consist_from_end) {
+switch(FEAT_TRAINS, SELF, sw_CORAIL_graphics, position_in_consist_from_end) {
     0: set_CORAIL_graphics_cabin_rear;
     default: sw_CORAIL_graphics_random;
 }
 
-spriteset (set_CORAIL_graphics_0,           "gfx/CORAIL_COACH.png") { tmpl_vehicle_CORAIL_4_views(0) }
-spriteset (set_CORAIL_graphics_1,           "gfx/CORAIL_COACH.png") { tmpl_vehicle_CORAIL_4_views(1) }
-spriteset (set_CORAIL_graphics_2,           "gfx/CORAIL_COACH.png") { tmpl_vehicle_CORAIL_4_views(2) }
-spriteset (set_CORAIL_graphics_3,           "gfx/CORAIL_COACH.png") { tmpl_vehicle_CORAIL_4_views(3) }
-spriteset (set_CORAIL_graphics_cabin_rear,  "gfx/CORAIL_CABIN.png") { tmpl_vehicle_CORAIL_8_views_cabin_rear() }
-spriteset (set_CORAIL_graphics_purchase,    "gfx/CORAIL_COACH.png") { tmpl_vehicle_CORAIL_purchase() }
+spriteset(set_CORAIL_graphics_0,           "gfx/CORAIL_COACH.png") { tmpl_vehicle_CORAIL_4_views(0) }
+spriteset(set_CORAIL_graphics_1,           "gfx/CORAIL_COACH.png") { tmpl_vehicle_CORAIL_4_views(1) }
+spriteset(set_CORAIL_graphics_2,           "gfx/CORAIL_COACH.png") { tmpl_vehicle_CORAIL_4_views(2) }
+spriteset(set_CORAIL_graphics_3,           "gfx/CORAIL_COACH.png") { tmpl_vehicle_CORAIL_4_views(3) }
+spriteset(set_CORAIL_graphics_cabin_rear,  "gfx/CORAIL_CABIN.png") { tmpl_vehicle_CORAIL_8_views_cabin_rear() }
+spriteset(set_CORAIL_graphics_purchase,    "gfx/CORAIL_COACH.png") { tmpl_vehicle_CORAIL_purchase() }
 
 item(FEAT_TRAINS, item_CORAIL) {
     property {

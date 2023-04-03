@@ -27,14 +27,14 @@ template tmpl_vehicle_151A_purchase() {
     [149, 5, 32, 14, -29, -10]
 }
 
-spriteset (set_151A_graphics_0,        "gfx/151A.png") { tmpl_vehicle_151A_8_views(0) }
-spriteset (set_151A_graphics_1,        "gfx/151A.png") { tmpl_vehicle_151A_8_views(1) }
-spriteset (set_151A_graphics_2,        "gfx/151A.png") { tmpl_vehicle_151A_8_views(2) }
-spriteset (set_151A_graphics_3,        "gfx/151A.png") { tmpl_vehicle_151A_8_views(3) }
-spriteset (set_151A_tender_graphics,   "gfx/151A.png") { tmpl_vehicle_151A_TENDER_8_views() }
-spriteset (set_151A_graphics_purchase, "gfx/151A.png") { tmpl_vehicle_151A_purchase() }
+spriteset(set_151A_graphics_0,        "gfx/151A.png") { tmpl_vehicle_151A_8_views(0) }
+spriteset(set_151A_graphics_1,        "gfx/151A.png") { tmpl_vehicle_151A_8_views(1) }
+spriteset(set_151A_graphics_2,        "gfx/151A.png") { tmpl_vehicle_151A_8_views(2) }
+spriteset(set_151A_graphics_3,        "gfx/151A.png") { tmpl_vehicle_151A_8_views(3) }
+spriteset(set_151A_tender_graphics,   "gfx/151A.png") { tmpl_vehicle_151A_TENDER_8_views() }
+spriteset(set_151A_graphics_purchase, "gfx/151A.png") { tmpl_vehicle_151A_purchase() }
 
-switch (FEAT_TRAINS, SELF, sw_151A_graphics_animated, motion_counter % 4) {
+switch(FEAT_TRAINS, SELF, sw_151A_graphics_animated, motion_counter % 4) {
     0: set_151A_graphics_0;
     1: set_151A_graphics_1;
     2: set_151A_graphics_2;

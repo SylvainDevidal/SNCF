@@ -27,30 +27,30 @@ template tmpl_vehicle_1ABBA1_purchase() {
     [142, 2, 32, 15, -29, -10]
 }
 
-spriteset (set_1ABBA1_graphics_front_0,  "gfx/1ABBA1.png") { tmpl_vehicle_1ABBA1_8_views_front(0) }
-spriteset (set_1ABBA1_graphics_rear_0,   "gfx/1ABBA1.png") { tmpl_vehicle_1ABBA1_8_views_rear(0) }
-spriteset (set_1ABBA1_graphics_front_1,  "gfx/1ABBA1.png") { tmpl_vehicle_1ABBA1_8_views_front(1) }
-spriteset (set_1ABBA1_graphics_rear_1,   "gfx/1ABBA1.png") { tmpl_vehicle_1ABBA1_8_views_rear(1) }
-spriteset (set_1ABBA1_graphics_front_2,  "gfx/1ABBA1.png") { tmpl_vehicle_1ABBA1_8_views_front(2) }
-spriteset (set_1ABBA1_graphics_rear_2,   "gfx/1ABBA1.png") { tmpl_vehicle_1ABBA1_8_views_rear(2) }
-spriteset (set_1ABBA1_graphics_purchase, "gfx/1ABBA1_mockup.png") { tmpl_vehicle_1ABBA1_purchase() }
+spriteset(set_1ABBA1_graphics_front_0,  "gfx/1ABBA1.png") { tmpl_vehicle_1ABBA1_8_views_front(0) }
+spriteset(set_1ABBA1_graphics_rear_0,   "gfx/1ABBA1.png") { tmpl_vehicle_1ABBA1_8_views_rear(0) }
+spriteset(set_1ABBA1_graphics_front_1,  "gfx/1ABBA1.png") { tmpl_vehicle_1ABBA1_8_views_front(1) }
+spriteset(set_1ABBA1_graphics_rear_1,   "gfx/1ABBA1.png") { tmpl_vehicle_1ABBA1_8_views_rear(1) }
+spriteset(set_1ABBA1_graphics_front_2,  "gfx/1ABBA1.png") { tmpl_vehicle_1ABBA1_8_views_front(2) }
+spriteset(set_1ABBA1_graphics_rear_2,   "gfx/1ABBA1.png") { tmpl_vehicle_1ABBA1_8_views_rear(2) }
+spriteset(set_1ABBA1_graphics_purchase, "gfx/1ABBA1_mockup.png") { tmpl_vehicle_1ABBA1_purchase() }
 
-switch (FEAT_TRAINS, SELF, sw_1ABBA1_graphics_set_0, position_in_articulated_veh) {
+switch(FEAT_TRAINS, SELF, sw_1ABBA1_graphics_set_0, position_in_articulated_veh) {
     0: set_1ABBA1_graphics_front_0;
     1: set_1ABBA1_graphics_rear_0;
 }
 
-switch (FEAT_TRAINS, SELF, sw_1ABBA1_graphics_set_1, position_in_articulated_veh) {
+switch(FEAT_TRAINS, SELF, sw_1ABBA1_graphics_set_1, position_in_articulated_veh) {
     0: set_1ABBA1_graphics_front_1;
     1: set_1ABBA1_graphics_rear_1;
 }
 
-switch (FEAT_TRAINS, SELF, sw_1ABBA1_graphics_set_2, position_in_articulated_veh) {
+switch(FEAT_TRAINS, SELF, sw_1ABBA1_graphics_set_2, position_in_articulated_veh) {
     0: set_1ABBA1_graphics_front_2;
     1: set_1ABBA1_graphics_rear_2;
 }
 
-random_switch (FEAT_TRAINS, SELF, sw_1ABBA1_graphics) {
+random_switch(FEAT_TRAINS, SELF, sw_1ABBA1_graphics) {
     1: sw_1ABBA1_graphics_set_0;
     2: sw_1ABBA1_graphics_set_1;
     3: sw_1ABBA1_graphics_set_2;

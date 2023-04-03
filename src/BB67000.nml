@@ -15,11 +15,11 @@ template tmpl_vehicle_BB67000_purchase() {
     [169, 7, 32, 12, -27, -8]
 }
 
-spriteset (set_BB67000_graphics_0,        "gfx/BB67000.png") { tmpl_vehicle_BB67000_8_views(0) }
-spriteset (set_BB67000_graphics_1,        "gfx/BB67000.png") { tmpl_vehicle_BB67000_8_views(1) }
-spriteset (set_BB67000_graphics_purchase, "gfx/BB67000.png") { tmpl_vehicle_BB67000_purchase() }
+spriteset(set_BB67000_graphics_0,        "gfx/BB67000.png") { tmpl_vehicle_BB67000_8_views(0) }
+spriteset(set_BB67000_graphics_1,        "gfx/BB67000.png") { tmpl_vehicle_BB67000_8_views(1) }
+spriteset(set_BB67000_graphics_purchase, "gfx/BB67000.png") { tmpl_vehicle_BB67000_purchase() }
 
-random_switch (FEAT_TRAINS, SELF, sw_BB67000_graphics) {
+random_switch(FEAT_TRAINS, SELF, sw_BB67000_graphics) {
     1: set_BB67000_graphics_0;
     2: set_BB67000_graphics_1;
 }

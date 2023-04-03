@@ -11,8 +11,8 @@ template tmpl_vehicle_FOURGON_CORAIL_purchase() {
     [50, 5, 32, 12, -19, -7]
 }
 
-spriteset (set_FOURGON_CORAIL_graphics,          "gfx/FOURGON.png") { tmpl_vehicle_FOURGON_CORAIL_4_views(0) }
-spriteset (set_FOURGON_CORAIL_graphics_purchase, "gfx/FOURGON.png") { tmpl_vehicle_FOURGON_CORAIL_purchase() }
+spriteset(set_FOURGON_CORAIL_graphics,          "gfx/FOURGON.png") { tmpl_vehicle_FOURGON_CORAIL_4_views(0) }
+spriteset(set_FOURGON_CORAIL_graphics_purchase, "gfx/FOURGON.png") { tmpl_vehicle_FOURGON_CORAIL_purchase() }
 
 item(FEAT_TRAINS, item_FOURGON_CORAIL) {
     property {

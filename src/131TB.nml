@@ -15,31 +15,31 @@ template tmpl_vehicle_131TB_purchase() {
     [149, 5, 32, 14, -29, -9]
 }
 
-spriteset (set_131TB_graphics_0_0,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(0, 0) }
-spriteset (set_131TB_graphics_1_0,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(1, 0) }
-spriteset (set_131TB_graphics_2_0,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(2, 0) }
-spriteset (set_131TB_graphics_3_0,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(3, 0) }
-spriteset (set_131TB_graphics_0_1,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(0, 1) }
-spriteset (set_131TB_graphics_1_1,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(1, 1) }
-spriteset (set_131TB_graphics_2_1,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(2, 1) }
-spriteset (set_131TB_graphics_3_1,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(3, 1) }
-spriteset (set_131TB_graphics_purchase, "gfx/131TB.png") { tmpl_vehicle_131TB_purchase() }
+spriteset(set_131TB_graphics_0_0,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(0, 0) }
+spriteset(set_131TB_graphics_1_0,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(1, 0) }
+spriteset(set_131TB_graphics_2_0,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(2, 0) }
+spriteset(set_131TB_graphics_3_0,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(3, 0) }
+spriteset(set_131TB_graphics_0_1,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(0, 1) }
+spriteset(set_131TB_graphics_1_1,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(1, 1) }
+spriteset(set_131TB_graphics_2_1,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(2, 1) }
+spriteset(set_131TB_graphics_3_1,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(3, 1) }
+spriteset(set_131TB_graphics_purchase, "gfx/131TB.png") { tmpl_vehicle_131TB_purchase() }
 
-switch (FEAT_TRAINS, SELF, sw_131TB_graphics_0, motion_counter % 4) {
+switch(FEAT_TRAINS, SELF, sw_131TB_graphics_0, motion_counter % 4) {
     0: set_131TB_graphics_0_0;
     1: set_131TB_graphics_1_0;
     2: set_131TB_graphics_2_0;
     3: set_131TB_graphics_3_0;
 }
 
-switch (FEAT_TRAINS, SELF, sw_131TB_graphics_1, motion_counter % 4) {
+switch(FEAT_TRAINS, SELF, sw_131TB_graphics_1, motion_counter % 4) {
     0: set_131TB_graphics_0_1;
     1: set_131TB_graphics_1_1;
     2: set_131TB_graphics_2_1;
     3: set_131TB_graphics_3_1;
 }
 
-random_switch (FEAT_TRAINS, SELF, sw_131TB_graphics_random) {
+random_switch(FEAT_TRAINS, SELF, sw_131TB_graphics_random) {
     1: sw_131TB_graphics_0;
     2: sw_131TB_graphics_1;
 }

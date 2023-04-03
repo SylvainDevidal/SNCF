@@ -27,37 +27,37 @@ template tmpl_vehicle_231EGHK_purchase() {
     [128, 4, 32, 14, -29, -10]
 }
 
-spriteset (set_231EGHK_front_graphics_0_0, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(0, 0) }
-spriteset (set_231EGHK_front_graphics_1_0, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(1, 0) }
-spriteset (set_231EGHK_front_graphics_2_0, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(2, 0) }
-spriteset (set_231EGHK_front_graphics_3_0, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(3, 0) }
-spriteset (set_231EGHK_front_graphics_4_0, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(4, 0) }
-spriteset (set_231EGHK_front_graphics_5_0, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(5, 0) }
-spriteset (set_231EGHK_front_graphics_0_1, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(0, 1) }
-spriteset (set_231EGHK_front_graphics_1_1, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(1, 1) }
-spriteset (set_231EGHK_front_graphics_2_1, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(2, 1) }
-spriteset (set_231EGHK_front_graphics_3_1, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(3, 1) }
-spriteset (set_231EGHK_front_graphics_4_1, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(4, 1) }
-spriteset (set_231EGHK_front_graphics_5_1, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(5, 1) }
-spriteset (set_231EGHK_front_graphics_0_2, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(0, 2) }
-spriteset (set_231EGHK_front_graphics_1_2, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(1, 2) }
-spriteset (set_231EGHK_front_graphics_2_2, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(2, 2) }
-spriteset (set_231EGHK_front_graphics_3_2, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(3, 2) }
-spriteset (set_231EGHK_front_graphics_4_2, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(4, 2) }
-spriteset (set_231EGHK_front_graphics_5_2, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(5, 2) }
-spriteset (set_231EGHK_front_graphics_0_3, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(0, 3) }
-spriteset (set_231EGHK_front_graphics_1_3, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(1, 3) }
-spriteset (set_231EGHK_front_graphics_2_3, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(2, 3) }
-spriteset (set_231EGHK_front_graphics_3_3, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(3, 3) }
-spriteset (set_231EGHK_front_graphics_4_3, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(4, 3) }
-spriteset (set_231EGHK_front_graphics_5_3, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(5, 3) }
-spriteset (set_231EGHK_tender_graphics_0, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_tender_8_views(0) }
-spriteset (set_231EGHK_tender_graphics_1, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_tender_8_views(1) }
-spriteset (set_231EGHK_tender_graphics_2, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_tender_8_views(2) }
-spriteset (set_231EGHK_tender_graphics_3, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_tender_8_views(3) }
-spriteset (set_231EGHK_graphics_purchase, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_purchase() }
+spriteset(set_231EGHK_front_graphics_0_0, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(0, 0) }
+spriteset(set_231EGHK_front_graphics_1_0, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(1, 0) }
+spriteset(set_231EGHK_front_graphics_2_0, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(2, 0) }
+spriteset(set_231EGHK_front_graphics_3_0, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(3, 0) }
+spriteset(set_231EGHK_front_graphics_4_0, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(4, 0) }
+spriteset(set_231EGHK_front_graphics_5_0, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(5, 0) }
+spriteset(set_231EGHK_front_graphics_0_1, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(0, 1) }
+spriteset(set_231EGHK_front_graphics_1_1, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(1, 1) }
+spriteset(set_231EGHK_front_graphics_2_1, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(2, 1) }
+spriteset(set_231EGHK_front_graphics_3_1, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(3, 1) }
+spriteset(set_231EGHK_front_graphics_4_1, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(4, 1) }
+spriteset(set_231EGHK_front_graphics_5_1, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(5, 1) }
+spriteset(set_231EGHK_front_graphics_0_2, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(0, 2) }
+spriteset(set_231EGHK_front_graphics_1_2, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(1, 2) }
+spriteset(set_231EGHK_front_graphics_2_2, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(2, 2) }
+spriteset(set_231EGHK_front_graphics_3_2, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(3, 2) }
+spriteset(set_231EGHK_front_graphics_4_2, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(4, 2) }
+spriteset(set_231EGHK_front_graphics_5_2, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(5, 2) }
+spriteset(set_231EGHK_front_graphics_0_3, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(0, 3) }
+spriteset(set_231EGHK_front_graphics_1_3, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(1, 3) }
+spriteset(set_231EGHK_front_graphics_2_3, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(2, 3) }
+spriteset(set_231EGHK_front_graphics_3_3, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(3, 3) }
+spriteset(set_231EGHK_front_graphics_4_3, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(4, 3) }
+spriteset(set_231EGHK_front_graphics_5_3, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front_8_views(5, 3) }
+spriteset(set_231EGHK_tender_graphics_0, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_tender_8_views(0) }
+spriteset(set_231EGHK_tender_graphics_1, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_tender_8_views(1) }
+spriteset(set_231EGHK_tender_graphics_2, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_tender_8_views(2) }
+spriteset(set_231EGHK_tender_graphics_3, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_tender_8_views(3) }
+spriteset(set_231EGHK_graphics_purchase, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_purchase() }
 
-switch (FEAT_TRAINS, SELF, sw_231EGHK_front_graphics_0, motion_counter % 6) {
+switch(FEAT_TRAINS, SELF, sw_231EGHK_front_graphics_0, motion_counter % 6) {
     0: set_231EGHK_front_graphics_0_0;
     1: set_231EGHK_front_graphics_1_0;
     2: set_231EGHK_front_graphics_2_0;
@@ -66,7 +66,7 @@ switch (FEAT_TRAINS, SELF, sw_231EGHK_front_graphics_0, motion_counter % 6) {
     5: set_231EGHK_front_graphics_5_0;
 }
 
-switch (FEAT_TRAINS, SELF, sw_231EGHK_front_graphics_1, motion_counter % 6) {
+switch(FEAT_TRAINS, SELF, sw_231EGHK_front_graphics_1, motion_counter % 6) {
     0: set_231EGHK_front_graphics_0_1;
     1: set_231EGHK_front_graphics_1_1;
     2: set_231EGHK_front_graphics_2_1;
@@ -75,7 +75,7 @@ switch (FEAT_TRAINS, SELF, sw_231EGHK_front_graphics_1, motion_counter % 6) {
     5: set_231EGHK_front_graphics_5_1;
 }
 
-switch (FEAT_TRAINS, SELF, sw_231EGHK_front_graphics_2, motion_counter % 6) {
+switch(FEAT_TRAINS, SELF, sw_231EGHK_front_graphics_2, motion_counter % 6) {
     0: set_231EGHK_front_graphics_0_2;
     1: set_231EGHK_front_graphics_1_2;
     2: set_231EGHK_front_graphics_2_2;
@@ -84,7 +84,7 @@ switch (FEAT_TRAINS, SELF, sw_231EGHK_front_graphics_2, motion_counter % 6) {
     5: set_231EGHK_front_graphics_5_2;
 }
 
-switch (FEAT_TRAINS, SELF, sw_231EGHK_front_graphics_3, motion_counter % 6) {
+switch(FEAT_TRAINS, SELF, sw_231EGHK_front_graphics_3, motion_counter % 6) {
     0: set_231EGHK_front_graphics_0_3;
     1: set_231EGHK_front_graphics_1_3;
     2: set_231EGHK_front_graphics_2_3;
@@ -93,27 +93,27 @@ switch (FEAT_TRAINS, SELF, sw_231EGHK_front_graphics_3, motion_counter % 6) {
     5: set_231EGHK_front_graphics_5_3;
 }
 
-switch (FEAT_TRAINS, SELF, set_231EGHK_graphics_0, position_in_articulated_veh) {
+switch(FEAT_TRAINS, SELF, set_231EGHK_graphics_0, position_in_articulated_veh) {
     0: sw_231EGHK_front_graphics_0;
     1: set_231EGHK_tender_graphics_0;
 }
 
-switch (FEAT_TRAINS, SELF, set_231EGHK_graphics_1, position_in_articulated_veh) {
+switch(FEAT_TRAINS, SELF, set_231EGHK_graphics_1, position_in_articulated_veh) {
     0: sw_231EGHK_front_graphics_1;
     1: set_231EGHK_tender_graphics_1;
 }
 
-switch (FEAT_TRAINS, SELF, set_231EGHK_graphics_2, position_in_articulated_veh) {
+switch(FEAT_TRAINS, SELF, set_231EGHK_graphics_2, position_in_articulated_veh) {
     0: sw_231EGHK_front_graphics_2;
     1: set_231EGHK_tender_graphics_2;
 }
 
-switch (FEAT_TRAINS, SELF, set_231EGHK_graphics_3, position_in_articulated_veh) {
+switch(FEAT_TRAINS, SELF, set_231EGHK_graphics_3, position_in_articulated_veh) {
     0: sw_231EGHK_front_graphics_3;
     1: set_231EGHK_tender_graphics_3;
 }
 
-random_switch (FEAT_TRAINS, SELF, sw_231EGHK_graphics) {
+random_switch(FEAT_TRAINS, SELF, sw_231EGHK_graphics) {
     1: set_231EGHK_graphics_0;
     2: set_231EGHK_graphics_1;
     3: set_231EGHK_graphics_2;

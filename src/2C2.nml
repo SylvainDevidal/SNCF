@@ -15,8 +15,8 @@ template tmpl_vehicle_2C2_purchase() {
     [164, 5, 32, 15, -29, -10]
 }
 
-spriteset (set_2C2_graphics,          "gfx/2C2.png") { tmpl_vehicle_2C2_8_views() }
-spriteset (set_2C2_graphics_purchase, "gfx/2C2.png") { tmpl_vehicle_2C2_purchase() }
+spriteset(set_2C2_graphics,          "gfx/2C2.png") { tmpl_vehicle_2C2_8_views() }
+spriteset(set_2C2_graphics_purchase, "gfx/2C2.png") { tmpl_vehicle_2C2_purchase() }
 
 item(FEAT_TRAINS, item_2C2) {
     property {

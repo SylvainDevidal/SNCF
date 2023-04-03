@@ -27,11 +27,11 @@ template tmpl_vehicle_Z7300_purchase() {
     [167, 6, 32, 15, -29, -9]
 }
 
-spriteset (set_Z7300_graphics_front,    "gfx/Z7300.png") { tmpl_vehicle_Z7300_8_views_front() }
-spriteset (set_Z7300_graphics_rear,     "gfx/Z7300.png") { tmpl_vehicle_Z7300_8_views_rear() }
-spriteset (set_Z7300_graphics_purchase, "gfx/Z7300.png") { tmpl_vehicle_Z7300_purchase() }
+spriteset(set_Z7300_graphics_front,    "gfx/Z7300.png") { tmpl_vehicle_Z7300_8_views_front() }
+spriteset(set_Z7300_graphics_rear,     "gfx/Z7300.png") { tmpl_vehicle_Z7300_8_views_rear() }
+spriteset(set_Z7300_graphics_purchase, "gfx/Z7300.png") { tmpl_vehicle_Z7300_purchase() }
 
-switch (FEAT_TRAINS, SELF, sw_Z7300_graphics, position_in_articulated_veh) {
+switch(FEAT_TRAINS, SELF, sw_Z7300_graphics, position_in_articulated_veh) {
     0: set_Z7300_graphics_front;
     1: set_Z7300_graphics_rear;
 }

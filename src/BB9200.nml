@@ -15,8 +15,8 @@ template tmpl_vehicle_BB9200_purchase() {
     [169, 3, 32, 15, -27, -9]
 }
 
-spriteset (set_BB9200_graphics,          "gfx/BB9200.png") { tmpl_vehicle_BB9200_8_views() }
-spriteset (set_BB9200_graphics_purchase, "gfx/BB9200.png") { tmpl_vehicle_BB9200_purchase() }
+spriteset(set_BB9200_graphics,          "gfx/BB9200.png") { tmpl_vehicle_BB9200_8_views() }
+spriteset(set_BB9200_graphics_purchase, "gfx/BB9200.png") { tmpl_vehicle_BB9200_purchase() }
 
 item(FEAT_TRAINS, item_BB9200) {
     property {

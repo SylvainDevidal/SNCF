@@ -15,8 +15,8 @@ template tmpl_vehicle_CC7100_purchase() {
     [165, 2, 32, 15, -29, -9]
 }
 
-spriteset (set_CC7100_graphics,          "gfx/CC7100.png") { tmpl_vehicle_CC7100_8_views() }
-spriteset (set_CC7100_graphics_purchase, "gfx/CC7100.png") { tmpl_vehicle_CC7100_purchase() }
+spriteset(set_CC7100_graphics,          "gfx/CC7100.png") { tmpl_vehicle_CC7100_8_views() }
+spriteset(set_CC7100_graphics_purchase, "gfx/CC7100.png") { tmpl_vehicle_CC7100_purchase() }
 
 item(FEAT_TRAINS, item_CC7100) {
     property {

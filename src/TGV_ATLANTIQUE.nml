@@ -84,14 +84,14 @@ template tmpl_vehicle_TGV_ATLANTIQUE_purchase() {
 }
 
 /* Define the spritesets, these allow referring to these sprites later on */
-spriteset (set_TGV_ATLANTIQUE_front_lighted, "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_front_lighted() }
-spriteset (set_TGV_ATLANTIQUE_front,         "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_front() }
-spriteset (set_TGV_ATLANTIQUE_middle_f,      "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_middle_f() }
-spriteset (set_TGV_ATLANTIQUE_middle_r,      "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_middle_r() }
-spriteset (set_TGV_ATLANTIQUE_middle,        "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_middle() }
-spriteset (set_TGV_ATLANTIQUE_rear_lighted,  "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_rear_lighted() }
-spriteset (set_TGV_ATLANTIQUE_rear,          "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_rear() }
-spriteset (set_TGV_ATLANTIQUE_purchase,      "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_purchase() }
+spriteset(set_TGV_ATLANTIQUE_front_lighted, "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_front_lighted() }
+spriteset(set_TGV_ATLANTIQUE_front,         "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_front() }
+spriteset(set_TGV_ATLANTIQUE_middle_f,      "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_middle_f() }
+spriteset(set_TGV_ATLANTIQUE_middle_r,      "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_middle_r() }
+spriteset(set_TGV_ATLANTIQUE_middle,        "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_middle() }
+spriteset(set_TGV_ATLANTIQUE_rear_lighted,  "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_rear_lighted() }
+spriteset(set_TGV_ATLANTIQUE_rear,          "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_rear() }
+spriteset(set_TGV_ATLANTIQUE_purchase,      "gfx/TGV_Atlantique.png") { tmpl_vehicle_TGV_ATLANTIQUE_purchase() }
 
 /* Only the frontmost vehicle should have its lights on */
 switch(FEAT_TRAINS, SELF, sw_TGV_ATLANTIQUE_front, position_in_consist) {
@@ -129,7 +129,7 @@ switch(FEAT_TRAINS, SELF, sw_TGV_ATLANTIQUE_can_attach_wagon, vehicle_type_id) {
     return string(ERR_TGV_ATLANTIQUE_CANNOT_ATTACH_OTHER);
 }
 
-switch (FEAT_TRAINS, SELF, sw_TGV_ATLANTIQUE_power, current_railtype) {
+switch(FEAT_TRAINS, SELF, sw_TGV_ATLANTIQUE_power, current_railtype) {
     ELEC: 11801;
     AC25: 11801;
     DC15: 5203;

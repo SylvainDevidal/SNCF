@@ -35,12 +35,12 @@ template tmpl_vehicle_T2000_purchase() {
     [164, 4, 32, 13, -29, -9]
 }
 
-spriteset (set_T2000_graphics_front,    "gfx/T2000.png") { tmpl_vehicle_T2000_8_views_front() }
-spriteset (set_T2000_graphics_coach,    "gfx/T2000.png") { tmpl_vehicle_T2000_4_views_coach() }
-spriteset (set_T2000_graphics_rear,     "gfx/T2000.png") { tmpl_vehicle_T2000_8_views_rear() }
-spriteset (set_T2000_graphics_purchase, "gfx/T2000.png") { tmpl_vehicle_T2000_purchase() }
+spriteset(set_T2000_graphics_front,    "gfx/T2000.png") { tmpl_vehicle_T2000_8_views_front() }
+spriteset(set_T2000_graphics_coach,    "gfx/T2000.png") { tmpl_vehicle_T2000_4_views_coach() }
+spriteset(set_T2000_graphics_rear,     "gfx/T2000.png") { tmpl_vehicle_T2000_8_views_rear() }
+spriteset(set_T2000_graphics_purchase, "gfx/T2000.png") { tmpl_vehicle_T2000_purchase() }
 
-switch (FEAT_TRAINS, SELF, sw_T2000_graphics, position_in_articulated_veh % 5) {
+switch(FEAT_TRAINS, SELF, sw_T2000_graphics, position_in_articulated_veh % 5) {
     0: set_T2000_graphics_front;
     1: set_T2000_graphics_coach;
     2: set_T2000_graphics_coach;
@@ -68,7 +68,7 @@ switch(FEAT_TRAINS, SELF, sw_T2000_can_attach_wagon, build_year) {
     default: sw_T2000_can_attach_T2000;
 }
 
-switch (FEAT_TRAINS, SELF, sw_T2000_visual_effect_and_powered, position_in_articulated_veh) {
+switch(FEAT_TRAINS, SELF, sw_T2000_visual_effect_and_powered, position_in_articulated_veh) {
     0: visual_effect_and_powered(VISUAL_EFFECT_DIESEL, -3, DISABLE_WAGON_POWER);
     4: visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 1, DISABLE_WAGON_POWER);
     default: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);

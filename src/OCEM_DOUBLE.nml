@@ -23,14 +23,14 @@ template tmpl_vehicle_OCEM_DOUBLE_purchase() {
     [50, 71, 32, 12, -19, -7]
 }
 
-switch (FEAT_TRAINS, SELF, sw_OCEM_DOUBLE_graphics, position_in_consist_from_end) {
+switch(FEAT_TRAINS, SELF, sw_OCEM_DOUBLE_graphics, position_in_consist_from_end) {
     0: set_OCEM_DOUBLE_graphics_rear;
     default: set_OCEM_DOUBLE_graphics;
 }
 
-spriteset (set_OCEM_DOUBLE_graphics,          "gfx/OCEM_DOUBLEDECK.png") { tmpl_vehicle_OCEM_DOUBLE_4_views() }
-spriteset (set_OCEM_DOUBLE_graphics_rear,     "gfx/OCEM_DOUBLEDECK.png") { tmpl_vehicle_OCEM_DOUBLE_8_views_rear() }
-spriteset (set_OCEM_DOUBLE_graphics_purchase, "gfx/OCEM_DOUBLEDECK.png") { tmpl_vehicle_OCEM_DOUBLE_purchase() }
+spriteset(set_OCEM_DOUBLE_graphics,          "gfx/OCEM_DOUBLEDECK.png") { tmpl_vehicle_OCEM_DOUBLE_4_views() }
+spriteset(set_OCEM_DOUBLE_graphics_rear,     "gfx/OCEM_DOUBLEDECK.png") { tmpl_vehicle_OCEM_DOUBLE_8_views_rear() }
+spriteset(set_OCEM_DOUBLE_graphics_purchase, "gfx/OCEM_DOUBLEDECK.png") { tmpl_vehicle_OCEM_DOUBLE_purchase() }
 
 item(FEAT_TRAINS, item_OCEM_DOUBLE) {
     property {

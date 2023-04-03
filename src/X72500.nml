@@ -40,18 +40,18 @@ template tmpl_vehicle_X72500_pixel() {
     [5, 5, 1, 1, 0, 0]
 }
 
-spriteset (set_X72500_graphics_front,    "gfx/X72500.png") { tmpl_vehicle_X72500_8_views_front() }
-spriteset (set_X72500_graphics_coach,    "gfx/X72500.png") { tmpl_vehicle_X72500_4_views_coach() }
-spriteset (set_X72500_graphics_rear,     "gfx/X72500.png") { tmpl_vehicle_X72500_8_views_rear() }
-spriteset (set_X72500_graphics_purchase, "gfx/X72500.png") { tmpl_vehicle_X72500_purchase() }
-spriteset (set_X72500_invisible,         "gfx/X72500.png") { tmpl_vehicle_X72500_pixel() }
+spriteset(set_X72500_graphics_front,    "gfx/X72500.png") { tmpl_vehicle_X72500_8_views_front() }
+spriteset(set_X72500_graphics_coach,    "gfx/X72500.png") { tmpl_vehicle_X72500_4_views_coach() }
+spriteset(set_X72500_graphics_rear,     "gfx/X72500.png") { tmpl_vehicle_X72500_8_views_rear() }
+spriteset(set_X72500_graphics_purchase, "gfx/X72500.png") { tmpl_vehicle_X72500_purchase() }
+spriteset(set_X72500_invisible,         "gfx/X72500.png") { tmpl_vehicle_X72500_pixel() }
 
 switch(FEAT_TRAINS, SELF, set_X72500_graphics_middle, cargo_subtype) {
     0: set_X72500_invisible;
     default: set_X72500_graphics_coach;
 }
 
-switch (FEAT_TRAINS, SELF, sw_X72500_graphics, position_in_articulated_veh) {
+switch(FEAT_TRAINS, SELF, sw_X72500_graphics, position_in_articulated_veh) {
     0: set_X72500_graphics_front;
     1: set_X72500_graphics_middle;
     2: set_X72500_graphics_rear;
@@ -72,7 +72,7 @@ switch(FEAT_TRAINS, SELF, sw_X72500_can_attach_wagon, vehicle_type_id) {
     default: return string(ERR_X72500_CANNOT_ATTACH_OTHER);
 }
 
-switch (FEAT_TRAINS, SELF, sw_X72500_visual_effect_and_powered, position_in_articulated_veh) {
+switch(FEAT_TRAINS, SELF, sw_X72500_visual_effect_and_powered, position_in_articulated_veh) {
     0: visual_effect_and_powered(VISUAL_EFFECT_DIESEL, -3, DISABLE_WAGON_POWER);
     3: visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 1, DISABLE_WAGON_POWER);
     default: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
