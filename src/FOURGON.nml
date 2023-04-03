@@ -1,8 +1,8 @@
 template tmpl_vehicle_FOURGON_4_views(livery) {
     //xpos ypos xsize ysize xrel yrel
     [4, 5 + livery * 32, 8, 24,  -3, -12]
-    [19, 5 + livery * 32, 22, 17, -16, -7]
-    [50, 5 + livery * 32, 32, 12, -18, -8]
+    [19, 5 + livery * 32, 22, 17, -15, -7]
+    [50, 5 + livery * 32, 32, 12, -15, -8]
     [87, 5 + livery * 32, 22, 17, -7, -9]
 }
 
@@ -52,7 +52,7 @@ item(FEAT_TRAINS, item_FOURGON) {
         air_drag_coefficient:         0;
         extra_weight_per_wagon:       0 ton;
         bitmask_vehicle_info:         0;
-        length:                       VEHICLE_LENGTH;
+        length:                       8;
     }
     graphics {
         default:                      sw_FOURGON_graphics_random;

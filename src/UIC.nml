@@ -1,8 +1,8 @@
 template tmpl_vehicle_UIC_4_views(livery) {
     //xpos ypos xsize ysize xrel yrel
     [6, 3 + livery * 32, 8, 24,  -3, -14]
-    [21, 3 + livery * 32, 23, 17, -17, -8]
-    [52, 3 + livery * 32, 32, 12, -18, -8]
+    [21, 3 + livery * 32, 23, 17, -16, -8]
+    [52, 3 + livery * 32, 32, 12, -15, -8]
     [93, 3 + livery * 32, 23, 17, -7, -9]
 }
 
@@ -54,7 +54,7 @@ item(FEAT_TRAINS, item_UIC) {
         air_drag_coefficient:         0;
         extra_weight_per_wagon:       0 ton;
         bitmask_vehicle_info:         0;
-        length:                       VEHICLE_LENGTH;
+        length:                       8;
     }
     graphics {
         default:                      sw_UIC_graphics_random;

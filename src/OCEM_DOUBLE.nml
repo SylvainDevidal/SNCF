@@ -1,8 +1,8 @@
 template tmpl_vehicle_OCEM_DOUBLE_4_views() {
     //xpos ypos xsize ysize xrel yrel
     [4, 71, 8, 25,  -3, -14]
-    [19, 71, 23, 18, -18, -9]
-    [50, 71, 32, 13, -18, -9]
+    [19, 71, 23, 18, -16, -9]
+    [50, 71, 32, 13, -16, -9]
     [87, 71, 23, 18, -7, -10]
 }
 
@@ -14,7 +14,7 @@ template tmpl_vehicle_OCEM_DOUBLE_8_views_rear() {
     [202, 38, 23, 18, -7, -10]
     [3, 38, 8, 25, -3, -14]
     [18, 38, 23, 18, -18, -9]
-    [50, 38, 32, 13, -18, -9]
+    [50, 38, 32, 13, -16, -9]
     [90, 38, 23, 18, -7, -10]
 }
 
@@ -62,7 +62,7 @@ item(FEAT_TRAINS, item_OCEM_DOUBLE) {
         air_drag_coefficient:         0;
         extra_weight_per_wagon:       0 ton;
         bitmask_vehicle_info:         0;
-        length:                       VEHICLE_LENGTH;
+        length:                       8;
     }
     graphics {
         default:                      sw_OCEM_DOUBLE_graphics;
