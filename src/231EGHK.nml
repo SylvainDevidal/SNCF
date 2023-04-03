@@ -1,25 +1,25 @@
 template tmpl_vehicle_231EGHK_front_8_views(frame, livery) {
     //xpos ypos xsize ysize xrel yrel
-    [2 + livery % 2 * 204, 4 + frame * 26 + int(livery / 2) * 186, 8, 24, -3, -16]
-    [12 + livery % 2 * 204, 4 + frame * 26 + int(livery / 2) * 186, 22, 17, -10, -10]
+    [2 + livery % 2 * 204, 4 + frame * 26 + int(livery / 2) * 186, 8, 24, -3, -14]
+    [12 + livery % 2 * 204, 4 + frame * 26 + int(livery / 2) * 186, 22, 17, -16, -8]
     [36 + livery % 2 * 204, 4 + frame * 26 + int(livery / 2) * 186, 32, 14, -12, -9]
-    [70 + livery % 2 * 204, 4 + frame * 26 + int(livery / 2) * 186, 22, 17, -2, -7]
-    [94 + livery % 2 * 204, 4 + frame * 26 + int(livery / 2) * 186, 8, 24, -3, -12]
-    [104 + livery % 2 * 204, 4 + frame * 26 + int(livery / 2) * 186, 22, 17, -19, -6]
-    [128 + livery % 2 * 204, 4 + frame * 26 + int(livery / 2) * 186, 32, 14, -24, -9]
-    [162 + livery % 2 * 204, 4 + frame * 26 + int(livery / 2) * 186, 22, 17, -9, -10]
+    [70 + livery % 2 * 204, 4 + frame * 26 + int(livery / 2) * 186, 22, 17, -3, -8]
+    [94 + livery % 2 * 204, 4 + frame * 26 + int(livery / 2) * 186, 8, 24, -3, -11]
+    [104 + livery % 2 * 204, 4 + frame * 26 + int(livery / 2) * 186, 22, 17, -16, -8]
+    [128 + livery % 2 * 204, 4 + frame * 26 + int(livery / 2) * 186, 32, 14, -22, -9]
+    [162 + livery % 2 * 204, 4 + frame * 26 + int(livery / 2) * 186, 22, 17, -4, -7]
 }
 
 template tmpl_vehicle_231EGHK_tender_8_views(livery) {
     //xpos ypos xsize ysize xrel yrel
-    [2 + livery % 2 * 204, 160 + int(livery / 2) * 186, 8, 24, -3, -16]
-    [12 + livery % 2 * 204, 160 + int(livery / 2) * 186, 22, 17, -4, -14]
+    [2 + livery % 2 * 204, 160 + int(livery / 2) * 186, 8, 24, -3, -14]
+    [12 + livery % 2 * 204, 160 + int(livery / 2) * 186, 22, 17, -8, -12]
     [36 + livery % 2 * 204, 160 + int(livery / 2) * 186, 32, 14, 3, -9]
     [70 + livery % 2 * 204, 160 + int(livery / 2) * 186, 22, 17, -3, -8]
-    [94 + livery % 2 * 204, 160 + int(livery / 2) * 186, 8, 24,  -3, -12]
-    [104 + livery % 2 * 204, 160 + int(livery / 2) * 186, 22, 17, -18, -6]
-    [128 + livery % 2 * 204, 160 + int(livery / 2) * 186, 32, 14, -38, -10]
-    [162 + livery % 2 * 204, 160 + int(livery / 2) * 186, 22, 17, -17, -15]
+    [94 + livery % 2 * 204, 160 + int(livery / 2) * 186, 8, 24,  -3, -10]
+    [104 + livery % 2 * 204, 160 + int(livery / 2) * 186, 22, 17, -18, -7]
+    [128 + livery % 2 * 204, 160 + int(livery / 2) * 186, 32, 14, -36, -10]
+    [162 + livery % 2 * 204, 160 + int(livery / 2) * 186, 22, 17, -13, -11]
 }
 
 template tmpl_vehicle_231EGHK_purchase() {
