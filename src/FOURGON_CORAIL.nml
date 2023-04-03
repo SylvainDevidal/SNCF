@@ -1,9 +1,9 @@
 template tmpl_vehicle_FOURGON_CORAIL_4_views(livery) {
     //xpos ypos xsize ysize xrel yrel
-    [4, 5 + livery * 32, 8, 24,  -3, -12]
-    [19, 5 + livery * 32, 22, 17, -14, -8]
-    [50, 5 + livery * 32, 32, 12, -15, -8]
-    [87, 5 + livery * 32, 22, 17, -7, -9]
+    [4, 5 + livery * 32, 8, 24,  -3, -11]
+    [19, 5 + livery * 32, 22, 17, -17, -7]
+    [50, 5 + livery * 32, 32, 12, -16, -8]
+    [87, 5 + livery * 32, 22, 17, -3, -7]
 }
 
 template tmpl_vehicle_FOURGON_CORAIL_purchase() {
