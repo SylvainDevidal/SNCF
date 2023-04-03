@@ -6,7 +6,7 @@ template tmpl_vehicle_231AC_8_views(frame, livery) {
     [70 + livery % 2 * 203, 2 + frame * 26 + int(livery / 2) * 186, 22, 17, -3, -7]
     [94 + livery % 2 * 203, 2 + frame * 26 + int(livery / 2) * 186, 8, 24,  -3, -11]
     [104 + livery % 2 * 203, 2 + frame * 26 + int(livery / 2) * 186, 22, 17, -17, -8]
-    [128 + livery % 2 * 203, 2 + frame * 26 + int(livery / 2) * 186, 32, 14, -22, -8]
+    [128 + livery % 2 * 203, 2 + frame * 26 + int(livery / 2) * 186, 32, 14, -22, -9]
     [162 + livery % 2 * 203, 2 + frame * 26 + int(livery / 2) * 186, 22, 17, -6, -8]
 }
 
