@@ -1,25 +1,25 @@
 template tmpl_vehicle_230BDG_8_views(frame, livery) {
     //xpos ypos xsize ysize xrel yrel
-    [5 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 8, 24, -3, -17]
-    [18 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 22, 17, -10, -12]
+    [5 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 8, 24, -3, -18]
+    [18 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 22, 17, -12, -10]
     [45 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 32, 14, -7, -9]
-    [82 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 22, 17, -3, -7]
-    [109 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 8, 24,  -3, -13]
-    [122 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 22, 17, -17, -7]
-    [149 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 32, 14, -27, -9]
-    [185 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 22, 17, -14, -13]
+    [82 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 22, 17, -1, -6]
+    [109 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 8, 24,  -3, -11]
+    [122 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 22, 17, -19, -7]
+    [149 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 32, 14, -25, -9]
+    [185 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 22, 17, -9, -9]
 }
 
 template tmpl_vehicle_230BDG_TENDER_8_views(livery) {
     //xpos ypos xsize ysize xrel yrel
-    [5 + livery % 2 * 207, 121 + int(livery / 2) * 145, 8, 24, -3, -22]
-    [18 + livery % 2 * 207, 121 + int(livery / 2) * 145, 22, 17, -4, -14]
-    [45 + livery % 2 * 207, 121 + int(livery / 2) * 145, 32, 14, -16, -9]
-    [82 + livery % 2 * 207, 121 + int(livery / 2) * 145, 22, 17, -4, -9]
-    [109 + livery % 2 * 207, 121 + int(livery / 2) * 145, 8, 24,  -3, -13]
-    [122 + livery % 2 * 207, 121 + int(livery / 2) * 145, 22, 17, ((livery == 3) ? 1 : 0) + -17, -8]
-    [149 + livery % 2 * 207, 121 + int(livery / 2) * 145, 32, 14, ((livery == 3) ? -2 : 0) + -38, -10]
-    [185 + livery % 2 * 207, 121 + int(livery / 2) * 145, 22, 17, -18, -15]
+    [5 + livery % 2 * 207, 121 + int(livery / 2) * 145, 8, 24, -3, -23]
+    [18 + livery % 2 * 207, 121 + int(livery / 2) * 145, 22, 17, -6, -13]
+    [45 + livery % 2 * 207, 121 + int(livery / 2) * 145, 32, 14, -15, -9]
+    [82 + livery % 2 * 207, 121 + int(livery / 2) * 145, 22, 17, -2, -8]
+    [109 + livery % 2 * 207, 121 + int(livery / 2) * 145, 8, 24,  -3, -11]
+    [122 + livery % 2 * 207, 121 + int(livery / 2) * 145, 22, 17, ((livery == 3) ? 1 : 0) + -19, -7]
+    [149 + livery % 2 * 207, 121 + int(livery / 2) * 145, 32, 14, ((livery == 3) ? -2 : 0) + -36, -10]
+    [185 + livery % 2 * 207, 121 + int(livery / 2) * 145, 22, 17, -14, -13]
 }
 
 template tmpl_vehicle_230BDG_purchase() {
