@@ -1,4 +1,4 @@
-template tmpl_vehicle_230BDG_8_views(frame, livery) {
+template tmpl_vehicle_230BDG_front_8_views(frame, livery) {
     //xpos ypos xsize ysize xrel yrel
     [5 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 8, 24, -3, -18]
     [18 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 22, 17, -12, -10]
@@ -10,7 +10,7 @@ template tmpl_vehicle_230BDG_8_views(frame, livery) {
     [185 + livery % 2 * 207, 5 + frame * 29 + int(livery / 2) * 145, 22, 17, -9, -9]
 }
 
-template tmpl_vehicle_230BDG_TENDER_8_views(livery) {
+template tmpl_vehicle_230BDG_tender_8_views(livery) {
     //xpos ypos xsize ysize xrel yrel
     [5 + livery % 2 * 207, 121 + int(livery / 2) * 145, 8, 24, -3, -23]
     [18 + livery % 2 * 207, 121 + int(livery / 2) * 145, 22, 17, -6, -13]
@@ -27,101 +27,117 @@ template tmpl_vehicle_230BDG_purchase() {
     [149, 5, 32, 14, -29, -10]
 }
 
-spriteset (set_230BDG_graphics_0_0,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(0, 0) }
-spriteset (set_230BDG_graphics_1_0,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(1, 0) }
-spriteset (set_230BDG_graphics_2_0,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(2, 0) }
-spriteset (set_230BDG_graphics_3_0,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(3, 0) }
-spriteset (set_230BDG_graphics_0_1,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(0, 1) }
-spriteset (set_230BDG_graphics_1_1,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(1, 1) }
-spriteset (set_230BDG_graphics_2_1,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(2, 1) }
-spriteset (set_230BDG_graphics_3_1,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(3, 1) }
-spriteset (set_230BDG_graphics_0_2,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(0, 2) }
-spriteset (set_230BDG_graphics_1_2,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(1, 2) }
-spriteset (set_230BDG_graphics_2_2,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(2, 2) }
-spriteset (set_230BDG_graphics_3_2,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(3, 2) }
-spriteset (set_230BDG_graphics_0_3,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(0, 3) }
-spriteset (set_230BDG_graphics_1_3,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(1, 3) }
-spriteset (set_230BDG_graphics_2_3,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(2, 3) }
-spriteset (set_230BDG_graphics_3_3,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(3, 3) }
-spriteset (set_230BDG_graphics_0_4,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(0, 4) }
-spriteset (set_230BDG_graphics_1_4,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(1, 4) }
-spriteset (set_230BDG_graphics_2_4,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(2, 4) }
-spriteset (set_230BDG_graphics_3_4,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(3, 4) }
-spriteset (set_230BDG_graphics_0_5,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(0, 5) }
-spriteset (set_230BDG_graphics_1_5,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(1, 5) }
-spriteset (set_230BDG_graphics_2_5,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(2, 5) }
-spriteset (set_230BDG_graphics_3_5,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_8_views(3, 5) }
-spriteset (set_230BDG_tender_graphics_0, "gfx/230BDG.png") { tmpl_vehicle_230BDG_TENDER_8_views(0) }
-spriteset (set_230BDG_tender_graphics_1, "gfx/230BDG.png") { tmpl_vehicle_230BDG_TENDER_8_views(1) }
-spriteset (set_230BDG_tender_graphics_2, "gfx/230BDG.png") { tmpl_vehicle_230BDG_TENDER_8_views(2) }
-spriteset (set_230BDG_tender_graphics_3, "gfx/230BDG.png") { tmpl_vehicle_230BDG_TENDER_8_views(3) }
-spriteset (set_230BDG_tender_graphics_4, "gfx/230BDG.png") { tmpl_vehicle_230BDG_TENDER_8_views(4) }
-spriteset (set_230BDG_tender_graphics_5, "gfx/230BDG.png") { tmpl_vehicle_230BDG_TENDER_8_views(5) }
+spriteset (set_230BDG_front_graphics_0_0,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(0, 0) }
+spriteset (set_230BDG_front_graphics_1_0,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(1, 0) }
+spriteset (set_230BDG_front_graphics_2_0,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(2, 0) }
+spriteset (set_230BDG_front_graphics_3_0,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(3, 0) }
+spriteset (set_230BDG_front_graphics_0_1,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(0, 1) }
+spriteset (set_230BDG_front_graphics_1_1,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(1, 1) }
+spriteset (set_230BDG_front_graphics_2_1,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(2, 1) }
+spriteset (set_230BDG_front_graphics_3_1,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(3, 1) }
+spriteset (set_230BDG_front_graphics_0_2,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(0, 2) }
+spriteset (set_230BDG_front_graphics_1_2,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(1, 2) }
+spriteset (set_230BDG_front_graphics_2_2,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(2, 2) }
+spriteset (set_230BDG_front_graphics_3_2,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(3, 2) }
+spriteset (set_230BDG_front_graphics_0_3,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(0, 3) }
+spriteset (set_230BDG_front_graphics_1_3,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(1, 3) }
+spriteset (set_230BDG_front_graphics_2_3,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(2, 3) }
+spriteset (set_230BDG_front_graphics_3_3,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(3, 3) }
+spriteset (set_230BDG_front_graphics_0_4,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(0, 4) }
+spriteset (set_230BDG_front_graphics_1_4,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(1, 4) }
+spriteset (set_230BDG_front_graphics_2_4,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(2, 4) }
+spriteset (set_230BDG_front_graphics_3_4,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(3, 4) }
+spriteset (set_230BDG_front_graphics_0_5,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(0, 5) }
+spriteset (set_230BDG_front_graphics_1_5,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(1, 5) }
+spriteset (set_230BDG_front_graphics_2_5,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(2, 5) }
+spriteset (set_230BDG_front_graphics_3_5,      "gfx/230BDG.png") { tmpl_vehicle_230BDG_front_8_views(3, 5) }
+spriteset (set_230BDG_tender_graphics_0, "gfx/230BDG.png") { tmpl_vehicle_230BDG_tender_8_views(0) }
+spriteset (set_230BDG_tender_graphics_1, "gfx/230BDG.png") { tmpl_vehicle_230BDG_tender_8_views(1) }
+spriteset (set_230BDG_tender_graphics_2, "gfx/230BDG.png") { tmpl_vehicle_230BDG_tender_8_views(2) }
+spriteset (set_230BDG_tender_graphics_3, "gfx/230BDG.png") { tmpl_vehicle_230BDG_tender_8_views(3) }
+spriteset (set_230BDG_tender_graphics_4, "gfx/230BDG.png") { tmpl_vehicle_230BDG_tender_8_views(4) }
+spriteset (set_230BDG_tender_graphics_5, "gfx/230BDG.png") { tmpl_vehicle_230BDG_tender_8_views(5) }
 spriteset (set_230BDG_graphics_purchase, "gfx/230BDG.png") { tmpl_vehicle_230BDG_purchase() }
 
-switch (FEAT_TRAINS, SELF, sw_230BDG_graphics_0, motion_counter % 4) {
-    0: set_230BDG_graphics_0_0;
-    1: set_230BDG_graphics_1_0;
-    2: set_230BDG_graphics_2_0;
-    3: set_230BDG_graphics_3_0;
+switch (FEAT_TRAINS, SELF, sw_230BDG_front_graphics_0, motion_counter % 4) {
+    0: set_230BDG_front_graphics_0_0;
+    1: set_230BDG_front_graphics_1_0;
+    2: set_230BDG_front_graphics_2_0;
+    3: set_230BDG_front_graphics_3_0;
 }
 
-switch (FEAT_TRAINS, SELF, sw_230BDG_graphics_1, motion_counter % 4) {
-    0: set_230BDG_graphics_0_1;
-    1: set_230BDG_graphics_1_1;
-    2: set_230BDG_graphics_2_1;
-    3: set_230BDG_graphics_3_1;
+switch (FEAT_TRAINS, SELF, sw_230BDG_front_graphics_1, motion_counter % 4) {
+    0: set_230BDG_front_graphics_0_1;
+    1: set_230BDG_front_graphics_1_1;
+    2: set_230BDG_front_graphics_2_1;
+    3: set_230BDG_front_graphics_3_1;
 }
 
-switch (FEAT_TRAINS, SELF, sw_230BDG_graphics_2, motion_counter % 4) {
-    0: set_230BDG_graphics_0_2;
-    1: set_230BDG_graphics_1_2;
-    2: set_230BDG_graphics_2_2;
-    3: set_230BDG_graphics_3_2;
+switch (FEAT_TRAINS, SELF, sw_230BDG_front_graphics_2, motion_counter % 4) {
+    0: set_230BDG_front_graphics_0_2;
+    1: set_230BDG_front_graphics_1_2;
+    2: set_230BDG_front_graphics_2_2;
+    3: set_230BDG_front_graphics_3_2;
 }
 
-switch (FEAT_TRAINS, SELF, sw_230BDG_graphics_3, motion_counter % 4) {
-    0: set_230BDG_graphics_0_3;
-    1: set_230BDG_graphics_1_3;
-    2: set_230BDG_graphics_2_3;
-    3: set_230BDG_graphics_3_3;
+switch (FEAT_TRAINS, SELF, sw_230BDG_front_graphics_3, motion_counter % 4) {
+    0: set_230BDG_front_graphics_0_3;
+    1: set_230BDG_front_graphics_1_3;
+    2: set_230BDG_front_graphics_2_3;
+    3: set_230BDG_front_graphics_3_3;
 }
 
-switch (FEAT_TRAINS, SELF, sw_230BDG_graphics_4, motion_counter % 4) {
-    0: set_230BDG_graphics_0_4;
-    1: set_230BDG_graphics_1_4;
-    2: set_230BDG_graphics_2_4;
-    3: set_230BDG_graphics_3_4;
+switch (FEAT_TRAINS, SELF, sw_230BDG_front_graphics_4, motion_counter % 4) {
+    0: set_230BDG_front_graphics_0_4;
+    1: set_230BDG_front_graphics_1_4;
+    2: set_230BDG_front_graphics_2_4;
+    3: set_230BDG_front_graphics_3_4;
 }
 
-switch (FEAT_TRAINS, SELF, sw_230BDG_graphics_5, motion_counter % 4) {
-    0: set_230BDG_graphics_0_5;
-    1: set_230BDG_graphics_1_5;
-    2: set_230BDG_graphics_2_5;
-    3: set_230BDG_graphics_3_5;
+switch (FEAT_TRAINS, SELF, sw_230BDG_front_graphics_5, motion_counter % 4) {
+    0: set_230BDG_front_graphics_0_5;
+    1: set_230BDG_front_graphics_1_5;
+    2: set_230BDG_front_graphics_2_5;
+    3: set_230BDG_front_graphics_3_5;
 }
 
-random_switch (FEAT_TRAINS, SELF, sw_230BDG_graphics_random) {
+switch (FEAT_TRAINS, SELF, sw_230BDG_graphics_0, position_in_articulated_veh) {
+    0: sw_230BDG_front_graphics_0;
+    1: set_230BDG_tender_graphics_0;
+}
+
+switch (FEAT_TRAINS, SELF, sw_230BDG_graphics_1, position_in_articulated_veh) {
+    0: sw_230BDG_front_graphics_1;
+    1: set_230BDG_tender_graphics_1;
+}
+
+switch (FEAT_TRAINS, SELF, sw_230BDG_graphics_2, position_in_articulated_veh) {
+    0: sw_230BDG_front_graphics_2;
+    1: set_230BDG_tender_graphics_2;
+}
+
+switch (FEAT_TRAINS, SELF, sw_230BDG_graphics_3, position_in_articulated_veh) {
+    0: sw_230BDG_front_graphics_3;
+    1: set_230BDG_tender_graphics_3;
+}
+
+switch (FEAT_TRAINS, SELF, sw_230BDG_graphics_4, position_in_articulated_veh) {
+    0: sw_230BDG_front_graphics_4;
+    1: set_230BDG_tender_graphics_4;
+}
+
+switch (FEAT_TRAINS, SELF, sw_230BDG_graphics_5, position_in_articulated_veh) {
+    0: sw_230BDG_front_graphics_5;
+    1: set_230BDG_tender_graphics_5;
+}
+
+random_switch(FEAT_TRAINS, SELF, sw_230BDG_graphics) {
     1: sw_230BDG_graphics_0;
     2: sw_230BDG_graphics_1;
     3: sw_230BDG_graphics_2;
     4: sw_230BDG_graphics_3;
     5: sw_230BDG_graphics_4;
     6: sw_230BDG_graphics_5;
-}
-
-random_switch (FEAT_TRAINS, SELF, sw_230BDG_graphics_tender_random) {
-    1: set_230BDG_tender_graphics_0;
-    2: set_230BDG_tender_graphics_1;
-    3: set_230BDG_tender_graphics_2;
-    4: set_230BDG_tender_graphics_3;
-    5: set_230BDG_tender_graphics_4;
-    6: set_230BDG_tender_graphics_5;
-}
-
-switch(FEAT_TRAINS, SELF, sw_230BDG_graphics, position_in_articulated_veh) {
-    0:      sw_230BDG_graphics_random;
-    1:      sw_230BDG_graphics_tender_random;
 }
 
 switch(FEAT_TRAINS, SELF, sw_230BDG_articulated_part, extra_callback_info1) {
