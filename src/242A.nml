@@ -1,25 +1,25 @@
 template tmpl_vehicle_242A_8_views(frame) {
     //xpos ypos xsize ysize xrel yrel
-    [5, 5 + frame * 29, 8, 24, -3, -14]
+    [5, 5 + frame * 29, 8, 24, -3, -12]
     [18, 5 + frame * 29, 22, 17, -14, -9]
     [45, 5 + frame * 29, 32, 14, -17, -10]
-    [82, 5 + frame * 29, 22, 17, -5, -9]
-    [109, 5 + frame * 29, 8, 24, -3, -13]
+    [82, 5 + frame * 29, 22, 17, -3, -7]
+    [109, 5 + frame * 29, 8, 24, -3, -11]
     [122, 5 + frame * 29, 22, 17, -18, -7]
-    [149, 5 + frame * 29, 32, 14, -18, -10]
-    [186, 5 + frame * 29, 22, 17, -11, -10]
+    [149, 5 + frame * 29, 32, 14, -15, -10]
+    [186, 5 + frame * 29, 22, 17, -3, -6]
 }
 
-template tmpl_vehicle_242A_TENDER_8_views() {
+template tmpl_vehicle_242A_tender_8_views() {
     //xpos ypos xsize ysize xrel yrel
     [5, 179, 8, 24, -3, -19]
     [18, 179, 22, 17, -8, -12]
-    [45, 179, 32, 14, -1, -10]
-    [82, 179, 22, 17, -4, -9]
+    [45, 179, 32, 14, 1, -10]
+    [82, 179, 22, 17, -1, -6]
     [109, 179, 8, 24, -3, -11]
-    [122, 179, 22, 17, -19, -7]
-    [149, 179, 32, 14, -34, -10]
-    [186, 179, 22, 17, -17, -15]
+    [122, 179, 22, 17, -19, -6]
+    [149, 179, 32, 14, -32, -10]
+    [186, 179, 22, 17, -10, -10]
 }
 
 template tmpl_vehicle_242A_purchase() {
@@ -33,7 +33,7 @@ spriteset(set_242A_graphics_2,        "gfx/242A.png") { tmpl_vehicle_242A_8_view
 spriteset(set_242A_graphics_3,        "gfx/242A.png") { tmpl_vehicle_242A_8_views(3) }
 spriteset(set_242A_graphics_4,        "gfx/242A.png") { tmpl_vehicle_242A_8_views(4) }
 spriteset(set_242A_graphics_5,        "gfx/242A.png") { tmpl_vehicle_242A_8_views(5) }
-spriteset(set_242A_tender_graphics,   "gfx/242A.png") { tmpl_vehicle_242A_TENDER_8_views() }
+spriteset(set_242A_tender_graphics,   "gfx/242A.png") { tmpl_vehicle_242A_tender_8_views() }
 spriteset(set_242A_graphics_purchase, "gfx/242A.png") { tmpl_vehicle_242A_purchase() }
 
 switch(FEAT_TRAINS, SELF, sw_242A_graphics_animated, motion_counter % 6) {
