@@ -1,18 +1,18 @@
 template tmpl_vehicle_BB61000_8_views(livery) {
     //xpos ypos xsize ysize xrel yrel
-    [2, 1 + livery * 28, 8, 24, -3, -10]
-    [13, 1 + livery * 28, 22, 17, -16, -8]
-    [37, 1 + livery * 28, 32, 12, -19, -10]
-    [71, 1 + livery * 28, 22, 17, -7, -11]
-    [96, 1 + livery * 28, 8, 24, -3, -14]
-    [107, 1 + livery * 28, 22, 17, -14, -10]
-    [131, 1 + livery * 28, 32, 12, -17, -8]
-    [165, 1 + livery * 28, 22, 17, -5, -9]
+    [2, 1 + livery * 28, 8, 24, -3, -13]
+    [13, 1 + livery * 28, 22, 17, -14, -8]
+    [37, 1 + livery * 28, 32, 12, -15, -8]
+    [71, 1 + livery * 28, 22, 17, -0, -6]
+    [96, 1 + livery * 28, 8, 24, -3, -9]
+    [107, 1 + livery * 28, 22, 17, -19, -7]
+    [131, 1 + livery * 28, 32, 12, -16, -8]
+    [165, 1 + livery * 28, 22, 17, -5, -8]
 }
 
 template tmpl_vehicle_BB61000_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [131, 29, 32, 12, -23, -7]
+    [131, 29, 32, 12, -23, -8]
 }
 
 spriteset(set_BB61000_graphics_0,        "gfx/BB61000.png") { tmpl_vehicle_BB61000_8_views(0) }
@@ -54,7 +54,7 @@ item(FEAT_TRAINS, item_BB61000) {
         air_drag_coefficient:         0.06;
         extra_weight_per_wagon:       0 ton;
         bitmask_vehicle_info:         0;
-        length:                       7;
+        length:                       6;
         visual_effect_and_powered:    visual_effect_and_powered(VISUAL_EFFECT_DIESEL, -3, DISABLE_WAGON_POWER);
     }
     graphics {
