@@ -1,30 +1,25 @@
-/*
-TODO :
-- 2CC style purchase
-*/
-
 template tmpl_vehicle_150BP_8_views(frame, livery) {
     //xpos ypos xsize ysize xrel yrel
     [5 + livery % 2 * 208, 5 + frame * 29, 8, 24, -3, -16]
-    [18 + livery % 2 * 208, 5 + frame * 29, 22, 17, -12, -10]
+    [18 + livery % 2 * 208, 5 + frame * 29, 22, 17, -13, -9]
     [45 + livery % 2 * 208, 5 + frame * 29, 32, 14, -10, -10]
-    [82 + livery % 2 * 208, 5 + frame * 29, 22, 17, -5, -8]
-    [109 + livery % 2 * 208, 5 + frame * 29, 8, 24,  -3, -14]
-    [122 + livery % 2 * 208, 5 + frame * 29, 22, 17, -16, -8]
-    [149 + livery % 2 * 208, 5 + frame * 29, 32, 14, -25, -10]
-    [186 + livery % 2 * 208, 5 + frame * 29, 22, 17, -10, -11]
+    [82 + livery % 2 * 208, 5 + frame * 29, 22, 17, -1, -6]
+    [109 + livery % 2 * 208, 5 + frame * 29, 8, 24, -3, -9]
+    [122 + livery % 2 * 208, 5 + frame * 29, 22, 17, -18, -7]
+    [149 + livery % 2 * 208, 5 + frame * 29, 32, 14, -23, -10]
+    [186 + livery % 2 * 208, 5 + frame * 29, 22, 17, -7, -8]
 }
 
 template tmpl_vehicle_150BP_TENDER_8_views(livery) {
     //xpos ypos xsize ysize xrel yrel
     [5 + livery % 2 * 208, 121, 8, 24, -3, -16]
-    [18 + livery % 2 * 208, 121, 22, 17, -8, -12]
-    [45 + livery % 2 * 208, 121, 32, 14, -2, -10]
-    [82 + livery % 2 * 208, 121, 22, 17, -5, -9]
-    [109 + livery % 2 * 208, 121, 8, 24,  -3, -14]
-    [122 + livery % 2 * 208, 121, 22, 17, -16, -8]
-    [149 + livery % 2 * 208, 121, 32, 14, -34, -10]
-    [186 + livery % 2 * 208, 121, 22, 17, -15, -14]
+    [18 + livery % 2 * 208, 121, 22, 17, -9, -10]
+    [45 + livery % 2 * 208, 121, 32, 14, 0, -10]
+    [82 + livery % 2 * 208, 121, 22, 17, -3, -7]
+    [109 + livery % 2 * 208, 121, 8, 24, -3, -11]
+    [122 + livery % 2 * 208, 121, 22, 17, -17, -7]
+    [149 + livery % 2 * 208, 121, 32, 14, -32, -10]
+    [186 + livery % 2 * 208, 121, 22, 17, -11, -10]
 }
 
 template tmpl_vehicle_150BP_purchase() {
@@ -59,13 +54,13 @@ switch(FEAT_TRAINS, SELF, sw_150BP_front_graphics_1, motion_counter % 4) {
 }
 
 switch(FEAT_TRAINS, SELF, sw_150BP_graphics_0, position_in_articulated_veh) {
-    0:      sw_150BP_front_graphics_0;
-    1:      set_150BP_tender_graphics_0;
+    0: sw_150BP_front_graphics_0;
+    1: set_150BP_tender_graphics_0;
 }
 
 switch(FEAT_TRAINS, SELF, sw_150BP_graphics_1, position_in_articulated_veh) {
-    0:      sw_150BP_front_graphics_1;
-    1:      set_150BP_tender_graphics_1;
+    0: sw_150BP_front_graphics_1;
+    1: set_150BP_tender_graphics_1;
 }
 
 random_switch(FEAT_TRAINS, SELF, sw_150BP_graphics) {
