@@ -32,7 +32,7 @@ template tmpl_vehicle_X72500_4_views_coach() {
 
 template tmpl_vehicle_X72500_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [171, 5, 32, 12, -29, -9]
+    [171, 5, 32, 12, -29, -8]
 }
 
 template tmpl_vehicle_X72500_pixel() {
