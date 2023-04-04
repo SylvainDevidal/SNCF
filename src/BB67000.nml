@@ -1,13 +1,13 @@
 template tmpl_vehicle_BB67000_8_views(livery) {
      //xpos ypos xsize ysize xrel yrel
-    [5, 7 + livery * 36, 8, 24,  -3, -13]
-    [20, 7 + livery * 36, 22, 17, -15, -8]
-    [51, 7 + livery * 36, 32, 12, -14, -8]
-    [89, 7 + livery * 36, 22, 17, -7, -9]
-    [123, 7 + livery * 36, 8, 24,  -3, -12]
-    [138, 7 + livery * 36, 22, 17, -15, -8]
+    [5, 7 + livery * 36, 8, 24, -3, -11]
+    [20, 7 + livery * 36, 22, 17, -16, -7]
+    [51, 7 + livery * 36, 32, 12, -15, -8]
+    [89, 7 + livery * 36, 22, 17, -1, -6]
+    [123, 7 + livery * 36, 8, 24, -3, -10]
+    [138, 7 + livery * 36, 22, 17, -18, -6]
     [169, 7 + livery * 36, 32, 12, -18, -8]
-    [206, 7 + livery * 36, 22, 17, -7, -9]
+    [206, 7 + livery * 36, 22, 17, -4, -7]
 }
 
 template tmpl_vehicle_BB67000_purchase() {

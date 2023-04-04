@@ -1,6 +1,6 @@
 template tmpl_vehicle_CORAIL_4_views(livery) {
     //xpos ypos xsize ysize xrel yrel
-    [6, 4 + livery * 30, 7, 23,  -3, -11]
+    [6, 4 + livery * 30, 8, 23, -3, -11]
     [19, 4 + livery * 30, 23, 17, -17, -8]
     [49, 4 + livery * 30, 32, 12, -16, -8]
     [89, 4 + livery * 30, 23, 17, -3, -7]
@@ -8,7 +8,7 @@ template tmpl_vehicle_CORAIL_4_views(livery) {
 
 template tmpl_vehicle_CORAIL_8_views_cabin_rear() {
      //xpos ypos xsize ysize xrel yrel
-    [117, 33, 8, 24,  -3, -11]
+    [117, 33, 8, 24, -3, -11]
     [132, 33, 23, 17, -17, -8]
     [163, 33, 32, 12, -15, -8]
     [199, 33, 23, 17, -3, -7]
