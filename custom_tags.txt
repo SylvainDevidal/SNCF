@@ -1,5 +1,5 @@
-VERSION                   :0.0.1
-TITLE                     :My GRF
+VERSION                   :0.0.1 alpha
+TITLE                     :SNCF - French Trainset
 
 # Rail type
 STR_STEAM                 :Steam
@@ -24,7 +24,7 @@ STR_TRAIN_151A            :151A
 STR_TRAIN_230BDG          :230BDG
 STR_TRAIN_231AC           :231AC
 STR_TRAIN_231EGHK         :231EGHK
-STR_TRAIN_231CHAPELON     :231 Chapelon
+STR_TRAIN_231CHAPELON     :231 Chapelon Garratt
 STR_TRAIN_232TC           :232TC
 STR_TRAIN_240A            :240A
 STR_TRAIN_240P            :240P
@@ -40,7 +40,7 @@ STR_TRAIN_CC65000         :CC65000
 STR_TRAIN_BB67000         :BB67000
 STR_TRAIN_X2000           :X2000 Iroquois
 STR_TRAIN_TAR             :TAR
-STR_TRAIN_T2000           :T2000
+STR_TRAIN_T2000           :T2000 (RTG)
 STR_TRAIN_X72500          :X72500
 STR_TRAIN_BB61000         :BB61000
 
@@ -79,4 +79,4 @@ STR_WAGON_FOURGON         :Voiture Fourgon
 STR_WAGON_FOURGON_CORAIL  :Voiture Fourgon Corail
 
 # Stuff
-STR_GRAPHICS_CREDIT       :Emperor Jake, The Irish, Hovering Teacup, acs121, Coalroads Artist, Snail. If you regognize graphics of your own and are not credited please contact this GRF author on the forums.
+STR_GRAPHICS_CREDIT       :Emperor Jake, The Irish, Hovering Teacup, acs121, Coalroads Artist, DanMacK, Snail. If you regognize graphics of your own and are not credited please contact this GRF author on the forums.
