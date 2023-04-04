@@ -1,25 +1,25 @@
 template tmpl_vehicle_141R_8_views(frame, livery) {
     //xpos ypos xsize ysize xrel yrel
     [5 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 145, 8, 24, -3, -16]
-    [18 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 145, 22, 17, -12, -10]
-    [45 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 145, 32, 14, -12, -9]
-    [82 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 145, 22, 17, -5, -9]
-    [109 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 145, 8, 24,  -3, -15]
-    [122 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 145, 22, 17, -16, -8]
-    [149 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 145, 32, 14, -23, -10]
-    [186 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 145, 22, 17, -8, -9]
+    [18 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 145, 22, 17, -13, -9]
+    [45 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 145, 32, 14, -9, -10]
+    [82 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 145, 22, 17, -1, -6]
+    [109 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 145, 8, 24, -3, -9]
+    [122 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 145, 22, 17, -19, -7]
+    [149 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 145, 32, 14, -22, -10]
+    [186 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 145, 22, 17, -7, -9]
 }
 
 template tmpl_vehicle_141R_TENDER_8_views(livery) {
     //xpos ypos xsize ysize xrel yrel
-    [5 + livery % 2 * 208, 121 + int(livery / 2) * 145, 8, 24, -3, -16]
-    [18 + livery % 2 * 208, 121 + int(livery / 2) * 145, 22, 17, -8, -12]
-    [45 + livery % 2 * 208, 121 + int(livery / 2) * 145, 32, 14, 0, -9]
-    [82 + livery % 2 * 208, 121 + int(livery / 2) * 145, 22, 17, -5, -9]
-    [109 + livery % 2 * 208, 121 + int(livery / 2) * 145, 8, 24,  -3, -15]
-    [122 + livery % 2 * 208, 121 + int(livery / 2) * 145, 22, 17, -17, -7]
-    [149 + livery % 2 * 208, 121 + int(livery / 2) * 145, 32, 14, -35, -10]
-    [186 + livery % 2 * 208, 121 + int(livery / 2) * 145, 22, 17, -15, -13]
+    [5 + livery % 2 * 208, 121 + int(livery / 2) * 145, 8, 24, -3, -18]
+    [18 + livery % 2 * 208, 121 + int(livery / 2) * 145, 22, 17, -9, -11]
+    [45 + livery % 2 * 208, 121 + int(livery / 2) * 145, 32, 14, 1, -10]
+    [82 + livery % 2 * 208, 121 + int(livery / 2) * 145, 22, 17, -1, -6]
+    [109 + livery % 2 * 208, 121 + int(livery / 2) * 145, 8, 24, -3, -12]
+    [122 + livery % 2 * 208, 121 + int(livery / 2) * 145, 22, 17, -19, -7]
+    [149 + livery % 2 * 208, 121 + int(livery / 2) * 145, 32, 14, -32, -10]
+    [186 + livery % 2 * 208, 121 + int(livery / 2) * 145, 22, 17, -13, -12]
 }
 
 template tmpl_vehicle_141R_purchase() {
@@ -27,27 +27,27 @@ template tmpl_vehicle_141R_purchase() {
     [149, 5, 32, 14, -28, -10]
 }
 
-spriteset(set_141R_front_graphics_0_0,      "gfx/141R.png") { tmpl_vehicle_141R_8_views(0, 0) }
-spriteset(set_141R_front_graphics_1_0,      "gfx/141R.png") { tmpl_vehicle_141R_8_views(1, 0) }
-spriteset(set_141R_front_graphics_2_0,      "gfx/141R.png") { tmpl_vehicle_141R_8_views(2, 0) }
-spriteset(set_141R_front_graphics_3_0,      "gfx/141R.png") { tmpl_vehicle_141R_8_views(3, 0) }
-spriteset(set_141R_front_graphics_0_1,      "gfx/141R.png") { tmpl_vehicle_141R_8_views(0, 1) }
-spriteset(set_141R_front_graphics_1_1,      "gfx/141R.png") { tmpl_vehicle_141R_8_views(1, 1) }
-spriteset(set_141R_front_graphics_2_1,      "gfx/141R.png") { tmpl_vehicle_141R_8_views(2, 1) }
-spriteset(set_141R_front_graphics_3_1,      "gfx/141R.png") { tmpl_vehicle_141R_8_views(3, 1) }
-spriteset(set_141R_front_graphics_0_2,      "gfx/141R.png") { tmpl_vehicle_141R_8_views(0, 2) }
-spriteset(set_141R_front_graphics_1_2,      "gfx/141R.png") { tmpl_vehicle_141R_8_views(1, 2) }
-spriteset(set_141R_front_graphics_2_2,      "gfx/141R.png") { tmpl_vehicle_141R_8_views(2, 2) }
-spriteset(set_141R_front_graphics_3_2,      "gfx/141R.png") { tmpl_vehicle_141R_8_views(3, 2) }
-spriteset(set_141R_front_graphics_0_3,      "gfx/141R.png") { tmpl_vehicle_141R_8_views(0, 3) }
-spriteset(set_141R_front_graphics_1_3,      "gfx/141R.png") { tmpl_vehicle_141R_8_views(1, 3) }
-spriteset(set_141R_front_graphics_2_3,      "gfx/141R.png") { tmpl_vehicle_141R_8_views(2, 3) }
-spriteset(set_141R_front_graphics_3_3,      "gfx/141R.png") { tmpl_vehicle_141R_8_views(3, 3) }
-spriteset(set_141R_tender_graphics_0, "gfx/141R.png") { tmpl_vehicle_141R_TENDER_8_views(0) }
-spriteset(set_141R_tender_graphics_1, "gfx/141R.png") { tmpl_vehicle_141R_TENDER_8_views(1) }
-spriteset(set_141R_tender_graphics_2, "gfx/141R.png") { tmpl_vehicle_141R_TENDER_8_views(2) }
-spriteset(set_141R_tender_graphics_3, "gfx/141R.png") { tmpl_vehicle_141R_TENDER_8_views(3) }
-spriteset(set_141R_graphics_purchase, "gfx/141R.png") { tmpl_vehicle_141R_purchase() }
+spriteset(set_141R_front_graphics_0_0, "gfx/141R.png") { tmpl_vehicle_141R_8_views(0, 0) }
+spriteset(set_141R_front_graphics_1_0, "gfx/141R.png") { tmpl_vehicle_141R_8_views(1, 0) }
+spriteset(set_141R_front_graphics_2_0, "gfx/141R.png") { tmpl_vehicle_141R_8_views(2, 0) }
+spriteset(set_141R_front_graphics_3_0, "gfx/141R.png") { tmpl_vehicle_141R_8_views(3, 0) }
+spriteset(set_141R_front_graphics_0_1, "gfx/141R.png") { tmpl_vehicle_141R_8_views(0, 1) }
+spriteset(set_141R_front_graphics_1_1, "gfx/141R.png") { tmpl_vehicle_141R_8_views(1, 1) }
+spriteset(set_141R_front_graphics_2_1, "gfx/141R.png") { tmpl_vehicle_141R_8_views(2, 1) }
+spriteset(set_141R_front_graphics_3_1, "gfx/141R.png") { tmpl_vehicle_141R_8_views(3, 1) }
+spriteset(set_141R_front_graphics_0_2, "gfx/141R.png") { tmpl_vehicle_141R_8_views(0, 2) }
+spriteset(set_141R_front_graphics_1_2, "gfx/141R.png") { tmpl_vehicle_141R_8_views(1, 2) }
+spriteset(set_141R_front_graphics_2_2, "gfx/141R.png") { tmpl_vehicle_141R_8_views(2, 2) }
+spriteset(set_141R_front_graphics_3_2, "gfx/141R.png") { tmpl_vehicle_141R_8_views(3, 2) }
+spriteset(set_141R_front_graphics_0_3, "gfx/141R.png") { tmpl_vehicle_141R_8_views(0, 3) }
+spriteset(set_141R_front_graphics_1_3, "gfx/141R.png") { tmpl_vehicle_141R_8_views(1, 3) }
+spriteset(set_141R_front_graphics_2_3, "gfx/141R.png") { tmpl_vehicle_141R_8_views(2, 3) }
+spriteset(set_141R_front_graphics_3_3, "gfx/141R.png") { tmpl_vehicle_141R_8_views(3, 3) }
+spriteset(set_141R_tender_graphics_0,  "gfx/141R.png") { tmpl_vehicle_141R_TENDER_8_views(0) }
+spriteset(set_141R_tender_graphics_1,  "gfx/141R.png") { tmpl_vehicle_141R_TENDER_8_views(1) }
+spriteset(set_141R_tender_graphics_2,  "gfx/141R.png") { tmpl_vehicle_141R_TENDER_8_views(2) }
+spriteset(set_141R_tender_graphics_3,  "gfx/141R.png") { tmpl_vehicle_141R_TENDER_8_views(3) }
+spriteset(set_141R_graphics_purchase,  "gfx/141R.png") { tmpl_vehicle_141R_purchase() }
 
 switch(FEAT_TRAINS, SELF, sw_141R_front_graphics_0, motion_counter % 4) {
     0: set_141R_front_graphics_0_0;
@@ -150,6 +150,6 @@ item(FEAT_TRAINS, item_141R) {
         visual_effect_and_powered:    return (position_in_articulated_veh == 0) ?
                                           visual_effect_and_powered(VISUAL_EFFECT_STEAM, -5, DISABLE_WAGON_POWER) :
                                           visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
-        length:                       return (position_in_articulated_veh == 0) ? 7 : 4;
+        length:                       return (position_in_articulated_veh == 0) ? 6 : 4;
     }
 }
