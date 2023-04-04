@@ -12,7 +12,7 @@ template tmpl_vehicle_2D2_5500_8_views() {
 
 template tmpl_vehicle_2D2_5500_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [169, 4, 32, 15, -28, -10]
+    [169, 4, 32, 15, -28, -11]
 }
 
 spriteset(set_2D2_5500_graphics,          "gfx/2D2_5500.png") { tmpl_vehicle_2D2_5500_8_views() }

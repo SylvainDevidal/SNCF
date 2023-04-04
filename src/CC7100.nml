@@ -5,14 +5,14 @@ template tmpl_vehicle_CC7100_8_views() {
     [50, 2, 32, 15, -17, -10]
     [88, 2, 22, 17, -7, -12]
     [119, 2, 8, 24,  -3, -12]
-    [134, 2, 22, 17, -15, -9]
-    [165, 2, 32, 15, -19, -11]
+    [134, 2, 22, 17, -17, -9]
+    [165, 2, 32, 15, -16, -11]
     [202, 2, 22, 20, -7, -11]
 }
 
 template tmpl_vehicle_CC7100_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [165, 2, 32, 15, -29, -9]
+    [165, 2, 32, 15, -29, -11]
 }
 
 spriteset(set_CC7100_graphics,          "gfx/CC7100.png") { tmpl_vehicle_CC7100_8_views() }

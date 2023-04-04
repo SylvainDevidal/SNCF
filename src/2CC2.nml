@@ -12,7 +12,7 @@ template tmpl_vehicle_2CC2_8_views(livery) {
 
 template tmpl_vehicle_2CC2_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [131, 2, 32, 15, -29, -10]
+    [131, 2, 32, 15, -29, -11]
 }
 
 spriteset(set_2CC2_graphics_0,        "gfx/2CC2.png") { tmpl_vehicle_2CC2_8_views(0) }

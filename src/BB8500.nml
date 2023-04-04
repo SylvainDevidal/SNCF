@@ -12,7 +12,7 @@ template tmpl_vehicle_BB8500_8_views() {
 
 template tmpl_vehicle_BB8500_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [172, 4, 32, 15, -27, -9]
+    [172, 4, 32, 15, -27, -10]
 }
 
 spriteset(set_BB8500_graphics,          "gfx/BB8500.png") { tmpl_vehicle_BB8500_8_views() }
