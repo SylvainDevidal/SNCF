@@ -110,13 +110,13 @@ STR_SNCF_TRAIN_BB8500_ADDITIONAL_TEXT         :Graphics by Emperor Jake, Hoverin
 STR_SNCF_TRAIN_CC7100_NAME                    :{STR_TRAIN_CC7100} ({STR_ELEC_15DC})
 STR_SNCF_TRAIN_CC7100_ADDITIONAL_TEXT         :Graphics by Emperor Jake, Hovering Teacup
 STR_SNCF_TRAIN_BB8100_NAME                    :{STR_TRAIN_BB8100} ({STR_ELEC_15DC})
-STR_SNCF_TRAIN_BB8100_ADDITIONAL_TEXT         :Graphics by Hovering Teacup
+STR_SNCF_TRAIN_BB8100_ADDITIONAL_TEXT         :Graphics by Hovering Teacup, Snail
 STR_SNCF_TRAIN_BB12000_NAME                   :{STR_TRAIN_BB12000} ({STR_ELEC_25AC})
 STR_SNCF_TRAIN_BB12000_ADDITIONAL_TEXT        :Graphics by Emperor Jake, Hovering Teacup
 STR_SNCF_TRAIN_CC40100_NAME                   :{STR_TRAIN_CC40100} ({STR_ELEC_15DC03DC15AC25AC})
 STR_SNCF_TRAIN_CC40100_ADDITIONAL_TEXT        :Power: 4850 kW on AC and 3670 kW on DC.{}Graphics by Emperor Jake, Hovering Teacup
 STR_SNCF_TRAIN_BB27000_NAME                   :{STR_TRAIN_BB27000} ({STR_ELEC_15DC25AC})
-STR_SNCF_TRAIN_BB27000_ADDITIONAL_TEXT        :Graphics by Hovering Teacup
+STR_SNCF_TRAIN_BB27000_ADDITIONAL_TEXT        :Graphics by Hovering Teacup, Snail
 STR_SNCF_TRAIN_Z8100_NAME                     :{STR_TRAIN_Z8100} ({STR_ELEC_15DC25AC})
 STR_SNCF_TRAIN_Z8100_ADDITIONAL_TEXT          :Power: 2824 kW on AC and 2480 kW on DC.{}Graphics by The Irish
 STR_SNCF_TRAIN_Z7300_NAME                     :{STR_TRAIN_Z7300} ({STR_ELEC_15DC})
@@ -124,7 +124,7 @@ STR_SNCF_TRAIN_Z7300_ADDITIONAL_TEXT          :Graphics by Jvassie
 STR_SNCF_TRAIN_Z21500_NAME                    :{STR_TRAIN_Z21500} ({STR_ELEC_15DC25AC})
 STR_SNCF_TRAIN_Z21500_ADDITIONAL_TEXT         :Graphics by The Irish
 STR_SNCF_TRAIN_BB26000_NAME                   :{STR_TRAIN_BB26000} ({STR_ELEC_15DC25AC})
-STR_SNCF_TRAIN_BB26000_ADDITIONAL_TEXT        :Graphics by acs121, Hovering Teacup
+STR_SNCF_TRAIN_BB26000_ADDITIONAL_TEXT        :Graphics by acs121, Hovering Teacup, Snail
 
 # No consent
 # STR_SNCF_TRAIN_BB1280_NAME                    :{STR_TRAIN_BB1280} ({STR_ELEC_15DC})
@@ -148,14 +148,14 @@ STR_SNCF_TRAIN_TGV_RESEAU_ADDITIONAL_TEXT     :Power: 8800 kW on AC and 3680 kW 
 
 # Wagon
 STR_SNCF_WAGON_OCEM_NAME                      :{STR_WAGON_OCEM} (passengers)
-STR_SNCF_WAGON_OCEM_ADDITIONAL_TEXT           :Graphics by Hovering Teacup
+STR_SNCF_WAGON_OCEM_ADDITIONAL_TEXT           :Graphics by Hovering Teacup, Snail
 STR_SNCF_WAGON_OCEM_DOUBLE_NAME               :{STR_WAGON_OCEM_DOUBLE} (passengers)
-STR_SNCF_WAGON_OCEM_DOUBLE_ADDITIONAL_TEXT    :Graphics by Hovering Teacup
+STR_SNCF_WAGON_OCEM_DOUBLE_ADDITIONAL_TEXT    :Graphics by Hovering Teacup, Snail
 STR_SNCF_WAGON_UIC_NAME                       :{STR_WAGON_UIC} (passengers)
-STR_SNCF_WAGON_UIC_ADDITIONAL_TEXT            :Graphics by Hovering Teacup
+STR_SNCF_WAGON_UIC_ADDITIONAL_TEXT            :Graphics by Hovering Teacup, Snail
 STR_SNCF_WAGON_CORAIL_NAME                    :{STR_WAGON_CORAIL} (passengers)
-STR_SNCF_WAGON_CORAIL_ADDITIONAL_TEXT         :Graphics by Hovering Teacup
+STR_SNCF_WAGON_CORAIL_ADDITIONAL_TEXT         :Graphics by Hovering Teacup, Snail
 STR_SNCF_WAGON_FOURGON_NAME                   :{STR_WAGON_FOURGON} (mail)
-STR_SNCF_WAGON_FOURGON_ADDITIONAL_TEXT        :Graphics by Hovering Teacup
+STR_SNCF_WAGON_FOURGON_ADDITIONAL_TEXT        :Graphics by Hovering Teacup, Snail
 STR_SNCF_WAGON_FOURGON_CORAIL_NAME            :{STR_WAGON_FOURGON_CORAIL} (mail)
-STR_SNCF_WAGON_FOURGON_CORAIL_ADDITIONAL_TEXT :Graphics by Hovering Teacup
+STR_SNCF_WAGON_FOURGON_CORAIL_ADDITIONAL_TEXT :Graphics by Hovering Teacup, Snail
