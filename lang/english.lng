@@ -5,10 +5,11 @@ STR_GRF_NAME                                  :{TITLE} {VERSION}
 STR_GRF_DESC                                  :{ORANGE}{TITLE}SNCF{}{BLACK}At last! Graphics credits to {STR_GRAPHICS_CREDIT}
 
 # Parameters
-STR_PARAM_NAME_INTRODUCTION_DATES             :Introduction dates
-STR_PARAM_DESC_INTRODUCTION_DATES             :Use historical (could be frustrating) or gameplay oriented introduction dates
-STR_PARAM_VALUE_INTRODUCTION_DATES_REAL       :Historic
-STR_PARAM_VALUE_INTRODUCTION_DATES_GAMEPLAY   :Gameplay
+STR_PARAM_NAME_INTRODUCTION_DATES             :Historical introduction dates
+STR_PARAM_DESC_INTRODUCTION_DATES             :Historical could be frustrating, you may disable this feaature for better gameplay experience
+
+STR_PARAM_NAME_ALLOW_NO_GRAPHICS              :Load vehicules with no graphcis
+STR_PARAM_DESC_ALLOW_NO_GRAPHICS              :Due to some copyright limitations, I'm not able to use all the graphics I would. Enable this feature to play with more vehicules shown as ugly coloured box.
 
 # Generic strings
 STR_SUBTYPE_2_PART                            : (2 parts)
@@ -41,42 +42,42 @@ STR_SNCF_TRAIN_231EGHK_NAME                   :{STR_TRAIN_231EGHK} ({STR_STEAM})
 STR_SNCF_TRAIN_231EGHK_ADDITIONAL_TEXT        :Graphics by Hovering Teacup
 
 # No consent
-# STR_SNCF_TRAIN_040TA_NAME                     :{STR_TRAIN_040TA} ({STR_STEAM})
-# STR_SNCF_TRAIN_040TA_ADDITIONAL_TEXT          :Graphics by Snail
-# STR_SNCF_TRAIN_131TB_NAME                     :{STR_TRAIN_131TB} ({STR_STEAM})
-# STR_SNCF_TRAIN_131TB_ADDITIONAL_TEXT          :Graphics by Snail
-# STR_SNCF_TRAIN_140C_NAME                      :{STR_TRAIN_140C} ({STR_STEAM})
-# STR_SNCF_TRAIN_140C_ADDITIONAL_TEXT           :Graphics by Snail
-# STR_SNCF_TRAIN_141TA_NAME                     :{STR_TRAIN_141TA} ({STR_STEAM})
-# STR_SNCF_TRAIN_141TA_ADDITIONAL_TEXT          :Graphics by Snail
-# STR_SNCF_TRAIN_141R_NAME                      :{STR_TRAIN_141R} ({STR_STEAM})
-# STR_SNCF_TRAIN_141R_ADDITIONAL_TEXT           :Graphics by Snail
-# STR_SNCF_TRAIN_150BP_NAME                     :{STR_TRAIN_150BP} ({STR_STEAM})
-# STR_SNCF_TRAIN_150BP_ADDITIONAL_TEXT          :Graphics by Snail
-# STR_SNCF_TRAIN_151A_NAME                      :{STR_TRAIN_151A} ({STR_STEAM})
-# STR_SNCF_TRAIN_151A_ADDITIONAL_TEXT           :Graphics by Snail
-# STR_SNCF_TRAIN_230BDG_NAME                    :{STR_TRAIN_230BDG} ({STR_STEAM})
-# STR_SNCF_TRAIN_230BDG_ADDITIONAL_TEXT         :Graphics by Snail
-# STR_SNCF_TRAIN_231AC_NAME                     :{STR_TRAIN_231AC} ({STR_STEAM})
-# STR_SNCF_TRAIN_231AC_ADDITIONAL_TEXT          :Graphics by Snail
-# STR_SNCF_TRAIN_231CHAPELON_NAME               :{STR_TRAIN_231CHAPELON} ({STR_STEAM})
-# STR_SNCF_TRAIN_231CHAPELON_ADDITIONAL_TEXT    :Graphics by Snail
-# STR_SNCF_TRAIN_232TC_NAME                     :{STR_TRAIN_232TC} ({STR_STEAM})
-# STR_SNCF_TRAIN_232TC_ADDITIONAL_TEXT          :Graphics by Snail
-# STR_SNCF_TRAIN_240A_NAME                      :{STR_TRAIN_240A} ({STR_STEAM})
-# STR_SNCF_TRAIN_240A_ADDITIONAL_TEXT           :Graphics by Snail
-# STR_SNCF_TRAIN_240P_NAME                      :{STR_TRAIN_240P} ({STR_STEAM})
-# STR_SNCF_TRAIN_240P_ADDITIONAL_TEXT           :Graphics by Snail
-# STR_SNCF_TRAIN_241AC_NAME                     :{STR_TRAIN_241AC} ({STR_STEAM})
-# STR_SNCF_TRAIN_241AC_ADDITIONAL_TEXT          :Graphics by Snail
-# STR_SNCF_TRAIN_241P_NAME                      :{STR_TRAIN_241P} ({STR_STEAM})
-# STR_SNCF_TRAIN_241P_ADDITIONAL_TEXT           :Graphics by Snail
-# STR_SNCF_TRAIN_242A_NAME                      :{STR_TRAIN_242A} ({STR_STEAM})
-# STR_SNCF_TRAIN_242A_ADDITIONAL_TEXT           :Graphics by Snail
-# STR_SNCF_TRAIN_242TA_NAME                     :{STR_TRAIN_242TA} ({STR_STEAM})
-# STR_SNCF_TRAIN_242TA_ADDITIONAL_TEXT          :Graphics by Snail
-# STR_SNCF_TRAIN_BB61000_NAME                   :{STR_TRAIN_BB61000} ({STR_DIESEL})
-# STR_SNCF_TRAIN_BB61000_ADDITIONAL_TEXT        :Graphics by Snail
+STR_SNCF_TRAIN_040TA_NAME                     :{STR_TRAIN_040TA} ({STR_STEAM})
+STR_SNCF_TRAIN_040TA_ADDITIONAL_TEXT          :{ORANGE}No graphics
+STR_SNCF_TRAIN_131TB_NAME                     :{STR_TRAIN_131TB} ({STR_STEAM})
+STR_SNCF_TRAIN_131TB_ADDITIONAL_TEXT          :{ORANGE}No graphics
+STR_SNCF_TRAIN_140C_NAME                      :{STR_TRAIN_140C} ({STR_STEAM})
+STR_SNCF_TRAIN_140C_ADDITIONAL_TEXT           :{ORANGE}No graphics
+STR_SNCF_TRAIN_141TA_NAME                     :{STR_TRAIN_141TA} ({STR_STEAM})
+STR_SNCF_TRAIN_141TA_ADDITIONAL_TEXT          :{ORANGE}No graphics
+STR_SNCF_TRAIN_141R_NAME                      :{STR_TRAIN_141R} ({STR_STEAM})
+STR_SNCF_TRAIN_141R_ADDITIONAL_TEXT           :{ORANGE}No graphics
+STR_SNCF_TRAIN_150BP_NAME                     :{STR_TRAIN_150BP} ({STR_STEAM})
+STR_SNCF_TRAIN_150BP_ADDITIONAL_TEXT          :{ORANGE}No graphics
+STR_SNCF_TRAIN_151A_NAME                      :{STR_TRAIN_151A} ({STR_STEAM})
+STR_SNCF_TRAIN_151A_ADDITIONAL_TEXT           :{ORANGE}No graphics
+STR_SNCF_TRAIN_230BDG_NAME                    :{STR_TRAIN_230BDG} ({STR_STEAM})
+STR_SNCF_TRAIN_230BDG_ADDITIONAL_TEXT         :{ORANGE}No graphics
+STR_SNCF_TRAIN_231AC_NAME                     :{STR_TRAIN_231AC} ({STR_STEAM})
+STR_SNCF_TRAIN_231AC_ADDITIONAL_TEXT          :{ORANGE}No graphics
+STR_SNCF_TRAIN_231CHAPELON_NAME               :{STR_TRAIN_231CHAPELON} ({STR_STEAM})
+STR_SNCF_TRAIN_231CHAPELON_ADDITIONAL_TEXT    :{ORANGE}No graphics
+STR_SNCF_TRAIN_232TC_NAME                     :{STR_TRAIN_232TC} ({STR_STEAM})
+STR_SNCF_TRAIN_232TC_ADDITIONAL_TEXT          :{ORANGE}No graphics
+STR_SNCF_TRAIN_240A_NAME                      :{STR_TRAIN_240A} ({STR_STEAM})
+STR_SNCF_TRAIN_240A_ADDITIONAL_TEXT           :{ORANGE}No graphics
+STR_SNCF_TRAIN_240P_NAME                      :{STR_TRAIN_240P} ({STR_STEAM})
+STR_SNCF_TRAIN_240P_ADDITIONAL_TEXT           :{ORANGE}No graphics
+STR_SNCF_TRAIN_241AC_NAME                     :{STR_TRAIN_241AC} ({STR_STEAM})
+STR_SNCF_TRAIN_241AC_ADDITIONAL_TEXT          :{ORANGE}No graphics
+STR_SNCF_TRAIN_241P_NAME                      :{STR_TRAIN_241P} ({STR_STEAM})
+STR_SNCF_TRAIN_241P_ADDITIONAL_TEXT           :{ORANGE}No graphics
+STR_SNCF_TRAIN_242A_NAME                      :{STR_TRAIN_242A} ({STR_STEAM})
+STR_SNCF_TRAIN_242A_ADDITIONAL_TEXT           :{ORANGE}No graphics
+STR_SNCF_TRAIN_242TA_NAME                     :{STR_TRAIN_242TA} ({STR_STEAM})
+STR_SNCF_TRAIN_242TA_ADDITIONAL_TEXT          :{ORANGE}No graphics
+STR_SNCF_TRAIN_BB61000_NAME                   :{STR_TRAIN_BB61000} ({STR_DIESEL})
+STR_SNCF_TRAIN_BB61000_ADDITIONAL_TEXT        :{ORANGE}No graphics
 
 # Diesel
 STR_SNCF_TRAIN_262DB_NAME                     :{STR_TRAIN_262BD} ({STR_DIESEL})
@@ -127,16 +128,16 @@ STR_SNCF_TRAIN_BB26000_NAME                   :{STR_TRAIN_BB26000} ({STR_ELEC_15
 STR_SNCF_TRAIN_BB26000_ADDITIONAL_TEXT        :Graphics by acs121, Hovering Teacup, Snail
 
 # No consent
-# STR_SNCF_TRAIN_BB1280_NAME                    :{STR_TRAIN_BB1280} ({STR_ELEC_15DC})
-# STR_SNCF_TRAIN_BB1280_ADDITIONAL_TEXT         :Graphics by Snail
-# STR_SNCF_TRAIN_1ABBA1_NAME                    :{STR_TRAIN_1ABBA1} ({STR_ELEC_15DC})
-# STR_SNCF_TRAIN_1ABBA1_ADDITIONAL_TEXT         :Graphics by Snail
-# STR_SNCF_TRAIN_2BB2_NAME                      :{STR_TRAIN_2BB2} ({STR_ELEC_15DC})
-# STR_SNCF_TRAIN_2BB2_ADDITIONAL_TEXT           :Graphics by Snail
-# STR_SNCF_TRAIN_1CC1_NAME                      :{STR_TRAIN_1CC1} ({STR_ELEC_15DC})
-# STR_SNCF_TRAIN_1CC1_ADDITIONAL_TEXT           :Graphics by Snail
-# STR_SNCF_TRAIN_2CC2_NAME                      :{STR_TRAIN_2CC2} ({STR_ELEC_15DC})
-# STR_SNCF_TRAIN_2CC2_ADDITIONAL_TEXT           :Graphics by Snail
+STR_SNCF_TRAIN_BB1280_NAME                    :{STR_TRAIN_BB1280} ({STR_ELEC_15DC})
+STR_SNCF_TRAIN_BB1280_ADDITIONAL_TEXT         :{ORANGE}No graphics
+STR_SNCF_TRAIN_1ABBA1_NAME                    :{STR_TRAIN_1ABBA1} ({STR_ELEC_15DC})
+STR_SNCF_TRAIN_1ABBA1_ADDITIONAL_TEXT         :{ORANGE}No graphics
+STR_SNCF_TRAIN_2BB2_NAME                      :{STR_TRAIN_2BB2} ({STR_ELEC_15DC})
+STR_SNCF_TRAIN_2BB2_ADDITIONAL_TEXT           :{ORANGE}No graphics
+STR_SNCF_TRAIN_1CC1_NAME                      :{STR_TRAIN_1CC1} ({STR_ELEC_15DC})
+STR_SNCF_TRAIN_1CC1_ADDITIONAL_TEXT           :{ORANGE}No graphics
+STR_SNCF_TRAIN_2CC2_NAME                      :{STR_TRAIN_2CC2} ({STR_ELEC_15DC})
+STR_SNCF_TRAIN_2CC2_ADDITIONAL_TEXT           :{ORANGE}No graphics
 
 # TGV
 STR_SNCF_TRAIN_TGV_PSE_NAME                   :{STR_TRAIN_TGV_PSE} ({STR_ELEC_15DC15AC25AC})

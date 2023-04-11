@@ -1,3 +1,4 @@
+/*
 template tmpl_vehicle_141R_8_views(frame, livery) {
     //xpos ypos xsize ysize xrel yrel
     [5 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 145, 8, 24, -3, -16]
@@ -103,6 +104,12 @@ random_switch(FEAT_TRAINS, SELF, sw_141R_graphics) {
     3: sw_141R_graphics_2;
     4: sw_141R_graphics_3;
 }
+*/
+
+switch(FEAT_TRAINS, SELF, sw_141R_graphics, position_in_articulated_veh) {
+    0:      set_vehicle_DUMMY_6LEN_8_views;
+    1:      set_vehicle_DUMMY_4LEN_8_views;
+}
 
 switch(FEAT_TRAINS, SELF, sw_141R_articulated_part, extra_callback_info1) {
     1 : return item_141R;
@@ -112,7 +119,7 @@ switch(FEAT_TRAINS, SELF, sw_141R_articulated_part, extra_callback_info1) {
 item(FEAT_TRAINS, item_141R) {
     property {
         name:                         string(STR_SNCF_TRAIN_141R_NAME);
-        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        climates_available:           (param_allow_no_graphics) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1945, 1, 1);
         model_life:                   44;
         vehicle_life:                 33;
@@ -144,7 +151,8 @@ item(FEAT_TRAINS, item_141R) {
     }
     graphics {
         default:                      sw_141R_graphics;
-        purchase:                     set_141R_graphics_purchase;
+//        purchase:                     set_141R_graphics_purchase;
+        purchase:                     set_vehicle_DUMMY_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_141R_ADDITIONAL_TEXT);
         articulated_part:             sw_141R_articulated_part;
         visual_effect_and_powered:    return (position_in_articulated_veh == 0) ?

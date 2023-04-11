@@ -1,3 +1,4 @@
+/*
 template tmpl_vehicle_231CHAPELON_8_views_front(frame) {
     //xpos ypos xsize ysize xrel yrel
     [213, 5 + frame * 29, 8, 24, -3, -25]
@@ -77,6 +78,13 @@ switch(FEAT_TRAINS, SELF, sw_231CHAPELON_graphics, position_in_articulated_veh) 
     1: set_231CHAPELON_graphics_middle;
     2: sw_231CHAPELON_graphics_rear;
 }
+*/
+
+switch(FEAT_TRAINS, SELF, sw_231CHAPELON_graphics, position_in_articulated_veh) {
+    0: set_vehicle_DUMMY_4LEN_8_views;
+    1: set_vehicle_DUMMY_5LEN_8_views;
+    2: set_vehicle_DUMMY_4LEN_8_views;
+}
 
 switch(FEAT_TRAINS, SELF, sw_231CHAPELON_length, position_in_articulated_veh) {
     0: 4;
@@ -92,7 +100,7 @@ switch(FEAT_TRAINS, SELF, sw_231CHAPELON_articulated_part, extra_callback_info1)
 item(FEAT_TRAINS, item_231CHAPELON) {
     property {
         name:                         string(STR_SNCF_TRAIN_231CHAPELON_NAME);
-        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        climates_available:           (param_allow_no_graphics) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1934, 1, 1);
         model_life:                   37;
         vehicle_life:                 25;
@@ -124,7 +132,8 @@ item(FEAT_TRAINS, item_231CHAPELON) {
     }
     graphics {
         default:                      sw_231CHAPELON_graphics;
-        purchase:                     set_231CHAPELON_graphics_purchase;
+//        purchase:                     set_231CHAPELON_graphics_purchase;
+        purchase:                     set_vehicle_DUMMY_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_231CHAPELON_ADDITIONAL_TEXT);
         articulated_part:             sw_231CHAPELON_articulated_part;
         visual_effect_and_powered:    return (position_in_articulated_veh == 0) ?

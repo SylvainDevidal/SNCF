@@ -1,3 +1,4 @@
+/*
 template tmpl_vehicle_242TA_8_views(frame, livery) {
     //xpos ypos xsize ysize xrel yrel
     [5 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 232, 8, 24, -3, -13]
@@ -67,11 +68,12 @@ random_switch(FEAT_TRAINS, SELF, sw_242TA_graphics) {
     3: sw_242TA_graphics_2;
     4: sw_242TA_graphics_3;
 }
+*/
 
 item(FEAT_TRAINS, item_242TA) {
     property {
         name:                         string(STR_SNCF_TRAIN_242TA_NAME);
-        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        climates_available:           (param_allow_no_graphics) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1927, 1, 1);
         model_life:                   39;
         vehicle_life:                 25;
@@ -103,8 +105,10 @@ item(FEAT_TRAINS, item_242TA) {
         visual_effect_and_powered:    visual_effect_and_powered(VISUAL_EFFECT_STEAM, -3, DISABLE_WAGON_POWER);
     }
     graphics {
-        default:                      sw_242TA_graphics;
-        purchase:                     set_242TA_graphics_purchase;
+//        default:                      sw_242TA_graphics;
+//        purchase:                     set_242TA_graphics_purchase;
+        default:                      set_vehicle_DUMMY_7LEN_8_views;
+        purchase:                     set_vehicle_DUMMY_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_242TA_ADDITIONAL_TEXT);
     }
 }

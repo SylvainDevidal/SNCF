@@ -1,3 +1,4 @@
+/*
 template tmpl_vehicle_242A_8_views(frame) {
     //xpos ypos xsize ysize xrel yrel
     [5, 5 + frame * 29, 8, 24, -3, -12]
@@ -49,6 +50,12 @@ switch(FEAT_TRAINS, SELF, sw_242A_graphics, position_in_articulated_veh) {
     0: sw_242A_graphics_animated;
     1: set_242A_tender_graphics;
 }
+*/
+
+switch(FEAT_TRAINS, SELF, sw_242A_graphics, position_in_articulated_veh) {
+    0: set_vehicle_DUMMY_8LEN_8_views;
+    1: set_vehicle_DUMMY_4LEN_8_views;
+}
 
 switch(FEAT_TRAINS, SELF, sw_242A_articulated_part, extra_callback_info1) {
     1 : return item_242A;
@@ -58,7 +65,7 @@ switch(FEAT_TRAINS, SELF, sw_242A_articulated_part, extra_callback_info1) {
 item(FEAT_TRAINS, item_242A) {
     property {
         name:                         string(STR_SNCF_TRAIN_242A_NAME);
-        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        climates_available:           (param_allow_no_graphics) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1946, 1, 1);
         model_life:                   39;
         vehicle_life:                 29;
@@ -89,7 +96,8 @@ item(FEAT_TRAINS, item_242A) {
     }
     graphics {
         default:                      sw_242A_graphics;
-        purchase:                     set_242A_graphics_purchase;
+//        purchase:                     set_242A_graphics_purchase;
+        purchase:                     set_vehicle_DUMMY_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_242A_ADDITIONAL_TEXT);
         articulated_part:             sw_242A_articulated_part;
         visual_effect_and_powered:    return (position_in_articulated_veh == 0) ?

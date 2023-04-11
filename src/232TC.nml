@@ -1,3 +1,4 @@
+/*
 template tmpl_vehicle_232TC_8_views(frame, livery) {
     //xpos ypos xsize ysize xrel yrel
     [5 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 116, 8, 24, -3, -16]
@@ -43,11 +44,12 @@ random_switch(FEAT_TRAINS, SELF, sw_232TC_graphics_random) {
     1: sw_232TC_graphics_0;
     2: sw_232TC_graphics_1;
 }
+*/
 
 item(FEAT_TRAINS, item_232TC) {
     property {
         name:                         string(STR_SNCF_TRAIN_232TC_NAME);
-        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        climates_available:           (param_allow_no_graphics) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1923, 1, 1);
         model_life:                   43;
         vehicle_life:                 24;
@@ -79,8 +81,10 @@ item(FEAT_TRAINS, item_232TC) {
         visual_effect_and_powered:    visual_effect_and_powered(VISUAL_EFFECT_STEAM,-3, DISABLE_WAGON_POWER);
     }
     graphics {
-        default:                      sw_232TC_graphics_random;
-        purchase:                     set_232TC_graphics_purchase;
+//        default:                      sw_232TC_graphics_random;
+//        purchase:                     set_232TC_graphics_purchase;
+        default:                      set_vehicle_DUMMY_6LEN_8_views;
+        purchase:                     set_vehicle_DUMMY_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_232TC_ADDITIONAL_TEXT);
     }
 }

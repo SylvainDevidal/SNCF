@@ -1,3 +1,4 @@
+/*
 template tmpl_vehicle_240P_front_8_views(frame, livery) {
     //xpos ypos xsize ysize xrel yrel
     [2 + livery * 204, 4 + frame * 26, 8, 24, -3, -16]
@@ -75,6 +76,12 @@ random_switch(FEAT_TRAINS, SELF, sw_240P_graphics) {
     1: sw_240P_graphics_0;
     2: sw_240P_graphics_1;
 }
+*/
+
+random_switch(FEAT_TRAINS, SELF, sw_240P_graphics) {
+    1: set_vehicle_DUMMY_6LEN_8_views;
+    2: set_vehicle_DUMMY_3LEN_8_views;
+}
 
 switch(FEAT_TRAINS, SELF, sw_240P_articulated_part, extra_callback_info1) {
     1 : return item_240P;
@@ -84,7 +91,7 @@ switch(FEAT_TRAINS, SELF, sw_240P_articulated_part, extra_callback_info1) {
 item(FEAT_TRAINS, item_240P) {
     property {
         name:                         string(STR_SNCF_TRAIN_240P_NAME);
-        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        climates_available:           (param_allow_no_graphics) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1940, 1, 1);
         model_life:                   41;
         vehicle_life:                 30;
@@ -115,7 +122,8 @@ item(FEAT_TRAINS, item_240P) {
     }
     graphics {
         default:                      sw_240P_graphics;
-        purchase:                     set_240P_graphics_purchase;
+//        purchase:                     set_240P_graphics_purchase;
+        purchase:                     set_vehicle_DUMMY_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_240P_ADDITIONAL_TEXT);
         articulated_part:             sw_240P_articulated_part;
         visual_effect_and_powered:    return (position_in_articulated_veh == 0) ?
