@@ -3,7 +3,7 @@ template tmpl_vehicle_UIC_4_views(livery) {
     [6, 3 + livery * 32, 8, 24, -3, -11]
     [21, 3 + livery * 32, 23, 17, -16, -8]
     [52, 3 + livery * 32, 32, 12, -16, -8]
-    [93, 3 + livery * 32, 23, 17, -4, -7]
+    [93, 3 + livery * 32, 23, 17, -6, -9]
 }
 
 template tmpl_vehicle_UIC_purchase() {
