@@ -119,7 +119,7 @@ item(FEAT_TRAINS, item_231CHAPELON) {
         power:                        3000 hp;
         running_cost_base:            RUNNING_COST_STEAM;
         dual_headed:                  0;
-        cargo_capacity:               48;
+        cargo_capacity:               0;
         weight:                       180 ton;
         ai_engine_rank:               0;
         engine_class:                 ENGINE_CLASS_STEAM;
