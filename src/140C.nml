@@ -149,7 +149,7 @@ switch(FEAT_TRAINS, SELF, sw_140C_articulated_part, extra_callback_info1) {
 item(FEAT_TRAINS, item_140C) {
     property {
         name:                         string(STR_SNCF_TRAIN_140C_NAME);
-        climates_available:           (param_allow_no_graphics) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_no_graphics && param_allow_steam) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            (param_introduction_dates) ? date(1913, 1, 1) : date(1905, 1, 1);
         model_life:                   50;
         vehicle_life:                 29;
@@ -158,7 +158,7 @@ item(FEAT_TRAINS, item_140C) {
         non_refittable_cargo_classes: ALL_CARGO_CLASSES;
         loading_speed:                0; 
         cost_factor:                  17;
-        running_cost_factor:          95;
+        running_cost_factor:          48;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
         speed:                        80 km/h;
         misc_flags:                   bitmask();

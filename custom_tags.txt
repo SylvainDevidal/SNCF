@@ -78,5 +78,9 @@ STR_WAGON_CORAIL          :Voiture Corail
 STR_WAGON_FOURGON         :Voiture Fourgon
 STR_WAGON_FOURGON_CORAIL  :Voiture Fourgon Corail
 
+STR_WAGON_SMALL           :Small wagon
+STR_WAGON_MEDIUM          :Medium wagon
+STR_WAGON_LARGE           :Large wagon
+
 # Stuff
 STR_GRAPHICS_CREDIT       :Emperor Jake, The Irish, Hovering Teacup, acs121, Coalroads Artist, DanMacK, Snail. If you regognize graphics of your own and are not credited please contact this GRF author on the forums.

@@ -90,7 +90,7 @@ switch(FEAT_TRAINS, SELF, sw_241AC_articulated_part, extra_callback_info1) {
 item(FEAT_TRAINS, item_241AC) {
     property {
         name:                         string(STR_SNCF_TRAIN_241AC_NAME);
-        climates_available:           (param_allow_no_graphics) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_no_graphics && param_allow_steam) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1925, 1, 1);
         model_life:                   40;
         vehicle_life:                 25;
@@ -99,7 +99,7 @@ item(FEAT_TRAINS, item_241AC) {
         non_refittable_cargo_classes: ALL_CARGO_CLASSES;
         loading_speed:                0; 
         cost_factor:                  29;
-        running_cost_factor:          145;
+        running_cost_factor:          73;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
         speed:                        120 km/h;
         misc_flags:                   bitmask();

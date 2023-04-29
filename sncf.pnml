@@ -23,6 +23,34 @@ grf {
             desc: string(STR_PARAM_DESC_ALLOW_NO_GRAPHICS);
             def_value: 0;
         }
+        param_allow_steam {
+            type: bool;
+            bit: 2;
+            name: string(STR_PARAM_NAME_ALLOW_STEAM);
+            desc: string(STR_PARAM_DESC_ALLOW_STEAM);
+            def_value: 1;
+        }
+        param_allow_diesel {
+            type: bool;
+            bit: 3;
+            name: string(STR_PARAM_NAME_ALLOW_DIESEL);
+            desc: string(STR_PARAM_DESC_ALLOW_DIESEL);
+            def_value: 1;
+        }
+        param_allow_electric {
+            type: bool;
+            bit: 4;
+            name: string(STR_PARAM_NAME_ALLOW_ELECTRIC);
+            desc: string(STR_PARAM_DESC_ALLOW_ELECTRIC);
+            def_value: 1;
+        }
+        param_allow_wagon {
+            type: bool;
+            bit: 5;
+            name: string(STR_PARAM_NAME_ALLOW_WAGON);
+            desc: string(STR_PARAM_DESC_ALLOW_WAGON);
+            def_value: 1;
+        }
     }
 }
 
@@ -40,7 +68,7 @@ grf {
 // 004
 #include "src/231AC.nml"
 
-//#include "src/231EGHK.nml" // ?????????
+//#include "src/231EGHK.nml"
 // 006
 #include "src/140C.nml"
 // 007
@@ -146,3 +174,41 @@ grf {
 #include "src/FOURGON.nml"
 // 205
 #include "src/FOURGON_CORAIL.nml"
+
+#include "src/WAGON_SMALL_PASSENGERS.nml"
+#include "src/WAGON_SMALL_MAIL.nml"
+#include "src/WAGON_SMALL_EXPRESS.nml"
+#include "src/WAGON_SMALL_ARMOURED.nml"
+#include "src/WAGON_SMALL_BULK.nml"
+#include "src/WAGON_SMALL_PIECE_GOODS.nml"
+#include "src/WAGON_SMALL_LIQUID.nml"
+#include "src/WAGON_SMALL_REFRIGERATED.nml"
+#include "src/WAGON_SMALL_HAZARDOUS.nml"
+#include "src/WAGON_SMALL_COVERED.nml"
+#include "src/WAGON_SMALL_POWDERIZED.nml"
+#include "src/WAGON_SMALL_NON_POURABLE.nml"
+#include "src/WAGON_SMALL_NEO_BULK.nml"
+
+#include "src/WAGON_MEDIUM_EXPRESS.nml"
+#include "src/WAGON_MEDIUM_ARMOURED.nml"
+#include "src/WAGON_MEDIUM_BULK.nml"
+#include "src/WAGON_MEDIUM_PIECE_GOODS.nml"
+#include "src/WAGON_MEDIUM_LIQUID.nml"
+#include "src/WAGON_MEDIUM_REFRIGERATED.nml"
+#include "src/WAGON_MEDIUM_HAZARDOUS.nml"
+#include "src/WAGON_MEDIUM_COVERED.nml"
+#include "src/WAGON_MEDIUM_POWDERIZED.nml"
+#include "src/WAGON_MEDIUM_NON_POURABLE.nml"
+#include "src/WAGON_MEDIUM_NEO_BULK.nml"
+
+#include "src/WAGON_LARGE_EXPRESS.nml"
+#include "src/WAGON_LARGE_ARMOURED.nml"
+#include "src/WAGON_LARGE_BULK.nml"
+#include "src/WAGON_LARGE_PIECE_GOODS.nml"
+#include "src/WAGON_LARGE_LIQUID.nml"
+#include "src/WAGON_LARGE_REFRIGERATED.nml"
+#include "src/WAGON_LARGE_HAZARDOUS.nml"
+#include "src/WAGON_LARGE_COVERED.nml"
+#include "src/WAGON_LARGE_POWDERIZED.nml"
+#include "src/WAGON_LARGE_NON_POURABLE.nml"
+#include "src/WAGON_LARGE_NEO_BULK.nml"

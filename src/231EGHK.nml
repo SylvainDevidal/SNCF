@@ -128,7 +128,7 @@ switch(FEAT_TRAINS, SELF, sw_231EGHK_articulated_part, extra_callback_info1) {
 item(FEAT_TRAINS, item_231EGHK) {
     property {
         name:                         string(STR_SNCF_TRAIN_231EGHK_NAME);
-        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        climates_available:           (param_allow_steam) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1934, 1, 1);
         model_life:                   37;
         vehicle_life:                 25;
@@ -137,7 +137,7 @@ item(FEAT_TRAINS, item_231EGHK) {
         non_refittable_cargo_classes: ALL_CARGO_CLASSES;
         loading_speed:                0; 
         cost_factor:                  37;
-        running_cost_factor:          165;
+        running_cost_factor:          82;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
         speed:                        130 km/h;
         misc_flags:                   bitmask();

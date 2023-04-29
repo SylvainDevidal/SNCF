@@ -73,7 +73,7 @@ random_switch(FEAT_TRAINS, SELF, sw_242TA_graphics) {
 item(FEAT_TRAINS, item_242TA) {
     property {
         name:                         string(STR_SNCF_TRAIN_242TA_NAME);
-        climates_available:           (param_allow_no_graphics) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_no_graphics && param_allow_steam) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1927, 1, 1);
         model_life:                   39;
         vehicle_life:                 25;
@@ -82,7 +82,7 @@ item(FEAT_TRAINS, item_242TA) {
         non_refittable_cargo_classes: ALL_CARGO_CLASSES;
         loading_speed:                0; 
         cost_factor:                  15;
-        running_cost_factor:          105;
+        running_cost_factor:          53;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
         speed:                        85 km/h;
         misc_flags:                   bitmask();

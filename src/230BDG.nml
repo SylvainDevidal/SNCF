@@ -155,7 +155,7 @@ switch(FEAT_TRAINS, SELF, sw_230BDG_articulated_part, extra_callback_info1) {
 item(FEAT_TRAINS, item_230BDG) {
     property {
         name:                         string(STR_SNCF_TRAIN_230BDG_NAME);
-        climates_available:           (param_allow_no_graphics) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_no_graphics && param_allow_steam) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            (param_introduction_dates) ? date(1914, 1, 1) : date(1911, 1, 1);
         model_life:                   41;
         vehicle_life:                 25;
@@ -164,7 +164,7 @@ item(FEAT_TRAINS, item_230BDG) {
         non_refittable_cargo_classes: ALL_CARGO_CLASSES;
         loading_speed:                0; 
         cost_factor:                  23;
-        running_cost_factor:          150;
+        running_cost_factor:          75;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
         speed:                        110 km/h;
         misc_flags:                   bitmask();

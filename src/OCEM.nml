@@ -35,8 +35,8 @@ spriteset(set_OCEM_graphics_purchase, "gfx/OCEM_COACH.png") { tmpl_vehicle_OCEM_
 item(FEAT_TRAINS, item_OCEM) {
     property {
         name:                         string(STR_SNCF_WAGON_OCEM_NAME);
-        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
-        introduction_date:            (param_introduction_dates) ? date(1924, 1, 1) : date(1899, 1, 1);
+        climates_available:           (param_allow_wagon) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        introduction_date:            date(1924, 1, 1);
         model_life:                   40;
         vehicle_life:                 25;
         reliability_decay:            20;

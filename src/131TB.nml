@@ -48,7 +48,7 @@ random_switch(FEAT_TRAINS, SELF, sw_131TB_graphics_random) {
 item(FEAT_TRAINS, item_131TB) {
     property {
         name:                         string(STR_SNCF_TRAIN_131TB_NAME);
-        climates_available:           (param_allow_no_graphics) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_no_graphics && param_allow_steam) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1924, 1, 1);
         model_life:                   55;
         vehicle_life:                 22;
@@ -57,7 +57,7 @@ item(FEAT_TRAINS, item_131TB) {
         non_refittable_cargo_classes: ALL_CARGO_CLASSES;
         loading_speed:                0; 
         cost_factor:                  14;
-        running_cost_factor:          100;
+        running_cost_factor:          50;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
         speed:                        90 km/h;
         misc_flags:                   bitmask();

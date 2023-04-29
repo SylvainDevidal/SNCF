@@ -83,7 +83,7 @@ switch(FEAT_TRAINS, SELF, sw_150BP_articulated_part, extra_callback_info1) {
 item(FEAT_TRAINS, item_150BP) {
     property {
         name:                         string(STR_SNCF_TRAIN_150BP_NAME);
-        climates_available:           (param_allow_no_graphics) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_no_graphics && param_allow_steam) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1933, 1, 1);
         model_life:                   40;
         vehicle_life:                 26;
@@ -92,7 +92,7 @@ item(FEAT_TRAINS, item_150BP) {
         non_refittable_cargo_classes: ALL_CARGO_CLASSES;
         loading_speed:                0; 
         cost_factor:                  24;
-        running_cost_factor:          140;
+        running_cost_factor:          70;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
         speed:                        105 km/h;
         misc_flags:                   bitmask();

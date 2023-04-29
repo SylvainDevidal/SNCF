@@ -61,7 +61,7 @@ switch(FEAT_TRAINS, SELF, sw_151A_articulated_part, extra_callback_info1) {
 item(FEAT_TRAINS, item_151A) {
     property {
         name:                         string(STR_SNCF_TRAIN_151A_NAME);
-        climates_available:           (param_allow_no_graphics) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_no_graphics && param_allow_steam) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1932, 1, 1);
         model_life:                   37;
         vehicle_life:                 29;
@@ -70,7 +70,7 @@ item(FEAT_TRAINS, item_151A) {
         non_refittable_cargo_classes: ALL_CARGO_CLASSES;
         loading_speed:                0; 
         cost_factor:                  23;
-        running_cost_factor:          150;
+        running_cost_factor:          75;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
         speed:                        85 km/h;
         misc_flags:                   bitmask();

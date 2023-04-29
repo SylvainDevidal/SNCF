@@ -119,7 +119,7 @@ switch(FEAT_TRAINS, SELF, sw_141R_articulated_part, extra_callback_info1) {
 item(FEAT_TRAINS, item_141R) {
     property {
         name:                         string(STR_SNCF_TRAIN_141R_NAME);
-        climates_available:           (param_allow_no_graphics) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_no_graphics && param_allow_steam) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1945, 1, 1);
         model_life:                   44;
         vehicle_life:                 33;
@@ -128,7 +128,7 @@ item(FEAT_TRAINS, item_141R) {
         non_refittable_cargo_classes: ALL_CARGO_CLASSES;
         loading_speed:                0; 
         cost_factor:                  24;
-        running_cost_factor:          120;
+        running_cost_factor:          60;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
         speed:                        105 km/h;
         misc_flags:                   bitmask();

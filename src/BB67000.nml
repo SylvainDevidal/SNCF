@@ -27,7 +27,7 @@ random_switch(FEAT_TRAINS, SELF, sw_BB67000_graphics) {
 item(FEAT_TRAINS, item_BB67000) {
     property {
         name:                         string(STR_SNCF_TRAIN_BB67000_NAME);
-        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        climates_available:           (param_allow_diesel) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1963, 1, 1);
         model_life:                   60;
         vehicle_life:                 25;
@@ -36,7 +36,7 @@ item(FEAT_TRAINS, item_BB67000) {
         non_refittable_cargo_classes: ALL_CARGO_CLASSES;
         loading_speed:                0; 
         cost_factor:                  46;
-        running_cost_factor:          117;
+        running_cost_factor:          58;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
         speed:                        140 km/h;
         misc_flags:                   bitmask();

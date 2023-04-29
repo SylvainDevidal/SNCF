@@ -44,7 +44,7 @@ switch(FEAT_TRAINS, SELF, sw_262DB_articulated_part, extra_callback_info1) {
 item(FEAT_TRAINS, item_262DB) {
     property {
         name:                         string(STR_SNCF_TRAIN_262DB_NAME);
-        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        climates_available:           (param_allow_diesel) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1938, 1, 1);
         model_life:                   17;
         vehicle_life:                 17;
@@ -53,7 +53,7 @@ item(FEAT_TRAINS, item_262DB) {
         non_refittable_cargo_classes: ALL_CARGO_CLASSES;
         loading_speed:                0; 
         cost_factor:                  53;
-        running_cost_factor:          140;
+        running_cost_factor:          70;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
         speed:                        130 km/h;
         misc_flags:                   bitmask();

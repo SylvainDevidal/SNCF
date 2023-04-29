@@ -25,8 +25,8 @@ spriteset(set_FOURGON_graphics_purchase,    "gfx/FOURGON.png") { tmpl_vehicle_FO
 item(FEAT_TRAINS, item_FOURGON) {
     property {
         name:                         string(STR_SNCF_WAGON_FOURGON_NAME);
-        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
-        introduction_date:            (param_introduction_dates) ? date(1924, 1, 1) : date(1899, 1, 1);
+        climates_available:           (param_allow_wagon) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        introduction_date:            date(1924, 1, 1);
         model_life:                   VEHICLE_NEVER_EXPIRES;
         vehicle_life:                 30;
         reliability_decay:            20;

@@ -82,7 +82,7 @@ switch(FEAT_TRAINS, SELF, sw_Z8100_power, current_railtype) {
 item(FEAT_TRAINS, item_Z8100) {
     property {
         name:                         string(STR_SNCF_TRAIN_Z8100_NAME);
-        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        climates_available:           (param_allow_electric) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1979, 1, 1);
         model_life:                   41;
         vehicle_life:                 32;

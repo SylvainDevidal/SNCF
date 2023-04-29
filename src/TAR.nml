@@ -64,7 +64,7 @@ switch(FEAT_TRAINS, SELF, sw_TAR_can_attach_wagon, vehicle_type_id) {
 item(FEAT_TRAINS, item_TAR) {
     property {
         name:                         string(STR_SNCF_TRAIN_TAR_NAME);
-        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        climates_available:           (param_allow_diesel) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1935, 1, 1);
         model_life:                   24;
         vehicle_life:                 20;
@@ -73,7 +73,7 @@ item(FEAT_TRAINS, item_TAR) {
         non_refittable_cargo_classes: bitmask();
         loading_speed:                0; 
         cost_factor:                  26;
-        running_cost_factor:          95;
+        running_cost_factor:          50;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
         speed:                        140 km/h;
         misc_flags:                   bitmask(TRAIN_FLAG_MU);

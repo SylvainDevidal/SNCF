@@ -30,7 +30,7 @@ switch(FEAT_TRAINS, SELF, sw_CC40100_power, current_railtype) {
 item(FEAT_TRAINS, item_CC40100) {
     property {
         name:                         string(STR_SNCF_TRAIN_CC40100_NAME);
-        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        climates_available:           (param_allow_electric) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1964, 1, 1);
         model_life:                   32;
         vehicle_life:                 26;
@@ -39,7 +39,7 @@ item(FEAT_TRAINS, item_CC40100) {
         non_refittable_cargo_classes: ALL_CARGO_CLASSES;
         loading_speed:                0; 
         cost_factor:                  94;
-        running_cost_factor:          195;
+        running_cost_factor:          98;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
         speed:                        240 km/h;
         misc_flags:                   bitmask();

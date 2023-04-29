@@ -21,7 +21,7 @@ spriteset(set_BB9200_graphics_purchase, "gfx/BB9200.png") { tmpl_vehicle_BB9200_
 item(FEAT_TRAINS, item_BB9200) {
     property {
         name:                         string(STR_SNCF_TRAIN_BB9200_NAME);
-        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        climates_available:           (param_allow_electric) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1957, 1, 1);
         model_life:                   58;
         vehicle_life:                 45;
@@ -30,7 +30,7 @@ item(FEAT_TRAINS, item_BB9200) {
         non_refittable_cargo_classes: ALL_CARGO_CLASSES;
         loading_speed:                0; 
         cost_factor:                  80;
-        running_cost_factor:          175;
+        running_cost_factor:          87;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
         speed:                        200 km/h;
         misc_flags:                   bitmask();

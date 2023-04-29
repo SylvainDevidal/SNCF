@@ -54,7 +54,7 @@ switch(FEAT_TRAINS, SELF, sw_Z7300_can_attach_wagon, vehicle_type_id) {
 item(FEAT_TRAINS, item_Z7300) {
     property {
         name:                         string(STR_SNCF_TRAIN_Z7300_NAME);
-        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        climates_available:           (param_allow_electric) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1980, 1, 1);
         model_life:                   40;
         vehicle_life:                 35;

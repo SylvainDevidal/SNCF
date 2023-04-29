@@ -27,7 +27,7 @@ spriteset(set_BB12000_graphics_purchase, "gfx/BB12000.png") { tmpl_vehicle_BB120
 item(FEAT_TRAINS, item_BB12000) {
     property {
         name:                         string(STR_SNCF_TRAIN_BB12000_NAME);
-        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL); 
+        climates_available:           (param_allow_electric) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1954, 1, 1);
         model_life:                   60;
         vehicle_life:                 40;
@@ -36,7 +36,7 @@ item(FEAT_TRAINS, item_BB12000) {
         non_refittable_cargo_classes: ALL_CARGO_CLASSES;
         loading_speed:                0; 
         cost_factor:                  54;
-        running_cost_factor:          155;
+        running_cost_factor:          77;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
         speed:                        140 km/h;
         misc_flags:                   bitmask();
