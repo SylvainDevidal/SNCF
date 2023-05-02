@@ -2,7 +2,7 @@
 
 # GRF description
 STR_GRF_NAME                                       :{TITLE} {VERSION}
-STR_GRF_DESC                                       :{ORANGE}{TITLE}SNCF{}{BLACK}At last! Graphics credits to {STR_GRAPHICS_CREDIT}
+STR_GRF_DESC                                       :{ORANGE}{TITLE}SNCF{}{BLACK}At last! Graphics credits to {STR_GRAPHICS_CREDIT}{}Special thanks to Brickblock1 who helped a lot with the standardised railtype scheme support.
 
 # Parameters
 STR_PARAM_NAME_INTRODUCTION_DATES                  :Historical introduction dates
