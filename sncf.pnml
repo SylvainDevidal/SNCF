@@ -1,12 +1,14 @@
 /* Define grf */
 grf {
     grfid: "SD\01\01";
+    
     /* GRF name and description strings are defined in the lang files */
     name: string(STR_GRF_NAME);
     desc: string(STR_GRF_DESC);
+
     /* This is the first version, start numbering at 0. */
-    version: 2;
-    min_compatible_version: 0;
+    version: 4;
+    min_compatible_version: 3;
 
     param {
         param_introduction_dates {
