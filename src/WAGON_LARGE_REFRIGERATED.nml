@@ -8,7 +8,7 @@ item(FEAT_TRAINS, item_WAGON_LARGE_REFRIGERATED) {
         reliability_decay:            20;
         refittable_cargo_classes:     bitmask(CC_REFRIGERATED);
         non_refittable_cargo_classes: bitmask();
-        loading_speed:                5;
+        loading_speed:                LOADING_NORMAL;
         cost_factor:                  250;
         running_cost_factor:          120;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;

@@ -42,7 +42,7 @@ item(FEAT_TRAINS, item_OCEM_DOUBLE) {
         reliability_decay:            20;
         refittable_cargo_classes:     bitmask(CC_PASSENGERS);
         non_refittable_cargo_classes: bitmask();
-        loading_speed:                5;
+        loading_speed:                LOADING_FAST;
         cost_factor:                  180;
         running_cost_factor:          60;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;

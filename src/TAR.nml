@@ -71,7 +71,7 @@ item(FEAT_TRAINS, item_TAR) {
         reliability_decay:            11;
         refittable_cargo_classes:     bitmask(CC_PASSENGERS);
         non_refittable_cargo_classes: bitmask();
-        loading_speed:                0; 
+        loading_speed:                LOADING_NORMAL; 
         cost_factor:                  26;
         running_cost_factor:          50;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;

@@ -34,7 +34,7 @@ item(FEAT_TRAINS, item_BB67000) {
         reliability_decay:            14;
         refittable_cargo_classes:     NO_CARGO_CLASS;
         non_refittable_cargo_classes: ALL_CARGO_CLASSES;
-        loading_speed:                0; 
+        loading_speed:                LOADING_NONE; 
         cost_factor:                  46;
         running_cost_factor:          58;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;

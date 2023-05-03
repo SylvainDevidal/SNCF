@@ -52,7 +52,7 @@ item(FEAT_TRAINS, item_CORAIL) {
         reliability_decay:            20;
         refittable_cargo_classes:     bitmask(CC_PASSENGERS);
         non_refittable_cargo_classes: bitmask();
-        loading_speed:                5;
+        loading_speed:                LOADING_NORMAL;
         cost_factor:                  250;
         running_cost_factor:          100;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;

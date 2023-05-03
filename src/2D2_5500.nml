@@ -28,7 +28,7 @@ item(FEAT_TRAINS, item_2D2_5500) {
         reliability_decay:            15;
         refittable_cargo_classes:     NO_CARGO_CLASS;
         non_refittable_cargo_classes: ALL_CARGO_CLASSES;
-        loading_speed:                0; 
+        loading_speed:                LOADING_NONE; 
         cost_factor:                  50;
         running_cost_factor:          86;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;

@@ -199,7 +199,7 @@ item(FEAT_TRAINS, item_TGV_PSE) {
         reliability_decay:            19;
         refittable_cargo_classes:     bitmask(CC_PASSENGERS);
         non_refittable_cargo_classes: bitmask();
-        loading_speed:                6; 
+        loading_speed:                LOADING_FAST; 
         cost_factor:                  185;
         running_cost_factor:          170;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
