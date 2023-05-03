@@ -23,6 +23,9 @@ STR_PARAM_DESC_ALLOW_ELECTRIC                      :If you don't electric diesel
 STR_PARAM_NAME_ALLOW_WAGON                         :Load wagons
 STR_PARAM_DESC_ALLOW_WAGON                         :If you don't want wagons, disable this parameter.
 
+STR_PARAM_NAME_ALLOW_VOLTAGE                       :Use voltage restrictions
+STR_PARAM_DESC_ALLOW_VOLTAGE                       :When using a compatible track set, this parameter will need the tracks power to be compatible with the engines.
+
 # Generic strings
 STR_SUBTYPE_2_PART                                 : (2 parts)
 STR_SUBTYPE_3_PART                                 : (3 parts)

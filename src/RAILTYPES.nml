@@ -1,6 +1,6 @@
 railtypetable {
     UNELECTRIFIED: [ RLA0, RLA1, RLA2, RLA3, RAIL ],
-    ELEC: [ ELRL ],
+    ELEC: [ SAAE, ELRL ],
     DC15: [SAAd, SAAD, SAAE, ELRL],
     DC03: [SAAD, SAAE, ELRL],
     AC15: [SAAa, SAAA, SAAE, ELRL],

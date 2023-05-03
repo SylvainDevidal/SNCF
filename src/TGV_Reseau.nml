@@ -192,7 +192,7 @@ switch(FEAT_TRAINS, SELF, sw_TGV_Reseau_power, current_railtype) {
 item(FEAT_TRAINS, item_TGV_Reseau) {
     property {
         name:                         string(STR_SNCF_TRAIN_TGV_RESEAU_NAME);
-        climates_available:           (param_allow_electric) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_electric || !xussr) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1992, 1, 1);
         model_life:                   23;
         vehicle_life:                 20;
@@ -206,7 +206,7 @@ item(FEAT_TRAINS, item_TGV_Reseau) {
         speed:                        320 km/h;
         misc_flags:                   bitmask(TRAIN_FLAG_MU);
         refit_cost:                   0;
-        track_type:                   AC25DC03DC15;
+        track_type:                   (!param_allow_voltage) ? ELEC : (xussr) ? AC25DC03DC15 : AC25DC15;
         ai_special_flag:              AI_FLAG_PASSENGER;
         power:                        8800 kW;
         running_cost_base:            RUNNING_COST_ELECTRIC;

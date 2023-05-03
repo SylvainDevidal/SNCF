@@ -53,6 +53,13 @@ grf {
             desc: string(STR_PARAM_DESC_ALLOW_WAGON);
             def_value: 1;
         }
+        param_allow_voltage {
+            type: bool;
+            bit: 6;
+            name: string(STR_PARAM_NAME_ALLOW_VOLTAGE);
+            desc: string(STR_PARAM_DESC_ALLOW_VOLTAGE);
+            def_value: 1;
+        }
     }
 }
 
