@@ -206,7 +206,7 @@ item(FEAT_TRAINS, item_TGV_PSE) {
         speed:                        270 km/h;
         misc_flags:                   bitmask(TRAIN_FLAG_MU);
         refit_cost:                   0;
-        track_type:                   (!param_allow_voltage) ? ELEC : (xussr) ? AC25AC15DC15 : AC25DC15;
+        track_type:                   (!param_allow_voltage) ? ELEC : AC25AC15DC15;
         ai_special_flag:              AI_FLAG_PASSENGER;
         power:                        6420 kW;
         running_cost_base:            RUNNING_COST_ELECTRIC;
