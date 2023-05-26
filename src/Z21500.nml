@@ -1,4 +1,4 @@
-template tmpl_vehicle_Z21500_8_views_front() {
+template tmpl_vehicle_Z21500_front() {
     //xpos ypos xsize ysize xrel yrel
     [5, 4, 8, 24, -3, -12]
     [20, 4, 22, 17, -16, -5]
@@ -10,7 +10,7 @@ template tmpl_vehicle_Z21500_8_views_front() {
     [207, 4, 22, 17, -4, -6]
 }
 
-template tmpl_vehicle_Z21500_8_views_rear() {
+template tmpl_vehicle_Z21500_rear() {
     //xpos ypos xsize ysize xrel yrel
     [119, 34, 8, 24, -3, -11]
     [134, 34, 22, 17, -16, -6]
@@ -22,7 +22,7 @@ template tmpl_vehicle_Z21500_8_views_rear() {
     [88, 34, 22, 17, -4, -7]
 }
 
-template tmpl_vehicle_Z21500_8_views_coach() {
+template tmpl_vehicle_Z21500_coach() {
     //xpos ypos xsize ysize xrel yrel
     [5, 66, 8, 24, -3, -12]
     [20, 66, 22, 20, -16, -8]
@@ -36,12 +36,12 @@ template tmpl_vehicle_Z21500_8_views_coach() {
 
 template tmpl_vehicle_Z21500_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [165, 4, 32, 12, -29, -6]
+    [165, 4, 32, 12, -7, -6]
 }
 
-spriteset(set_Z21500_graphics_front,    "gfx/Z21500.png") { tmpl_vehicle_Z21500_8_views_front() }
-spriteset(set_Z21500_graphics_coach,    "gfx/Z21500.png") { tmpl_vehicle_Z21500_8_views_coach() }
-spriteset(set_Z21500_graphics_rear,     "gfx/Z21500.png") { tmpl_vehicle_Z21500_8_views_rear() }
+spriteset(set_Z21500_graphics_front,    "gfx/Z21500.png") { tmpl_vehicle_Z21500_front() }
+spriteset(set_Z21500_graphics_coach,    "gfx/Z21500.png") { tmpl_vehicle_Z21500_coach() }
+spriteset(set_Z21500_graphics_rear,     "gfx/Z21500.png") { tmpl_vehicle_Z21500_rear() }
 spriteset(set_Z21500_graphics_purchase, "gfx/Z21500.png") { tmpl_vehicle_Z21500_purchase() }
 
 switch(FEAT_TRAINS, SELF, sw_Z21500_graphics, position_in_articulated_veh) {

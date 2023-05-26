@@ -80,7 +80,7 @@ template tmpl_vehicle_TGV_ATLANTIQUE_rear() {
 
 template tmpl_vehicle_TGV_ATLANTIQUE_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [122, 1, 32, 15, -29, -9]
+    [122, 1, 32, 15, -7, -9]
 }
 
 /* Define the spritesets, these allow referring to these sprites later on */

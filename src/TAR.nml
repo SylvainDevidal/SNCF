@@ -1,4 +1,4 @@
-template tmpl_vehicle_TAR_8_views_front() {
+template tmpl_vehicle_TAR_front() {
     //xpos ypos xsize ysize xrel yrel
     [7, 77, 8, 24, -3, -12]
     [22, 77, 22, 17, -15, -6]
@@ -10,7 +10,7 @@ template tmpl_vehicle_TAR_8_views_front() {
     [208, 77, 22, 17, -6, -8]
 }
 
-template tmpl_vehicle_TAR_8_views_rear() {
+template tmpl_vehicle_TAR_rear() {
     //xpos ypos xsize ysize xrel yrel
     [125, 77, 8, 24, -3, -11]
     [140, 77, 22, 17, -16, -6]
@@ -22,7 +22,7 @@ template tmpl_vehicle_TAR_8_views_rear() {
     [91, 77, 22, 17, -4, -7]
 }
 
-template tmpl_vehicle_TAR_8_views_coach() {
+template tmpl_vehicle_TAR_coach() {
     //xpos ypos xsize ysize xrel yrel
     [6, 118, 8, 24, -3, -10]
     [21, 118, 22, 17, -16, -6]
@@ -32,12 +32,12 @@ template tmpl_vehicle_TAR_8_views_coach() {
 
 template tmpl_vehicle_TAR_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [171, 77, 32, 12, -29, -8]
+    [171, 77, 32, 12, -7, -8]
 }
 
-spriteset(set_TAR_graphics_front,    "gfx/iroqtar.png") { tmpl_vehicle_TAR_8_views_front() }
-spriteset(set_TAR_graphics_coach,     "gfx/iroqtar.png") { tmpl_vehicle_TAR_8_views_coach() }
-spriteset(set_TAR_graphics_rear,     "gfx/iroqtar.png") { tmpl_vehicle_TAR_8_views_rear() }
+spriteset(set_TAR_graphics_front,    "gfx/iroqtar.png") { tmpl_vehicle_TAR_front() }
+spriteset(set_TAR_graphics_coach,     "gfx/iroqtar.png") { tmpl_vehicle_TAR_coach() }
+spriteset(set_TAR_graphics_rear,     "gfx/iroqtar.png") { tmpl_vehicle_TAR_rear() }
 spriteset(set_TAR_graphics_purchase, "gfx/iroqtar.png") { tmpl_vehicle_TAR_purchase() }
 
 switch(FEAT_TRAINS, SELF, sw_TAR_graphics, position_in_articulated_veh % 3) {

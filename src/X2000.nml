@@ -1,4 +1,4 @@
-template tmpl_vehicle_X2000_8_views_front() {
+template tmpl_vehicle_X2000_front() {
     //xpos ypos xsize ysize xrel yrel
     [5, 37, 8, 24, -3, -12]
     [20, 37, 22, 17, -15, -8]
@@ -10,7 +10,7 @@ template tmpl_vehicle_X2000_8_views_front() {
     [213, 37, 22, 17, -4, -8]
 }
 
-template tmpl_vehicle_X2000_8_views_rear() {
+template tmpl_vehicle_X2000_rear() {
     //xpos ypos xsize ysize xrel yrel
     [5, 3, 8, 24, -3, -8]
     [20, 3, 22, 17, -16, -6]
@@ -24,11 +24,11 @@ template tmpl_vehicle_X2000_8_views_rear() {
 
 template tmpl_vehicle_X2000_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [172, 37, 32, 12, -26, -8]
+    [172, 37, 32, 12, -4, -8]
 }
 
-spriteset(set_X2000_graphics_front,    "gfx/iroqtar.png") { tmpl_vehicle_X2000_8_views_front() }
-spriteset(set_X2000_graphics_rear,     "gfx/iroqtar.png") { tmpl_vehicle_X2000_8_views_rear() }
+spriteset(set_X2000_graphics_front,    "gfx/iroqtar.png") { tmpl_vehicle_X2000_front() }
+spriteset(set_X2000_graphics_rear,     "gfx/iroqtar.png") { tmpl_vehicle_X2000_rear() }
 spriteset(set_X2000_graphics_purchase, "gfx/iroqtar.png") { tmpl_vehicle_X2000_purchase() }
 
 switch(FEAT_TRAINS, SELF, sw_X2000_graphics, position_in_articulated_veh) {

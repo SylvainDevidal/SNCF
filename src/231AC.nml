@@ -1,218 +1,16 @@
-/*
-template tmpl_vehicle_231AC_8_views(frame, livery) {
-    //xpos ypos xsize ysize xrel yrel
-    [2 + livery % 2 * 203, 2 + frame * 26 + int(livery / 2) * 186, 8, 24, -3, -14]
-    [12 + livery % 2 * 203, 2 + frame * 26 + int(livery / 2) * 186, 22, 17, -14, -8]
-    [36 + livery % 2 * 203, 2 + frame * 26 + int(livery / 2) * 186, 32, 14, -10, -10]
-    [70 + livery % 2 * 203, 2 + frame * 26 + int(livery / 2) * 186, 22, 17, -3, -7]
-    [94 + livery % 2 * 203, 2 + frame * 26 + int(livery / 2) * 186, 8, 24,  -3, -11]
-    [104 + livery % 2 * 203, 2 + frame * 26 + int(livery / 2) * 186, 22, 17, -17, -8]
-    [128 + livery % 2 * 203, 2 + frame * 26 + int(livery / 2) * 186, 32, 14, -22, -9]
-    [162 + livery % 2 * 203, 2 + frame * 26 + int(livery / 2) * 186, 22, 17, -6, -8]
+switch(FEAT_TRAINS, SELF, sw_231AC_graphics_front, param_allow_no_graphics) {
+    0: set_vehicle_DUMMY_ChaneyJubleeSH8P;
+    1: set_vehicle_DUMMY_7LEN;
 }
 
-template tmpl_vehicle_231AC_tender_8_views(livery) {
-    //xpos ypos xsize ysize xrel yrel
-    [2 + livery % 2 * 203, 158 + int(livery / 2) * 186, 8, 24, -3, -19]
-    [12 + livery % 2 * 203, 158 + int(livery / 2) * 186, 22, 17, -8, -12]
-    [36 + livery % 2 * 203, 158 + int(livery / 2) * 186, 32, 14, 4, -10]
-    [70 + livery % 2 * 203, 158 + int(livery / 2) * 186, 22, 17, -2, -6]
-    [94 + livery % 2 * 203, 158 + int(livery / 2) * 186, 8, 24,  -3, -9]
-    [104 + livery % 2 * 203, 158 + int(livery / 2) * 186, 22, 17, -19, -7]
-    [128 + livery % 2 * 203, 158 + int(livery / 2) * 186, 32, 14, -36, -10]
-    [162 + livery % 2 * 203, 158 + int(livery / 2) * 186, 22, 17, -14, -12]
+switch(FEAT_TRAINS, SELF, sw_231AC_graphics_purchase, param_allow_no_graphics) {
+    0: set_vehicle_DUMMY_purchase_ChaneyJubleeSH8P;
+    1: set_vehicle_DUMMY_purchase;
 }
-
-template tmpl_vehicle_231AC_purchase() {
-    //xpos ypos xsize ysize xrel yrel
-    [128, 2, 32, 14, -29, -10]
-}
-
-spriteset(set_231AC_front_graphics_0_0, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(0, 0) }
-spriteset(set_231AC_front_graphics_1_0, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(1, 0) }
-spriteset(set_231AC_front_graphics_2_0, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(2, 0) }
-spriteset(set_231AC_front_graphics_3_0, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(3, 0) }
-spriteset(set_231AC_front_graphics_4_0, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(4, 0) }
-spriteset(set_231AC_front_graphics_5_0, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(5, 0) }
-spriteset(set_231AC_front_graphics_0_1, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(0, 1) }
-spriteset(set_231AC_front_graphics_1_1, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(1, 1) }
-spriteset(set_231AC_front_graphics_2_1, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(2, 1) }
-spriteset(set_231AC_front_graphics_3_1, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(3, 1) }
-spriteset(set_231AC_front_graphics_4_1, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(4, 1) }
-spriteset(set_231AC_front_graphics_5_1, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(5, 1) }
-spriteset(set_231AC_front_graphics_0_2, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(0, 2) }
-spriteset(set_231AC_front_graphics_1_2, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(1, 2) }
-spriteset(set_231AC_front_graphics_2_2, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(2, 2) }
-spriteset(set_231AC_front_graphics_3_2, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(3, 2) }
-spriteset(set_231AC_front_graphics_4_2, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(4, 2) }
-spriteset(set_231AC_front_graphics_5_2, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(5, 2) }
-spriteset(set_231AC_front_graphics_0_3, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(0, 3) }
-spriteset(set_231AC_front_graphics_1_3, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(1, 3) }
-spriteset(set_231AC_front_graphics_2_3, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(2, 3) }
-spriteset(set_231AC_front_graphics_3_3, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(3, 3) }
-spriteset(set_231AC_front_graphics_4_3, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(4, 3) }
-spriteset(set_231AC_front_graphics_5_3, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(5, 3) }
-spriteset(set_231AC_front_graphics_0_4, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(0, 4) }
-spriteset(set_231AC_front_graphics_1_4, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(1, 4) }
-spriteset(set_231AC_front_graphics_2_4, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(2, 4) }
-spriteset(set_231AC_front_graphics_3_4, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(3, 4) }
-spriteset(set_231AC_front_graphics_4_4, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(4, 4) }
-spriteset(set_231AC_front_graphics_5_4, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(5, 4) }
-spriteset(set_231AC_front_graphics_0_5, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(0, 5) }
-spriteset(set_231AC_front_graphics_1_5, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(1, 5) }
-spriteset(set_231AC_front_graphics_2_5, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(2, 5) }
-spriteset(set_231AC_front_graphics_3_5, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(3, 5) }
-spriteset(set_231AC_front_graphics_4_5, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(4, 5) }
-spriteset(set_231AC_front_graphics_5_5, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(5, 5) }
-spriteset(set_231AC_front_graphics_0_6, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(0, 6) }
-spriteset(set_231AC_front_graphics_1_6, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(1, 6) }
-spriteset(set_231AC_front_graphics_2_6, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(2, 6) }
-spriteset(set_231AC_front_graphics_3_6, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(3, 6) }
-spriteset(set_231AC_front_graphics_4_6, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(4, 6) }
-spriteset(set_231AC_front_graphics_5_6, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(5, 6) }
-spriteset(set_231AC_front_graphics_0_7, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(0, 7) }
-spriteset(set_231AC_front_graphics_1_7, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(1, 7) }
-spriteset(set_231AC_front_graphics_2_7, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(2, 7) }
-spriteset(set_231AC_front_graphics_3_7, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(3, 7) }
-spriteset(set_231AC_front_graphics_4_7, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(4, 7) }
-spriteset(set_231AC_front_graphics_5_7, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(5, 7) }
-spriteset(set_231AC_tender_graphics_0,  "gfx/231AC.png") { tmpl_vehicle_231AC_tender_8_views(0) }
-spriteset(set_231AC_tender_graphics_1,  "gfx/231AC.png") { tmpl_vehicle_231AC_tender_8_views(1) }
-spriteset(set_231AC_tender_graphics_2,  "gfx/231AC.png") { tmpl_vehicle_231AC_tender_8_views(2) }
-spriteset(set_231AC_tender_graphics_3,  "gfx/231AC.png") { tmpl_vehicle_231AC_tender_8_views(3) }
-spriteset(set_231AC_tender_graphics_4,  "gfx/231AC.png") { tmpl_vehicle_231AC_tender_8_views(4) }
-spriteset(set_231AC_tender_graphics_5,  "gfx/231AC.png") { tmpl_vehicle_231AC_tender_8_views(5) }
-spriteset(set_231AC_tender_graphics_6,  "gfx/231AC.png") { tmpl_vehicle_231AC_tender_8_views(6) }
-spriteset(set_231AC_tender_graphics_7,  "gfx/231AC.png") { tmpl_vehicle_231AC_tender_8_views(7) }
-spriteset(set_231AC_graphics_purchase,  "gfx/231AC.png") { tmpl_vehicle_231AC_purchase() }
-
-switch(FEAT_TRAINS, SELF, sw_231AC_front_graphics_0, motion_counter % 6) {
-    0: set_231AC_front_graphics_0_0;
-    1: set_231AC_front_graphics_1_0;
-    2: set_231AC_front_graphics_2_0;
-    3: set_231AC_front_graphics_3_0;
-    4: set_231AC_front_graphics_4_0;
-    5: set_231AC_front_graphics_5_0;
-}
-
-switch(FEAT_TRAINS, SELF, sw_231AC_front_graphics_1, motion_counter % 6) {
-    0: set_231AC_front_graphics_0_1;
-    1: set_231AC_front_graphics_1_1;
-    2: set_231AC_front_graphics_2_1;
-    3: set_231AC_front_graphics_3_1;
-    4: set_231AC_front_graphics_4_1;
-    5: set_231AC_front_graphics_5_1;
-}
-
-switch(FEAT_TRAINS, SELF, sw_231AC_front_graphics_2, motion_counter % 6) {
-    0: set_231AC_front_graphics_0_2;
-    1: set_231AC_front_graphics_1_2;
-    2: set_231AC_front_graphics_2_2;
-    3: set_231AC_front_graphics_3_2;
-    4: set_231AC_front_graphics_4_2;
-    5: set_231AC_front_graphics_5_2;
-}
-
-switch(FEAT_TRAINS, SELF, sw_231AC_front_graphics_3, motion_counter % 6) {
-    0: set_231AC_front_graphics_0_3;
-    1: set_231AC_front_graphics_1_3;
-    2: set_231AC_front_graphics_2_3;
-    3: set_231AC_front_graphics_3_3;
-    4: set_231AC_front_graphics_4_3;
-    5: set_231AC_front_graphics_5_3;
-}
-
-switch(FEAT_TRAINS, SELF, sw_231AC_front_graphics_4, motion_counter % 6) {
-    0: set_231AC_front_graphics_0_4;
-    1: set_231AC_front_graphics_1_4;
-    2: set_231AC_front_graphics_2_4;
-    3: set_231AC_front_graphics_3_4;
-    4: set_231AC_front_graphics_4_4;
-    5: set_231AC_front_graphics_5_4;
-}
-
-switch(FEAT_TRAINS, SELF, sw_231AC_front_graphics_5, motion_counter % 6) {
-    0: set_231AC_front_graphics_0_5;
-    1: set_231AC_front_graphics_1_5;
-    2: set_231AC_front_graphics_2_5;
-    3: set_231AC_front_graphics_3_5;
-    4: set_231AC_front_graphics_4_5;
-    5: set_231AC_front_graphics_5_5;
-}
-
-switch(FEAT_TRAINS, SELF, sw_231AC_front_graphics_6, motion_counter % 6) {
-    0: set_231AC_front_graphics_0_6;
-    1: set_231AC_front_graphics_1_6;
-    2: set_231AC_front_graphics_2_6;
-    3: set_231AC_front_graphics_3_6;
-    4: set_231AC_front_graphics_4_6;
-    5: set_231AC_front_graphics_5_6;
-}
-
-switch(FEAT_TRAINS, SELF, sw_231AC_front_graphics_7, motion_counter % 6) {
-    0: set_231AC_front_graphics_0_7;
-    1: set_231AC_front_graphics_1_7;
-    2: set_231AC_front_graphics_2_7;
-    3: set_231AC_front_graphics_3_7;
-    4: set_231AC_front_graphics_4_7;
-    5: set_231AC_front_graphics_5_7;
-}
-
-switch(FEAT_TRAINS, SELF, sw_231AC_graphics_0, position_in_articulated_veh) {
-    0: sw_231AC_front_graphics_0;
-    1: set_231AC_tender_graphics_0;
-}
-
-switch(FEAT_TRAINS, SELF, sw_231AC_graphics_1, position_in_articulated_veh) {
-    0: sw_231AC_front_graphics_1;
-    1: set_231AC_tender_graphics_1;
-}
-
-switch(FEAT_TRAINS, SELF, sw_231AC_graphics_2, position_in_articulated_veh) {
-    0: sw_231AC_front_graphics_2;
-    1: set_231AC_tender_graphics_2;
-}
-
-switch(FEAT_TRAINS, SELF, sw_231AC_graphics_3, position_in_articulated_veh) {
-    0: sw_231AC_front_graphics_3;
-    1: set_231AC_tender_graphics_3;
-}
-
-switch(FEAT_TRAINS, SELF, sw_231AC_graphics_4, position_in_articulated_veh) {
-    0: sw_231AC_front_graphics_4;
-    1: set_231AC_tender_graphics_4;
-}
-
-switch(FEAT_TRAINS, SELF, sw_231AC_graphics_5, position_in_articulated_veh) {
-    0: sw_231AC_front_graphics_5;
-    1: set_231AC_tender_graphics_5;
-}
-
-switch(FEAT_TRAINS, SELF, sw_231AC_graphics_6, position_in_articulated_veh) {
-    0: sw_231AC_front_graphics_6;
-    1: set_231AC_tender_graphics_6;
-}
-
-switch(FEAT_TRAINS, SELF, sw_231AC_graphics_7, position_in_articulated_veh) {
-    0: sw_231AC_front_graphics_7;
-    1: set_231AC_tender_graphics_7;
-}
-
-random_switch(FEAT_TRAINS, SELF, sw_231AC_graphics) {
-    1: sw_231AC_graphics_0;
-    2: sw_231AC_graphics_1;
-    3: sw_231AC_graphics_2;
-    4: sw_231AC_graphics_3;
-    5: sw_231AC_graphics_4;
-    6: sw_231AC_graphics_5;
-    7: sw_231AC_graphics_6;
-    8: sw_231AC_graphics_7;
-}
-*/
 
 switch(FEAT_TRAINS, SELF, sw_231AC_graphics, position_in_articulated_veh) {
-    0: set_vehicle_DUMMY_7LEN_8_views;
-    1: set_vehicle_DUMMY_3LEN_8_views;
+    0: sw_231AC_graphics_front;
+    1: set_vehicle_DUMMY_3LEN;
 }
 
 switch(FEAT_TRAINS, SELF, sw_231AC_articulated_part, extra_callback_info1) {
@@ -223,7 +21,7 @@ switch(FEAT_TRAINS, SELF, sw_231AC_articulated_part, extra_callback_info1) {
 item(FEAT_TRAINS, item_231AC) {
     property {
         name:                         string(STR_SNCF_TRAIN_231AC_NAME);
-        climates_available:           (param_allow_no_graphics && param_allow_steam) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_no_graphics < 2 && param_allow_steam) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1914, 1, 1);
         model_life:                   51;
         vehicle_life:                 29;
@@ -254,8 +52,7 @@ item(FEAT_TRAINS, item_231AC) {
     }
     graphics {
         default:                      sw_231AC_graphics;
-//        purchase:                     set_231AC_graphics_purchase;
-        purchase:                     set_vehicle_DUMMY_purchase;
+        purchase:                     sw_231AC_graphics_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_231AC_ADDITIONAL_TEXT);
         articulated_part:             sw_231AC_articulated_part;
         visual_effect_and_powered:    return (position_in_articulated_veh == 0) ?

@@ -1,7 +1,7 @@
 item(FEAT_TRAINS, item_WAGON_LARGE_NEO_BULK) {
     property {
         name:                         string(STR_SNCF_WAGON_LARGE_NEO_BULK_NAME);
-        climates_available:           (param_allow_no_graphics && param_allow_wagon) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_no_graphics < 2 && param_allow_wagon) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1980, 1, 1);
         model_life:                   VEHICLE_NEVER_EXPIRES;
         vehicle_life:                 25;
@@ -31,8 +31,64 @@ item(FEAT_TRAINS, item_WAGON_LARGE_NEO_BULK) {
         length:                       8;
     }
     graphics {
-        default:                      set_vehicle_DUMMY_8LEN_8_views;
-        purchase:                     set_vehicle_DUMMY_purchase;
+        default:                      sw_vehicle_DUMMY_WAGON_COVERED;
+        purchase:                     set_vehicle_DUMMY_purchase_WAGON_BULK;
         additional_text:              return string(STR_SNCF_WAGON_LARGE_NEO_BULK_ADDITIONAL_TEXT);
+        
+        COAL:                        sw_vehicle_DUMMY_WAGON_BULK_BLACK;
+        FECR:                        sw_vehicle_DUMMY_WAGON_BULK_BLACK;
+        KAOL:                        sw_vehicle_DUMMY_WAGON_BULK_BLACK;
+        COKE:                        sw_vehicle_DUMMY_WAGON_BULK_BLACK;
+        CBLK:                        sw_vehicle_DUMMY_WAGON_BULK_BLACK;
+        MNO2:                        sw_vehicle_DUMMY_WAGON_BULK_BLACK;
+        NKOR:                        sw_vehicle_DUMMY_WAGON_BULK_BLACK;
+
+        IORE:                        spritegroup_vehicle_DUMMY_WAGON_BULK_BROWN;
+        CLAY:                        spritegroup_vehicle_DUMMY_WAGON_BULK_BROWN;
+        GRVL:                        spritegroup_vehicle_DUMMY_WAGON_BULK_BROWN;
+        SCMT:                        spritegroup_vehicle_DUMMY_WAGON_BULK_BROWN;
+        WDPR:                        spritegroup_vehicle_DUMMY_WAGON_BULK_BROWN;
+        AORE:                        spritegroup_vehicle_DUMMY_WAGON_BULK_BROWN;
+        PEAT:                        spritegroup_vehicle_DUMMY_WAGON_BULK_BROWN;
+        CASS:                        spritegroup_vehicle_DUMMY_WAGON_BULK_BROWN;
+        SLAG:                        spritegroup_vehicle_DUMMY_WAGON_BULK_BROWN;
+        TOFF:                        spritegroup_vehicle_DUMMY_WAGON_BULK_BROWN;
+
+        GRAI:                        sw_vehicle_DUMMY_WAGON_BULK_YELLOW;
+        MAIZ:                        sw_vehicle_DUMMY_WAGON_BULK_YELLOW;
+        CERE:                        sw_vehicle_DUMMY_WAGON_BULK_YELLOW;
+        LIME:                        sw_vehicle_DUMMY_WAGON_BULK_YELLOW;
+        SAND:                        sw_vehicle_DUMMY_WAGON_BULK_YELLOW;
+        SULP:                        sw_vehicle_DUMMY_WAGON_BULK_YELLOW;
+        PHOS:                        sw_vehicle_DUMMY_WAGON_BULK_YELLOW;
+        URAN:                        sw_vehicle_DUMMY_WAGON_BULK_YELLOW;
+        WHEA:                        sw_vehicle_DUMMY_WAGON_BULK_YELLOW;
+        SGBT:                        sw_vehicle_DUMMY_WAGON_BULK_YELLOW;
+
+        CORE:                        spritegroup_vehicle_DUMMY_WAGON_BULK_GREEN;
+        BEAN:                        spritegroup_vehicle_DUMMY_WAGON_BULK_GREEN;
+        SEED:                        spritegroup_vehicle_DUMMY_WAGON_BULK_GREEN;
+        SGCN:                        spritegroup_vehicle_DUMMY_WAGON_BULK_GREEN;
+        TBCO:                        spritegroup_vehicle_DUMMY_WAGON_BULK_GREEN;
+        WSTE:                        spritegroup_vehicle_DUMMY_WAGON_BULK_GREEN;
+
+        FRUT:                        spritegroup_vehicle_DUMMY_WAGON_BULK_ORANGE;
+        OLSD:                        spritegroup_vehicle_DUMMY_WAGON_BULK_ORANGE;
+        RCYC:                        spritegroup_vehicle_DUMMY_WAGON_BULK_ORANGE;
+
+        CMNT:                        spritegroup_vehicle_DUMMY_WAGON_BULK_WHITE;
+        BAKE:                        spritegroup_vehicle_DUMMY_WAGON_BULK_WHITE;
+        SUGR:                        spritegroup_vehicle_DUMMY_WAGON_BULK_WHITE;
+        FERT:                        spritegroup_vehicle_DUMMY_WAGON_BULK_WHITE;
+        FICR:                        spritegroup_vehicle_DUMMY_WAGON_BULK_WHITE;
+        PORE:                        spritegroup_vehicle_DUMMY_WAGON_BULK_WHITE;
+        NITR:                        spritegroup_vehicle_DUMMY_WAGON_BULK_WHITE;
+        NICK:                        spritegroup_vehicle_DUMMY_WAGON_BULK_WHITE;
+        QLME:                        spritegroup_vehicle_DUMMY_WAGON_BULK_WHITE;
+        SALT:                        spritegroup_vehicle_DUMMY_WAGON_BULK_WHITE;
+        SASH:                        spritegroup_vehicle_DUMMY_WAGON_BULK_WHITE;
+
+        POTA:                        spritegroup_vehicle_DUMMY_WAGON_BULK_PINK;
+        CTCD:                        spritegroup_vehicle_DUMMY_WAGON_BULK_PINK;
    }
 }

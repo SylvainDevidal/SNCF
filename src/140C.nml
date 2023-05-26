@@ -1,144 +1,16 @@
-/*
-template tmpl_vehicle_140C_front_8_views(frame, livery) {
-     //xpos ypos xsize ysize xrel yrel
-    [3 + livery % 2 * 189, 3 + frame * 27 + int(livery / 2) * 144, 8, 24, -3, -19]
-    [13 + livery % 2 * 189, 3 + frame * 27 + int(livery / 2) * 144, 22, 17, -10, -10]
-    [37 + livery % 2 * 189, 3 + frame * 27 + int(livery / 2) * 144, 32, 14, -7, -10]
-    [71 + livery % 2 * 189, 3 + frame * 27 + int(livery / 2) * 144, 22, 17, -1, -6]
-    [95 + livery % 2 * 189, 3 + frame * 27 + int(livery / 2) * 144, 8, 24,  -3, -9]
-    [105 + livery % 2 * 189, 3 + frame * 27 + int(livery / 2) * 144, 22, 17, -18, -7]
-    [129 + livery % 2 * 189, 3 + frame * 27 + int(livery / 2) * 144, 32, 14, -23, -10]
-    [163 + livery % 2 * 189, 3 + frame * 27 + int(livery / 2) * 144, 22, 17, -9, -9]
+switch(FEAT_TRAINS, SELF, sw_140C_graphics_front, param_allow_no_graphics) {
+    0: set_vehicle_DUMMY_PloddyPhut;
+    1: set_vehicle_DUMMY_6LEN;
 }
 
-template tmpl_vehicle_140C_tender_8_views(livery) {
-     //xpos ypos xsize ysize xrel yrel
-    [3 + livery % 2 * 189, 110 + int(livery / 2) * 144, 8, 24, -3, -23]
-    [13 + livery % 2 * 189, 110 + int(livery / 2) * 144, 22, 17, -5, -13]
-    [37 + livery % 2 * 189, 110 + int(livery / 2) * 144, 32, 14, 4, -10]
-    [71 + livery % 2 * 189, 110 + int(livery / 2) * 144, 22, 17, -1, -7]
-    [95 + livery % 2 * 189, 110 + int(livery / 2) * 144, 8, 24,  -3, -11]
-    [105 + livery % 2 * 189, 110 + int(livery / 2) * 144, 22, 17, -18, -8]
-    [129 + livery % 2 * 189, 110 + int(livery / 2) * 144, 32, 14, -35, -10]
-    [163 + livery % 2 * 189, 110 + int(livery / 2) * 144, 22, 17, -13, -12]
+switch(FEAT_TRAINS, SELF, sw_140C_graphics_purchase, param_allow_no_graphics) {
+    0: set_vehicle_DUMMY_purchase_PloddyPhut;
+    1: set_vehicle_DUMMY_purchase;
 }
-
-template tmpl_vehicle_140C_tender_bis_8_views(livery) {
-     //xpos ypos xsize ysize xrel yrel
-    [3 + livery % 2 * 189, 110 + int(livery / 2) * 144, 8, 24, -3, -23]
-    [13 + livery % 2 * 189, 110 + int(livery / 2) * 144, 22, 17, -5, -13]
-    [37 + livery % 2 * 189, 110 + int(livery / 2) * 144, 32, 14, -5, -10]
-    [71 + livery % 2 * 189, 110 + int(livery / 2) * 144, 22, 17, -1, -7]
-    [95 + livery % 2 * 189, 110 + int(livery / 2) * 144, 8, 24,  -3, -11]
-    [105 + livery % 2 * 189, 110 + int(livery / 2) * 144, 22, 17, -18, -8]
-    [129 + livery % 2 * 189, 110 + int(livery / 2) * 144, 32, 14, -35, -10]
-    [163 + livery % 2 * 189, 110 + int(livery / 2) * 144, 22, 17, -13, -12]
-}
-
-template tmpl_vehicle_140C_purchase() {
-    //xpos ypos xsize ysize xrel yrel
-    [129, 3, 32, 14, -28, -10]
-}
-
-spriteset(set_140C_graphics_0_0,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(0, 0) }
-spriteset(set_140C_graphics_1_0,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(1, 0) }
-spriteset(set_140C_graphics_2_0,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(2, 0) }
-spriteset(set_140C_graphics_3_0,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(3, 0) }
-spriteset(set_140C_graphics_0_1,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(0, 1) }
-spriteset(set_140C_graphics_1_1,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(1, 1) }
-spriteset(set_140C_graphics_2_1,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(2, 1) }
-spriteset(set_140C_graphics_3_1,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(3, 1) }
-spriteset(set_140C_graphics_0_2,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(0, 2) }
-spriteset(set_140C_graphics_1_2,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(1, 2) }
-spriteset(set_140C_graphics_2_2,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(2, 2) }
-spriteset(set_140C_graphics_3_2,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(3, 2) }
-spriteset(set_140C_graphics_0_3,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(0, 3) }
-spriteset(set_140C_graphics_1_3,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(1, 3) }
-spriteset(set_140C_graphics_2_3,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(2, 3) }
-spriteset(set_140C_graphics_3_3,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(3, 3) }
-spriteset(set_140C_graphics_0_4,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(0, 4) }
-spriteset(set_140C_graphics_1_4,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(1, 4) }
-spriteset(set_140C_graphics_2_4,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(2, 4) }
-spriteset(set_140C_graphics_3_4,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(3, 4) }
-spriteset(set_140C_tender_graphics_0, "gfx/140C.png") { tmpl_vehicle_140C_tender_bis_8_views(0) }
-spriteset(set_140C_tender_graphics_1, "gfx/140C.png") { tmpl_vehicle_140C_tender_bis_8_views(1) }
-spriteset(set_140C_tender_graphics_2, "gfx/140C.png") { tmpl_vehicle_140C_tender_8_views(2) }
-spriteset(set_140C_tender_graphics_3, "gfx/140C.png") { tmpl_vehicle_140C_tender_8_views(3) }
-spriteset(set_140C_tender_graphics_4, "gfx/140C.png") { tmpl_vehicle_140C_tender_8_views(4) }
-spriteset(set_140C_graphics_purchase, "gfx/140C.png") { tmpl_vehicle_140C_purchase() }
-
-switch(FEAT_TRAINS, SELF, sw_140C_front_graphics_0, motion_counter % 4) {
-    0: set_140C_graphics_0_0;
-    1: set_140C_graphics_1_0;
-    2: set_140C_graphics_2_0;
-    3: set_140C_graphics_3_0;
-}
-
-switch(FEAT_TRAINS, SELF, sw_140C_front_graphics_1, motion_counter % 4) {
-    0: set_140C_graphics_0_1;
-    1: set_140C_graphics_1_1;
-    2: set_140C_graphics_2_1;
-    3: set_140C_graphics_3_1;
-}
-
-switch(FEAT_TRAINS, SELF, sw_140C_front_graphics_2, motion_counter % 4) {
-    0: set_140C_graphics_0_2;
-    1: set_140C_graphics_1_2;
-    2: set_140C_graphics_2_2;
-    3: set_140C_graphics_3_2;
-}
-
-switch(FEAT_TRAINS, SELF, sw_140C_front_graphics_3, motion_counter % 4) {
-    0: set_140C_graphics_0_3;
-    1: set_140C_graphics_1_3;
-    2: set_140C_graphics_2_3;
-    3: set_140C_graphics_3_3;
-}
-
-switch(FEAT_TRAINS, SELF, sw_140C_front_graphics_4, motion_counter % 4) {
-    0: set_140C_graphics_0_4;
-    1: set_140C_graphics_1_4;
-    2: set_140C_graphics_2_4;
-    3: set_140C_graphics_3_4;
-}
-
-switch(FEAT_TRAINS, SELF, sw_140C_graphics_0, position_in_articulated_veh) {
-    0:      sw_140C_front_graphics_0;
-    1:      set_140C_tender_graphics_0;
-}
-
-switch(FEAT_TRAINS, SELF, sw_140C_graphics_1, position_in_articulated_veh) {
-    0:      sw_140C_front_graphics_1;
-    1:      set_140C_tender_graphics_1;
-}
-
-switch(FEAT_TRAINS, SELF, sw_140C_graphics_2, position_in_articulated_veh) {
-    0:      sw_140C_front_graphics_2;
-    1:      set_140C_tender_graphics_2;
-}
-
-switch(FEAT_TRAINS, SELF, sw_140C_graphics_3, position_in_articulated_veh) {
-    0:      sw_140C_front_graphics_3;
-    1:      set_140C_tender_graphics_3;
-}
-
-switch(FEAT_TRAINS, SELF, sw_140C_graphics_4, position_in_articulated_veh) {
-    0:      sw_140C_front_graphics_4;
-    1:      set_140C_tender_graphics_4;
-}
-
-random_switch(FEAT_TRAINS, SELF, sw_140C_graphics) {
-    1: sw_140C_graphics_0;
-    2: sw_140C_graphics_1;
-    3: sw_140C_graphics_2;
-    4: sw_140C_graphics_3;
-    5: sw_140C_graphics_4;
-}
-*/
 
 switch(FEAT_TRAINS, SELF, sw_140C_graphics, position_in_articulated_veh) {
-    0: set_vehicle_DUMMY_6LEN_8_views;
-    1: set_vehicle_DUMMY_3LEN_8_views;
+    0: sw_140C_graphics_front;
+    1: set_vehicle_DUMMY_3LEN;
 }
 
 switch(FEAT_TRAINS, SELF, sw_140C_articulated_part, extra_callback_info1) {
@@ -149,7 +21,7 @@ switch(FEAT_TRAINS, SELF, sw_140C_articulated_part, extra_callback_info1) {
 item(FEAT_TRAINS, item_140C) {
     property {
         name:                         string(STR_SNCF_TRAIN_140C_NAME);
-        climates_available:           (param_allow_no_graphics && param_allow_steam) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_no_graphics < 2 && param_allow_steam) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            (param_introduction_dates) ? date(1913, 1, 1) : date(1905, 1, 1);
         model_life:                   50;
         vehicle_life:                 29;
@@ -181,8 +53,7 @@ item(FEAT_TRAINS, item_140C) {
     }
     graphics {
         default:                      sw_140C_graphics;
-//        purchase:                     set_140C_graphics_purchase;
-        purchase:                     set_vehicle_DUMMY_purchase;
+        purchase:                     sw_140C_graphics_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_140C_ADDITIONAL_TEXT);
         articulated_part:             sw_140C_articulated_part;
         visual_effect_and_powered:    return (position_in_articulated_veh == 0) ?

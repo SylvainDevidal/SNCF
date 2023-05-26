@@ -1,4 +1,4 @@
-template tmpl_vehicle_2C2_8_views() {
+template tmpl_vehicle_2C2() {
     //xpos ypos xsize ysize xrel yrel
     [3, 5, 8, 25, -3, -12]
     [18, 5, 22, 20, -15, -10]
@@ -12,10 +12,10 @@ template tmpl_vehicle_2C2_8_views() {
 
 template tmpl_vehicle_2C2_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [164, 5, 32, 15, -29, -10]
+    [164, 5, 32, 15, -7, -10]
 }
 
-spriteset(set_2C2_graphics,          "gfx/2C2.png") { tmpl_vehicle_2C2_8_views() }
+spriteset(set_2C2_graphics,          "gfx/2C2.png") { tmpl_vehicle_2C2() }
 spriteset(set_2C2_graphics_purchase, "gfx/2C2.png") { tmpl_vehicle_2C2_purchase() }
 
 item(FEAT_TRAINS, item_2C2) {

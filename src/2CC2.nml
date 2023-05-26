@@ -1,37 +1,17 @@
-/*
-template tmpl_vehicle_2CC2_8_views(livery) {
-    //xpos ypos xsize ysize xrel yrel
-    [2, 2 + livery * 27, 8, 24, -3, -14]
-    [12, 2 + livery * 27, 23, 20, -14, -11]
-    [37, 2 + livery * 27, 32, 15, -12, -12]
-    [71, 2 + livery * 27, 23, 20, -0, -8]
-    [96, 2 + livery * 27, 8, 24, -3, -9]
-    [106, 2 + livery * 27, 23, 20, -20, -8]
-    [131, 2 + livery * 27, 32, 15, -19, -11]
-    [165, 2 + livery * 27, 23, 20, -6, -10]
+switch(FEAT_TRAINS, SELF, sw_2CC2_graphics_front, param_allow_no_graphics) {
+    0: set_vehicle_DUMMY_SH40;
+    1: set_vehicle_DUMMY_7LEN;
 }
 
-template tmpl_vehicle_2CC2_purchase() {
-    //xpos ypos xsize ysize xrel yrel
-    [131, 2, 32, 15, -29, -11]
+switch(FEAT_TRAINS, SELF, sw_2CC2_graphics_purchase, param_allow_no_graphics) {
+    0: set_vehicle_DUMMY_purchase_SH40;
+    1: set_vehicle_DUMMY_purchase;
 }
-
-spriteset(set_2CC2_graphics_0,        "gfx/2CC2.png") { tmpl_vehicle_2CC2_8_views(0) }
-spriteset(set_2CC2_graphics_1,        "gfx/2CC2.png") { tmpl_vehicle_2CC2_8_views(1) }
-spriteset(set_2CC2_graphics_2,        "gfx/2CC2.png") { tmpl_vehicle_2CC2_8_views(2) }
-spriteset(set_2CC2_graphics_purchase, "gfx/2CC2.png") { tmpl_vehicle_2CC2_purchase() }
-
-random_switch(FEAT_TRAINS, SELF, sw_2CC2_graphics) {
-    1: set_2CC2_graphics_0;
-    2: set_2CC2_graphics_1;
-    3: set_2CC2_graphics_2;
-}
-*/
 
 item(FEAT_TRAINS, item_2CC2) {
     property {
         name:                         string(STR_SNCF_TRAIN_2CC2_NAME);
-        climates_available:           (param_allow_no_graphics && param_allow_electric) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_no_graphics < 2 && param_allow_electric) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1929, 1, 1);
         model_life:                   45;
         vehicle_life:                 40;
@@ -59,14 +39,12 @@ item(FEAT_TRAINS, item_2CC2) {
         air_drag_coefficient:         0.06;
         extra_weight_per_wagon:       0 ton;
         bitmask_vehicle_info:         0;
-        length:                       7;
         visual_effect_and_powered:    visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, -4, DISABLE_WAGON_POWER);
     }
     graphics {
-//        default:                      sw_2CC2_graphics;
-//        purchase:                     set_2CC2_graphics_purchase;
-        default:                      set_vehicle_DUMMY_7LEN_8_views;
-        purchase:                     set_vehicle_DUMMY_purchase;
+        default:                      sw_2CC2_graphics_front;
+        purchase:                     sw_2CC2_graphics_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_2CC2_ADDITIONAL_TEXT);
+        length:                       return (param_allow_no_graphics == 0) ? 8 : 7;
     }
 }

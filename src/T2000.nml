@@ -1,4 +1,4 @@
-template tmpl_vehicle_T2000_8_views_front() {
+template tmpl_vehicle_T2000_front() {
     //xpos ypos xsize ysize xrel yrel
     [3, 4, 8, 24, -3, -12]
     [18, 4, 22, 17, -15, -6]
@@ -10,7 +10,7 @@ template tmpl_vehicle_T2000_8_views_front() {
     [202, 4, 22, 17, -4, -7]
 }
 
-template tmpl_vehicle_T2000_8_views_rear() {
+template tmpl_vehicle_T2000_rear() {
     //xpos ypos xsize ysize xrel yrel
     [118, 36, 8, 24, -3, -11]
     [133, 36, 22, 17, -16, -6]
@@ -32,12 +32,12 @@ template tmpl_vehicle_T2000_4_views_coach() {
 
 template tmpl_vehicle_T2000_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [164, 4, 32, 13, -29, -9]
+    [164, 4, 32, 13, -7, -9]
 }
 
-spriteset(set_T2000_graphics_front,    "gfx/T2000.png") { tmpl_vehicle_T2000_8_views_front() }
+spriteset(set_T2000_graphics_front,    "gfx/T2000.png") { tmpl_vehicle_T2000_front() }
 spriteset(set_T2000_graphics_coach,    "gfx/T2000.png") { tmpl_vehicle_T2000_4_views_coach() }
-spriteset(set_T2000_graphics_rear,     "gfx/T2000.png") { tmpl_vehicle_T2000_8_views_rear() }
+spriteset(set_T2000_graphics_rear,     "gfx/T2000.png") { tmpl_vehicle_T2000_rear() }
 spriteset(set_T2000_graphics_purchase, "gfx/T2000.png") { tmpl_vehicle_T2000_purchase() }
 
 switch(FEAT_TRAINS, SELF, sw_T2000_graphics, position_in_articulated_veh % 5) {

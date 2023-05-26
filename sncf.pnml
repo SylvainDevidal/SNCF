@@ -7,7 +7,7 @@ grf {
     desc: string(STR_GRF_DESC);
 
     /* This is the first version, start numbering at 0. */
-    version: 4;
+    version: 5;
     min_compatible_version: 3;
 
     param {
@@ -16,13 +16,6 @@ grf {
             bit: 0;
             name: string(STR_PARAM_NAME_INTRODUCTION_DATES);
             desc: string(STR_PARAM_DESC_INTRODUCTION_DATES);
-            def_value: 0;
-        }
-        param_allow_no_graphics {
-            type: bool;
-            bit: 1;
-            name: string(STR_PARAM_NAME_ALLOW_NO_GRAPHICS);
-            desc: string(STR_PARAM_DESC_ALLOW_NO_GRAPHICS);
             def_value: 0;
         }
         param_allow_steam {
@@ -61,8 +54,26 @@ grf {
             def_value: 1;
         }
     }
+    param
+    {
+        
+        param_allow_no_graphics {
+            type: int;
+            name: string(STR_PARAM_NAME_ALLOW_NO_GRAPHICS);
+            desc: string(STR_PARAM_DESC_ALLOW_NO_GRAPHICS);
+            min_value: 0;
+            max_value: 2;
+            def_value: 0;
+            names: {
+                0: string(STR_PARAM_NAME_ALLOW_NO_GRAPHICS_OPENGFX);
+                1: string(STR_PARAM_NAME_ALLOW_NO_GRAPHICS_BOXES);
+                2: string(STR_PARAM_NAME_DISALLOW_NO_GRAPHICS);
+            };
+        }
+    }
 }
 
+#include "src/OPENGFX.nml"
 #include "src/DUMMY.nml"
 #include "src/COMMON.nml"
 #include "src/RAILTYPES.nml"

@@ -1,4 +1,4 @@
-template tmpl_vehicle_X72500_8_views_front() {
+template tmpl_vehicle_X72500_front() {
     //xpos ypos xsize ysize xrel yrel
     [5, 5, 8, 24, -3, -12]
     [20, 5, 22, 17, -17, -6]
@@ -10,7 +10,7 @@ template tmpl_vehicle_X72500_8_views_front() {
     [213, 5, 22, 17, -4, -7]
 }
 
-template tmpl_vehicle_X72500_8_views_rear() {
+template tmpl_vehicle_X72500_rear() {
     //xpos ypos xsize ysize xrel yrel
     [125, 36, 8, 24, -3, -11]
     [140, 36, 22, 17, -16, -7]
@@ -32,7 +32,7 @@ template tmpl_vehicle_X72500_4_views_coach() {
 
 template tmpl_vehicle_X72500_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [171, 5, 32, 12, -29, -8]
+    [171, 5, 32, 12, -7, -8]
 }
 
 template tmpl_vehicle_X72500_pixel() {
@@ -40,9 +40,9 @@ template tmpl_vehicle_X72500_pixel() {
     [5, 5, 1, 1, 0, 0]
 }
 
-spriteset(set_X72500_graphics_front,    "gfx/X72500.png") { tmpl_vehicle_X72500_8_views_front() }
+spriteset(set_X72500_graphics_front,    "gfx/X72500.png") { tmpl_vehicle_X72500_front() }
 spriteset(set_X72500_graphics_coach,    "gfx/X72500.png") { tmpl_vehicle_X72500_4_views_coach() }
-spriteset(set_X72500_graphics_rear,     "gfx/X72500.png") { tmpl_vehicle_X72500_8_views_rear() }
+spriteset(set_X72500_graphics_rear,     "gfx/X72500.png") { tmpl_vehicle_X72500_rear() }
 spriteset(set_X72500_graphics_purchase, "gfx/X72500.png") { tmpl_vehicle_X72500_purchase() }
 spriteset(set_X72500_invisible,         "gfx/X72500.png") { tmpl_vehicle_X72500_pixel() }
 

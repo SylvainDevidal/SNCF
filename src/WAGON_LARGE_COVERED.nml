@@ -1,7 +1,7 @@
 item(FEAT_TRAINS, item_WAGON_LARGE_COVERED) {
     property {
         name:                         string(STR_SNCF_WAGON_LARGE_COVERED_NAME);
-        climates_available:           (param_allow_no_graphics && param_allow_wagon) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_no_graphics < 2 && param_allow_wagon) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1980, 1, 1);
         model_life:                   VEHICLE_NEVER_EXPIRES;
         vehicle_life:                 25;
@@ -31,8 +31,8 @@ item(FEAT_TRAINS, item_WAGON_LARGE_COVERED) {
         length:                       8;
     }
     graphics {
-        default:                      set_vehicle_DUMMY_8LEN_8_views;
-        purchase:                     set_vehicle_DUMMY_purchase;
+        default:                      sw_vehicle_DUMMY_WAGON_COVERED;
+        purchase:                     set_vehicle_DUMMY_purchase_WAGON_COVERED;
         additional_text:              return string(STR_SNCF_WAGON_LARGE_COVERED_ADDITIONAL_TEXT);
    }
 }

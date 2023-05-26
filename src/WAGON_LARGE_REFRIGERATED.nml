@@ -1,7 +1,7 @@
 item(FEAT_TRAINS, item_WAGON_LARGE_REFRIGERATED) {
     property {
         name:                         string(STR_SNCF_WAGON_LARGE_REFRIGERATED_NAME);
-        climates_available:           (param_allow_no_graphics && param_allow_wagon) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_no_graphics < 2 && param_allow_wagon) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1980, 1, 1);
         model_life:                   VEHICLE_NEVER_EXPIRES;
         vehicle_life:                 25;
@@ -9,7 +9,7 @@ item(FEAT_TRAINS, item_WAGON_LARGE_REFRIGERATED) {
         refittable_cargo_classes:     bitmask(CC_REFRIGERATED);
         non_refittable_cargo_classes: bitmask();
         loading_speed:                LOADING_NORMAL;
-        cost_factor:                  250;
+        cost_factor:                  255;
         running_cost_factor:          120;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
         speed:                        160 km/h;
@@ -29,10 +29,11 @@ item(FEAT_TRAINS, item_WAGON_LARGE_REFRIGERATED) {
         extra_weight_per_wagon:       0 ton;
         bitmask_vehicle_info:         0;
         length:                       8;
+        cargo_age_period:             0;    // Refrigerated, so no aging
     }
     graphics {
-        default:                      set_vehicle_DUMMY_8LEN_8_views;
-        purchase:                     set_vehicle_DUMMY_purchase;
+        default:                      sw_vehicle_DUMMY_WAGON_REFRIGERATED;
+        purchase:                     set_vehicle_DUMMY_purchase_WAGON_REFRIGERATED;
         additional_text:              return string(STR_SNCF_WAGON_LARGE_REFRIGERATED_ADDITIONAL_TEXT);
    }
 }

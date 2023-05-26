@@ -1,4 +1,4 @@
-template tmpl_vehicle_Z7300_8_views_front() {
+template tmpl_vehicle_Z7300_front() {
     //xpos ypos xsize ysize xrel yrel
     [6, 6, 8, 24, -3, -12]
     [21, 6, 23, 17, -16, -6]
@@ -10,7 +10,7 @@ template tmpl_vehicle_Z7300_8_views_front() {
     [205, 6, 23, 17, -4, -7]
 }
 
-template tmpl_vehicle_Z7300_8_views_rear() {
+template tmpl_vehicle_Z7300_rear() {
     //xpos ypos xsize ysize xrel yrel
     [121, 35, 8, 24, -3, -11]
     [136, 35, 22, 20, -16, -9]
@@ -24,11 +24,11 @@ template tmpl_vehicle_Z7300_8_views_rear() {
 
 template tmpl_vehicle_Z7300_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [167, 6, 32, 15, -29, -9]
+    [167, 6, 32, 15, -7, -9]
 }
 
-spriteset(set_Z7300_graphics_front,    "gfx/Z7300.png") { tmpl_vehicle_Z7300_8_views_front() }
-spriteset(set_Z7300_graphics_rear,     "gfx/Z7300.png") { tmpl_vehicle_Z7300_8_views_rear() }
+spriteset(set_Z7300_graphics_front,    "gfx/Z7300.png") { tmpl_vehicle_Z7300_front() }
+spriteset(set_Z7300_graphics_rear,     "gfx/Z7300.png") { tmpl_vehicle_Z7300_rear() }
 spriteset(set_Z7300_graphics_purchase, "gfx/Z7300.png") { tmpl_vehicle_Z7300_purchase() }
 
 switch(FEAT_TRAINS, SELF, sw_Z7300_graphics, position_in_articulated_veh) {

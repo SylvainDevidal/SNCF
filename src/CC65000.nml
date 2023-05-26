@@ -1,4 +1,4 @@
-template tmpl_vehicle_CC65000_8_views() {
+template tmpl_vehicle_CC65000() {
      //xpos ypos xsize ysize xrel yrel
     [3, 4, 8, 24, -3, -12]
     [18, 4, 22, 17, -16, -8]
@@ -12,10 +12,10 @@ template tmpl_vehicle_CC65000_8_views() {
 
 template tmpl_vehicle_CC65000_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [165, 4, 32, 12, -28, -8]
+    [165, 4, 32, 12, -6, -8]
 }
 
-spriteset(set_CC65000_graphics,          "gfx/CC65000.png") { tmpl_vehicle_CC65000_8_views() }
+spriteset(set_CC65000_graphics,          "gfx/CC65000.png") { tmpl_vehicle_CC65000() }
 spriteset(set_CC65000_graphics_purchase, "gfx/CC65000.png") { tmpl_vehicle_CC65000_purchase() }
 
 item(FEAT_TRAINS, item_CC65000) {

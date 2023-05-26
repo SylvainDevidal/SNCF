@@ -1,10 +1,4 @@
-/*
-TODO :
-- Correct colours (no 2CC)
-- Forbid "passengers" cargo in wagons
-*/
-
-template tmpl_vehicle_BB12000_8_views() {
+template tmpl_vehicle_BB12000() {
      //xpos ypos xsize ysize xrel yrel
     [1, 1, 8, 24,  -3, -8]
     [10, 1, 22, 20, -14, -12]
@@ -18,10 +12,10 @@ template tmpl_vehicle_BB12000_8_views() {
 
 template tmpl_vehicle_BB12000_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [33, 1, 33, 16, -30, -10]
+    [33, 1, 33, 16, -8, -10]
 }
 
-spriteset(set_BB12000_graphics,          "gfx/BB12000.png") { tmpl_vehicle_BB12000_8_views() }
+spriteset(set_BB12000_graphics,          "gfx/BB12000.png") { tmpl_vehicle_BB12000() }
 spriteset(set_BB12000_graphics_purchase, "gfx/BB12000.png") { tmpl_vehicle_BB12000_purchase() }
 
 item(FEAT_TRAINS, item_BB12000) {

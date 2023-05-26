@@ -9,7 +9,10 @@ STR_PARAM_NAME_INTRODUCTION_DATES                  :Historical introduction date
 STR_PARAM_DESC_INTRODUCTION_DATES                  :Historical could be frustrating, you may disable this feaature for better gameplay experience
 
 STR_PARAM_NAME_ALLOW_NO_GRAPHICS                   :Load vehicules with no graphcis
-STR_PARAM_DESC_ALLOW_NO_GRAPHICS                   :Due to some copyright limitations, I'm not able to use all the graphics I would. Enable this feature to play with more vehicules shown as ugly coloured box.
+STR_PARAM_DESC_ALLOW_NO_GRAPHICS                   :Due to some copyright limitations, I'm not able to use all the sprites I would. Enable this feature to play with more vehicules without sprites.
+STR_PARAM_NAME_ALLOW_NO_GRAPHICS_OPENGFX           :Tries to use OpenGFX or derived sprites (may change vehicle length)
+STR_PARAM_NAME_ALLOW_NO_GRAPHICS_BOXES             :Use ugly coloured box when no sprite exists
+STR_PARAM_NAME_DISALLOW_NO_GRAPHICS                :Load only vehicles with sprites (would reduce the number of available vehicles)
 
 STR_PARAM_NAME_ALLOW_STEAM                         :Load steam engines
 STR_PARAM_DESC_ALLOW_STEAM                         :If you don't want steam engines, disable this parameter.

@@ -1,4 +1,4 @@
-template tmpl_vehicle_BB9200_8_views() {
+template tmpl_vehicle_BB9200() {
     //xpos ypos xsize ysize xrel yrel
     [3, 3, 8, 24, -3, -14]
     [18, 3, 22, 20, -14, -11]
@@ -12,10 +12,10 @@ template tmpl_vehicle_BB9200_8_views() {
 
 template tmpl_vehicle_BB9200_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [169, 3, 32, 15, -27, -9]
+    [169, 3, 32, 15, -5, -9]
 }
 
-spriteset(set_BB9200_graphics,          "gfx/BB9200.png") { tmpl_vehicle_BB9200_8_views() }
+spriteset(set_BB9200_graphics,          "gfx/BB9200.png") { tmpl_vehicle_BB9200() }
 spriteset(set_BB9200_graphics_purchase, "gfx/BB9200.png") { tmpl_vehicle_BB9200_purchase() }
 
 item(FEAT_TRAINS, item_BB9200) {

@@ -1,54 +1,18 @@
-/*
-template tmpl_vehicle_131TB_8_views(frame, livery) {
-     //xpos ypos xsize ysize xrel yrel
-    [5 + livery * 208, 5 + frame * 29, 8, 24, -3, -19]
-    [18 + livery * 208, 5 + frame * 29, 22, 17, -11, -11]
-    [45 + livery * 208, 5 + frame * 29, 32, 14, -4, -10]
-    [82 + livery * 208, 5 + frame * 29, 22, 17, -2, -6]
-    [109 + livery * 208, 5 + frame * 29, 8, 24,  -3, -10]
-    [122 + livery * 208, 5 + frame * 29, 22, 17, -20, -6]
-    [149 + livery * 208, 5 + frame * 29, 32, 14, -28, -10]
-    [186 + livery * 208, 5 + frame * 29, 22, 17, -10, -11]
+switch(FEAT_TRAINS, SELF, sw_131TB_graphics_front, param_allow_no_graphics) {
+    0: set_vehicle_DUMMY_KirbyPaul;
+    1: set_vehicle_DUMMY_6LEN;
 }
 
-template tmpl_vehicle_131TB_purchase() {
-    //xpos ypos xsize ysize xrel yrel
-    [149, 5, 32, 14, -29, -9]
+switch(FEAT_TRAINS, SELF, sw_131TB_graphics_purchase, param_allow_no_graphics) {
+    0: set_vehicle_DUMMY_purchase_KirbyPaul;
+    1: set_vehicle_DUMMY_purchase;
 }
 
-spriteset(set_131TB_graphics_0_0,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(0, 0) }
-spriteset(set_131TB_graphics_1_0,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(1, 0) }
-spriteset(set_131TB_graphics_2_0,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(2, 0) }
-spriteset(set_131TB_graphics_3_0,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(3, 0) }
-spriteset(set_131TB_graphics_0_1,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(0, 1) }
-spriteset(set_131TB_graphics_1_1,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(1, 1) }
-spriteset(set_131TB_graphics_2_1,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(2, 1) }
-spriteset(set_131TB_graphics_3_1,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(3, 1) }
-spriteset(set_131TB_graphics_purchase, "gfx/131TB.png") { tmpl_vehicle_131TB_purchase() }
 
-switch(FEAT_TRAINS, SELF, sw_131TB_graphics_0, motion_counter % 4) {
-    0: set_131TB_graphics_0_0;
-    1: set_131TB_graphics_1_0;
-    2: set_131TB_graphics_2_0;
-    3: set_131TB_graphics_3_0;
-}
-
-switch(FEAT_TRAINS, SELF, sw_131TB_graphics_1, motion_counter % 4) {
-    0: set_131TB_graphics_0_1;
-    1: set_131TB_graphics_1_1;
-    2: set_131TB_graphics_2_1;
-    3: set_131TB_graphics_3_1;
-}
-
-random_switch(FEAT_TRAINS, SELF, sw_131TB_graphics_random) {
-    1: sw_131TB_graphics_0;
-    2: sw_131TB_graphics_1;
-}
-*/
 item(FEAT_TRAINS, item_131TB) {
     property {
         name:                         string(STR_SNCF_TRAIN_131TB_NAME);
-        climates_available:           (param_allow_no_graphics && param_allow_steam) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_no_graphics < 2 && param_allow_steam) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1924, 1, 1);
         model_life:                   55;
         vehicle_life:                 22;
@@ -77,13 +41,11 @@ item(FEAT_TRAINS, item_131TB) {
         visual_effect_and_powered:    visual_effect_and_powered(VISUAL_EFFECT_STEAM, -4, DISABLE_WAGON_POWER);
         extra_weight_per_wagon:       0 ton;
         bitmask_vehicle_info:         0;
-        length:                       5;
     }
     graphics {
-//        default:                      sw_131TB_graphics_random;
-//        purchase:                     set_131TB_graphics_purchase;
-        default:                      set_vehicle_DUMMY_5LEN_8_views;
-        purchase:                     set_vehicle_DUMMY_purchase;
+        default:                      sw_131TB_graphics_front;
+        purchase:                     sw_131TB_graphics_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_131TB_ADDITIONAL_TEXT);
+        length:                       return (param_allow_no_graphics == 1) ? 5 : 6;
     }
 }

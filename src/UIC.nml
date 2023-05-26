@@ -8,7 +8,7 @@ template tmpl_vehicle_UIC_4_views(livery) {
 
 template tmpl_vehicle_UIC_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [52, 35, 32, 12, -19, -7]
+    [52, 35, 32, 12, -7, -7]
 }
 
 spriteset(set_UIC_graphics_0,        "gfx/UIC_COACH.png") { tmpl_vehicle_UIC_4_views(0) }

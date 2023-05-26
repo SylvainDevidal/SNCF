@@ -1,4 +1,4 @@
-template tmpl_vehicle_262DB_8_views_front() {
+template tmpl_vehicle_262DB_front() {
     //xpos ypos xsize ysize xrel yrel
     [4, 4, 8, 24, -3, -11]
     [19, 4, 22, 17, -10, -10]
@@ -10,7 +10,7 @@ template tmpl_vehicle_262DB_8_views_front() {
     [203, 4, 22, 17, -7, -8]
 }
 
-template tmpl_vehicle_262DB_8_views_rear() {
+template tmpl_vehicle_262DB_rear() {
     //xpos ypos xsize ysize xrel yrel
     [119, 36, 8, 24, -3, -15]
     [134, 36, 22, 17, -12, -9]
@@ -24,11 +24,11 @@ template tmpl_vehicle_262DB_8_views_rear() {
 
 template tmpl_vehicle_262DB_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [165, 4, 32, 12, -28, -8]
+    [165, 4, 32, 12, -6, -8]
 }
 
-spriteset(set_262DB_graphics_front,    "gfx/262DB.png") { tmpl_vehicle_262DB_8_views_front() }
-spriteset(set_262DB_graphics_rear,     "gfx/262DB.png") { tmpl_vehicle_262DB_8_views_rear() }
+spriteset(set_262DB_graphics_front,    "gfx/262DB.png") { tmpl_vehicle_262DB_front() }
+spriteset(set_262DB_graphics_rear,     "gfx/262DB.png") { tmpl_vehicle_262DB_rear() }
 spriteset(set_262DB_graphics_purchase, "gfx/262DB.png") { tmpl_vehicle_262DB_purchase() }
 
 switch(FEAT_TRAINS, SELF, sw_262DB_graphics, position_in_articulated_veh) {

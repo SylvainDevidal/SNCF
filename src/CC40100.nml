@@ -1,4 +1,4 @@
-template tmpl_vehicle_CC40100_8_views() {
+template tmpl_vehicle_CC40100() {
      //xpos ypos xsize ysize xrel yrel
     [1, 1, 8, 24,  -3, -8]
     [10, 1, 22, 20, -14, -12]
@@ -12,10 +12,10 @@ template tmpl_vehicle_CC40100_8_views() {
 
 template tmpl_vehicle_CC40100_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [23, 64, 32, 12, -29, -6]
+    [23, 64, 32, 12, -7, -6]
 }
 
-spriteset(set_CC40100_graphics,          "gfx/CC40100.png") { tmpl_vehicle_CC40100_8_views() }
+spriteset(set_CC40100_graphics,          "gfx/CC40100.png") { tmpl_vehicle_CC40100() }
 spriteset(set_CC40100_graphics_purchase, "gfx/CC40100.png") { tmpl_vehicle_CC40100_purchase() }
 
 switch(FEAT_TRAINS, SELF, sw_CC40100_power, current_railtype) {

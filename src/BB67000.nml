@@ -1,4 +1,4 @@
-template tmpl_vehicle_BB67000_8_views(livery) {
+template tmpl_vehicle_BB67000(livery) {
      //xpos ypos xsize ysize xrel yrel
     [5, 7 + livery * 36, 8, 24, -3, -11]
     [20, 7 + livery * 36, 22, 17, -16, -7]
@@ -12,11 +12,11 @@ template tmpl_vehicle_BB67000_8_views(livery) {
 
 template tmpl_vehicle_BB67000_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [169, 7, 32, 12, -27, -8]
+    [169, 7, 32, 12, -5, -8]
 }
 
-spriteset(set_BB67000_graphics_0,        "gfx/BB67000.png") { tmpl_vehicle_BB67000_8_views(0) }
-spriteset(set_BB67000_graphics_1,        "gfx/BB67000.png") { tmpl_vehicle_BB67000_8_views(1) }
+spriteset(set_BB67000_graphics_0,        "gfx/BB67000.png") { tmpl_vehicle_BB67000(0) }
+spriteset(set_BB67000_graphics_1,        "gfx/BB67000.png") { tmpl_vehicle_BB67000(1) }
 spriteset(set_BB67000_graphics_purchase, "gfx/BB67000.png") { tmpl_vehicle_BB67000_purchase() }
 
 random_switch(FEAT_TRAINS, SELF, sw_BB67000_graphics) {

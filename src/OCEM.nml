@@ -6,7 +6,7 @@ template tmpl_vehicle_OCEM_4_views() {
     [90, 71, 23, 17, -6, -9]
 }
 
-template tmpl_vehicle_OCEM_8_views_rear() {
+template tmpl_vehicle_OCEM_rear() {
      //xpos ypos xsize ysize xrel yrel
     [126, 38, 8, 24, -3, -14]
     [141, 38, 22, 17, -14, -9]
@@ -20,7 +20,7 @@ template tmpl_vehicle_OCEM_8_views_rear() {
 
 template tmpl_vehicle_OCEM_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [53, 71, 32, 12, -19, -7]
+    [53, 71, 32, 12, -7, -7]
 }
 
 switch(FEAT_TRAINS, SELF, sw_OCEM_graphics, position_in_consist_from_end) {
@@ -29,7 +29,7 @@ switch(FEAT_TRAINS, SELF, sw_OCEM_graphics, position_in_consist_from_end) {
 }
 
 spriteset(set_OCEM_graphics,          "gfx/OCEM_COACH.png") { tmpl_vehicle_OCEM_4_views() }
-spriteset(set_OCEM_graphics_rear,     "gfx/OCEM_COACH.png") { tmpl_vehicle_OCEM_8_views_rear() }
+spriteset(set_OCEM_graphics_rear,     "gfx/OCEM_COACH.png") { tmpl_vehicle_OCEM_rear() }
 spriteset(set_OCEM_graphics_purchase, "gfx/OCEM_COACH.png") { tmpl_vehicle_OCEM_purchase() }
 
 item(FEAT_TRAINS, item_OCEM) {

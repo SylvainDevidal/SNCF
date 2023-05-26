@@ -1,35 +1,17 @@
-/*
-template tmpl_vehicle_2BB2_8_views(livery) {
-    //xpos ypos xsize ysize xrel yrel
-    [2, 2 + livery * 30, 8, 24, -3, -14]
-    [12, 2 + livery * 30, 22, 17, -16, -8]
-    [36, 2 + livery * 30, 32, 14, -15, -10]
-    [70, 2 + livery * 30, 22, 17, -1, -8]
-    [94, 2 + livery * 30, 8, 24, -3, -13]
-    [104, 2 + livery * 30, 22, 17, -20, -7]
-    [128, 2 + livery * 30, 32, 14, -17, -10]
-    [162, 2 + livery * 30, 22, 17, -4, -7]
+switch(FEAT_TRAINS, SELF, sw_2BB2_graphics_front, param_allow_no_graphics) {
+    0: set_vehicle_DUMMY_MJS1000;
+    1: set_vehicle_DUMMY_7LEN;
 }
 
-template tmpl_vehicle_2BB2_purchase() {
-    //xpos ypos xsize ysize xrel yrel
-    [128, 2, 32, 14, -27, -10]
+switch(FEAT_TRAINS, SELF, sw_2BB2_graphics_purchase, param_allow_no_graphics) {
+    0: set_vehicle_DUMMY_purchase_MJS1000;
+    1: set_vehicle_DUMMY_purchase;
 }
-
-spriteset(set_2BB2_graphics_0,        "gfx/2BB2.png") { tmpl_vehicle_2BB2_8_views(0) }
-spriteset(set_2BB2_graphics_1,        "gfx/2BB2.png") { tmpl_vehicle_2BB2_8_views(1) }
-spriteset(set_2BB2_graphics_purchase, "gfx/2BB2.png") { tmpl_vehicle_2BB2_purchase() }
-
-random_switch(FEAT_TRAINS, SELF, sw_2BB2_graphics) {
-    1: set_2BB2_graphics_0;
-    2: set_2BB2_graphics_1;
-}
-*/
 
 item(FEAT_TRAINS, item_2BB2) {
     property {
         name:                         string(STR_SNCF_TRAIN_2BB2_NAME);
-        climates_available:           (param_allow_no_graphics && param_allow_electric) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_no_graphics < 2 && param_allow_electric) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1925, 1, 1);
         model_life:                   50;
         vehicle_life:                 35;
@@ -61,10 +43,8 @@ item(FEAT_TRAINS, item_2BB2) {
         visual_effect_and_powered:    visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, -3, DISABLE_WAGON_POWER);
     }
     graphics {
-//        default:                      sw_2BB2_graphics;
-//        purchase:                     set_2BB2_graphics_purchase;
-        default:                      set_vehicle_DUMMY_7LEN_8_views;
-        purchase:                     set_vehicle_DUMMY_purchase;
+        default:                      sw_2BB2_graphics_front;
+        purchase:                     sw_2BB2_graphics_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_2BB2_ADDITIONAL_TEXT);
     }
 }

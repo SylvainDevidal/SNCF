@@ -8,7 +8,7 @@ template tmpl_vehicle_FOURGON_CORAIL_4_views(livery) {
 
 template tmpl_vehicle_FOURGON_CORAIL_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [50, 5, 32, 12, -19, -7]
+    [50, 5, 32, 12, -7, -7]
 }
 
 spriteset(set_FOURGON_CORAIL_graphics,          "gfx/FOURGON.png") { tmpl_vehicle_FOURGON_CORAIL_4_views(0) }

@@ -1,0 +1,335 @@
+// Kirby Paul (6/8 length)
+template tmpl_vehicle_DUMMY_KirbyPaul() {
+    [0, 0, 8, 24, -3, -18]
+    [9, 0, 22, 17, -12, -10]
+    [32, 0, 32, 12, -7, -6]
+    [65, 0, 22, 17, -3, -7]
+    [88, 0, 8, 24, -3, -7]
+    [97, 0, 22, 17, -19, -7]
+    [120, 0, 32, 12, -24, -8]
+    [153, 0, 22, 17, -6, -9]
+}
+template tmpl_vehicle_DUMMY_KirbyPaul_purchase() {
+    [120, 0, 32, 12, -7, -8]
+}
+spriteset(set_vehicle_DUMMY_KirbyPaul,          "../OpenGFX/sprites/png/trains/temperate_kirbypaul_88.png") { tmpl_vehicle_DUMMY_KirbyPaul() }
+spriteset(set_vehicle_DUMMY_purchase_KirbyPaul, "../OpenGFX/sprites/png/trains/temperate_kirbypaul_88.png") { tmpl_vehicle_DUMMY_KirbyPaul_purchase() }
+
+// Chaney Jublee SH8P (7/8 length)
+template tmpl_vehicle_DUMMY_ChaneyJubleeSH8P() {
+    [0, 0, 8, 24, -3, -18]
+    [9, 0, 22, 17, -12, -10]
+    [32, 0, 32, 12, -8, -6]
+    [65, 0, 22, 17, -3, -8]
+    [88, 0, 8, 24, -3, -8]
+    [97, 0, 22, 17, -17, -8]
+    [120, 0, 32, 12, -20, -8]
+    [153, 0, 22, 17, -11, -12]
+}
+template tmpl_vehicle_DUMMY_ChaneyJubleeSH8P_purchase() {
+    [120, 0, 32, 12, -7, -8]
+}
+spriteset(set_vehicle_DUMMY_ChaneyJubleeSH8P,          "../OpenGFX/sprites/png/trains/temperate_ChaneyJubilee_SH8P_88.png") { tmpl_vehicle_DUMMY_ChaneyJubleeSH8P() }
+spriteset(set_vehicle_DUMMY_purchase_ChaneyJubleeSH8P, "../OpenGFX/sprites/png/trains/temperate_ChaneyJubilee_SH8P_88.png") { tmpl_vehicle_DUMMY_ChaneyJubleeSH8P_purchase() }
+
+// CS 24000 (7/8 length)
+template tmpl_vehicle_DUMMY_CS2400() {
+    [1, 1, 8, 22, -3, -15]
+    [17, 1, 20, 16, -13, -9]
+    [49, 1, 29, 12, -11, -7]
+    [97, 1, 20, 16, -1, -7]
+    [129, 1, 8, 22, -3, -8]
+    [145, 1, 20, 16, -17, -7]
+    [177, 1, 29, 12, -17, -8]
+    [225, 1, 20, 16, -5, -8]
+}
+template tmpl_vehicle_DUMMY_CS2400_purchase() {
+    [177, 1, 29, 12, -4, -8]
+}
+spriteset(set_vehicle_DUMMY_CS2400,          "../OpenGFX/sprites/png/trains/arctic_CS2400_28px.png") { tmpl_vehicle_DUMMY_CS2400() }
+spriteset(set_vehicle_DUMMY_purchase_CS2400, "../OpenGFX/sprites/png/trains/arctic_CS2400_28px.png") { tmpl_vehicle_DUMMY_CS2400_purchase() }
+
+// Ploddy Phut (6/8 length)
+template tmpl_vehicle_DUMMY_PloddyPhut() {
+    [0, 0, 8, 24, -3, -18]
+    [9, 0, 22, 17, -9, -10]
+    [32, 0, 32, 12, -8, -6]
+    [65, 0, 22, 17, -1, -7]
+    [88, 0, 8, 24, -3, -8]
+    [97, 0, 22, 17, -18, -6]
+    [120, 0, 32, 12, -23, -8]
+    [153, 0, 22, 17, -12, -12]
+}
+template tmpl_vehicle_DUMMY_PloddyPhut_purchase() {
+    [120, 0, 32, 12, -7, -8]
+}
+spriteset(set_vehicle_DUMMY_PloddyPhut,          "../OpenGFX/sprites/png/trains/toyland_ploddyphut.png") { tmpl_vehicle_DUMMY_PloddyPhut() }
+spriteset(set_vehicle_DUMMY_purchase_PloddyPhut, "../OpenGFX/sprites/png/trains/toyland_ploddyphut.png") { tmpl_vehicle_DUMMY_PloddyPhut_purchase() }
+
+// Wills 2-8-0 (8/8 length)
+template tmpl_vehicle_DUMMY_Wills280() {
+    [0, 0, 8, 24, -3, -14]
+    [9, 0, 22, 20, -14, -12]
+    [32, 0, 32, 17, -16, -11]
+    [65, 0, 22, 20, -5, -12]
+    [88, 0, 8, 24, -3, -9]
+    [97, 0, 22, 20, -14, -11]
+    [120, 0, 32, 17, -16, -13]
+    [153, 0, 22, 20, -7, -12]
+}
+template tmpl_vehicle_DUMMY_Wills280_purchase() {
+    [120, 0, 32, 17, -7, -12]
+}
+spriteset(set_vehicle_DUMMY_Wills280,          "../OpenGFX/sprites/png/trains/tropic_Wills2-8-0_88.png") { tmpl_vehicle_DUMMY_Wills280() }
+spriteset(set_vehicle_DUMMY_purchase_Wills280, "../OpenGFX/sprites/png/trains/tropic_Wills2-8-0_88.png") { tmpl_vehicle_DUMMY_Wills280_purchase() }
+
+// MJS 1000 (7/8 length)
+template tmpl_vehicle_DUMMY_MJS1000() {
+    [2, 1, 8, 22, -3, -12]
+    [18, 1, 20, 16, -14, -7]
+    [50, 1, 29, 12, -16, -8]
+    [98, 1, 20, 16, -1, -5]
+}
+template tmpl_vehicle_DUMMY_MJS1000_purchase() {
+    [50, 1, 29, 12, -4, -8]
+}
+spriteset(set_vehicle_DUMMY_MJS1000,          "../OpenGFX/sprites/png/trains/arctic_MJS1000_28px.png") { tmpl_vehicle_DUMMY_MJS1000() }
+spriteset(set_vehicle_DUMMY_purchase_MJS1000, "../OpenGFX/sprites/png/trains/arctic_MJS1000_28px.png") { tmpl_vehicle_DUMMY_MJS1000_purchase() }
+
+// SH40 (8/8 length)
+template tmpl_vehicle_DUMMY_SH40() {
+    [0, 0, 8, 28, -3, -14]
+    [9, 0, 22, 21, -14, -12]
+    [32, 0, 32, 16, -16, -11]
+    [65, 0, 22, 21, -5, -12]
+}
+template tmpl_vehicle_DUMMY_SH40_purchase() {
+    [32, 0, 32, 16, -7, -11]
+}
+spriteset(set_vehicle_DUMMY_SH40,          "../OpenGFX/sprites/png/trains/temperate_SH30_SH40_88.png") { tmpl_vehicle_DUMMY_SH40() }
+spriteset(set_vehicle_DUMMY_purchase_SH40, "../OpenGFX/sprites/png/trains/temperate_SH30_SH40_88.png") { tmpl_vehicle_DUMMY_SH40_purchase() }
+
+// Temerate Wagons (7/8 length)
+template tmpl_vehicle_DUMMY_WAGON(cargo) {
+    [0, 0 + (cargo * 25), 8, 24, -3, -11]
+    [16, 0 + (cargo * 25), 22, 17, -17, -8]
+    [48, 0 + (cargo * 25), 32, 12, -16, -8]
+    [96, 0 + (cargo * 25), 22, 17, -6, -9]
+}
+template tmpl_vehicle_DUMMY_WAGON_purchase(cargo) {
+    [48, 0 + (cargo * 25), 32, 12, -7, -7]
+}
+
+spriteset(set_vehicle_DUMMY_purchase_WAGON_ARMOURED,    "../OpenGFX/sprites/png/trains/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON_purchase(15) }
+spriteset(set_vehicle_DUMMY_purchase_WAGON_BULK,        "../OpenGFX/sprites/png/trains/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON_purchase(1) }
+spriteset(set_vehicle_DUMMY_purchase_WAGON_COVERED,     "../OpenGFX/sprites/png/trains/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON_purchase(5) }
+spriteset(set_vehicle_DUMMY_purchase_WAGON_LIQUID,      "../OpenGFX/sprites/png/trains/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON_purchase(3) }
+spriteset(set_vehicle_DUMMY_purchase_WAGON_PIECE_GOODS, "../OpenGFX/sprites/png/trains/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON_purchase(7) }
+
+
+spriteset(set_vehicle_DUMMY_WAGON_ARMOURED,             "../OpenGFX/sprites/png/trains/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(15) }
+
+spriteset(set_vehicle_DUMMY_WAGON_BULK_BLACK_EMPTY_1,          "../OpenGFX/sprites/png/trains/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(1) }
+spriteset(set_vehicle_DUMMY_WAGON_BULK_BLACK_FULL_1,           "../OpenGFX/sprites/png/trains/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(10) }
+spritegroup spritegroup_vehicle_DUMMY_WAGON_BULK_BLACK_1 {
+    loaded: [set_vehicle_DUMMY_WAGON_BULK_BLACK_EMPTY_1, set_vehicle_DUMMY_WAGON_BULK_BLACK_FULL_1];
+    loading: [set_vehicle_DUMMY_WAGON_BULK_BLACK_EMPTY_1, set_vehicle_DUMMY_WAGON_BULK_BLACK_FULL_1];
+}
+
+spriteset(set_vehicle_DUMMY_WAGON_BULK_YELLOW_EMPTY_1,          "../OpenGFX/sprites/png/trains/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(6) }
+spriteset(set_vehicle_DUMMY_WAGON_BULK_YELLOW_FULL_1,           "../OpenGFX/sprites/png/trains/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(11) }
+spritegroup spritegroup_vehicle_DUMMY_WAGON_BULK_YELLOW_1 {
+    loaded: [set_vehicle_DUMMY_WAGON_BULK_YELLOW_EMPTY_1, set_vehicle_DUMMY_WAGON_BULK_YELLOW_FULL_1];
+    loading: [set_vehicle_DUMMY_WAGON_BULK_YELLOW_EMPTY_1, set_vehicle_DUMMY_WAGON_BULK_YELLOW_FULL_1];
+}
+
+spriteset(set_vehicle_DUMMY_WAGON_BULK_BROWN_EMPTY,          "../OpenGFX/sprites/png/trains/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(9) }
+spriteset(set_vehicle_DUMMY_WAGON_BULK_BROWN_FULL,           "../OpenGFX/sprites/png/trains/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(14) }
+spritegroup spritegroup_vehicle_DUMMY_WAGON_BULK_BROWN {
+    loaded: [set_vehicle_DUMMY_WAGON_BULK_BROWN_EMPTY, set_vehicle_DUMMY_WAGON_BULK_BROWN_FULL];
+    loading: [set_vehicle_DUMMY_WAGON_BULK_BROWN_EMPTY, set_vehicle_DUMMY_WAGON_BULK_BROWN_FULL];
+}
+
+spriteset(set_vehicle_DUMMY_WAGON_LIQUID_1,        "../OpenGFX/sprites/png/trains/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(3) }
+
+spriteset(set_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD_EMPTY_1, "../OpenGFX/sprites/png/trains/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(7) }
+spriteset(set_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD_FULL_1,  "../OpenGFX/sprites/png/trains/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(12) }
+spritegroup spritegroup_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD_1 {
+    loaded: [set_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD_EMPTY_1, set_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD_FULL_1];
+    loading: [set_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD_EMPTY_1, set_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD_FULL_1];
+}
+
+spriteset(set_vehicle_DUMMY_WAGON_PIECE_GOODS_STEEL_EMPTY, "../OpenGFX/sprites/png/trains/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(8) }
+spriteset(set_vehicle_DUMMY_WAGON_PIECE_GOODS_STEEL_FULL,  "../OpenGFX/sprites/png/trains/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(13) }
+spritegroup spritegroup_vehicle_DUMMY_WAGON_PIECE_GOODS_STEEL {
+    loaded: [set_vehicle_DUMMY_WAGON_PIECE_GOODS_STEEL_EMPTY, set_vehicle_DUMMY_WAGON_PIECE_GOODS_STEEL_FULL];
+    loading: [set_vehicle_DUMMY_WAGON_PIECE_GOODS_STEEL_EMPTY, set_vehicle_DUMMY_WAGON_PIECE_GOODS_STEEL_FULL];
+}
+
+// Arctic Wagons (7/8 length)
+template tmpl_vehicle_DUMMY_ARCTIC_WAGON(cargo) {
+    [0, 0 + (cargo * 25), 8, 24, -3, -11]
+    [16, 0 + (cargo * 25), 22, 17, -17, -8]
+    [48, 0 + (cargo * 25), 32, 12, -16, -8]
+    [96, 0 + (cargo * 25), 22, 17, -6, -9]
+}
+template tmpl_vehicle_DUMMY_ARCTIC_WAGON_purchase(cargo) {
+    [48, 0 + (cargo * 25), 32, 12, -7, -7]
+}
+
+spriteset(set_vehicle_DUMMY_purchase_WAGON_REFRIGERATED,       "../OpenGFX/sprites/png/trains/arctic_railwagons.png") { tmpl_vehicle_DUMMY_ARCTIC_WAGON_purchase(16) }
+
+spriteset(set_vehicle_DUMMY_WAGON_BULK_BLACK_EMPTY_2,          "../OpenGFX/sprites/png/trains/arctic_railwagons.png") { tmpl_vehicle_DUMMY_ARCTIC_WAGON(1) }
+spriteset(set_vehicle_DUMMY_WAGON_BULK_BLACK_FULL_2,           "../OpenGFX/sprites/png/trains/arctic_railwagons.png") { tmpl_vehicle_DUMMY_ARCTIC_WAGON(10) }
+spritegroup spritegroup_vehicle_DUMMY_WAGON_BULK_BLACK_2 {
+    loaded: [set_vehicle_DUMMY_WAGON_BULK_BLACK_EMPTY_2, set_vehicle_DUMMY_WAGON_BULK_BLACK_FULL_2];
+    loading: [set_vehicle_DUMMY_WAGON_BULK_BLACK_EMPTY_2, set_vehicle_DUMMY_WAGON_BULK_BLACK_FULL_2];
+}
+
+spriteset(set_vehicle_DUMMY_WAGON_COVERED_3,                  "../OpenGFX/sprites/png/trains/arctic_railwagons.png") { tmpl_vehicle_DUMMY_ARCTIC_WAGON(5) }
+
+spriteset(set_vehicle_DUMMY_WAGON_COVERED_4_LOADING,          "../OpenGFX/sprites/png/trains/arctic_railwagons.png") { tmpl_vehicle_DUMMY_ARCTIC_WAGON(8) }
+spriteset(set_vehicle_DUMMY_WAGON_COVERED_4_LOADED,           "../OpenGFX/sprites/png/trains/arctic_railwagons.png") { tmpl_vehicle_DUMMY_ARCTIC_WAGON(17) }
+spritegroup spritegroup_vehicle_DUMMY_WAGON_COVERED_4 {
+    loaded: [set_vehicle_DUMMY_WAGON_COVERED_4_LOADED, set_vehicle_DUMMY_WAGON_COVERED_4_LOADED];
+    loading: [set_vehicle_DUMMY_WAGON_COVERED_4_LOADING, set_vehicle_DUMMY_WAGON_COVERED_4_LOADING];
+}
+
+spriteset(set_vehicle_DUMMY_WAGON_REFRIGERATED_1,               "../OpenGFX/sprites/png/trains/arctic_railwagons.png") { tmpl_vehicle_DUMMY_ARCTIC_WAGON(16) }
+
+// Tropical Wagons (7/8 length)
+template tmpl_vehicle_DUMMY_TROPICAL_WAGON(cargo) {
+    [0, 0 + (cargo * 25), 8, 24, -3, -11]
+    [16, 0 + (cargo * 25), 22, 17, -17, -8]
+    [48, 0 + (cargo * 25), 32, 12, -16, -8]
+    [96, 0 + (cargo * 25), 22, 17, -6, -9]
+}
+template tmpl_vehicle_DUMMY_TROPICAL_WAGON_purchase(cargo) {
+    [48, 0 + (cargo * 25), 32, 12, -7, -7]
+}
+
+spriteset(set_vehicle_DUMMY_WAGON_LIQUID_2,                  "../OpenGFX/sprites/png/trains/tropic_railwagons.png") { tmpl_vehicle_DUMMY_TROPICAL_WAGON(3) }
+spriteset(set_vehicle_DUMMY_WAGON_LIQUID_3,                  "../OpenGFX/sprites/png/trains/tropic_railwagons.png") { tmpl_vehicle_DUMMY_TROPICAL_WAGON(19) }
+
+
+spriteset(set_vehicle_DUMMY_WAGON_BULK_YELLOW_EMPTY_2,          "../OpenGFX/sprites/png/trains/tropic_railwagons.png") { tmpl_vehicle_DUMMY_TROPICAL_WAGON(6) }
+spriteset(set_vehicle_DUMMY_WAGON_BULK_YELLOW_FULL_2,           "../OpenGFX/sprites/png/trains/tropic_railwagons.png") { tmpl_vehicle_DUMMY_TROPICAL_WAGON(11) }
+spritegroup spritegroup_vehicle_DUMMY_WAGON_BULK_YELLOW_2 {
+    loaded: [set_vehicle_DUMMY_WAGON_BULK_YELLOW_EMPTY_2, set_vehicle_DUMMY_WAGON_BULK_YELLOW_FULL_2];
+    loading: [set_vehicle_DUMMY_WAGON_BULK_YELLOW_EMPTY_2, set_vehicle_DUMMY_WAGON_BULK_YELLOW_FULL_2];
+}
+
+spriteset(set_vehicle_DUMMY_WAGON_BULK_GREEN_EMPTY,          "../OpenGFX/sprites/png/trains/tropic_railwagons.png") { tmpl_vehicle_DUMMY_TROPICAL_WAGON(9) }
+spriteset(set_vehicle_DUMMY_WAGON_BULK_GREEN_FULL,           "../OpenGFX/sprites/png/trains/tropic_railwagons.png") { tmpl_vehicle_DUMMY_TROPICAL_WAGON(18) }
+spritegroup spritegroup_vehicle_DUMMY_WAGON_BULK_GREEN {
+    loaded: [set_vehicle_DUMMY_WAGON_BULK_GREEN_EMPTY, set_vehicle_DUMMY_WAGON_BULK_GREEN_FULL];
+    loading: [set_vehicle_DUMMY_WAGON_BULK_GREEN_EMPTY, set_vehicle_DUMMY_WAGON_BULK_GREEN_FULL];
+}
+
+spriteset(set_vehicle_DUMMY_WAGON_BULK_ORANGE_EMPTY,          "../OpenGFX/sprites/png/trains/tropic_railwagons.png") { tmpl_vehicle_DUMMY_TROPICAL_WAGON(20) }
+spriteset(set_vehicle_DUMMY_WAGON_BULK_ORANGE_FULL,           "../OpenGFX/sprites/png/trains/tropic_railwagons.png") { tmpl_vehicle_DUMMY_TROPICAL_WAGON(21) }
+spritegroup spritegroup_vehicle_DUMMY_WAGON_BULK_ORANGE {
+    loaded: [set_vehicle_DUMMY_WAGON_BULK_ORANGE_EMPTY, set_vehicle_DUMMY_WAGON_BULK_ORANGE_FULL];
+    loading: [set_vehicle_DUMMY_WAGON_BULK_ORANGE_EMPTY, set_vehicle_DUMMY_WAGON_BULK_ORANGE_FULL];
+}
+
+spriteset(set_vehicle_DUMMY_WAGON_COVERED_5_LOADING,          "../OpenGFX/sprites/png/trains/tropic_railwagons.png") { tmpl_vehicle_DUMMY_TROPICAL_WAGON(22) }
+spriteset(set_vehicle_DUMMY_WAGON_COVERED_5_LOADED,           "../OpenGFX/sprites/png/trains/tropic_railwagons.png") { tmpl_vehicle_DUMMY_TROPICAL_WAGON(23) }
+spritegroup spritegroup_vehicle_DUMMY_WAGON_COVERED_5 {
+    loaded: [set_vehicle_DUMMY_WAGON_COVERED_5_LOADED, set_vehicle_DUMMY_WAGON_COVERED_5_LOADED];
+    loading: [set_vehicle_DUMMY_WAGON_COVERED_5_LOADING, set_vehicle_DUMMY_WAGON_COVERED_5_LOADING];
+}
+
+spriteset(set_vehicle_DUMMY_WAGON_COVERED_6,                  "../OpenGFX/sprites/png/trains/tropic_railwagons.png") { tmpl_vehicle_DUMMY_TROPICAL_WAGON(15) }
+
+spriteset(set_vehicle_DUMMY_WAGON_REFRIGERATED_2,             "../OpenGFX/sprites/png/trains/tropic_railwagons.png") { tmpl_vehicle_DUMMY_TROPICAL_WAGON(16) }
+
+spriteset(set_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD_EMPTY_2, "../OpenGFX/sprites/png/trains/tropic_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(7) }
+spriteset(set_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD_FULL_2,  "../OpenGFX/sprites/png/trains/tropic_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(12) }
+spritegroup spritegroup_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD_2 {
+    loaded: [set_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD_EMPTY_2, set_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD_FULL_2];
+    loading: [set_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD_EMPTY_2, set_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD_FULL_2];
+}
+
+// Toyland Wagons (7/8 length)
+template tmpl_vehicle_DUMMY_TOYLAND_WAGON(cargo) {
+    [0, 0 + (cargo * 20), 8, 18, -3, -11]
+    [16, 0 + (cargo * 20), 20, 16, -16, -7]
+    [48, 0 + (cargo * 20), 28, 12, -14, -8]
+    [96, 0 + (cargo * 20), 20, 16, -5, -8]
+}
+template tmpl_vehicle_DUMMY_TOYLAND_WAGON_purchase(cargo) {
+    [48, 0 + (cargo * 20), 28, 12, -16, -11]
+}
+
+spriteset(set_vehicle_DUMMY_WAGON_BULK_WHITE_EMPTY,          "../OpenGFX/sprites/png/trains/toyland_railwagons.png") { tmpl_vehicle_DUMMY_TOYLAND_WAGON(5) }
+spriteset(set_vehicle_DUMMY_WAGON_BULK_WHITE_FULL,           "../OpenGFX/sprites/png/trains/toyland_railwagons.png") { tmpl_vehicle_DUMMY_TOYLAND_WAGON(6) }
+spritegroup spritegroup_vehicle_DUMMY_WAGON_BULK_WHITE {
+    loaded: [set_vehicle_DUMMY_WAGON_BULK_WHITE_EMPTY, set_vehicle_DUMMY_WAGON_BULK_WHITE_FULL];
+    loading: [set_vehicle_DUMMY_WAGON_BULK_WHITE_EMPTY, set_vehicle_DUMMY_WAGON_BULK_WHITE_FULL];
+}
+
+spriteset(set_vehicle_DUMMY_WAGON_BULK_PINK_EMPTY,          "../OpenGFX/sprites/png/trains/toyland_railwagons.png") { tmpl_vehicle_DUMMY_TOYLAND_WAGON(7) }
+spriteset(set_vehicle_DUMMY_WAGON_BULK_PINK_FULL,           "../OpenGFX/sprites/png/trains/toyland_railwagons.png") { tmpl_vehicle_DUMMY_TOYLAND_WAGON(8) }
+spritegroup spritegroup_vehicle_DUMMY_WAGON_BULK_PINK {
+    loaded: [set_vehicle_DUMMY_WAGON_BULK_PINK_EMPTY, set_vehicle_DUMMY_WAGON_BULK_PINK_FULL];
+    loading: [set_vehicle_DUMMY_WAGON_BULK_PINK_EMPTY, set_vehicle_DUMMY_WAGON_BULK_PINK_FULL];
+}
+
+spriteset(set_vehicle_DUMMY_WAGON_COVERED_1_LOADING,          "../OpenGFX/sprites/png/trains/toyland_railwagons.png") { tmpl_vehicle_DUMMY_TOYLAND_WAGON(13) }
+spriteset(set_vehicle_DUMMY_WAGON_COVERED_1_LOADED,           "../OpenGFX/sprites/png/trains/toyland_railwagons.png") { tmpl_vehicle_DUMMY_TOYLAND_WAGON(14) }
+spritegroup spritegroup_vehicle_DUMMY_WAGON_COVERED_1 {
+    loaded: [set_vehicle_DUMMY_WAGON_COVERED_1_LOADED, set_vehicle_DUMMY_WAGON_COVERED_1_LOADED];
+    loading: [set_vehicle_DUMMY_WAGON_COVERED_1_LOADING, set_vehicle_DUMMY_WAGON_COVERED_1_LOADING];
+}
+
+spriteset(set_vehicle_DUMMY_WAGON_COVERED_2_LOADING,          "../OpenGFX/sprites/png/trains/toyland_railwagons.png") { tmpl_vehicle_DUMMY_TOYLAND_WAGON(15) }
+spriteset(set_vehicle_DUMMY_WAGON_COVERED_2_LOADED,           "../OpenGFX/sprites/png/trains/toyland_railwagons.png") { tmpl_vehicle_DUMMY_TOYLAND_WAGON(16) }
+spritegroup spritegroup_vehicle_DUMMY_WAGON_COVERED_2 {
+    loaded: [set_vehicle_DUMMY_WAGON_COVERED_2_LOADED, set_vehicle_DUMMY_WAGON_COVERED_2_LOADED];
+    loading: [set_vehicle_DUMMY_WAGON_COVERED_2_LOADING, set_vehicle_DUMMY_WAGON_COVERED_2_LOADING];
+}
+
+spriteset(set_vehicle_DUMMY_WAGON_PIECE_GOODS_GREEN_EMPTY, "../OpenGFX/sprites/png/trains/tropic_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(21) }
+spriteset(set_vehicle_DUMMY_WAGON_PIECE_GOODS_GREEN_FULL,  "../OpenGFX/sprites/png/trains/tropic_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(22) }
+spritegroup spritegroup_vehicle_DUMMY_WAGON_PIECE_GOODS_GREEN {
+    loaded: [set_vehicle_DUMMY_WAGON_PIECE_GOODS_GREEN_EMPTY, set_vehicle_DUMMY_WAGON_PIECE_GOODS_GREEN_FULL];
+    loading: [set_vehicle_DUMMY_WAGON_PIECE_GOODS_GREEN_EMPTY, set_vehicle_DUMMY_WAGON_PIECE_GOODS_GREEN_FULL];
+}
+
+
+
+
+random_switch(FEAT_TRAINS, SELF, sw_vehicle_DUMMY_WAGON_BULK_BLACK) {
+    1: spritegroup_vehicle_DUMMY_WAGON_BULK_BLACK_1;
+    2: spritegroup_vehicle_DUMMY_WAGON_BULK_BLACK_2;
+}
+
+random_switch(FEAT_TRAINS, SELF, sw_vehicle_DUMMY_WAGON_COVERED) {
+    1: spritegroup_vehicle_DUMMY_WAGON_COVERED_1;
+    2: set_vehicle_DUMMY_WAGON_COVERED_3;
+    3: spritegroup_vehicle_DUMMY_WAGON_COVERED_4;
+    4: spritegroup_vehicle_DUMMY_WAGON_COVERED_5;
+    5: set_vehicle_DUMMY_WAGON_COVERED_6;
+}
+
+random_switch(FEAT_TRAINS, SELF, sw_vehicle_DUMMY_WAGON_LIQUID) {
+    1: set_vehicle_DUMMY_WAGON_LIQUID_1;
+    2: set_vehicle_DUMMY_WAGON_LIQUID_2;
+    3: set_vehicle_DUMMY_WAGON_LIQUID_3;
+}
+
+random_switch(FEAT_TRAINS, SELF, sw_vehicle_DUMMY_WAGON_BULK_YELLOW) {
+    1: spritegroup_vehicle_DUMMY_WAGON_BULK_YELLOW_1;
+    2: spritegroup_vehicle_DUMMY_WAGON_BULK_YELLOW_2;
+}
+
+random_switch(FEAT_TRAINS, SELF, sw_vehicle_DUMMY_WAGON_REFRIGERATED) {
+    1: set_vehicle_DUMMY_WAGON_REFRIGERATED_1;
+    2: set_vehicle_DUMMY_WAGON_REFRIGERATED_2;
+}
+
+random_switch(FEAT_TRAINS, SELF, sw_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD) {
+    1: spritegroup_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD_1;
+    2: spritegroup_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD_2;
+}

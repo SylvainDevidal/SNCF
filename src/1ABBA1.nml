@@ -1,66 +1,6 @@
-/*
-template tmpl_vehicle_1ABBA1_8_views_front(livery) {
-    //xpos ypos xsize ysize xrel yrel
-    [3, 2 + livery * 56, 8, 24, -3, -23]
-    [13, 2 + livery * 56, 23, 20, -18, -7]
-    [38, 2 + livery * 56, 32, 15, -16, -11]
-    [72, 2 + livery * 56, 23, 20, -4, -10]
-    [97, 2 + livery * 56, 8, 24, -3, -14]
-    [107, 2 + livery * 56, 23, 20, -19, -9]
-    [132, 2 + livery * 56, 32, 15, -17, -11]
-    [166, 2 + livery * 56, 23, 20, -5, -8]
-}
-
-template tmpl_vehicle_1ABBA1_8_views_rear(livery) {
-    //xpos ypos xsize ysize xrel yrel
-    [3, 28 + livery * 56, 8, 24, -3, -15]
-    [13, 28 + livery * 56, 23, 20, -18, -6]
-    [38, 28 + livery * 56, 32, 15, -1, -11]
-    [72, 28 + livery * 56, 23, 20, -5, -11]
-    [97, 28 + livery * 56, 8, 24, -3, -7]
-    [107, 28 + livery * 56, 23, 20, -18, -10]
-    [132, 28 + livery * 56, 32, 15, -32, -11]
-    [166, 28 + livery * 56, 23, 20, -5, -7]
-}
-
-template tmpl_vehicle_1ABBA1_purchase() {
-    //xpos ypos xsize ysize xrel yrel
-    [142, 2, 32, 15, -29, -11]
-}
-
-spriteset(set_1ABBA1_graphics_front_0,  "gfx/1ABBA1.png") { tmpl_vehicle_1ABBA1_8_views_front(0) }
-spriteset(set_1ABBA1_graphics_rear_0,   "gfx/1ABBA1.png") { tmpl_vehicle_1ABBA1_8_views_rear(0) }
-spriteset(set_1ABBA1_graphics_front_1,  "gfx/1ABBA1.png") { tmpl_vehicle_1ABBA1_8_views_front(1) }
-spriteset(set_1ABBA1_graphics_rear_1,   "gfx/1ABBA1.png") { tmpl_vehicle_1ABBA1_8_views_rear(1) }
-spriteset(set_1ABBA1_graphics_front_2,  "gfx/1ABBA1.png") { tmpl_vehicle_1ABBA1_8_views_front(2) }
-spriteset(set_1ABBA1_graphics_rear_2,   "gfx/1ABBA1.png") { tmpl_vehicle_1ABBA1_8_views_rear(2) }
-spriteset(set_1ABBA1_graphics_purchase, "gfx/1ABBA1_mockup.png") { tmpl_vehicle_1ABBA1_purchase() }
-
-switch(FEAT_TRAINS, SELF, sw_1ABBA1_graphics_set_0, position_in_articulated_veh) {
-    0: set_1ABBA1_graphics_front_0;
-    1: set_1ABBA1_graphics_rear_0;
-}
-
-switch(FEAT_TRAINS, SELF, sw_1ABBA1_graphics_set_1, position_in_articulated_veh) {
-    0: set_1ABBA1_graphics_front_1;
-    1: set_1ABBA1_graphics_rear_1;
-}
-
-switch(FEAT_TRAINS, SELF, sw_1ABBA1_graphics_set_2, position_in_articulated_veh) {
-    0: set_1ABBA1_graphics_front_2;
-    1: set_1ABBA1_graphics_rear_2;
-}
-
-random_switch(FEAT_TRAINS, SELF, sw_1ABBA1_graphics) {
-    1: sw_1ABBA1_graphics_set_0;
-    2: sw_1ABBA1_graphics_set_1;
-    3: sw_1ABBA1_graphics_set_2;
-}
-*/
-
 switch(FEAT_TRAINS, SELF, sw_1ABBA1_graphics, position_in_articulated_veh) {
-    0: set_vehicle_DUMMY_4LEN_8_views;
-    1: set_vehicle_DUMMY_4LEN_8_views;
+    0: set_vehicle_DUMMY_4LEN;
+    1: set_vehicle_DUMMY_4LEN;
 }
 
 switch(FEAT_TRAINS, SELF, sw_1ABBA1_articulated_part, extra_callback_info1) {
@@ -71,7 +11,7 @@ switch(FEAT_TRAINS, SELF, sw_1ABBA1_articulated_part, extra_callback_info1) {
 item(FEAT_TRAINS, item_1ABBA1) {
     property {
         name:                         string(STR_SNCF_TRAIN_1ABBA1_NAME);
-        climates_available:           (param_allow_no_graphics && param_allow_electric) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_no_graphics < 2 && param_allow_electric) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1926, 1, 1);
         model_life:                   47;
         vehicle_life:                 45;
