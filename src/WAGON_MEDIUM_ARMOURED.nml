@@ -12,7 +12,7 @@ item(FEAT_TRAINS, item_WAGON_MEDIUM_ARMOURED) {
         cost_factor:                  250;
         running_cost_factor:          120;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
-        speed:                        110 km/h;
+        speed:                        130 km/h;
         misc_flags:                   bitmask();
         refit_cost:                   0;
         track_type:                   UNELECTRIFIED;

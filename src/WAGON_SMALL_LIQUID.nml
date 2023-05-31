@@ -3,7 +3,7 @@ item(FEAT_TRAINS, item_WAGON_SMALL_LIQUID) {
         name:                         string(STR_SNCF_WAGON_SMALL_LIQUID_NAME);
         climates_available:           (param_allow_no_graphics < 2 && param_allow_wagon) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1899, 1, 1);
-        model_life:                   40;
+        model_life:                   50;
         vehicle_life:                 25;
         reliability_decay:            20;
         refittable_cargo_classes:     bitmask(CC_LIQUID);

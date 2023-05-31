@@ -9,8 +9,8 @@ switch(FEAT_TRAINS, SELF, sw_240P_graphics_purchase, param_allow_no_graphics) {
 }
 
 switch(FEAT_TRAINS, SELF, sw_240P_graphics, position_in_articulated_veh) {
-    1: sw_240P_graphics_front;
-    2: set_vehicle_DUMMY_3LEN;
+    0: sw_240P_graphics_front;
+    1: set_vehicle_DUMMY_3LEN;
 }
 
 switch(FEAT_TRAINS, SELF, sw_240P_articulated_part, extra_callback_info1) {
