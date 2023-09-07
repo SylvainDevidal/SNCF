@@ -89,7 +89,7 @@ item(FEAT_TRAINS, item_T2000) {
         running_cost_factor:          65;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
         speed:                        225 km/h;
-        misc_flags:                   bitmask(TRAIN_FLAG_MU);
+        misc_flags:                   bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_AUTOREFIT);
         refit_cost:                   0;
         track_type:                   UNELECTRIFIED;
         ai_special_flag:              AI_FLAG_PASSENGER;

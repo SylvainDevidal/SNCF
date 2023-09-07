@@ -57,7 +57,7 @@ item(FEAT_TRAINS, item_CORAIL) {
         running_cost_factor:          100;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
         speed:                        200 km/h;
-        misc_flags:                   bitmask();
+        misc_flags:                   bitmask(TRAIN_FLAG_AUTOREFIT);
         refit_cost:                   0;
         track_type:                   UNELECTRIFIED;
         ai_special_flag:              AI_FLAG_PASSENGER;

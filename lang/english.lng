@@ -2,7 +2,7 @@
 
 # GRF description
 STR_GRF_NAME                                       :{TITLE} {VERSION}
-STR_GRF_DESC                                       :{ORANGE}{TITLE}SNCF{}{BLACK}At last! Graphics credits to {STR_GRAPHICS_CREDIT}{}Special thanks to Brickblock1 who helped a lot with the standardised railtype scheme support.
+STR_GRF_DESC                                       :{ORANGE}{TITLE}SNCF{}{BLACK}At last! Graphics credits to {CT_GRAPHICS_CREDIT}{}Special thanks to Brickblock1 who helped a lot with the standardised railtype scheme support.
 
 # Parameters
 STR_PARAM_NAME_INTRODUCTION_DATES                  :Historical introduction dates
@@ -56,208 +56,261 @@ ERR_Z21500_CANNOT_ATTACH_OTHER                     :Only other Z21500 can be att
 ERR_Z21500_TOO_LONG                                :A Z21500 consist can't have more than 3 units.
 
 # Steam
-STR_SNCF_TRAIN_231EGHK_NAME                        :{STR_TRAIN_231EGHK} ({STR_STEAM})
+STR_SNCF_TRAIN_231EGHK_NAME                        :{CT_TRAIN_231EGHK} (steam)
 STR_SNCF_TRAIN_231EGHK_ADDITIONAL_TEXT             :Graphics by Hovering Teacup
 
 # No consent
-STR_SNCF_TRAIN_040TA_NAME                          :{STR_TRAIN_040TA} ({STR_STEAM})
+STR_SNCF_TRAIN_040TA_NAME                          :{CT_TRAIN_040TA} (steam)
 STR_SNCF_TRAIN_040TA_ADDITIONAL_TEXT               :{ORANGE}No graphics
-STR_SNCF_TRAIN_131TB_NAME                          :{STR_TRAIN_131TB} ({STR_STEAM})
+STR_SNCF_TRAIN_131TB_NAME                          :{CT_TRAIN_131TB} (steam)
 STR_SNCF_TRAIN_131TB_ADDITIONAL_TEXT               :{ORANGE}No graphics
-STR_SNCF_TRAIN_140C_NAME                           :{STR_TRAIN_140C} ({STR_STEAM})
+STR_SNCF_TRAIN_140C_NAME                           :{CT_TRAIN_140C} (steam)
 STR_SNCF_TRAIN_140C_ADDITIONAL_TEXT                :{ORANGE}No graphics
-STR_SNCF_TRAIN_141TA_NAME                          :{STR_TRAIN_141TA} ({STR_STEAM})
+STR_SNCF_TRAIN_141TA_NAME                          :{CT_TRAIN_141TA} (steam)
 STR_SNCF_TRAIN_141TA_ADDITIONAL_TEXT               :{ORANGE}No graphics
-STR_SNCF_TRAIN_141R_NAME                           :{STR_TRAIN_141R} ({STR_STEAM})
+STR_SNCF_TRAIN_141R_NAME                           :{CT_TRAIN_141R} (steam)
 STR_SNCF_TRAIN_141R_ADDITIONAL_TEXT                :{ORANGE}No graphics
-STR_SNCF_TRAIN_150BP_NAME                          :{STR_TRAIN_150BP} ({STR_STEAM})
+STR_SNCF_TRAIN_150BP_NAME                          :{CT_TRAIN_150BP} (steam)
 STR_SNCF_TRAIN_150BP_ADDITIONAL_TEXT               :{ORANGE}No graphics
-STR_SNCF_TRAIN_151A_NAME                           :{STR_TRAIN_151A} ({STR_STEAM})
+STR_SNCF_TRAIN_151A_NAME                           :{CT_TRAIN_151A} (steam)
 STR_SNCF_TRAIN_151A_ADDITIONAL_TEXT                :{ORANGE}No graphics
-STR_SNCF_TRAIN_230BDG_NAME                         :{STR_TRAIN_230BDG} ({STR_STEAM})
+STR_SNCF_TRAIN_230BDG_NAME                         :{CT_TRAIN_230BDG} (steam)
 STR_SNCF_TRAIN_230BDG_ADDITIONAL_TEXT              :{ORANGE}No graphics
-STR_SNCF_TRAIN_231AC_NAME                          :{STR_TRAIN_231AC} ({STR_STEAM})
+STR_SNCF_TRAIN_231AC_NAME                          :{CT_TRAIN_231AC} (steam)
 STR_SNCF_TRAIN_231AC_ADDITIONAL_TEXT               :{ORANGE}No graphics
-STR_SNCF_TRAIN_231CHAPELON_NAME                    :{STR_TRAIN_231CHAPELON} ({STR_STEAM})
+STR_SNCF_TRAIN_231CHAPELON_NAME                    :{CT_TRAIN_231CHAPELON} (steam)
 STR_SNCF_TRAIN_231CHAPELON_ADDITIONAL_TEXT         :{ORANGE}No graphics
-STR_SNCF_TRAIN_232TC_NAME                          :{STR_TRAIN_232TC} ({STR_STEAM})
+STR_SNCF_TRAIN_232TC_NAME                          :{CT_TRAIN_232TC} (steam)
 STR_SNCF_TRAIN_232TC_ADDITIONAL_TEXT               :{ORANGE}No graphics
-STR_SNCF_TRAIN_240A_NAME                           :{STR_TRAIN_240A} ({STR_STEAM})
+STR_SNCF_TRAIN_240A_NAME                           :{CT_TRAIN_240A} (steam)
 STR_SNCF_TRAIN_240A_ADDITIONAL_TEXT                :{ORANGE}No graphics
-STR_SNCF_TRAIN_240P_NAME                           :{STR_TRAIN_240P} ({STR_STEAM})
+STR_SNCF_TRAIN_240P_NAME                           :{CT_TRAIN_240P} (steam)
 STR_SNCF_TRAIN_240P_ADDITIONAL_TEXT                :{ORANGE}No graphics
-STR_SNCF_TRAIN_241AC_NAME                          :{STR_TRAIN_241AC} ({STR_STEAM})
+STR_SNCF_TRAIN_241AC_NAME                          :{CT_TRAIN_241AC} (steam)
 STR_SNCF_TRAIN_241AC_ADDITIONAL_TEXT               :{ORANGE}No graphics
-STR_SNCF_TRAIN_241P_NAME                           :{STR_TRAIN_241P} ({STR_STEAM})
+STR_SNCF_TRAIN_241P_NAME                           :{CT_TRAIN_241P} (steam)
 STR_SNCF_TRAIN_241P_ADDITIONAL_TEXT                :{ORANGE}No graphics
-STR_SNCF_TRAIN_242A_NAME                           :{STR_TRAIN_242A} ({STR_STEAM})
+STR_SNCF_TRAIN_242A_NAME                           :{CT_TRAIN_242A} (steam)
 STR_SNCF_TRAIN_242A_ADDITIONAL_TEXT                :{ORANGE}No graphics
-STR_SNCF_TRAIN_242TA_NAME                          :{STR_TRAIN_242TA} ({STR_STEAM})
+STR_SNCF_TRAIN_242TA_NAME                          :{CT_TRAIN_242TA} (steam)
 STR_SNCF_TRAIN_242TA_ADDITIONAL_TEXT               :{ORANGE}No graphics
-STR_SNCF_TRAIN_BB61000_NAME                        :{STR_TRAIN_BB61000} ({STR_DIESEL})
+STR_SNCF_TRAIN_BB61000_NAME                        :{CT_TRAIN_BB61000} (diesel)
 STR_SNCF_TRAIN_BB61000_ADDITIONAL_TEXT             :{ORANGE}No graphics
 
 # Diesel
-STR_SNCF_TRAIN_262DB_NAME                          :{STR_TRAIN_262BD} ({STR_DIESEL})
+STR_SNCF_TRAIN_262DB_NAME                          :{CT_TRAIN_262BD} (diesel)
 STR_SNCF_TRAIN_262DB_ADDITIONAL_TEXT               :Graphics by Hovering Teacup
-STR_SNCF_TRAIN_62000_NAME                          :{STR_TRAIN_62000} ({STR_DIESEL})
+STR_SNCF_TRAIN_62000_NAME                          :{CT_TRAIN_62000} (diesel)
 STR_SNCF_TRAIN_62000_ADDITIONAL_TEXT               :Graphics by DanMacK
-STR_SNCF_TRAIN_CC65000_NAME                        :{STR_TRAIN_CC65000} ({STR_DIESEL})
+STR_SNCF_TRAIN_CC65000_NAME                        :{CT_TRAIN_CC65000} (diesel)
 STR_SNCF_TRAIN_CC65000_ADDITIONAL_TEXT             :Graphics by Hovering Teacup
-STR_SNCF_TRAIN_BB67000_NAME                        :{STR_TRAIN_BB67000} ({STR_DIESEL})
+STR_SNCF_TRAIN_BB67000_NAME                        :{CT_TRAIN_BB67000} (diesel)
 STR_SNCF_TRAIN_BB67000_ADDITIONAL_TEXT             :Graphics by Hovering Teacup, Snail
-STR_SNCF_TRAIN_T2000_NAME                          :{STR_TRAIN_T2000} ({STR_DIESEL})
+STR_SNCF_TRAIN_T2000_NAME                          :{CT_TRAIN_T2000} (diesel)
 STR_SNCF_TRAIN_T2000_ADDITIONAL_TEXT               :Graphics by Hovering Teacup
-STR_SNCF_TRAIN_X72500_NAME                         :{STR_TRAIN_X72500} ({STR_DIESEL})
+STR_SNCF_TRAIN_X72500_NAME                         :{CT_TRAIN_X72500} (diesel)
 STR_SNCF_TRAIN_X72500_ADDITIONAL_TEXT              :Graphics by The Irish
-STR_SNCF_TRAIN_X2000_NAME                          :{STR_TRAIN_X2000} ({STR_DIESEL})
+STR_SNCF_TRAIN_X2000_NAME                          :{CT_TRAIN_X2000} (diesel)
 STR_SNCF_TRAIN_X2000_ADDITIONAL_TEXT               :Graphics by Hovering Teacup
-STR_SNCF_TRAIN_TAR_NAME                            :{STR_TRAIN_TAR} ({STR_DIESEL})
+STR_SNCF_TRAIN_TAR_NAME                            :{CT_TRAIN_TAR} (diesel)
 STR_SNCF_TRAIN_TAR_ADDITIONAL_TEXT                 :Graphics by Hovering Teacup
 
 # No consent
 
 # Electric
-STR_SNCF_TRAIN_2C2_NAME                            :{STR_TRAIN_2C2} ({STR_ELEC_15DC})
+STR_SNCF_TRAIN_2C2_NAME                            :{CT_TRAIN_2C2} ({CT_ELEC_15DC})
 STR_SNCF_TRAIN_2C2_ADDITIONAL_TEXT                 :Graphics by Hovering Teacup
-STR_SNCF_TRAIN_2D2_5500_NAME                       :{STR_TRAIN_2D2_5500} ({STR_ELEC_15DC})
+STR_SNCF_TRAIN_2D2_5500_NAME                       :{CT_TRAIN_2D2_5500} ({CT_ELEC_15DC})
 STR_SNCF_TRAIN_2D2_5500_ADDITIONAL_TEXT            :Graphics by The Hovering Teacup
-STR_SNCF_TRAIN_BB9200_NAME                         :{STR_TRAIN_BB9200} ({STR_ELEC_15DC})
+STR_SNCF_TRAIN_BB9200_NAME                         :{CT_TRAIN_BB9200} ({CT_ELEC_15DC})
 STR_SNCF_TRAIN_BB9200_ADDITIONAL_TEXT              :Graphics by Emperor Jake, Hovering Teacup
-STR_SNCF_TRAIN_BB8500_NAME                         :{STR_TRAIN_BB8500} ({STR_ELEC_15DC})
+STR_SNCF_TRAIN_BB8500_NAME                         :{CT_TRAIN_BB8500} ({CT_ELEC_15DC})
 STR_SNCF_TRAIN_BB8500_ADDITIONAL_TEXT              :Graphics by Emperor Jake, Hovering Teacup
-STR_SNCF_TRAIN_CC7100_NAME                         :{STR_TRAIN_CC7100} ({STR_ELEC_15DC})
+STR_SNCF_TRAIN_CC7100_NAME                         :{CT_TRAIN_CC7100} ({CT_ELEC_15DC})
 STR_SNCF_TRAIN_CC7100_ADDITIONAL_TEXT              :Graphics by Emperor Jake, Hovering Teacup
-STR_SNCF_TRAIN_BB8100_NAME                         :{STR_TRAIN_BB8100} ({STR_ELEC_15DC})
+STR_SNCF_TRAIN_BB8100_NAME                         :{CT_TRAIN_BB8100} ({CT_ELEC_15DC})
 STR_SNCF_TRAIN_BB8100_ADDITIONAL_TEXT              :Graphics by Hovering Teacup, Snail
-STR_SNCF_TRAIN_BB12000_NAME                        :{STR_TRAIN_BB12000} ({STR_ELEC_25AC})
+STR_SNCF_TRAIN_BB12000_NAME                        :{CT_TRAIN_BB12000} ({CT_ELEC_25AC})
 STR_SNCF_TRAIN_BB12000_ADDITIONAL_TEXT             :Graphics by Emperor Jake, Hovering Teacup
-STR_SNCF_TRAIN_CC40100_NAME                        :{STR_TRAIN_CC40100} ({STR_ELEC_15DC03DC15AC25AC})
+STR_SNCF_TRAIN_CC40100_NAME                        :{CT_TRAIN_CC40100} ({CT_ELEC_15DC03DC15AC25AC})
 STR_SNCF_TRAIN_CC40100_ADDITIONAL_TEXT             :Power: 4850 kW on AC and 3670 kW on DC.{}Graphics by Emperor Jake, Hovering Teacup
-STR_SNCF_TRAIN_BB27000_NAME                        :{STR_TRAIN_BB27000} ({STR_ELEC_15DC25AC})
+STR_SNCF_TRAIN_BB27000_NAME                        :{CT_TRAIN_BB27000} ({CT_ELEC_15DC25AC})
 STR_SNCF_TRAIN_BB27000_ADDITIONAL_TEXT             :Graphics by Hovering Teacup, Snail
-STR_SNCF_TRAIN_Z8100_NAME                          :{STR_TRAIN_Z8100} ({STR_ELEC_15DC25AC})
+STR_SNCF_TRAIN_Z8100_NAME                          :{CT_TRAIN_Z8100} ({CT_ELEC_15DC25AC})
 STR_SNCF_TRAIN_Z8100_ADDITIONAL_TEXT               :Power: 2824 kW on AC and 2480 kW on DC.{}Graphics by The Irish
-STR_SNCF_TRAIN_Z7300_NAME                          :{STR_TRAIN_Z7300} ({STR_ELEC_15DC})
+STR_SNCF_TRAIN_Z7300_NAME                          :{CT_TRAIN_Z7300} ({CT_ELEC_15DC})
 STR_SNCF_TRAIN_Z7300_ADDITIONAL_TEXT               :Graphics by Jvassie
-STR_SNCF_TRAIN_Z21500_NAME                         :{STR_TRAIN_Z21500} ({STR_ELEC_15DC25AC})
+STR_SNCF_TRAIN_Z21500_NAME                         :{CT_TRAIN_Z21500} ({CT_ELEC_15DC25AC})
 STR_SNCF_TRAIN_Z21500_ADDITIONAL_TEXT              :Graphics by The Irish
-STR_SNCF_TRAIN_BB26000_NAME                        :{STR_TRAIN_BB26000} ({STR_ELEC_15DC25AC})
+STR_SNCF_TRAIN_BB26000_NAME                        :{CT_TRAIN_BB26000} ({CT_ELEC_15DC25AC})
 STR_SNCF_TRAIN_BB26000_ADDITIONAL_TEXT             :Graphics by acs121, Hovering Teacup, Snail
 
 # No consent
-STR_SNCF_TRAIN_BB1280_NAME                         :{STR_TRAIN_BB1280} ({STR_ELEC_15DC})
+STR_SNCF_TRAIN_BB1280_NAME                         :{CT_TRAIN_BB1280} ({CT_ELEC_15DC})
 STR_SNCF_TRAIN_BB1280_ADDITIONAL_TEXT              :{ORANGE}No graphics
-STR_SNCF_TRAIN_1ABBA1_NAME                         :{STR_TRAIN_1ABBA1} ({STR_ELEC_15DC})
+STR_SNCF_TRAIN_1ABBA1_NAME                         :{CT_TRAIN_1ABBA1} ({CT_ELEC_15DC})
 STR_SNCF_TRAIN_1ABBA1_ADDITIONAL_TEXT              :{ORANGE}No graphics
-STR_SNCF_TRAIN_2BB2_NAME                           :{STR_TRAIN_2BB2} ({STR_ELEC_15DC})
+STR_SNCF_TRAIN_2BB2_NAME                           :{CT_TRAIN_2BB2} ({CT_ELEC_15DC})
 STR_SNCF_TRAIN_2BB2_ADDITIONAL_TEXT                :{ORANGE}No graphics
-STR_SNCF_TRAIN_1CC1_NAME                           :{STR_TRAIN_1CC1} ({STR_ELEC_15DC})
+STR_SNCF_TRAIN_1CC1_NAME                           :{CT_TRAIN_1CC1} ({CT_ELEC_15DC})
 STR_SNCF_TRAIN_1CC1_ADDITIONAL_TEXT                :{ORANGE}No graphics
-STR_SNCF_TRAIN_2CC2_NAME                           :{STR_TRAIN_2CC2} ({STR_ELEC_15DC})
+STR_SNCF_TRAIN_2CC2_NAME                           :{CT_TRAIN_2CC2} ({CT_ELEC_15DC})
 STR_SNCF_TRAIN_2CC2_ADDITIONAL_TEXT                :{ORANGE}No graphics
+STR_SNCF_TRAIN_BB7200_NAME                         :{CT_TRAIN_BB7200} ({CT_ELEC_15DC})
+STR_SNCF_TRAIN_BB7200_ADDITIONAL_TEXT              :{ORANGE}No graphics
 
 # TGV
-STR_SNCF_TRAIN_TGV_PSE_NAME                        :{STR_TRAIN_TGV_PSE} ({STR_ELEC_15DC15AC25AC})
+STR_SNCF_TRAIN_TGV_PSE_NAME                        :{CT_TRAIN_TGV_PSE} ({CT_ELEC_15DC15AC25AC})
 STR_SNCF_TRAIN_TGV_PSE_ADDITIONAL_TEXT             :Power: 6450 kW on AC 25 kV, 2800 kW on AC 15 kV and 3100 kW on DC 1,5 kV.{}Graphics by Coalroads Artist
-STR_SNCF_TRAIN_TGV_ATLANTIQUE_NAME                 :{STR_TRAIN_TGV_ATLANTIQUE} ({STR_ELEC_15DC25AC})
+STR_SNCF_TRAIN_TGV_ATLANTIQUE_NAME                 :{CT_TRAIN_TGV_ATLANTIQUE} ({CT_ELEC_15DC25AC})
 STR_SNCF_TRAIN_TGV_ATLANTIQUE_ADDITIONAL_TEXT      :Power: 8800 kW on AC and 3880 kW on DC.{}Graphics by Coalroads Artist
-STR_SNCF_TRAIN_TGV_RESEAU_NAME                     :{STR_TRAIN_TGV_RESEAU} ({STR_ELEC_15DC03DC25AC})
+STR_SNCF_TRAIN_TGV_RESEAU_NAME                     :{CT_TRAIN_TGV_RESEAU} ({CT_ELEC_15DC03DC25AC})
 STR_SNCF_TRAIN_TGV_RESEAU_ADDITIONAL_TEXT          :Power: 8800 kW on AC and 3680 kW on DC.{}Graphics by Coalroads Artist
 
 # Wagon
-STR_SNCF_WAGON_OCEM_NAME                           :{STR_WAGON_OCEM} (passengers)
+STR_SNCF_WAGON_OCEM_NAME                           :{CT_WAGON_OCEM} (passengers)
 STR_SNCF_WAGON_OCEM_ADDITIONAL_TEXT                :Graphics by Hovering Teacup, Snail
-STR_SNCF_WAGON_OCEM_DOUBLE_NAME                    :{STR_WAGON_OCEM_DOUBLE} (passengers)
+STR_SNCF_WAGON_OCEM_DOUBLE_NAME                    :{CT_WAGON_OCEM_DOUBLE} (passengers)
 STR_SNCF_WAGON_OCEM_DOUBLE_ADDITIONAL_TEXT         :Graphics by Hovering Teacup, Snail
-STR_SNCF_WAGON_UIC_NAME                            :{STR_WAGON_UIC} (passengers)
+STR_SNCF_WAGON_UIC_NAME                            :{CT_WAGON_UIC} (passengers)
 STR_SNCF_WAGON_UIC_ADDITIONAL_TEXT                 :Graphics by Hovering Teacup, Snail
-STR_SNCF_WAGON_CORAIL_NAME                         :{STR_WAGON_CORAIL} (passengers)
+STR_SNCF_WAGON_CORAIL_NAME                         :{CT_WAGON_CORAIL} (passengers)
 STR_SNCF_WAGON_CORAIL_ADDITIONAL_TEXT              :Graphics by Hovering Teacup, Snail
-STR_SNCF_WAGON_FOURGON_NAME                        :{STR_WAGON_FOURGON} (mail)
+STR_SNCF_WAGON_FOURGON_NAME                        :{CT_WAGON_FOURGON} (mail)
 STR_SNCF_WAGON_FOURGON_ADDITIONAL_TEXT             :Graphics by Hovering Teacup, Snail
-STR_SNCF_WAGON_FOURGON_CORAIL_NAME                 :{STR_WAGON_FOURGON_CORAIL} (mail)
+STR_SNCF_WAGON_FOURGON_CORAIL_NAME                 :{CT_WAGON_FOURGON_CORAIL} (mail)
 STR_SNCF_WAGON_FOURGON_CORAIL_ADDITIONAL_TEXT      :Graphics by Hovering Teacup, Snail
 
-STR_SNCF_WAGON_SMALL_ARMOURED_NAME                 :{STR_WAGON_SMALL} (armoured)
+STR_SNCF_WAGON_SMALL_ARMOURED_NAME                 :{CT_WAGON_SMALL} (armoured)
 STR_SNCF_WAGON_SMALL_ARMOURED_ADDITIONAL_TEXT      :{ORANGE}No graphics
-STR_SNCF_WAGON_MEDIUM_ARMOURED_NAME                :{STR_WAGON_MEDIUM} (armoured)
+STR_SNCF_WAGON_MEDIUM_ARMOURED_NAME                :{CT_WAGON_MEDIUM} (armoured)
 STR_SNCF_WAGON_MEDIUM_ARMOURED_ADDITIONAL_TEXT     :{ORANGE}No graphics
-STR_SNCF_WAGON_LARGE_ARMOURED_NAME                 :{STR_WAGON_LARGE} (armoured)
+STR_SNCF_WAGON_LARGE_ARMOURED_NAME                 :{CT_WAGON_LARGE} (armoured)
 STR_SNCF_WAGON_LARGE_ARMOURED_ADDITIONAL_TEXT      :{ORANGE}No graphics
 
-STR_SNCF_WAGON_SMALL_BULK_NAME                     :{STR_WAGON_SMALL} (bulk)
+STR_SNCF_WAGON_SMALL_BULK_NAME                     :{CT_WAGON_SMALL} (bulk)
 STR_SNCF_WAGON_SMALL_BULK_ADDITIONAL_TEXT          :{ORANGE}No graphics
-STR_SNCF_WAGON_MEDIUM_BULK_NAME                    :{STR_WAGON_MEDIUM} (bulk)
+STR_SNCF_WAGON_MEDIUM_BULK_NAME                    :{CT_WAGON_MEDIUM} (bulk)
 STR_SNCF_WAGON_MEDIUM_BULK_ADDITIONAL_TEXT         :{ORANGE}No graphics
-STR_SNCF_WAGON_LARGE_BULK_NAME                     :{STR_WAGON_LARGE} (bulk)
+STR_SNCF_WAGON_LARGE_BULK_NAME                     :{CT_WAGON_LARGE} (bulk)
 STR_SNCF_WAGON_LARGE_BULK_ADDITIONAL_TEXT          :{ORANGE}No graphics
 
-STR_SNCF_WAGON_SMALL_COVERED_NAME                  :{STR_WAGON_SMALL} (covered)
+STR_SNCF_WAGON_SMALL_COVERED_NAME                  :{CT_WAGON_SMALL} covered
 STR_SNCF_WAGON_SMALL_COVERED_ADDITIONAL_TEXT       :{ORANGE}No graphics
-STR_SNCF_WAGON_MEDIUM_COVERED_NAME                 :{STR_WAGON_MEDIUM} (covered)
+STR_SNCF_WAGON_MEDIUM_COVERED_NAME                 :{CT_WAGON_MEDIUM} covered
 STR_SNCF_WAGON_MEDIUM_COVERED_ADDITIONAL_TEXT      :{ORANGE}No graphics
-STR_SNCF_WAGON_LARGE_COVERED_NAME                  :{STR_WAGON_LARGE} (covered)
+STR_SNCF_WAGON_LARGE_COVERED_NAME                  :{CT_WAGON_LARGE} covered
 STR_SNCF_WAGON_LARGE_COVERED_ADDITIONAL_TEXT       :{ORANGE}No graphics
 
-STR_SNCF_WAGON_SMALL_EXPRESS_NAME                  :{STR_WAGON_SMALL} (express)
+STR_SNCF_WAGON_SMALL_EXPRESS_NAME                  :{CT_WAGON_SMALL} (express)
 STR_SNCF_WAGON_SMALL_EXPRESS_ADDITIONAL_TEXT       :{ORANGE}No graphics
-STR_SNCF_WAGON_MEDIUM_EXPRESS_NAME                 :{STR_WAGON_MEDIUM} (express)
+STR_SNCF_WAGON_MEDIUM_EXPRESS_NAME                 :{CT_WAGON_MEDIUM} (express)
 STR_SNCF_WAGON_MEDIUM_EXPRESS_ADDITIONAL_TEXT      :{ORANGE}No graphics
-STR_SNCF_WAGON_LARGE_EXPRESS_NAME                  :{STR_WAGON_LARGE} (express)
+STR_SNCF_WAGON_LARGE_EXPRESS_NAME                  :{CT_WAGON_LARGE} (express)
 STR_SNCF_WAGON_LARGE_EXPRESS_ADDITIONAL_TEXT       :{ORANGE}No graphics
 
-STR_SNCF_WAGON_SMALL_HAZARDOUS_NAME                :{STR_WAGON_SMALL} (hazardous)
+STR_SNCF_WAGON_SMALL_HAZARDOUS_NAME                :{CT_WAGON_SMALL} (hazardous)
 STR_SNCF_WAGON_SMALL_HAZARDOUS_ADDITIONAL_TEXT     :{ORANGE}No graphics
-STR_SNCF_WAGON_MEDIUM_HAZARDOUS_NAME               :{STR_WAGON_MEDIUM} (hazardous)
+STR_SNCF_WAGON_MEDIUM_HAZARDOUS_NAME               :{CT_WAGON_MEDIUM} (hazardous)
 STR_SNCF_WAGON_MEDIUM_HAZARDOUS_ADDITIONAL_TEXT    :{ORANGE}No graphics
-STR_SNCF_WAGON_LARGE_HAZARDOUS_NAME                :{STR_WAGON_LARGE} (hazardous)
+STR_SNCF_WAGON_LARGE_HAZARDOUS_NAME                :{CT_WAGON_LARGE} (hazardous)
 STR_SNCF_WAGON_LARGE_HAZARDOUS_ADDITIONAL_TEXT     :{ORANGE}No graphics
 
-STR_SNCF_WAGON_SMALL_LIQUID_NAME                   :{STR_WAGON_SMALL} (liquid)
+STR_SNCF_WAGON_SMALL_LIQUID_NAME                   :{CT_WAGON_SMALL} (liquid)
 STR_SNCF_WAGON_SMALL_LIQUID_ADDITIONAL_TEXT        :{ORANGE}No graphics
-STR_SNCF_WAGON_MEDIUM_LIQUID_NAME                  :{STR_WAGON_MEDIUM} (liquid)
+STR_SNCF_WAGON_MEDIUM_LIQUID_NAME                  :{CT_WAGON_MEDIUM} (liquid)
 STR_SNCF_WAGON_MEDIUM_LIQUID_ADDITIONAL_TEXT       :{ORANGE}No graphics
-STR_SNCF_WAGON_LARGE_LIQUID_NAME                   :{STR_WAGON_LARGE} (liquid)
+STR_SNCF_WAGON_LARGE_LIQUID_NAME                   :{CT_WAGON_LARGE} (liquid)
 STR_SNCF_WAGON_LARGE_LIQUID_ADDITIONAL_TEXT        :{ORANGE}No graphics
 
-STR_SNCF_WAGON_SMALL_NEO_BULK_NAME                 :{STR_WAGON_SMALL} (neo bulk)
+STR_SNCF_WAGON_SMALL_NEO_BULK_NAME                 :{CT_WAGON_SMALL} (neo bulk)
 STR_SNCF_WAGON_SMALL_NEO_BULK_ADDITIONAL_TEXT      :{ORANGE}No graphics
-STR_SNCF_WAGON_MEDIUM_NEO_BULK_NAME                :{STR_WAGON_MEDIUM} (neo bulk)
+STR_SNCF_WAGON_MEDIUM_NEO_BULK_NAME                :{CT_WAGON_MEDIUM} (neo bulk)
 STR_SNCF_WAGON_MEDIUM_NEO_BULK_ADDITIONAL_TEXT     :{ORANGE}No graphics
-STR_SNCF_WAGON_LARGE_NEO_BULK_NAME                 :{STR_WAGON_LARGE} (neo bulk)
+STR_SNCF_WAGON_LARGE_NEO_BULK_NAME                 :{CT_WAGON_LARGE} (neo bulk)
 STR_SNCF_WAGON_LARGE_NEO_BULK_ADDITIONAL_TEXT      :{ORANGE}No graphics
 
-STR_SNCF_WAGON_SMALL_NON_POURABLE_NAME             :{STR_WAGON_SMALL} (non pourable)
+STR_SNCF_WAGON_SMALL_NON_POURABLE_NAME             :{CT_WAGON_SMALL} (non pourable)
 STR_SNCF_WAGON_SMALL_NON_POURABLE_ADDITIONAL_TEXT  :{ORANGE}No graphics
-STR_SNCF_WAGON_MEDIUM_NON_POURABLE_NAME            :{STR_WAGON_MEDIUM} (non pourable)
+STR_SNCF_WAGON_MEDIUM_NON_POURABLE_NAME            :{CT_WAGON_MEDIUM} (non pourable)
 STR_SNCF_WAGON_MEDIUM_NON_POURABLE_ADDITIONAL_TEXT :{ORANGE}No graphics
-STR_SNCF_WAGON_LARGE_NON_POURABLE_NAME             :{STR_WAGON_LARGE} (non pourable)
+STR_SNCF_WAGON_LARGE_NON_POURABLE_NAME             :{CT_WAGON_LARGE} (non pourable)
 STR_SNCF_WAGON_LARGE_NON_POURABLE_ADDITIONAL_TEXT  :{ORANGE}No graphics
 
-STR_SNCF_WAGON_SMALL_POWDERIZED_NAME               :{STR_WAGON_SMALL} (powderized)
+STR_SNCF_WAGON_SMALL_POWDERIZED_NAME               :{CT_WAGON_SMALL} (powderized)
 STR_SNCF_WAGON_SMALL_POWDERIZED_ADDITIONAL_TEXT    :{ORANGE}No graphics
-STR_SNCF_WAGON_MEDIUM_POWDERIZED_NAME              :{STR_WAGON_MEDIUM} (powderized)
+STR_SNCF_WAGON_MEDIUM_POWDERIZED_NAME              :{CT_WAGON_MEDIUM} (powderized)
 STR_SNCF_WAGON_MEDIUM_POWDERIZED_ADDITIONAL_TEXT   :{ORANGE}No graphics
-STR_SNCF_WAGON_LARGE_POWDERIZED_NAME               :{STR_WAGON_LARGE} (powderized)
+STR_SNCF_WAGON_LARGE_POWDERIZED_NAME               :{CT_WAGON_LARGE} (powderized)
 STR_SNCF_WAGON_LARGE_POWDERIZED_ADDITIONAL_TEXT    :{ORANGE}No graphics
 
-STR_SNCF_WAGON_SMALL_PIECE_GOODS_NAME              :{STR_WAGON_SMALL} (piece goods)
+STR_SNCF_WAGON_SMALL_PIECE_GOODS_NAME              :{CT_WAGON_SMALL} (piece goods)
 STR_SNCF_WAGON_SMALL_PIECE_GOODS_ADDITIONAL_TEXT   :{ORANGE}No graphics
-STR_SNCF_WAGON_MEDIUM_PIECE_GOODS_NAME             :{STR_WAGON_MEDIUM} (piece goods)
+STR_SNCF_WAGON_MEDIUM_PIECE_GOODS_NAME             :{CT_WAGON_MEDIUM} (piece goods)
 STR_SNCF_WAGON_MEDIUM_PIECE_GOODS_ADDITIONAL_TEXT  :{ORANGE}No graphics
-STR_SNCF_WAGON_LARGE_PIECE_GOODS_NAME              :{STR_WAGON_LARGE} (piece goods)
+STR_SNCF_WAGON_LARGE_PIECE_GOODS_NAME              :{CT_WAGON_LARGE} (piece goods)
 STR_SNCF_WAGON_LARGE_PIECE_GOODS_ADDITIONAL_TEXT   :{ORANGE}No graphics
 
-STR_SNCF_WAGON_SMALL_REFRIGERATED_NAME             :{STR_WAGON_SMALL} (refrigerated)
+STR_SNCF_WAGON_SMALL_REFRIGERATED_NAME             :{CT_WAGON_SMALL} (refrigerated)
 STR_SNCF_WAGON_SMALL_REFRIGERATED_ADDITIONAL_TEXT  :{ORANGE}No graphics
-STR_SNCF_WAGON_MEDIUM_REFRIGERATED_NAME            :{STR_WAGON_MEDIUM} (refrigerated)
+STR_SNCF_WAGON_MEDIUM_REFRIGERATED_NAME            :{CT_WAGON_MEDIUM} (refrigerated)
 STR_SNCF_WAGON_MEDIUM_REFRIGERATED_ADDITIONAL_TEXT :{ORANGE}No graphics
-STR_SNCF_WAGON_LARGE_REFRIGERATED_NAME             :{STR_WAGON_LARGE} (refrigerated)
+STR_SNCF_WAGON_LARGE_REFRIGERATED_NAME             :{CT_WAGON_LARGE} (refrigerated)
 STR_SNCF_WAGON_LARGE_REFRIGERATED_ADDITIONAL_TEXT  :{ORANGE}No graphics
 
-STR_SNCF_WAGON_SMALL_PASSENGERS_NAME               :{STR_WAGON_SMALL} (passengers)
+STR_SNCF_WAGON_SMALL_PASSENGERS_NAME               :{CT_WAGON_SMALL} (passengers)
 STR_SNCF_WAGON_SMALL_PASSENGERS_ADDITIONAL_TEXT    :{ORANGE}No graphics
 
-STR_SNCF_WAGON_SMALL_MAIL_NAME                     :{STR_WAGON_SMALL} (mail)
+STR_SNCF_WAGON_SMALL_MAIL_NAME                     :{CT_WAGON_SMALL} (mail)
 STR_SNCF_WAGON_SMALL_MAIL_ADDITIONAL_TEXT          :{ORANGE}No graphics
+
+STR_SNCF_WAGON_ETAT1_bulk_ls_NAME                  :{CT_WAGON_ETAT1} bulk (low speed)
+STR_SNCF_WAGON_ETAT1_bulk_hs_NAME                  :{CT_WAGON_ETAT1} bulk (high speed})
+STR_SNCF_WAGON_ETAT1_bulk_ADDITIONAL_TEXT          :{ORANGE}No graphics
+STR_SNCF_WAGON_ETAT2_bulk_ls_NAME                  :{CT_WAGON_ETAT2} bulk (low speed)
+STR_SNCF_WAGON_ETAT2_bulk_hs_NAME                  :{CT_WAGON_ETAT2} bulk (high speed)
+STR_SNCF_WAGON_ETAT2_bulk_ADDITIONAL_TEXT          :{ORANGE}No graphics
+STR_SNCF_WAGON_OCEM19_bulk_NAME                    :{CT_WAGON_OCEM19} bulk
+STR_SNCF_WAGON_OCEM19_bulk_ADDITIONAL_TEXT         :{ORANGE}No graphics
+STR_SNCF_WAGON_OCEM29_bulk_NAME                    :{CT_WAGON_OCEM29} bulk
+STR_SNCF_WAGON_OCEM29_bulk_ADDITIONAL_TEXT         :{ORANGE}No graphics
+STR_SNCF_WAGON_USA_bulk_NAME                       :{CT_WAGON_USA} bulk
+STR_SNCF_WAGON_USA_bulk_ADDITIONAL_TEXT            :{ORANGE}No graphics
+STR_SNCF_WAGON_UICORE_bulk_NAME                    :{CT_WAGON_UICORE} bulk
+STR_SNCF_WAGON_UICORE_bulk_ADDITIONAL_TEXT         :{ORANGE}No graphics
+STR_SNCF_WAGON_SNCF_bulk_NAME                      :{CT_WAGON_SNCF} bulk
+STR_SNCF_WAGON_SNCF_bulk_ADDITIONAL_TEXT           :{ORANGE}No graphics
+
+STR_SNCF_WAGON_ETAT1_covered_ls_NAME               :{CT_WAGON_ETAT1} covered (low speed)
+STR_SNCF_WAGON_ETAT1_covered_hs_NAME               :{CT_WAGON_ETAT1} covered (high speed)
+STR_SNCF_WAGON_ETAT1_covered_ADDITIONAL_TEXT       :{ORANGE}No graphics
+STR_SNCF_WAGON_ETAT2_covered_ls_NAME               :{CT_WAGON_ETAT2} covered (low speed)
+STR_SNCF_WAGON_ETAT2_covered_hs_NAME               :{CT_WAGON_ETAT2} covered (high speed)
+STR_SNCF_WAGON_ETAT2_covered_ADDITIONAL_TEXT       :{ORANGE}No graphics
+STR_SNCF_WAGON_OCEM19_covered_NAME                 :{CT_WAGON_OCEM19} covered
+STR_SNCF_WAGON_OCEM19_covered_ADDITIONAL_TEXT      :{ORANGE}No graphics
+STR_SNCF_WAGON_OCEM29_covered_NAME                 :{CT_WAGON_OCEM29} covered
+STR_SNCF_WAGON_OCEM29_covered_ADDITIONAL_TEXT      :{ORANGE}No graphics
+STR_SNCF_WAGON_USA_covered_NAME                    :{CT_WAGON_USA} covered
+STR_SNCF_WAGON_USA_covered_ADDITIONAL_TEXT         :{ORANGE}No graphics
+STR_SNCF_WAGON_UICORE_covered_NAME                 :{CT_WAGON_UICORE} covered
+STR_SNCF_WAGON_UICORE_covered_ADDITIONAL_TEXT      :{ORANGE}No graphics
+STR_SNCF_WAGON_SNCF_covered_NAME                   :{CT_WAGON_SNCF} covered
+STR_SNCF_WAGON_SNCF_covered_ADDITIONAL_TEXT        :{ORANGE}No graphics
+
+STR_SNCF_WAGON_ETAT1_flat_ls_NAME                  :{CT_WAGON_ETAT1} flat (low speed)
+STR_SNCF_WAGON_ETAT1_flat_hs_NAME                  :{CT_WAGON_ETAT1} flat (high speed)
+STR_SNCF_WAGON_ETAT1_flat_ADDITIONAL_TEXT          :{ORANGE}No graphics
+STR_SNCF_WAGON_ETAT2_flat_ls_NAME                  :{CT_WAGON_ETAT2} flat (low speed)
+STR_SNCF_WAGON_ETAT2_flat_hs_NAME                  :{CT_WAGON_ETAT2} flat (high speed)
+STR_SNCF_WAGON_ETAT2_flat_ADDITIONAL_TEXT          :{ORANGE}No graphics
+STR_SNCF_WAGON_OCEM19_flat_NAME                    :{CT_WAGON_OCEM19} flat
+STR_SNCF_WAGON_OCEM19_flat_ADDITIONAL_TEXT         :{ORANGE}No graphics
+STR_SNCF_WAGON_OCEM29_flat_NAME                    :{CT_WAGON_OCEM29} flat
+STR_SNCF_WAGON_OCEM29_flat_ADDITIONAL_TEXT         :{ORANGE}No graphics
+STR_SNCF_WAGON_USA_flat_NAME                       :{CT_WAGON_USA} flat
+STR_SNCF_WAGON_USA_flat_ADDITIONAL_TEXT            :{ORANGE}No graphics
+STR_SNCF_WAGON_UICORE_flat_NAME                    :{CT_WAGON_UICORE} flat
+STR_SNCF_WAGON_UICORE_flat_ADDITIONAL_TEXT         :{ORANGE}No graphics
+STR_SNCF_WAGON_SNCF_flat_NAME                      :{CT_WAGON_SNCF} flat
+STR_SNCF_WAGON_SNCF_flat_ADDITIONAL_TEXT           :{ORANGE}No graphics

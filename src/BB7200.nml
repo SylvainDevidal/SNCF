@@ -1,0 +1,50 @@
+switch(FEAT_TRAINS, SELF, sw_BB7200_graphics_front, param_allow_no_graphics) {
+    0: set_vehicle_DUMMY_SH40;
+    1: set_vehicle_DUMMY_7LEN;
+}
+
+switch(FEAT_TRAINS, SELF, sw_BB7200_graphics_purchase, param_allow_no_graphics) {
+    0: set_vehicle_DUMMY_purchase_SH40;
+    1: set_vehicle_DUMMY_purchase;
+}
+
+item(FEAT_TRAINS, item_BB7200) {
+    property {
+        name:                         string(STR_SNCF_TRAIN_BB7200_NAME);
+        climates_available:           (param_allow_no_graphics < 2 && param_allow_electric) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        introduction_date:            date(1976, 1, 1);
+        model_life:                   45;
+        vehicle_life:                 40;
+        reliability_decay:            21;
+        refittable_cargo_classes:     NO_CARGO_CLASS;
+        non_refittable_cargo_classes: ALL_CARGO_CLASSES;
+        loading_speed:                LOADING_NONE; 
+        cost_factor:                  60;
+        running_cost_factor:          90;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        200 km/h;
+        misc_flags:                   bitmask();
+        refit_cost:                   0;
+        track_type:                   (!param_allow_voltage) ? ELEC : DC15;
+        ai_special_flag:              AI_FLAG_PASSENGER | AI_FLAG_CARGO;
+        power:                        4040 hp;
+        running_cost_base:            RUNNING_COST_ELECTRIC;
+        dual_headed:                  0;
+        cargo_capacity:               0;
+        weight:                       84 ton;
+        ai_engine_rank:               0;
+        engine_class:                 ENGINE_CLASS_ELECTRIC;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0.3;
+        air_drag_coefficient:         0.06;
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+        visual_effect_and_powered:    visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, -4, DISABLE_WAGON_POWER);
+    }
+    graphics {
+        default:                      sw_BB7200_graphics_front;
+        purchase:                     sw_BB7200_graphics_purchase;
+        additional_text:              return string(STR_SNCF_TRAIN_BB7200_ADDITIONAL_TEXT);
+        length:                       return (param_allow_no_graphics == 0) ? 8 : 7;
+    }
+}

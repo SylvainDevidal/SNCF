@@ -94,7 +94,7 @@ item(FEAT_TRAINS, item_Z8100) {
         running_cost_factor:          131;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
         speed:                        140 km/h;
-        misc_flags:                   bitmask(TRAIN_FLAG_MU);
+        misc_flags:                   bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_AUTOREFIT);
         refit_cost:                   0;
         track_type:                   (!param_allow_voltage) ? ELEC : AC25DC15;
         ai_special_flag:              AI_FLAG_PASSENGER;

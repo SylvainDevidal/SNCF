@@ -1,86 +1,94 @@
-VERSION                   :0.0.5 alpha
+VERSION                   :0.0.6 alpha
 TITLE                     :SNCF - French Trainset
 
 # Rail type
-STR_STEAM                 :Steam
-STR_DIESEL                :Diesel
-STR_ELEC_15DC             :1,5 kV DC
-STR_ELEC_3DC              :3 kV DC
-STR_ELEC_15AC             :15 kV AC
-STR_ELEC_25AC             :25 kV AC
-STR_ELEC_15DC25AC         :1,5 kV DC / 25 kV AC
-STR_ELEC_15DC03DC25AC     :1,5 kV DC / 3 kV DC / 25 kV AC
-STR_ELEC_15DC15AC25AC     :1,5 kV DC / 15 kV AC / 25 kV AC
-STR_ELEC_15DC03DC15AC25AC :1,5 kV DC / 3 kV DC / 15 kV AC / 25 kV AC
+CT_STEAM                 :Steam
+CT_DIESEL                :Diesel
+CT_ELEC_15DC             :1,5 kV DC
+CT_ELEC_3DC              :3 kV DC
+CT_ELEC_15AC             :15 kV AC
+CT_ELEC_25AC             :25 kV AC
+CT_ELEC_15DC25AC         :1,5 kV DC / 25 kV AC
+CT_ELEC_15DC03DC25AC     :1,5 kV DC / 3 kV DC / 25 kV AC
+CT_ELEC_15DC15AC25AC     :1,5 kV DC / 15 kV AC / 25 kV AC
+CT_ELEC_15DC03DC15AC25AC :1,5 kV DC / 3 kV DC / 15 kV AC / 25 kV AC
 
 # Steam
-STR_TRAIN_040TA           :040TA
-STR_TRAIN_131TB           :131TB
-STR_TRAIN_140C            :140C
-STR_TRAIN_141TA           :141TA
-STR_TRAIN_141R            :141R
-STR_TRAIN_150BP           :150BP
-STR_TRAIN_151A            :151A
-STR_TRAIN_230BDG          :230BDG
-STR_TRAIN_231AC           :231AC
-STR_TRAIN_231EGHK         :231EGHK
-STR_TRAIN_231CHAPELON     :231 Chapelon Garratt
-STR_TRAIN_232TC           :232TC
-STR_TRAIN_240A            :240A
-STR_TRAIN_240P            :240P
-STR_TRAIN_241AC           :241AC
-STR_TRAIN_241P            :241P
-STR_TRAIN_242A            :242A
-STR_TRAIN_242TA           :242TA
+CT_TRAIN_040TA           :040TA
+CT_TRAIN_131TB           :131TB
+CT_TRAIN_140C            :140C
+CT_TRAIN_141TA           :141TA
+CT_TRAIN_141R            :141R
+CT_TRAIN_150BP           :150BP
+CT_TRAIN_151A            :151A
+CT_TRAIN_230BDG          :230BDG
+CT_TRAIN_231AC           :231AC
+CT_TRAIN_231EGHK         :231EGHK
+CT_TRAIN_231CHAPELON     :231 Chapelon Garratt
+CT_TRAIN_232TC           :232TC
+CT_TRAIN_240A            :240A
+CT_TRAIN_240P            :240P
+CT_TRAIN_241AC           :241AC
+CT_TRAIN_241P            :241P
+CT_TRAIN_242A            :242A
+CT_TRAIN_242TA           :242TA
 
 # Diesel
-STR_TRAIN_262BD           :262BD
-STR_TRAIN_62000           :A1A A1A 62000
-STR_TRAIN_CC65000         :CC65000
-STR_TRAIN_BB67000         :BB67000
-STR_TRAIN_X2000           :X2000 Iroquois
-STR_TRAIN_TAR             :TAR
-STR_TRAIN_T2000           :T2000 (RTG)
-STR_TRAIN_X72500          :X72500
-STR_TRAIN_BB61000         :BB61000
+CT_TRAIN_262BD           :262BD
+CT_TRAIN_62000           :A1A A1A 62000
+CT_TRAIN_CC65000         :CC65000
+CT_TRAIN_BB67000         :BB67000
+CT_TRAIN_X2000           :X2000 « Iroquois »
+CT_TRAIN_TAR             :TAR
+CT_TRAIN_T2000           :T2000 « RTG »
+CT_TRAIN_X72500          :X72500 « X TER »
+CT_TRAIN_BB61000         :BB61000
 
 
 # Electric
-STR_TRAIN_BB1280          :BB1280
-STR_TRAIN_2C2             :2C2 3100
-STR_TRAIN_1ABBA1          :1ABBA1 3600
-STR_TRAIN_1CC1            :1CC1 3800
-STR_TRAIN_2BB2            :2BB2 3300
-STR_TRAIN_2CC2            :2CC2 3400
-STR_TRAIN_2D2_5500        :2D2 5500
-STR_TRAIN_CC7100          :CC7100
-STR_TRAIN_BB8100          :BB8100
-STR_TRAIN_BB12000         :BB12000
-STR_TRAIN_BB26000         :BB26000
-STR_TRAIN_BB27000         :BB27000
-STR_TRAIN_BB9200          :BB9200
-STR_TRAIN_BB8500          :BB8500
-STR_TRAIN_CC40100         :CC40100
-STR_TRAIN_Z8100           :Z8100
-STR_TRAIN_Z7300           :Z7300
-STR_TRAIN_Z21500          :Z21500
+CT_TRAIN_BB1280          :BB1280
+CT_TRAIN_2C2             :2C2 3100
+CT_TRAIN_1ABBA1          :1ABBA1 3600
+CT_TRAIN_1CC1            :1CC1 3800
+CT_TRAIN_2BB2            :2BB2 3300
+CT_TRAIN_2CC2            :2CC2 3400
+CT_TRAIN_2D2_5500        :2D2 5500
+CT_TRAIN_CC7100          :CC7100
+CT_TRAIN_BB8100          :BB8100
+CT_TRAIN_BB12000         :BB12000
+CT_TRAIN_BB26000         :BB26000 « Sybic »
+CT_TRAIN_BB27000         :BB27000
+CT_TRAIN_BB9200          :BB9200
+CT_TRAIN_BB8500          :BB8500 « Danseuse »
+CT_TRAIN_CC40100         :CC40100 « Nez Cassé
+CT_TRAIN_Z8100           :Z8100
+CT_TRAIN_Z7300           :Z7300 « Z2 »
+CT_TRAIN_Z21500          :Z21500 « XZ TER »
+CT_TRAIN_BB7200          :BB7200 « Nez Cassé »
 
 #TGV
-STR_TRAIN_TGV_PSE         :TGV Sud-Est
-STR_TRAIN_TGV_ATLANTIQUE  :TGV Atlantique
-STR_TRAIN_TGV_RESEAU      :TGV Réseau
+CT_TRAIN_TGV_PSE         :TGV Sud-Est
+CT_TRAIN_TGV_ATLANTIQUE  :TGV Atlantique
+CT_TRAIN_TGV_RESEAU      :TGV Réseau
 
 # Wagons
-STR_WAGON_OCEM            :Voiture OCEM « Talbot »
-STR_WAGON_OCEM_DOUBLE     :Voiture OCEM Double Deck
-STR_WAGON_UIC             :Voiture UIC-Y
-STR_WAGON_CORAIL          :Voiture Corail
-STR_WAGON_FOURGON         :Voiture Fourgon
-STR_WAGON_FOURGON_CORAIL  :Voiture Fourgon Corail
+CT_WAGON_OCEM            :Voiture OCEM « Talbot »
+CT_WAGON_OCEM_DOUBLE     :Voiture OCEM Double Deck
+CT_WAGON_UIC             :Voiture UIC-Y
+CT_WAGON_CORAIL          :Voiture Corail
+CT_WAGON_FOURGON         :Voiture Fourgon
+CT_WAGON_FOURGON_CORAIL  :Voiture Fourgon Corail
 
-STR_WAGON_SMALL           :Small wagon
-STR_WAGON_MEDIUM          :Medium wagon
-STR_WAGON_LARGE           :Large wagon
+CT_WAGON_ETAT1           :Wagon Etat 1
+CT_WAGON_ETAT2           :Wagon Etat 2
+CT_WAGON_OCEM19          :Wagon OCEM 19
+CT_WAGON_OCEM29          :Wagon OCEM 29
+CT_WAGON_USA             :Wagon Standard USA
+CT_WAGON_UICORE          :Wagon UIC-ORE
+CT_WAGON_SNCF            :Wagon Standard SNCF
+CT_WAGON_SMALL           :Small wagon
+CT_WAGON_MEDIUM          :Medium wagon
+CT_WAGON_LARGE           :Large wagon
 
 # Stuff
-STR_GRAPHICS_CREDIT       :Emperor Jake, The Irish, Hovering Teacup, acs121, Coalroads Artist, DanMacK, Snail. If you regognize graphics of your own and are not credited please contact this GRF author on the forums.
+CT_GRAPHICS_CREDIT       :Emperor Jake, The Irish, Hovering Teacup, acs121, Coalroads Artist, DanMacK, Snail. If you regognize graphics of your own and are not credited please contact this GRF author on the forums.

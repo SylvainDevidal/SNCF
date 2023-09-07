@@ -13,7 +13,7 @@ item(FEAT_TRAINS, item_WAGON_SMALL_POWDERIZED) {
         running_cost_factor:          60;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
         speed:                        50 km/h;
-        misc_flags:                   bitmask();
+        misc_flags:                   bitmask(TRAIN_FLAG_AUTOREFIT);
         refit_cost:                   0;
         track_type:                   UNELECTRIFIED;
         ai_special_flag:              AI_FLAG_CARGO;

@@ -1,0 +1,38 @@
+item(FEAT_TRAINS, item_WAGON_SNCF_flat) {
+    property {
+        name:                         string(STR_SNCF_WAGON_SNCF_flat_NAME);
+        climates_available:           (param_allow_no_graphics < 2 && param_allow_wagon) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        introduction_date:            date(1966, 1, 1);
+        model_life:                   50;
+        vehicle_life:                 25;
+        reliability_decay:            20;
+        refittable_cargo_classes:     bitmask(CC_PIECE_GOODS);
+        non_refittable_cargo_classes: bitmask();
+        loading_speed:                LOADING_SLOW;
+        cost_factor:                  250;
+        running_cost_factor:          13;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        140 km/h;
+        misc_flags:                   bitmask(TRAIN_FLAG_AUTOREFIT);
+        refit_cost:                   0;
+        track_type:                   UNELECTRIFIED;
+        ai_special_flag:              AI_FLAG_CARGO;
+        power:                        0;
+        running_cost_base:            RUNNING_COST_STEAM;
+        dual_headed:                  0;
+        cargo_capacity:               40;
+        weight:                       15 ton;
+        ai_engine_rank:               0;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0;
+        air_drag_coefficient:         0;
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+        length:                       8;
+    }
+    graphics {
+        default:                      set_vehicle_DUMMY_8LEN;
+        purchase:                     set_vehicle_DUMMY_purchase;
+        additional_text:              return string(STR_SNCF_WAGON_SNCF_flat_ADDITIONAL_TEXT);
+   }
+}
