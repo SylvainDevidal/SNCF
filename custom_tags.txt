@@ -43,6 +43,7 @@ CT_TRAIN_TAR             :TAR
 CT_TRAIN_T2000           :T2000 « RTG »
 CT_TRAIN_X72500          :X72500 « X TER »
 CT_TRAIN_BB61000         :BB61000
+CT_TRAIN_X4500           :X4500 « Caravelle »
 
 
 # Electric
@@ -84,7 +85,7 @@ CT_WAGON_ETAT2           :Wagon Etat 2
 CT_WAGON_OCEM19          :Wagon OCEM 19
 CT_WAGON_OCEM29          :Wagon OCEM 29
 CT_WAGON_USA             :Wagon Standard USA
-CT_WAGON_UICORE          :Wagon UIC-ORE
+CT_WAGON_UICORE          :Wagon UICORE
 CT_WAGON_SNCF            :Wagon Standard SNCF
 CT_WAGON_SMALL           :Small wagon
 CT_WAGON_MEDIUM          :Medium wagon

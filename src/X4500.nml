@@ -1,0 +1,98 @@
+template tmpl_vehicle_X4500_front() {
+    //xpos ypos xsize ysize xrel yrel
+    [5, 37, 8, 24, -3, -12]
+    [20, 37, 22, 17, -15, -8]
+    [55, 38, 29, 11, -15, -7]
+    [93, 37, 22, 17, -5, -7]
+    [126, 37, 8, 24, -3, -11]
+    [141, 37, 22, 17, -14, -7]
+    [172, 37, 32, 12, -16, -8]
+    [213, 37, 22, 17, -4, -8]
+}
+
+template tmpl_vehicle_X4500_rear() {
+    //xpos ypos xsize ysize xrel yrel
+    [5, 3, 8, 24, -3, -8]
+    [20, 3, 22, 17, -16, -6]
+    [55, 4, 29, 11, -16, -7]
+    [88, 3, 22, 17, -6, -8]
+    [119, 3, 8, 24, -3, -14]
+    [134, 3, 22, 17, -13, -8]
+    [165, 3, 29, 12, -15, -8]
+    [207, 3, 22, 17, -3, -6]
+}
+
+template tmpl_vehicle_X4500_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [172, 37, 32, 12, -4, -8]
+}
+
+spriteset(set_X4500_graphics_front,    "gfx/iroqtar.png") { tmpl_vehicle_X4500_front() }
+spriteset(set_X4500_graphics_rear,     "gfx/iroqtar.png") { tmpl_vehicle_X4500_rear() }
+spriteset(set_X4500_graphics_purchase, "gfx/iroqtar.png") { tmpl_vehicle_X4500_purchase() }
+
+switch(FEAT_TRAINS, SELF, sw_X4500_graphics, position_in_articulated_veh) {
+    0: set_X4500_graphics_front;
+    1: set_X4500_graphics_rear;
+}
+
+switch(FEAT_TRAINS, SELF, sw_X4500_articulated_part, extra_callback_info1) {
+    1 : return item_X4500;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch(FEAT_TRAINS, SELF, sw_X4500_check_length, num_vehs_in_consist) {
+    0 .. 6: return CB_RESULT_NO_TEXT;
+    return string(ERR_X4500_TOO_LONG);
+}
+
+switch(FEAT_TRAINS, SELF, sw_X4500_can_attach_wagon, vehicle_type_id) {
+    item_X4500: CB_RESULT_ATTACH_ALLOW;
+    return string(ERR_X4500_CANNOT_ATTACH_OTHER);
+}
+
+item(FEAT_TRAINS, item_X4500) {
+    property {
+        name:                         string(STR_SNCF_TRAIN_X4500_NAME);
+        climates_available:           (param_allow_diesel) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        introduction_date:            date(1963, 1, 1);
+        model_life:                   37;
+        vehicle_life:                 20;
+        reliability_decay:            6;
+        refittable_cargo_classes:     bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes: bitmask();
+        loading_speed:                LOADING_NORMAL; 
+        cost_factor:                  13;
+        running_cost_factor:          60;
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        120 km/h;
+        misc_flags:                   bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_AUTOREFIT);
+        refit_cost:                   0;
+        track_type:                   UNELECTRIFIED;
+        ai_special_flag:              AI_FLAG_PASSENGER;
+        power:                        115 kW;
+        running_cost_base:            RUNNING_COST_DIESEL;
+        dual_headed:                  0;
+        cargo_capacity:               70;
+        weight:                       33 ton;
+        ai_engine_rank:               0;
+        engine_class:                 ENGINE_CLASS_DIESEL;
+        extra_power_per_wagon:        0 kW;
+        tractive_effort_coefficient:  0.4;
+        air_drag_coefficient:         0.06;
+        extra_weight_per_wagon:       0 ton;
+        bitmask_vehicle_info:         0;
+        length:                       7;
+    }
+    graphics {
+        default:                      sw_X4500_graphics;
+        purchase:                     set_X4500_graphics_purchase;
+        additional_text:              return string(STR_SNCF_TRAIN_X4500_ADDITIONAL_TEXT);
+        articulated_part:             sw_X4500_articulated_part;
+        visual_effect_and_powered:    return (position_in_articulated_veh == 0) ?
+                                          visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 1, ENABLE_WAGON_POWER) :
+                                          visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+        can_attach_wagon:             sw_X4500_can_attach_wagon;
+        start_stop:                   sw_X4500_check_length;
+    }
+}

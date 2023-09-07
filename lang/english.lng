@@ -42,6 +42,8 @@ ERR_TGV_RESEAU_CANNOT_ATTACH_OTHER                 :Only other TGV Réseau, POS 
 ERR_TGV_RESEAU_TOO_LONG                            :A TGV Réseau, POS and Duplex consist can't have more than 2 units.
 ERR_X2000_CANNOT_ATTACH_OTHER                      :Only other X2000 can be attached to X2000.
 ERR_X2000_TOO_LONG                                 :A X2000 consist can't have more than 3 units.
+ERR_X4500_CANNOT_ATTACH_OTHER                      :Only other X4500 can be attached to X4500.
+ERR_X4500_TOO_LONG                                 :A X4500 consist can't have more than 3 units.
 ERR_TAR_CANNOT_ATTACH_OTHER                        :Only other TAR can be attached to TAR.
 ERR_TAR_TOO_LONG                                   :A TAR consist can't have more than 3 units.
 ERR_T2000_CANNOT_ATTACH_OTHER                      :Only other T2000 can be attached to T2000, and T2000 build before 1986 can't be coupled.
@@ -114,6 +116,8 @@ STR_SNCF_TRAIN_X2000_NAME                          :{CT_TRAIN_X2000} (diesel)
 STR_SNCF_TRAIN_X2000_ADDITIONAL_TEXT               :Graphics by Hovering Teacup
 STR_SNCF_TRAIN_TAR_NAME                            :{CT_TRAIN_TAR} (diesel)
 STR_SNCF_TRAIN_TAR_ADDITIONAL_TEXT                 :Graphics by Hovering Teacup
+STR_SNCF_TRAIN_X4500_NAME                          :{CT_TRAIN_X4500} (diesel)
+STR_SNCF_TRAIN_X4500_ADDITIONAL_TEXT               :Graphics by Hovering Teacup
 
 # No consent
 
@@ -276,8 +280,8 @@ STR_SNCF_WAGON_OCEM29_bulk_NAME                    :{CT_WAGON_OCEM29} bulk
 STR_SNCF_WAGON_OCEM29_bulk_ADDITIONAL_TEXT         :{ORANGE}No graphics
 STR_SNCF_WAGON_USA_bulk_NAME                       :{CT_WAGON_USA} bulk
 STR_SNCF_WAGON_USA_bulk_ADDITIONAL_TEXT            :{ORANGE}No graphics
-STR_SNCF_WAGON_UICORE_bulk_NAME                    :{CT_WAGON_UICORE} bulk
-STR_SNCF_WAGON_UICORE_bulk_ADDITIONAL_TEXT         :{ORANGE}No graphics
+STR_SNCF_WAGON_UICORE_bulk_NAME                   :{CT_WAGON_UICORE} bulk
+STR_SNCF_WAGON_UICORE_bulk_ADDITIONAL_TEXT        :{ORANGE}No graphics
 STR_SNCF_WAGON_SNCF_bulk_NAME                      :{CT_WAGON_SNCF} bulk
 STR_SNCF_WAGON_SNCF_bulk_ADDITIONAL_TEXT           :{ORANGE}No graphics
 
@@ -293,8 +297,8 @@ STR_SNCF_WAGON_OCEM29_covered_NAME                 :{CT_WAGON_OCEM29} covered
 STR_SNCF_WAGON_OCEM29_covered_ADDITIONAL_TEXT      :{ORANGE}No graphics
 STR_SNCF_WAGON_USA_covered_NAME                    :{CT_WAGON_USA} covered
 STR_SNCF_WAGON_USA_covered_ADDITIONAL_TEXT         :{ORANGE}No graphics
-STR_SNCF_WAGON_UICORE_covered_NAME                 :{CT_WAGON_UICORE} covered
-STR_SNCF_WAGON_UICORE_covered_ADDITIONAL_TEXT      :{ORANGE}No graphics
+STR_SNCF_WAGON_UICORE_covered_NAME                :{CT_WAGON_UICORE} covered
+STR_SNCF_WAGON_UICORE_covered_ADDITIONAL_TEXT     :{ORANGE}No graphics
 STR_SNCF_WAGON_SNCF_covered_NAME                   :{CT_WAGON_SNCF} covered
 STR_SNCF_WAGON_SNCF_covered_ADDITIONAL_TEXT        :{ORANGE}No graphics
 
@@ -310,7 +314,7 @@ STR_SNCF_WAGON_OCEM29_flat_NAME                    :{CT_WAGON_OCEM29} flat
 STR_SNCF_WAGON_OCEM29_flat_ADDITIONAL_TEXT         :{ORANGE}No graphics
 STR_SNCF_WAGON_USA_flat_NAME                       :{CT_WAGON_USA} flat
 STR_SNCF_WAGON_USA_flat_ADDITIONAL_TEXT            :{ORANGE}No graphics
-STR_SNCF_WAGON_UICORE_flat_NAME                    :{CT_WAGON_UICORE} flat
-STR_SNCF_WAGON_UICORE_flat_ADDITIONAL_TEXT         :{ORANGE}No graphics
+STR_SNCF_WAGON_UICORE_flat_NAME                   :{CT_WAGON_UICORE} flat
+STR_SNCF_WAGON_UICORE_flat_ADDITIONAL_TEXT        :{ORANGE}No graphics
 STR_SNCF_WAGON_SNCF_flat_NAME                      :{CT_WAGON_SNCF} flat
 STR_SNCF_WAGON_SNCF_flat_ADDITIONAL_TEXT           :{ORANGE}No graphics
