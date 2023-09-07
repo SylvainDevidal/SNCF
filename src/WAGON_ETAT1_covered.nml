@@ -51,7 +51,7 @@ item(FEAT_TRAINS, item_WAGON_ETAT1_covered_hs) {
         cost_factor:                  150;
         running_cost_factor:          5;
         sprite_id:                    SPRITE_ID_NEW_TRAIN;
-        speed:                        65 km/h;
+        speed:                        80 km/h;
         misc_flags:                   bitmask(TRAIN_FLAG_AUTOREFIT);
         refit_cost:                   0;
         track_type:                   UNELECTRIFIED;
