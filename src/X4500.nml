@@ -70,11 +70,11 @@ item(FEAT_TRAINS, item_X4500) {
         refit_cost:                   0;
         track_type:                   UNELECTRIFIED;
         ai_special_flag:              AI_FLAG_PASSENGER;
-        power:                        115 kW;
+        power:                        330 kW;
         running_cost_base:            RUNNING_COST_DIESEL;
         dual_headed:                  0;
         cargo_capacity:               70;
-        weight:                       33 ton;
+        weight:                       67 ton;
         ai_engine_rank:               0;
         engine_class:                 ENGINE_CLASS_DIESEL;
         extra_power_per_wagon:        0 kW;
