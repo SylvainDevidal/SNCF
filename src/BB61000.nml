@@ -1,17 +1,19 @@
 switch(FEAT_TRAINS, SELF, sw_BB61000_graphics_front, param_allow_no_graphics) {
     0: set_vehicle_DUMMY_CS2400;
     1: set_vehicle_DUMMY_6LEN;
+    2: set_vehicle_DUMMY_CS2400;
 }
 
 switch(FEAT_TRAINS, SELF, sw_BB61000_graphics_purchase, param_allow_no_graphics) {
     0: set_vehicle_DUMMY_purchase_CS2400;
     1: set_vehicle_DUMMY_purchase;
+    2: set_vehicle_DUMMY_purchase_CS2400;
 }
 
 item(FEAT_TRAINS, item_BB61000) {
     property {
         name:                         string(STR_SNCF_TRAIN_BB61000_NAME);
-        climates_available:           (param_allow_no_graphics < 2 && param_allow_diesel) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_no_graphics < 3 && param_allow_diesel) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(2002, 1, 1);
         model_life:                   VEHICLE_NEVER_EXPIRES;
         vehicle_life:                 24;

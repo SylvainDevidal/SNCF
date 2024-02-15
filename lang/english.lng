@@ -13,6 +13,7 @@ STR_PARAM_DESC_ALLOW_NO_GRAPHICS                   :Due to some copyright limita
 STR_PARAM_NAME_ALLOW_NO_GRAPHICS_OPENGFX           :Tries to use OpenGFX or derived sprites (may change vehicle length)
 STR_PARAM_NAME_ALLOW_NO_GRAPHICS_BOXES             :Use ugly coloured box when no sprite exists
 STR_PARAM_NAME_DISALLOW_NO_GRAPHICS                :Load only vehicles with sprites (would reduce the number of available vehicles)
+STR_PARAM_NAME_ALLOW_OPENGFX_DISALLOW_NO_GRAPHICS  :Tries to use OpenGFX when available or disable the vehicle
 
 STR_PARAM_NAME_ALLOW_STEAM                         :Load steam engines
 STR_PARAM_DESC_ALLOW_STEAM                         :If you don't want steam engines, disable this parameter.

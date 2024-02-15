@@ -1,11 +1,13 @@
 switch(FEAT_TRAINS, SELF, sw_242A_graphics_front, param_allow_no_graphics) {
     0: set_vehicle_DUMMY_Wills280;
     1: set_vehicle_DUMMY_6LEN;
+    2: set_vehicle_DUMMY_Wills280;
 }
 
 switch(FEAT_TRAINS, SELF, sw_242A_graphics_purchase, param_allow_no_graphics) {
     0: set_vehicle_DUMMY_purchase_Wills280;
     1: set_vehicle_DUMMY_purchase;
+    2: set_vehicle_DUMMY_purchase_Wills280;
 }
 
 switch(FEAT_TRAINS, SELF, sw_242A_graphics, position_in_articulated_veh) {
@@ -21,7 +23,7 @@ switch(FEAT_TRAINS, SELF, sw_242A_articulated_part, extra_callback_info1) {
 item(FEAT_TRAINS, item_242A) {
     property {
         name:                         string(STR_SNCF_TRAIN_242A_NAME);
-        climates_available:           (param_allow_no_graphics < 2 && param_allow_steam) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_no_graphics < 3 && param_allow_steam) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1946, 1, 1);
         model_life:                   39;
         vehicle_life:                 29;

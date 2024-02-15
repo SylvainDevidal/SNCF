@@ -7,8 +7,8 @@ grf {
     desc: string(STR_GRF_DESC);
 
     /* This is the first version, start numbering at 0. */
-    version: 6;
-    min_compatible_version: 6;
+    version: 7;
+    min_compatible_version: 7;
 
     param {
         param_introduction_dates {
@@ -62,12 +62,13 @@ grf {
             name: string(STR_PARAM_NAME_ALLOW_NO_GRAPHICS);
             desc: string(STR_PARAM_DESC_ALLOW_NO_GRAPHICS);
             min_value: 0;
-            max_value: 2;
-            def_value: 0;
+            max_value: 3;
+            def_value: 2;
             names: {
                 0: string(STR_PARAM_NAME_ALLOW_NO_GRAPHICS_OPENGFX);
                 1: string(STR_PARAM_NAME_ALLOW_NO_GRAPHICS_BOXES);
-                2: string(STR_PARAM_NAME_DISALLOW_NO_GRAPHICS);
+                2: string(STR_PARAM_NAME_ALLOW_OPENGFX_DISALLOW_NO_GRAPHICS);
+                3: string(STR_PARAM_NAME_DISALLOW_NO_GRAPHICS);
             };
         }
     }

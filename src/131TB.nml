@@ -1,18 +1,20 @@
 switch(FEAT_TRAINS, SELF, sw_131TB_graphics_front, param_allow_no_graphics) {
     0: set_vehicle_DUMMY_KirbyPaul;
     1: set_vehicle_DUMMY_6LEN;
+    2: set_vehicle_DUMMY_KirbyPaul;
 }
 
 switch(FEAT_TRAINS, SELF, sw_131TB_graphics_purchase, param_allow_no_graphics) {
     0: set_vehicle_DUMMY_purchase_KirbyPaul;
     1: set_vehicle_DUMMY_purchase;
+    2: set_vehicle_DUMMY_purchase_KirbyPaul;
 }
 
 
 item(FEAT_TRAINS, item_131TB) {
     property {
         name:                         string(STR_SNCF_TRAIN_131TB_NAME);
-        climates_available:           (param_allow_no_graphics < 2 && param_allow_steam) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_no_graphics < 3 && param_allow_steam) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1924, 1, 1);
         model_life:                   55;
         vehicle_life:                 22;
