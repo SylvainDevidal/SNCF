@@ -1,4 +1,4 @@
-VERSION                   :0.0.7 alpha
+VERSION                   :0.0.8 beta
 TITLE                     :SNCF - French Trainset
 
 # Rail type
@@ -61,7 +61,7 @@ CT_TRAIN_BB26000         :BB26000 « Sybic »
 CT_TRAIN_BB27000         :BB27000
 CT_TRAIN_BB9200          :BB9200
 CT_TRAIN_BB8500          :BB8500 « Danseuse »
-CT_TRAIN_CC40100         :CC40100 « Nez Cassé
+CT_TRAIN_CC40100         :CC40100 « Nez Cassé »
 CT_TRAIN_Z8100           :Z8100
 CT_TRAIN_Z7300           :Z7300 « Z2 »
 CT_TRAIN_Z21500          :Z21500 « XZ TER »
