@@ -1,19 +1,65 @@
-switch(FEAT_TRAINS, SELF, sw_141TA_graphics_front, param_allow_no_graphics) {
-    0: set_vehicle_DUMMY_KirbyPaul;
-    1: set_vehicle_DUMMY_6LEN;
-    2: set_vehicle_DUMMY_KirbyPaul;
+template tmpl_vehicle_141TA_8_views(frame, livery) {
+    //xpos ypos xsize ysize xrel yrel
+    [5 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 116, 8, 24, -3, -18]
+    [18 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 116, 22, 17, -12, -11]
+    [45 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 116, 32, 14, -8, -9]
+    [82 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 116, 22, 17, -1, -6]
+    [109 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 116, 8, 24, -3, -10]
+    [122 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 116, 22, 17, -18, -7]
+    [149 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 116, 32, 14, -25, -9]
+    [186 + livery % 2 * 208, 5 + frame * 29 + int(livery / 2) * 116, 22, 17, -8, -10]
 }
 
-switch(FEAT_TRAINS, SELF, sw_141TA_graphics_purchase, param_allow_no_graphics) {
-    0: set_vehicle_DUMMY_purchase_KirbyPaul;
-    1: set_vehicle_DUMMY_purchase;
-    2: set_vehicle_DUMMY_purchase_KirbyPaul;
+template tmpl_vehicle_141TA_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [149, 5, 32, 14, -29, -9]
+}
+
+spriteset(set_141TA_graphics_0_0,      "gfx/141TA.png") { tmpl_vehicle_141TA_8_views(0, 0) }
+spriteset(set_141TA_graphics_1_0,      "gfx/141TA.png") { tmpl_vehicle_141TA_8_views(1, 0) }
+spriteset(set_141TA_graphics_2_0,      "gfx/141TA.png") { tmpl_vehicle_141TA_8_views(2, 0) }
+spriteset(set_141TA_graphics_3_0,      "gfx/141TA.png") { tmpl_vehicle_141TA_8_views(3, 0) }
+spriteset(set_141TA_graphics_0_1,      "gfx/141TA.png") { tmpl_vehicle_141TA_8_views(0, 1) }
+spriteset(set_141TA_graphics_1_1,      "gfx/141TA.png") { tmpl_vehicle_141TA_8_views(1, 1) }
+spriteset(set_141TA_graphics_2_1,      "gfx/141TA.png") { tmpl_vehicle_141TA_8_views(2, 1) }
+spriteset(set_141TA_graphics_3_1,      "gfx/141TA.png") { tmpl_vehicle_141TA_8_views(3, 1) }
+spriteset(set_141TA_graphics_0_2,      "gfx/141TA.png") { tmpl_vehicle_141TA_8_views(0, 2) }
+spriteset(set_141TA_graphics_1_2,      "gfx/141TA.png") { tmpl_vehicle_141TA_8_views(1, 2) }
+spriteset(set_141TA_graphics_2_2,      "gfx/141TA.png") { tmpl_vehicle_141TA_8_views(2, 2) }
+spriteset(set_141TA_graphics_3_2,      "gfx/141TA.png") { tmpl_vehicle_141TA_8_views(3, 2) }
+spriteset(set_141TA_graphics_purchase, "gfx/141TA.png") { tmpl_vehicle_141TA_purchase() }
+
+switch(FEAT_TRAINS, SELF, sw_141TA_graphics_0, motion_counter % 4) {
+    0: set_141TA_graphics_0_0;
+    1: set_141TA_graphics_1_0;
+    2: set_141TA_graphics_2_0;
+    3: set_141TA_graphics_3_0;
+}
+
+switch(FEAT_TRAINS, SELF, sw_141TA_graphics_1, motion_counter % 4) {
+    0: set_141TA_graphics_0_1;
+    1: set_141TA_graphics_1_1;
+    2: set_141TA_graphics_2_1;
+    3: set_141TA_graphics_3_1;
+}
+
+switch(FEAT_TRAINS, SELF, sw_141TA_graphics_2, motion_counter % 4) {
+    0: set_141TA_graphics_0_2;
+    1: set_141TA_graphics_1_2;
+    2: set_141TA_graphics_2_2;
+    3: set_141TA_graphics_3_2;
+}
+
+random_switch(FEAT_TRAINS, SELF, sw_141TA_graphics_random) {
+    1: sw_141TA_graphics_0;
+    2: sw_141TA_graphics_1;
+    3: sw_141TA_graphics_2;
 }
 
 item(FEAT_TRAINS, item_141TA) {
     property {
         name:                         string(STR_SNCF_TRAIN_141TA_NAME);
-        climates_available:           (param_allow_no_graphics < 3 && param_allow_steam) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_steam) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1922, 1, 1);
         model_life:                   46;
         vehicle_life:                 23;
@@ -45,8 +91,8 @@ item(FEAT_TRAINS, item_141TA) {
         length:                       6;
     }
     graphics {
-        default:                      sw_141TA_graphics_front;
-        purchase:                     sw_141TA_graphics_purchase;
+        default:                      sw_141TA_graphics_random;
+        purchase:                     set_141TA_graphics_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_141TA_ADDITIONAL_TEXT);
     }
 }

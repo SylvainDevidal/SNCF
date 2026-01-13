@@ -1,20 +1,54 @@
-switch(FEAT_TRAINS, SELF, sw_242A_graphics_front, param_allow_no_graphics) {
-    0: set_vehicle_DUMMY_Wills280;
-    1: set_vehicle_DUMMY_6LEN;
-    2: set_vehicle_DUMMY_Wills280;
+template tmpl_vehicle_242A_8_views(frame) {
+    //xpos ypos xsize ysize xrel yrel
+    [5, 5 + frame * 29, 8, 24, -3, -12]
+    [18, 5 + frame * 29, 22, 17, -14, -9]
+    [45, 5 + frame * 29, 32, 14, -17, -10]
+    [82, 5 + frame * 29, 22, 17, -3, -7]
+    [109, 5 + frame * 29, 8, 24, -3, -11]
+    [122, 5 + frame * 29, 22, 17, -18, -7]
+    [149, 5 + frame * 29, 32, 14, -15, -10]
+    [186, 5 + frame * 29, 22, 17, -3, -6]
 }
 
-switch(FEAT_TRAINS, SELF, sw_242A_graphics_purchase, param_allow_no_graphics) {
-    0: set_vehicle_DUMMY_purchase_Wills280;
-    1: set_vehicle_DUMMY_purchase;
-    2: set_vehicle_DUMMY_purchase_Wills280;
+template tmpl_vehicle_242A_tender_8_views() {
+    //xpos ypos xsize ysize xrel yrel
+    [5, 179, 8, 24, -3, -19]
+    [18, 179, 22, 17, -8, -12]
+    [45, 179, 32, 14, 1, -10]
+    [82, 179, 22, 17, -1, -6]
+    [109, 179, 8, 24, -3, -11]
+    [122, 179, 22, 17, -19, -6]
+    [149, 179, 32, 14, -32, -10]
+    [186, 179, 22, 17, -10, -10]
+}
+
+template tmpl_vehicle_242A_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [149, 5, 32, 14, -29, -10]
+}
+
+spriteset(set_242A_graphics_0,        "gfx/242A.png") { tmpl_vehicle_242A_8_views(0) }
+spriteset(set_242A_graphics_1,        "gfx/242A.png") { tmpl_vehicle_242A_8_views(1) }
+spriteset(set_242A_graphics_2,        "gfx/242A.png") { tmpl_vehicle_242A_8_views(2) }
+spriteset(set_242A_graphics_3,        "gfx/242A.png") { tmpl_vehicle_242A_8_views(3) }
+spriteset(set_242A_graphics_4,        "gfx/242A.png") { tmpl_vehicle_242A_8_views(4) }
+spriteset(set_242A_graphics_5,        "gfx/242A.png") { tmpl_vehicle_242A_8_views(5) }
+spriteset(set_242A_tender_graphics,   "gfx/242A.png") { tmpl_vehicle_242A_tender_8_views() }
+spriteset(set_242A_graphics_purchase, "gfx/242A.png") { tmpl_vehicle_242A_purchase() }
+
+switch(FEAT_TRAINS, SELF, sw_242A_graphics_animated, motion_counter % 6) {
+    0: set_242A_graphics_0;
+    1: set_242A_graphics_1;
+    2: set_242A_graphics_2;
+    3: set_242A_graphics_3;
+    4: set_242A_graphics_4;
+    5: set_242A_graphics_5;
 }
 
 switch(FEAT_TRAINS, SELF, sw_242A_graphics, position_in_articulated_veh) {
-    0: sw_242A_graphics_front;
-    1: set_vehicle_DUMMY_4LEN;
+    0: sw_242A_graphics_animated;
+    1: set_242A_tender_graphics;
 }
-
 switch(FEAT_TRAINS, SELF, sw_242A_articulated_part, extra_callback_info1) {
     1 : return item_242A;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
@@ -23,7 +57,7 @@ switch(FEAT_TRAINS, SELF, sw_242A_articulated_part, extra_callback_info1) {
 item(FEAT_TRAINS, item_242A) {
     property {
         name:                         string(STR_SNCF_TRAIN_242A_NAME);
-        climates_available:           (param_allow_no_graphics < 3 && param_allow_steam) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_steam) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            date(1946, 1, 1);
         model_life:                   39;
         vehicle_life:                 29;
@@ -54,7 +88,7 @@ item(FEAT_TRAINS, item_242A) {
     }
     graphics {
         default:                      sw_242A_graphics;
-        purchase:                     sw_242A_graphics_purchase;
+        purchase:                     set_242A_graphics_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_242A_ADDITIONAL_TEXT);
         articulated_part:             sw_242A_articulated_part;
         visual_effect_and_powered:    return (position_in_articulated_veh == 0) ?

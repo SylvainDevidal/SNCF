@@ -27,11 +27,11 @@ template tmpl_vehicle_BB26000_purchase() {
     [24, 64, 30, 12, -5, -6]
 }
 
-spriteset(set_BB26000_graphics_beton,        "gfx/BB26000_beton.png") { tmpl_vehicle_BB26000() }
-spriteset(set_BB26000_graphics_multiservice, "gfx/BB26000_multiservices.png") { tmpl_vehicle_BB26000() }
-spriteset(set_BB26000_graphics_envoyage_0,   "gfx/BB26000_envoyage.png") { tmpl_vehicle_BB26000_envoyage(0) }
-spriteset(set_BB26000_graphics_envoyage_1,   "gfx/BB26000_envoyage.png") { tmpl_vehicle_BB26000_envoyage(1) }
-spriteset(set_BB26000_graphics_purchase,     "gfx/BB26000_beton.png") { tmpl_vehicle_BB26000_purchase() }
+spriteset(set_BB26000_graphics_beton,        "gfx/BB26000_b.png") { tmpl_vehicle_BB26000() }
+spriteset(set_BB26000_graphics_multiservice, "gfx/BB26000_m.png") { tmpl_vehicle_BB26000() }
+spriteset(set_BB26000_graphics_envoyage_0,   "gfx/BB26000_e.png") { tmpl_vehicle_BB26000_envoyage(0) }
+spriteset(set_BB26000_graphics_envoyage_1,   "gfx/BB26000_e.png") { tmpl_vehicle_BB26000_envoyage(1) }
+spriteset(set_BB26000_graphics_purchase,     "gfx/BB26000_b.png") { tmpl_vehicle_BB26000_purchase() }
 
 random_switch(FEAT_TRAINS, SELF, sw_BB26000_graphics) {
     1: set_BB26000_graphics_beton;
@@ -57,7 +57,8 @@ item(FEAT_TRAINS, item_BB26000) {
         speed:                        200 km/h;
         misc_flags:                   bitmask();
         refit_cost:                   0;
-        track_type:                   (!param_allow_voltage) ? ELEC : AC25DC15;
+        //track_type:                   (!param_allow_voltage) ? ELEC : AC25DC15;
+        track_type:                   AC25DC15;
         ai_special_flag:              AI_FLAG_PASSENGER | AI_FLAG_CARGO;
         power:                        7506 hp;
         running_cost_base:            RUNNING_COST_ELECTRIC;

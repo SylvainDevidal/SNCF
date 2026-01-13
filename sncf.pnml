@@ -8,7 +8,7 @@ grf {
 
     /* This is the first version, start numbering at 0. */
     version: 9;
-    min_compatible_version: 8;
+    min_compatible_version: 9;
 
     param {
         param_introduction_dates {
@@ -45,14 +45,14 @@ grf {
             name: string(STR_PARAM_NAME_ALLOW_WAGON);
             desc: string(STR_PARAM_DESC_ALLOW_WAGON);
             def_value: 1;
-        }
+        }/*
         param_allow_voltage {
             type: bool;
             bit: 6;
             name: string(STR_PARAM_NAME_ALLOW_VOLTAGE);
             desc: string(STR_PARAM_DESC_ALLOW_VOLTAGE);
             def_value: 1;
-        }
+        }*/
     }
     param
     {
@@ -185,7 +185,6 @@ grf {
 // 089
 #include "src/BB7200.nml"
 
-
 // Wagons
 // 200
 #include "src/OCEM.nml"
@@ -200,24 +199,31 @@ grf {
 // 205
 #include "src/FOURGON_CORAIL.nml"
 
+/*
 #include "src/WAGON_ETAT1_covered.nml"
 #include "src/WAGON_ETAT1_bulk.nml"
 #include "src/WAGON_ETAT1_flat.nml"
+
 #include "src/WAGON_ETAT2_covered.nml"
 #include "src/WAGON_ETAT2_bulk.nml"
 #include "src/WAGON_ETAT2_flat.nml"
+
 #include "src/WAGON_OCEM19_covered.nml"
 #include "src/WAGON_OCEM19_bulk.nml"
 #include "src/WAGON_OCEM19_flat.nml"
+
 #include "src/WAGON_OCEM29_covered.nml"
 #include "src/WAGON_OCEM29_bulk.nml"
 #include "src/WAGON_OCEM29_flat.nml"
+
 #include "src/WAGON_USA_covered.nml"
 #include "src/WAGON_USA_bulk.nml"
 #include "src/WAGON_USA_flat.nml"
+
 #include "src/WAGON_UIC-ORE_covered.nml"
 #include "src/WAGON_UIC-ORE_bulk.nml"
 #include "src/WAGON_UIC-ORE_flat.nml"
+
 #include "src/WAGON_SNCF_covered.nml"
 #include "src/WAGON_SNCF_bulk.nml"
 #include "src/WAGON_SNCF_flat.nml"
@@ -225,36 +231,9 @@ grf {
 
 #include "src/WAGON_SMALL_PASSENGERS.nml"
 #include "src/WAGON_SMALL_MAIL.nml"
-/*
-#include "src/WAGON_SMALL_EXPRESS.nml"
-#include "src/WAGON_SMALL_ARMOURED.nml"
-#include "src/WAGON_SMALL_BULK.nml"
-#include "src/WAGON_SMALL_PIECE_GOODS.nml"
-*/
-#include "src/WAGON_SMALL_LIQUID.nml"
-/*
-#include "src/WAGON_SMALL_REFRIGERATED.nml"
-#include "src/WAGON_SMALL_HAZARDOUS.nml"
-#include "src/WAGON_SMALL_COVERED.nml"
-#include "src/WAGON_SMALL_POWDERIZED.nml"
-#include "src/WAGON_SMALL_NON_POURABLE.nml"
-#include "src/WAGON_SMALL_NEO_BULK.nml"
-*/
 
-/*
-#include "src/WAGON_MEDIUM_EXPRESS.nml"
-#include "src/WAGON_MEDIUM_ARMOURED.nml"
-#include "src/WAGON_MEDIUM_BULK.nml"
-#include "src/WAGON_MEDIUM_PIECE_GOODS.nml"
-*/
+#include "src/WAGON_SMALL_LIQUID.nml"
 #include "src/WAGON_MEDIUM_LIQUID.nml"
-/*
-#include "src/WAGON_MEDIUM_REFRIGERATED.nml"
-#include "src/WAGON_MEDIUM_HAZARDOUS.nml"
-#include "src/WAGON_MEDIUM_COVERED.nml"
-#include "src/WAGON_MEDIUM_POWDERIZED.nml"
-#include "src/WAGON_MEDIUM_NON_POURABLE.nml"
-#include "src/WAGON_MEDIUM_NEO_BULK.nml"
 */
 
 #include "src/WAGON_LARGE_EXPRESS.nml"
@@ -268,58 +247,3 @@ grf {
 #include "src/WAGON_LARGE_POWDERIZED.nml"
 #include "src/WAGON_LARGE_NON_POURABLE.nml"
 #include "src/WAGON_LARGE_NEO_BULK.nml"
-
-/*
-
-Wagons :
-
-Etat 1 à partir de 1890 : 12t petite vitesse / 8t grande vitesse
-- couvert 8,5m / 80 km/h (PV 65 km/h)
-- tombereau 7,5m / 60 km/h (PV 50 km/h)
-- plat 9m / 80 km/h (PV 65 km/h)
-
- 
-Etat 2 à partir de 1915 :  20t petite vitesse / 12t grande vitesse
-- couvert 9,3m / 90 km/h (PV 80 km/h)
-- tombereau 8,5m / 70 km/h (PV 60 km/h)
-- plat 10m / 90 km/h (PV 80 km/h)
- 
-OCEM 19 à partir de 1925 : 20t / 8,5m / 90 km/h
- 
-OCEM 29 à partir de 1935 : 22t / 9,3m / 100 km/h
-
-Standard USA à partir de 1944 : 28t / 100 km/h
-
-UIC-ORE à partir de 1950 : 35t / 100 km/h
-
-Standard SNCF à partir de 1966 : 40t
-- couvert 140 km/h
-- tombereau 100 km/h
-- plat 12,7m / 140 km/h
-
-
-
-
-@memaster
-ça va être compliqué de citer tout ce qui a roulé depuis 1950.
-mais en gros en voyageur tu peux mettre :
-- la flêche d'or en ciwl + 231K
-- le capitole + bb9200
-- les fameux corail + nez cassé bb7200
-- turbotrain
-- TGV
-en marge les grands confort qui faisaient paris/bordeaux.
- 
-sur les omnibus
-- les X4500 (toute époque quasiment)
-- les RRR réversibles
- 
-en marchandises je suis moins calé :
-mais tout ce qui est stva, tremies, container, sernam
-
-je peux t'aiguiller sur d'autres piste si necessaire et dans ce cas mp, n'hésite pas.
-
-
-
-
-*/

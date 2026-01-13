@@ -44,7 +44,8 @@ item(FEAT_TRAINS, item_CC40100) {
         speed:                        240 km/h;
         misc_flags:                   bitmask();
         refit_cost:                   0;
-        track_type:                   (!param_allow_voltage) ? ELEC : AC25AC15DC03DC15;
+        //track_type:                   (!param_allow_voltage) ? ELEC : AC25AC15DC03DC15;
+        track_type:                   AC25AC15DC03DC15;
         ai_special_flag:              AI_FLAG_PASSENGER | AI_FLAG_CARGO;
         power:                        6500 hp;
         running_cost_base:            RUNNING_COST_ELECTRIC;

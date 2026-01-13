@@ -35,7 +35,8 @@ item(FEAT_TRAINS, item_BB8500) {
         speed:                        120 km/h;
         misc_flags:                   bitmask();
         refit_cost:                   0;
-        track_type:                   (!param_allow_voltage) ? ELEC : DC15;
+        //track_type:                   (!param_allow_voltage) ? ELEC : DC15;
+        track_type:                   DC15;
         ai_special_flag:              AI_FLAG_PASSENGER | AI_FLAG_CARGO;
         power:                        3941 hp;
         running_cost_base:            RUNNING_COST_ELECTRIC;

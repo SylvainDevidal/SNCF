@@ -14,12 +14,12 @@ template tmpl_vehicle_DUMMY_purchase() {
     [0, 340, 50, 12, -25, -6]
 }
 
-spriteset(set_vehicle_DUMMY_8LEN,  "gfx/dummy.png") { tmpl_vehicle_DUMMY(8) }
-spriteset(set_vehicle_DUMMY_7LEN,  "gfx/dummy.png") { tmpl_vehicle_DUMMY(7) }
-spriteset(set_vehicle_DUMMY_6LEN,  "gfx/dummy.png") { tmpl_vehicle_DUMMY(6) }
-spriteset(set_vehicle_DUMMY_5LEN,  "gfx/dummy.png") { tmpl_vehicle_DUMMY(5) }
-spriteset(set_vehicle_DUMMY_4LEN,  "gfx/dummy.png") { tmpl_vehicle_DUMMY(4) }
-spriteset(set_vehicle_DUMMY_3LEN,  "gfx/dummy.png") { tmpl_vehicle_DUMMY(3) }
-spriteset(set_vehicle_DUMMY_2LEN,  "gfx/dummy.png") { tmpl_vehicle_DUMMY(2) }
-spriteset(set_vehicle_DUMMY_1LEN,  "gfx/dummy.png") { tmpl_vehicle_DUMMY(1) }
-spriteset(set_vehicle_DUMMY_purchase,      "gfx/dummy.png") { tmpl_vehicle_DUMMY_purchase() }
+spriteset(set_vehicle_DUMMY_8LEN,     "gfx/dummy.png") { tmpl_vehicle_DUMMY(8) }
+spriteset(set_vehicle_DUMMY_7LEN,     "gfx/dummy.png") { tmpl_vehicle_DUMMY(7) }
+spriteset(set_vehicle_DUMMY_6LEN,     "gfx/dummy.png") { tmpl_vehicle_DUMMY(6) }
+spriteset(set_vehicle_DUMMY_5LEN,     "gfx/dummy.png") { tmpl_vehicle_DUMMY(5) }
+spriteset(set_vehicle_DUMMY_4LEN,     "gfx/dummy.png") { tmpl_vehicle_DUMMY(4) }
+spriteset(set_vehicle_DUMMY_3LEN,     "gfx/dummy.png") { tmpl_vehicle_DUMMY(3) }
+spriteset(set_vehicle_DUMMY_2LEN,     "gfx/dummy.png") { tmpl_vehicle_DUMMY(2) }
+spriteset(set_vehicle_DUMMY_1LEN,     "gfx/dummy.png") { tmpl_vehicle_DUMMY(1) }
+spriteset(set_vehicle_DUMMY_purchase, "gfx/dummy.png") { tmpl_vehicle_DUMMY_purchase() }

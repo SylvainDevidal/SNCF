@@ -1,19 +1,27 @@
-switch(FEAT_TRAINS, SELF, sw_BB1280_graphics_front, param_allow_no_graphics) {
-    0: set_vehicle_DUMMY_MJS1000;
-    1: set_vehicle_DUMMY_5LEN;
-    2: set_vehicle_DUMMY_MJS1000;
+template tmpl_vehicle_BB1280_8_views() {
+    //xpos ypos xsize ysize xrel yrel
+    [1, 1, 8, 24, -3, -12]
+    [12, 1, 22, 20, -14, -8]
+    [37, 1, 32, 14, -16, -10]
+    [72, 1, 22, 20, -1, -10]
+    [98, 1, 8, 24, -3, -9]
+    [110, 1, 22, 20, -18, -9]
+    [135, 1, 32, 14, -16, -10]
+    [170, 1, 22, 20, -5, -8]
 }
 
-switch(FEAT_TRAINS, SELF, sw_BB1280_graphics_purchase, param_allow_no_graphics) {
-    0: set_vehicle_DUMMY_purchase_MJS1000;
-    1: set_vehicle_DUMMY_purchase;
-    2: set_vehicle_DUMMY_purchase_MJS1000;
+template tmpl_vehicle_BB1280_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [135, 1, 32, 14, -17, -10]
 }
+
+spriteset(set_BB1280_graphics,          "gfx/BB1280.png") { tmpl_vehicle_BB1280_8_views() }
+spriteset(set_BB1280_graphics_purchase, "gfx/BB1280.png") { tmpl_vehicle_BB1280_purchase() }
 
 item(FEAT_TRAINS, item_BB1280) {
     property {
         name:                         string(STR_SNCF_TRAIN_BB1280_NAME);
-        climates_available:           (param_allow_no_graphics < 3 && param_allow_electric) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
+        climates_available:           (param_allow_electric) ? bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL) : NO_CLIMATE;
         introduction_date:            (param_introduction_dates) ? date(1901, 1, 1) : date(1909, 1, 1);
         model_life:                   55;
         vehicle_life:                 31;
@@ -27,7 +35,8 @@ item(FEAT_TRAINS, item_BB1280) {
         speed:                        100 km/h;
         misc_flags:                   bitmask();
         refit_cost:                   0;
-        track_type:                   (!param_allow_voltage) ? ELEC : DC15;
+        //track_type:                   (!param_allow_voltage) ? ELEC : DC15;
+        track_type:                   DC15;
         ai_special_flag:              AI_FLAG_PASSENGER | AI_FLAG_CARGO;
         power:                        783 hp;
         running_cost_base:            RUNNING_COST_ELECTRIC;
@@ -44,8 +53,8 @@ item(FEAT_TRAINS, item_BB1280) {
         visual_effect_and_powered:    visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, -4, DISABLE_WAGON_POWER);
     }
     graphics {
-        default:                      sw_BB1280_graphics_front;
-        purchase:                     sw_BB1280_graphics_purchase;
+        default:                      set_BB1280_graphics;
+        purchase:                     set_BB1280_graphics_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_BB1280_ADDITIONAL_TEXT);
         length:                       return (param_allow_no_graphics == 0) ? 7 : 5;
     }

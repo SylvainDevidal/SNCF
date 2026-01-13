@@ -1,4 +1,4 @@
-VERSION                   :0.0.8 beta
+VERSION                   :0.0.9
 TITLE                     :SNCF - French Trainset
 
 # Rail type

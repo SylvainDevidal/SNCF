@@ -8,7 +8,7 @@ traininfo_y_offset = 2;
 
 // To use with loading_speed
 LOADING_NONE = 0;           // 0 for vehicles that can't carry anything
-LOADING_SLOW = 5;           // 5 is standard, for early vehicles
+//LOADING_SLOW = 5;           // 5 is standard, for early vehicles
 LOADING_NORMAL = 10;        // For normal modern vehicles
 LOADING_FAST = 20;          // For suburb or metro coaches
 
