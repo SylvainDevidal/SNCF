@@ -57,8 +57,6 @@ item(FEAT_TRAINS, item_BB26000) {
         speed:                        200 km/h;
         misc_flags:                   bitmask();
         refit_cost:                   0;
-        //track_type:                   (!param_allow_voltage) ? ELEC : AC25DC15;
-        track_type:                   AC25DC15;
         ai_special_flag:              AI_FLAG_PASSENGER | AI_FLAG_CARGO;
         power:                        7506 hp;
         running_cost_base:            RUNNING_COST_ELECTRIC;

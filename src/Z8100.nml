@@ -73,7 +73,6 @@ switch(FEAT_TRAINS, SELF, sw_Z8100_visual_effect_and_powered, position_in_articu
 }
 
 switch(FEAT_TRAINS, SELF, sw_Z8100_power, current_railtype) {
-    ELEC: 3787;
     AC25: 3787;
     DC15: 3326;
     default: 3787;
@@ -96,8 +95,6 @@ item(FEAT_TRAINS, item_Z8100) {
         speed:                        140 km/h;
         misc_flags:                   bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_AUTOREFIT);
         refit_cost:                   0;
-        //track_type:                   (!param_allow_voltage) ? ELEC : AC25DC15;
-        track_type:                   AC25DC15;
         ai_special_flag:              AI_FLAG_PASSENGER;
         power:                        1883 hp;
         running_cost_base:            RUNNING_COST_ELECTRIC;

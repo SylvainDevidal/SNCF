@@ -19,7 +19,6 @@ spriteset(set_CC40100_graphics,          "gfx/CC40100.png") { tmpl_vehicle_CC401
 spriteset(set_CC40100_graphics_purchase, "gfx/CC40100.png") { tmpl_vehicle_CC40100_purchase() }
 
 switch(FEAT_TRAINS, SELF, sw_CC40100_power, current_railtype) {
-    ELEC: 6504;
     AC25: 6504;
     AC15: 6504;
     DC03: 4922;
@@ -44,8 +43,6 @@ item(FEAT_TRAINS, item_CC40100) {
         speed:                        240 km/h;
         misc_flags:                   bitmask();
         refit_cost:                   0;
-        //track_type:                   (!param_allow_voltage) ? ELEC : AC25AC15DC03DC15;
-        track_type:                   AC25AC15DC03DC15;
         ai_special_flag:              AI_FLAG_PASSENGER | AI_FLAG_CARGO;
         power:                        6500 hp;
         running_cost_base:            RUNNING_COST_ELECTRIC;

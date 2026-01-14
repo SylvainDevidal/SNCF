@@ -1,0 +1,20 @@
+ if (railtype_available("SAAA"))
+ {
+ 	item (FEAT_TRAINS, item_BB12000)
+    {
+ 		property
+        {
+ 			track_type: AC25;
+  		}
+    }
+ }
+ else
+ {
+ 	item (FEAT_TRAINS, item_BB12000)
+    {
+ 		property
+        {
+ 			track_type: ACDC;
+ 		}
+ 	}
+ }

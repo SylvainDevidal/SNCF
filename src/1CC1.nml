@@ -70,8 +70,6 @@ item(FEAT_TRAINS, item_1CC1) {
         speed:                        80 km/h;
         misc_flags:                   bitmask();
         refit_cost:                   0;
-        //track_type:                   (!param_allow_voltage) ? ELEC : DC15;
-        track_type:                   DC15;
         ai_special_flag:              AI_FLAG_PASSENGER;
         power:                        2225 hp;
         running_cost_base:            RUNNING_COST_ELECTRIC;

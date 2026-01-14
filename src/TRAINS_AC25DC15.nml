@@ -1,0 +1,76 @@
+ if (railtype_available("SAAA") || railtype_available("SAAD"))
+ {
+ 	item (FEAT_TRAINS, item_BB26000)
+    {
+ 		property
+        {
+ 			track_type: [AC25, DC15];
+  		}
+    }
+	item (FEAT_TRAINS, item_BB27000)
+    {
+ 		property
+        {
+ 			track_type: [AC25, DC15];
+  		}
+    }
+	item (FEAT_TRAINS, item_TGV_ATLANTIQUE)
+    {
+ 		property
+        {
+ 			track_type: [AC25, DC15];
+  		}
+    }
+	item (FEAT_TRAINS, item_Z8100)
+    {
+ 		property
+        {
+ 			track_type: [AC25, DC15];
+  		}
+    }
+	item (FEAT_TRAINS, item_Z21500)
+    {
+ 		property
+        {
+ 			track_type: [AC25, DC15];
+  		}
+    }
+ }
+ else
+ {
+ 	item (FEAT_TRAINS, item_BB26000)
+    {
+ 		property
+        {
+ 			track_type: ACDC;
+ 		}
+ 	}
+	item (FEAT_TRAINS, item_BB27000)
+    {
+ 		property
+        {
+ 			track_type: ACDC;
+ 		}
+ 	}
+	item (FEAT_TRAINS, item_TGV_ATLANTIQUE)
+    {
+ 		property
+        {
+ 			track_type: ACDC;
+ 		}
+ 	}
+	item (FEAT_TRAINS, item_Z8100)
+    {
+ 		property
+        {
+ 			track_type: ACDC;
+ 		}
+ 	}
+	item (FEAT_TRAINS, item_Z21500)
+    {
+ 		property
+        {
+ 			track_type: ACDC;
+ 		}
+ 	}
+ }

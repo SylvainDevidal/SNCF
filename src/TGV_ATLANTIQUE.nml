@@ -130,7 +130,6 @@ switch(FEAT_TRAINS, SELF, sw_TGV_ATLANTIQUE_can_attach_wagon, vehicle_type_id) {
 }
 
 switch(FEAT_TRAINS, SELF, sw_TGV_ATLANTIQUE_power, current_railtype) {
-    ELEC: 11801;
     AC25: 11801;
     DC15: 5203;
     default: 11801;
@@ -153,8 +152,6 @@ item(FEAT_TRAINS, item_TGV_ATLANTIQUE) {
         speed:                        300 km/h;
         misc_flags:                   bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_AUTOREFIT);
         refit_cost:                   0;
-        //track_type:                   (!param_allow_voltage) ? ELEC : AC25DC15;
-        track_type:                   AC25DC15;
         ai_special_flag:              AI_FLAG_PASSENGER;
         power:                        8800 kW;
         running_cost_base:            RUNNING_COST_ELECTRIC;

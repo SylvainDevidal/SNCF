@@ -182,7 +182,6 @@ switch(FEAT_TRAINS, SELF, sw_TGV_PSE_capacity, position_in_articulated_veh) {
 }
 
 switch(FEAT_TRAINS, SELF, sw_TGV_PSE_power, current_railtype) {    
-    ELEC: 8650;
     AC25: 8650;
     DC15: 4157;
     AC15: 3755;
@@ -206,8 +205,6 @@ item(FEAT_TRAINS, item_TGV_PSE) {
         speed:                        270 km/h;
         misc_flags:                   bitmask(TRAIN_FLAG_MU, TRAIN_FLAG_AUTOREFIT);
         refit_cost:                   0;
-        //track_type:                   (!param_allow_voltage) ? ELEC : AC25AC15DC15;
-        track_type:                   AC25AC15DC15;
         ai_special_flag:              AI_FLAG_PASSENGER;
         power:                        6420 kW;
         running_cost_base:            RUNNING_COST_ELECTRIC;

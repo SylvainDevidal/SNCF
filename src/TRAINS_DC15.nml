@@ -1,0 +1,188 @@
+ if (railtype_available("SAAD"))
+ {
+ 	item (FEAT_TRAINS, item_1ABBA1)
+    {
+ 		property
+        {
+ 			track_type: DC15;
+  		}
+    }
+    item (FEAT_TRAINS, item_1CC1)
+    {
+ 		property
+        {
+ 			track_type: DC15;
+  		}
+    }
+    item (FEAT_TRAINS, item_2BB2)
+    {
+ 		property
+        {
+ 			track_type: DC15;
+  		}
+    }
+    item (FEAT_TRAINS, item_2C2)
+    {
+ 		property
+        {
+ 			track_type: DC15;
+  		}
+    }
+    item (FEAT_TRAINS, item_2CC2)
+    {
+ 		property
+        {
+ 			track_type: DC15;
+  		}
+    }
+    item (FEAT_TRAINS, item_2D2_5500)
+    {
+ 		property
+        {
+ 			track_type: DC15;
+  		}
+    }
+    item (FEAT_TRAINS, item_BB1280)
+    {
+ 		property
+        {
+ 			track_type: DC15;
+  		}
+    }
+    item (FEAT_TRAINS, item_BB7200)
+    {
+ 		property
+        {
+ 			track_type: DC15;
+  		}
+    }
+    item (FEAT_TRAINS, item_BB8100)
+    {
+ 		property
+        {
+ 			track_type: DC15;
+  		}
+    }
+    item (FEAT_TRAINS, item_BB8500)
+    {
+ 		property
+        {
+ 			track_type: DC15;
+  		}
+    }
+    item (FEAT_TRAINS, item_BB9200)
+    {
+ 		property
+        {
+ 			track_type: DC15;
+  		}
+    }
+    item (FEAT_TRAINS, item_CC7100)
+    {
+ 		property
+        {
+ 			track_type: DC15;
+  		}
+    }
+    item (FEAT_TRAINS, item_Z7300)
+    {
+ 		property
+        {
+ 			track_type: DC15;
+  		}
+    }
+ }
+ else
+ {
+ 	item (FEAT_TRAINS, item_1ABBA1)
+    {
+ 		property
+        {
+ 			track_type: ACDC;
+ 		}
+ 	}
+    item (FEAT_TRAINS, item_1CC1)
+    {
+ 		property
+        {
+ 			track_type: ACDC;
+ 		}
+ 	}
+    item (FEAT_TRAINS, item_2BB2)
+    {
+ 		property
+        {
+ 			track_type: ACDC;
+ 		}
+ 	}
+    item (FEAT_TRAINS, item_2C2)
+    {
+ 		property
+        {
+ 			track_type: ACDC;
+ 		}
+ 	}
+    item (FEAT_TRAINS, item_2CC2)
+    {
+ 		property
+        {
+ 			track_type: ACDC;
+ 		}
+ 	}
+    item (FEAT_TRAINS, item_2D2_5500)
+    {
+ 		property
+        {
+ 			track_type: ACDC;
+ 		}
+ 	}
+    item (FEAT_TRAINS, item_BB1280)
+    {
+ 		property
+        {
+ 			track_type: ACDC;
+ 		}
+ 	}
+    item (FEAT_TRAINS, item_BB7200)
+    {
+ 		property
+        {
+ 			track_type: ACDC;
+ 		}
+ 	}
+    item (FEAT_TRAINS, item_BB8100)
+    {
+ 		property
+        {
+ 			track_type: ACDC;
+ 		}
+ 	}
+    item (FEAT_TRAINS, item_BB8500)
+    {
+ 		property
+        {
+ 			track_type: ACDC;
+ 		}
+ 	}
+    item (FEAT_TRAINS, item_BB9200)
+    {
+ 		property
+        {
+ 			track_type: ACDC;
+ 		}
+ 	}
+    item (FEAT_TRAINS, item_CC7100)
+    {
+ 		property
+        {
+ 			track_type: ACDC;
+ 		}
+ 	}
+    item (FEAT_TRAINS, item_Z7300)
+    {
+ 		property
+        {
+ 			track_type: ACDC;
+ 		}
+ 	}
+ }

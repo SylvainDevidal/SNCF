@@ -1,0 +1,20 @@
+ if (railtype_available("SAAA") || railtype_available("SAAd") || railtype_available("SAAD"))
+ {
+ 	item (FEAT_TRAINS, item_TGV_Reseau)
+    {
+ 		property
+        {
+ 			track_type: [AC25, DC03, DC15];
+  		}
+    }
+ }
+ else
+ {
+ 	item (FEAT_TRAINS, item_TGV_Reseau)
+    {
+ 		property
+        {
+ 			track_type: ACDC;
+ 		}
+ 	}
+ }

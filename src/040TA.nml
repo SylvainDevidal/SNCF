@@ -12,7 +12,7 @@ template tmpl_vehicle_040TA_8_views(frame, livery) {
 
 template tmpl_vehicle_040TA_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [149, 5, 32, 14, 2, -9]
+    [149, 5, 32, 14, 5, -9]
 }
 
 spriteset(set_040TA_graphics_0_0,      "gfx/040TA.png") { tmpl_vehicle_040TA_8_views(0, 0) }
