@@ -1,8 +1,8 @@
 ##grflangid 0x01
 
 # GRF description
-STR_GRF_NAME                                       :{TITLE} {VERSION}
-STR_GRF_DESC                                       :{ORANGE}{TITLE}{BLUE}S{WHITE}NC{RED}F{}{BLACK}At last! Graphics credits to {CT_GRAPHICS_CREDIT}{}Special thanks to Brickblock1 who helped a lot with the standardised railtype scheme support.{}{ORANGE}This trainset works better with a RailSet that provides standard gauge with 25AC, 15AC, 1,5DC and 3DC voltages such as SETS.
+STR_GRF_NAME                                       :{TITLE}
+STR_GRF_DESC                                       :{BLUE}SNCF {WHITE}French {RED}Trainset{BLACK} - {VERSION}{}At last! Graphics credits to {CT_GRAPHICS_CREDIT}{}Special thanks to Brickblock1 who helped a lot with the standardised railtype scheme support.{}{ORANGE}This trainset works better with a RailSet that provides standard gauge with 25AC, 15AC, 1,5DC and 3DC voltages such as SETS.
 
 # Parameters
 STR_PARAM_NAME_INTRODUCTION_DATES                  :Historical introduction dates

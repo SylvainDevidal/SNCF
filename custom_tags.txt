@@ -2,8 +2,6 @@ VERSION                   :0.0.9
 TITLE                     :SNCF - French Trainset
 
 # Rail type
-CT_STEAM                 :Steam
-CT_DIESEL                :Diesel
 CT_ELEC_15DC             :1,5 kV DC
 CT_ELEC_3DC              :3 kV DC
 CT_ELEC_15AC             :15 kV AC
@@ -44,7 +42,6 @@ CT_TRAIN_T2000           :T2000 « RTG »
 CT_TRAIN_X72500          :X72500 « X TER »
 CT_TRAIN_BB61000         :BB61000
 CT_TRAIN_X4500           :X4500 « Caravelle »
-
 
 # Electric
 CT_TRAIN_BB1280          :BB1280
