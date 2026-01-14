@@ -1,3 +1,4 @@
 python "C:\Tools\NML Py-Patcher\nml_patcher.py" -f "SNCF.pnml" -o "SNCF.nml" -b 1 -v 1
 nmlc.exe --grf=SNCF.grf SNCF.nml
 move SNCF.grf C:\Users\sdevidal\Nextcloud\OpenTTD\newgrf\SNCF.grf
+C:\Users\sdevidal\source\repos\JGRPP-patches\out\build\x64-Debug\openttd.exe

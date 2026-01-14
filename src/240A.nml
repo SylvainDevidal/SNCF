@@ -2,24 +2,24 @@ template tmpl_vehicle_240A_front_8_views(frame, livery) {
     //xpos ypos xsize ysize xrel yrel
     [2 + livery * 204, 4 + frame * 26, 8, 24, -3, -16]
     [12 + livery * 204, 4 + frame * 26, 22, 17, -13, -8]
-    [36 + livery * 204, 4 + frame * 26, 32, 14, -11, -10]
+    [36 + livery * 204, 4 + frame * 26, 32, 14, -9, -10]
     [70 + livery * 204, 4 + frame * 26, 22, 17, -1, -6]
     [94 + livery * 204, 4 + frame * 26, 8, 24, -3, -9]
     [104 + livery * 204, 4 + frame * 26, 22, 17, -18, -7]
     [128 + livery * 204, 4 + frame * 26, 32, 14, -22, -9]
-    [162 + livery * 204, 4 + frame * 26, 22, 17, -13, -10]
+    [162 + livery * 204, 4 + frame * 26, 22, 17, -13, -11]
 }
 
 template tmpl_vehicle_240A_tender_8_views(livery) {
     //xpos ypos xsize ysize xrel yrel
     [2 + livery * 204, 160, 8, 24, -3, -21]
-    [12 + livery * 204, 160, 22, 17, -8, -11]
+    [12 + livery * 204, 160, 22, 17, -9, -12]
     [36 + livery * 204, 160, 32, 14, 0, -10]
-    [70 + livery * 204, 160, 22, 17, -2, -7]
+    [70 + livery * 204, 160, 22, 17, -4, -9]
     [94 + livery * 204, 160, 8, 24, -3, -10]
     [104 + livery * 204, 160, 22, 17, -18, -7]
     [128 + livery * 204, 160, 32, 14, -32, -10]
-    [162 + livery * 204, 160, 22, 17, -19, -15]
+    [162 + livery * 204, 160, 22, 17, -15, -13]
 }
 
 template tmpl_vehicle_240A_purchase() {

@@ -15,11 +15,11 @@ template tmpl_vehicle_231AC_tender_8_views(livery) {
     [2 + livery % 2 * 203, 158 + int(livery / 2) * 186, 8, 24, -3, -19]
     [12 + livery % 2 * 203, 158 + int(livery / 2) * 186, 22, 17, -8, -12]
     [36 + livery % 2 * 203, 158 + int(livery / 2) * 186, 32, 14, 4, -10]
-    [70 + livery % 2 * 203, 158 + int(livery / 2) * 186, 22, 17, -2, -6]
+    [70 + livery % 2 * 203, 158 + int(livery / 2) * 186, 22, 17, -2, -7]
     [94 + livery % 2 * 203, 158 + int(livery / 2) * 186, 8, 24,  -3, -9]
     [104 + livery % 2 * 203, 158 + int(livery / 2) * 186, 22, 17, -19, -7]
     [128 + livery % 2 * 203, 158 + int(livery / 2) * 186, 32, 14, -36, -10]
-    [162 + livery % 2 * 203, 158 + int(livery / 2) * 186, 22, 17, -14, -12]
+    [162 + livery % 2 * 203, 158 + int(livery / 2) * 186, 22, 17, -13, -13]
 }
 
 template tmpl_vehicle_231AC_purchase() {
