@@ -235,3 +235,46 @@ item(FEAT_TRAINS, item_TGV_PSE) {
         power:                        sw_TGV_PSE_power;
     }
 }
+
+/*
+if (tile_powers_railtype("SAAA"))
+{
+    item (FEAT_TRAINS, item_TGV_PSE)
+    {
+ 		property
+        {
+ 			power: 8650;
+ 		}
+ 	}
+}
+else if (tile_powers_railtype("SAAd"))
+{
+    item (FEAT_TRAINS, item_TGV_PSE)
+    {
+ 		property
+        {
+ 			power: 4157;
+ 		}
+ 	}
+}
+else if (tile_powers_railtype("SAAa"))
+{
+    item (FEAT_TRAINS, item_TGV_PSE)
+    {
+ 		property
+        {
+ 			power: 3755;
+ 		}
+ 	}
+}
+else
+{
+    item (FEAT_TRAINS, item_TGV_PSE)
+    {
+ 		property
+        {
+ 			power: 8650;
+ 		}
+ 	}
+}
+*/
