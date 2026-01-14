@@ -30,14 +30,14 @@ template tmpl_vehicle_X72500_4_views_coach() {
     [93, 66, 22, 17, -4, -7]
 }
 
-template tmpl_vehicle_X72500_purchase() {
-    //xpos ypos xsize ysize xrel yrel
-    [171, 5, 32, 12, -7, -8]
-}
-
 template tmpl_vehicle_X72500_pixel() {
     //xpos ypos xsize ysize xrel yrel
     [5, 5, 1, 1, 0, 0]
+}
+
+template tmpl_vehicle_X72500_purchase() {
+    //xpos ypos xsize ysize xrel yrel
+    [171, 5, 32, 12, -7, -7]
 }
 
 spriteset(set_X72500_graphics_front,    "gfx/X72500.png") { tmpl_vehicle_X72500_front() }

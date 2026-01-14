@@ -24,7 +24,7 @@ template tmpl_vehicle_262DB_rear() {
 
 template tmpl_vehicle_262DB_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [165, 4, 32, 12, -6, -8]
+    [165, 4, 32, 12, -6, -7]
 }
 
 spriteset(set_262DB_graphics_front,    "gfx/262DB.png") { tmpl_vehicle_262DB_front() }

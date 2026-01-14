@@ -36,7 +36,7 @@ template tmpl_vehicle_Z21500_coach() {
 
 template tmpl_vehicle_Z21500_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [165, 4, 32, 12, -7, -6]
+    [165, 4, 32, 12, -7, -7]
 }
 
 spriteset(set_Z21500_graphics_front,    "gfx/Z21500.png") { tmpl_vehicle_Z21500_front() }

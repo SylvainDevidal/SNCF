@@ -24,7 +24,7 @@ template tmpl_vehicle_1CC1_8_views_rear(livery) {
 
 template tmpl_vehicle_1CC1_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [149, 2, 32, 15, -29, -11]
+    [149, 2, 32, 15, -7, -10]
 }
 
 spriteset(set_1CC1_graphics_front_0,  "gfx/1CC1.png") { tmpl_vehicle_1CC1_8_views_front(0) }

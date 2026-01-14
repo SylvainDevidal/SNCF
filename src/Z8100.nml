@@ -36,7 +36,7 @@ template tmpl_vehicle_Z8100_4_views_coach(livery) {
 
 template tmpl_vehicle_Z8100_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [173, 8, 32, 12, -7, -6]
+    [173, 8, 32, 12, -7, -7]
 }
 
 spriteset(set_Z8100_graphics_front,    "gfx/Z8100.png") { tmpl_vehicle_Z8100_front() }

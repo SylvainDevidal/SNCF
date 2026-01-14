@@ -36,7 +36,7 @@ template tmpl_vehicle_140C_tender_bis_8_views(livery) {
 
 template tmpl_vehicle_140C_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [129, 3, 32, 14, -28, -10]
+    [129, 3, 32, 14, -7, -9]
 }
 
 spriteset(set_140C_graphics_0_0,      "gfx/140C.png") { tmpl_vehicle_140C_front_8_views(0, 0) }

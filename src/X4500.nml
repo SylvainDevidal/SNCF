@@ -24,7 +24,7 @@ template tmpl_vehicle_X4500_rear() {
 
 template tmpl_vehicle_X4500_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [172, 37, 32, 12, -4, -8]
+    [172, 37, 32, 12, -4, -7]
 }
 
 spriteset(set_X4500_graphics_front,    "gfx/iroqtar.png") { tmpl_vehicle_X4500_front() }

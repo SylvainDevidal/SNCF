@@ -24,7 +24,7 @@ template tmpl_vehicle_231AC_tender_8_views(livery) {
 
 template tmpl_vehicle_231AC_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [128, 2, 32, 14, -29, -10]
+    [128, 2, 32, 14, -7, -9]
 }
 
 spriteset(set_231AC_front_graphics_0_0, "gfx/231AC.png") { tmpl_vehicle_231AC_8_views(0, 0) }

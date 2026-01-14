@@ -45,30 +45,20 @@ grf {
             name: string(STR_PARAM_NAME_ALLOW_WAGON);
             desc: string(STR_PARAM_DESC_ALLOW_WAGON);
             def_value: 1;
-        }/*
-        param_allow_voltage {
-            type: bool;
-            bit: 6;
-            name: string(STR_PARAM_NAME_ALLOW_VOLTAGE);
-            desc: string(STR_PARAM_DESC_ALLOW_VOLTAGE);
-            def_value: 1;
-        }*/
+        }
     }
     param
     {
-        
         param_allow_no_graphics {
             type: int;
-            name: string(STR_PARAM_NAME_ALLOW_NO_GRAPHICS);
-            desc: string(STR_PARAM_DESC_ALLOW_NO_GRAPHICS);
+            name: string(STR_PARAM_NAME_NO_GRAPHICS);
+            desc: string(STR_PARAM_DESC_NO_GRAPHICS);
             min_value: 0;
-            max_value: 3;
-            def_value: 2;
+            max_value: 1;
+            def_value: 0;
             names: {
-                0: string(STR_PARAM_NAME_ALLOW_NO_GRAPHICS_OPENGFX);
-                1: string(STR_PARAM_NAME_ALLOW_NO_GRAPHICS_BOXES);
-                2: string(STR_PARAM_NAME_ALLOW_OPENGFX_DISALLOW_NO_GRAPHICS);
-                3: string(STR_PARAM_NAME_DISALLOW_NO_GRAPHICS);
+                0: string(STR_PARAM_NAME_NO_GRAPHICS_ALLOW);
+                1: string(STR_PARAM_NAME_NO_GRAPHICS_DISALLLOW);
             };
         }
     }
@@ -80,123 +70,69 @@ grf {
 #include "src/RAILTYPES.nml"
 
 // Steam
-// 001
 #include "src/040TA.nml"
-// 002
 #include "src/131TB.nml"
-// 003
 #include "src/230BDG.nml"
-// 004
 #include "src/231AC.nml"
-
-//#include "src/231EGHK.nml"
-// 006
+#include "src/231EGHK.nml"
 #include "src/140C.nml"
-// 007
 #include "src/141TA.nml"
-// 008
 #include "src/232TC.nml"
-// 009
 #include "src/241AC.nml"
-// 010
 #include "src/242TA.nml"
-// 011
 #include "src/151A.nml"
-// 012
 #include "src/240A.nml"
-// 013
 #include "src/150BP.nml"
-// 014
 #include "src/231CHAPELON.nml"
-// 016
 #include "src/240P.nml"
-// 017
 #include "src/141R.nml"
-// 018
 #include "src/242A.nml"
-// 019
 #include "src/241P.nml"
 
 // Diesel
-// 020
 #include "src/X2000.nml"
-// 023
 #include "src/TAR.nml"
-// 024
 #include "src/262DB.nml"
-// 030 ??
 #include "src/62000.nml"
-// 032
 #include "src/CC65000.nml"
-// 037
 #include "src/BB67000.nml"
-// 042
 #include "src/T2000.nml"
-// 045
 #include "src/X72500.nml"
-// 046
 #include "src/BB61000.nml"
-// 047
 #include "src/X4500.nml"
 
 // Electric
-// 050
 #include "src/BB1280.nml"
-// 052
 #include "src/2C2.nml"
-// 056
 #include "src/2BB2.nml"
-// 056
 #include "src/1ABBA1.nml"
-// 057
 #include "src/1CC1.nml"
-// 058
 #include "src/2CC2.nml"
-// 059
 #include "src/2D2_5500.nml"
-// 065
 #include "src/CC7100.nml"
-// 064
 #include "src/BB8100.nml"
-// 067
 #include "src/BB12000.nml"
-// 070
 #include "src/BB9200.nml"
-// 073
 #include "src/BB8500.nml"
-// 074
 #include "src/CC40100.nml"
-// 078      Need consent
 #include "src/TGV_PSE.nml"
-// 079
 #include "src/Z8100.nml"
-// 080
 #include "src/Z7300.nml"
-// 082      Need consent
 #include "src/BB26000.nml"
-// 083
 #include "src/TGV_ATLANTIQUE.nml"
-// 083'
 #include "src/TGV_Reseau.nml"
-// 087
 #include "src/BB27000.nml"
-// 088
 #include "src/Z21500.nml"
-// 089
 #include "src/BB7200.nml"
 
-// Wagons
-// 200
+// Passengers Coaches
 #include "src/OCEM.nml"
-// 201
 #include "src/OCEM_DOUBLE.nml"
-// 202
 #include "src/UIC.nml"
-// 203
 #include "src/CORAIL.nml"
-// 204
+
+// Mail Vans
 #include "src/FOURGON.nml"
-// 205
 #include "src/FOURGON_CORAIL.nml"
 
 /*

@@ -120,7 +120,7 @@ template tmpl_vehicle_TGV_PSE_rear() {
 
 template tmpl_vehicle_TGV_PSE_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [126, 7, 32, 16, -7, -10]
+    [126, 7, 32, 16, -7, -11]
 }
 
 /* Define the spritesets, these allow referring to these sprites later on */

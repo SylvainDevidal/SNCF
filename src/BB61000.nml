@@ -12,7 +12,7 @@ template tmpl_vehicle_BB61000_8_views(livery) {
 
 template tmpl_vehicle_BB61000_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [131, 29, 32, 12, -23, -8]
+    [131, 29, 32, 12, -1, -7]
 }
 
 spriteset(set_BB61000_graphics_0,        "gfx/BB61000.png") { tmpl_vehicle_BB61000_8_views(0) }
@@ -61,6 +61,6 @@ item(FEAT_TRAINS, item_BB61000) {
         default:                      sw_BB61000_graphics;
         purchase:                     set_BB61000_graphics_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_BB61000_ADDITIONAL_TEXT);
-        length:                       return (param_allow_no_graphics == 1) ? 6 : 7;
+        length:                       7;
     }
 }

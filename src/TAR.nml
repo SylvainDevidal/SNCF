@@ -32,7 +32,7 @@ template tmpl_vehicle_TAR_coach() {
 
 template tmpl_vehicle_TAR_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [171, 77, 32, 12, -7, -8]
+    [171, 77, 32, 12, -7, -7]
 }
 
 spriteset(set_TAR_graphics_front,    "gfx/iroqtar.png") { tmpl_vehicle_TAR_front() }

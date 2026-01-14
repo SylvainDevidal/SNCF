@@ -32,7 +32,7 @@ template tmpl_vehicle_T2000_4_views_coach() {
 
 template tmpl_vehicle_T2000_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [164, 4, 32, 13, -7, -9]
+    [164, 4, 32, 13, -7, -8]
 }
 
 spriteset(set_T2000_graphics_front,    "gfx/T2000.png") { tmpl_vehicle_T2000_front() }

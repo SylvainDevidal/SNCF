@@ -12,7 +12,7 @@ template tmpl_vehicle_BB12000() {
 
 template tmpl_vehicle_BB12000_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [33, 1, 33, 16, -8, -10]
+    [33, 1, 33, 16, -8, -11]
 }
 
 spriteset(set_BB12000_graphics,          "gfx/BB12000.png") { tmpl_vehicle_BB12000() }

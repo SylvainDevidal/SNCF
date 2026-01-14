@@ -36,7 +36,7 @@ template tmpl_vehicle_231CHAPELON_8_views_rear(frame) {
 
 template tmpl_vehicle_231CHAPELON_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [0, 0, 54, 14, -43, -10]
+    [0, 0, 54, 14, -29, -9]
 }
 
 spriteset(set_231CHAPELON_graphics_front_0, "gfx/231CHAPELON.png") { tmpl_vehicle_231CHAPELON_8_views_front(0) }

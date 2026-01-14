@@ -24,7 +24,7 @@ template tmpl_vehicle_Z7300_rear() {
 
 template tmpl_vehicle_Z7300_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [167, 6, 32, 15, -7, -9]
+    [167, 6, 32, 15, -7, -10]
 }
 
 spriteset(set_Z7300_graphics_front,    "gfx/Z7300.png") { tmpl_vehicle_Z7300_front() }

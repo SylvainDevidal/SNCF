@@ -12,7 +12,7 @@ template tmpl_vehicle_131TB_8_views(frame, livery) {
 
 template tmpl_vehicle_131TB_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [149, 5, 32, 14, -29, -9]
+    [149, 5, 32, 14, -7, -9]
 }
 
 spriteset(set_131TB_graphics_0_0,      "gfx/131TB.png") { tmpl_vehicle_131TB_8_views(0, 0) }

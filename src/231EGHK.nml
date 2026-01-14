@@ -24,7 +24,7 @@ template tmpl_vehicle_231EGHK_tender(livery) {
 
 template tmpl_vehicle_231EGHK_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [128, 4, 32, 14, -29, -10]
+    [128, 4, 32, 14, -7, -9]
 }
 
 spriteset(set_231EGHK_front_graphics_0_0, "gfx/231EGHK.png") { tmpl_vehicle_231EGHK_front(0, 0) }

@@ -24,7 +24,7 @@ template tmpl_vehicle_BB26000_envoyage(side) {
 
 template tmpl_vehicle_BB26000_purchase() {
     //xpos ypos xsize ysize xrel yrel
-    [24, 64, 30, 12, -5, -6]
+    [24, 64, 30, 12, -5, -7]
 }
 
 spriteset(set_BB26000_graphics_beton,        "gfx/BB26000_b.png") { tmpl_vehicle_BB26000() }
