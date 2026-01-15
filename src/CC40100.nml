@@ -18,14 +18,6 @@ template tmpl_vehicle_CC40100_purchase() {
 spriteset(set_CC40100_graphics,          "gfx/CC40100.png") { tmpl_vehicle_CC40100() }
 spriteset(set_CC40100_graphics_purchase, "gfx/CC40100.png") { tmpl_vehicle_CC40100_purchase() }
 
-switch(FEAT_TRAINS, SELF, sw_CC40100_power, current_railtype) {
-    AC25: 6504;
-    AC15: 6504;
-    DC03: 4922;
-    DC15: 4922;
-    default: 6504;
-}
-
 item(FEAT_TRAINS, item_CC40100) {
     property {
         name:                         string(STR_SNCF_TRAIN_CC40100_NAME);
@@ -44,7 +36,7 @@ item(FEAT_TRAINS, item_CC40100) {
         misc_flags:                   bitmask();
         refit_cost:                   0;
         ai_special_flag:              AI_FLAG_PASSENGER | AI_FLAG_CARGO;
-        power:                        6500 hp;
+        power:                        6010 hp;
         running_cost_base:            RUNNING_COST_ELECTRIC;
         dual_headed:                  0;
         cargo_capacity:               0;
@@ -62,6 +54,5 @@ item(FEAT_TRAINS, item_CC40100) {
         default:                      set_CC40100_graphics;
         purchase:                     set_CC40100_graphics_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_CC40100_ADDITIONAL_TEXT);
-        power:                        sw_CC40100_power;
     }
 }

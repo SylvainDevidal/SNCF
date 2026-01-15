@@ -132,7 +132,7 @@ STR_SNCF_TRAIN_BB8100_ADDITIONAL_TEXT              :Graphics by Hovering Teacup,
 STR_SNCF_TRAIN_BB12000_NAME                        :{CT_TRAIN_BB12000} ({CT_ELEC_25AC})
 STR_SNCF_TRAIN_BB12000_ADDITIONAL_TEXT             :Graphics by Emperor Jake, Hovering Teacup
 STR_SNCF_TRAIN_CC40100_NAME                        :{CT_TRAIN_CC40100} ({CT_ELEC_15DC03DC15AC25AC})
-STR_SNCF_TRAIN_CC40100_ADDITIONAL_TEXT             :Power: 4850 kW on AC and 3670 kW on DC.{}Graphics by Emperor Jake, Hovering Teacup
+STR_SNCF_TRAIN_CC40100_ADDITIONAL_TEXT             :Graphics by Emperor Jake, Hovering Teacup
 STR_SNCF_TRAIN_BB27000_NAME                        :{CT_TRAIN_BB27000} ({CT_ELEC_15DC25AC})
 STR_SNCF_TRAIN_BB27000_ADDITIONAL_TEXT             :Graphics by Hovering Teacup, Snail
 STR_SNCF_TRAIN_Z8100_NAME                          :{CT_TRAIN_Z8100} ({CT_ELEC_15DC25AC})

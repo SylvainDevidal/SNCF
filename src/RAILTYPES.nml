@@ -1,8 +1,8 @@
 railtypetable {
-    UNELECTRIFIED: [ SAAN, RAIL ],
-    AC25: [ SAAA ],
-    AC15: [ SAAa ],
-    DC15: [ SAAd ],
-    DC03: [ SAAD ],
-    ACDC: [ SAAE, ELRL ],
+    UNELECTRIFIED: [ SAAN, RAIL ], /* Unpowered lines */
+    AC25: [ SAAA ],                /* AC 25   kV */
+    AC15: [ SAAa ],                /* AC 15   kV */
+    DC15: [ SAAd ],                /* DC  1,5 kV */
+    DC03: [ SAAD ],                /* DC  3   kV */
+    ACDC: [ SAAE, ELRL ],          /* Other electric rails */
 }

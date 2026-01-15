@@ -181,10 +181,11 @@ switch(FEAT_TRAINS, SELF, sw_TGV_Reseau_capacity, position_in_articulated_veh) {
     default: 0;
 }
 
-switch(FEAT_TRAINS, SELF, sw_TGV_Reseau_power, current_railtype) {
-    AC25: 11801;
-    DC15: 4938;
-    DC03: 4938;     
+switch(FEAT_TRAINS, SELF, sw_TGV_Reseau_power, tile_powers_railtype("AC25") * 4 + tile_powers_railtype("DC15") * 2 + tile_powers_railtype("DC03"))
+{    
+    4..7: 11801;
+    2..3: 4938;
+    1: 4938;
     default: 11801;
 }
 
