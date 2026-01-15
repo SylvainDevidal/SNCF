@@ -1,12 +1,12 @@
 template tmpl_vehicle_2CC2_8_views(livery) {
     //xpos ypos xsize ysize xrel yrel
-    [2, 2 + livery * 27, 8, 24, -3, -14]
-    [12, 2 + livery * 27, 23, 20, -14, -11]
-    [37, 2 + livery * 27, 32, 15, -12, -12]
-    [71, 2 + livery * 27, 23, 20, -0, -8]
-    [96, 2 + livery * 27, 8, 24, -3, -9]
-    [106, 2 + livery * 27, 23, 20, -20, -8]
-    [131, 2 + livery * 27, 32, 15, -19, -11]
+    [2, 2 + livery * 27, 8, 24, -3, -8]
+    [12, 2 + livery * 27, 23, 20, -17, -9]
+    [37, 2 + livery * 27, 32, 15, -16, -11]
+    [71, 2 + livery * 27, 23, 20, -6, -11]
+    [96, 2 + livery * 27, 8, 24, -3, -11]
+    [106, 2 + livery * 27, 23, 20, -17, -10]
+    [131, 2 + livery * 27, 32, 15, -16, -11]
     [165, 2 + livery * 27, 23, 20, -6, -10]
 }
 
@@ -62,6 +62,6 @@ item(FEAT_TRAINS, item_2CC2) {
         default:                      sw_2CC2_graphics;
         purchase:                     set_2CC2_graphics_purchase;
         additional_text:              return string(STR_SNCF_TRAIN_2CC2_ADDITIONAL_TEXT);
-        length:                       return 7;
+        length:                       return 8;
     }
 }

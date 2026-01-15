@@ -1,25 +1,25 @@
 template tmpl_vehicle_1CC1_8_views_front(livery) {
     //xpos ypos xsize ysize xrel yrel
-    [2, 2 + livery * 53, 8, 24, -3, -23]
-    [12, 2 + livery * 53, 22, 20, -14, -9]
+    [2, 2 + livery * 53, 8, 24, -3, -19]
+    [12, 2 + livery * 53, 22, 20, -13, -10]
     [37, 2 + livery * 53, 32, 15, -15, -11]
     [72, 2 + livery * 53, 22, 20, -2, -10]
-    [95, 2 + livery * 53, 8, 24, -3, -13]
+    [95, 2 + livery * 53, 8, 24, -3, -7]
     [105, 2 + livery * 53, 22, 20, -20, -9]
     [130, 2 + livery * 53, 32, 15, -18, -11]
-    [164, 2 + livery * 53, 22, 20, -5, -9]
+    [164, 2 + livery * 53, 22, 20, -10, -12]
 }
 
 template tmpl_vehicle_1CC1_8_views_rear(livery) {
     //xpos ypos xsize ysize xrel yrel
-    [2, 27 + livery * 53, 8, 24, -3, -15]
-    [12, 27 + livery * 53, 22, 20, -14, -9]
+    [2, 27 + livery * 53, 8, 24, -3, -11]
+    [12, 27 + livery * 53, 22, 20, -13, -9]
     [37, 27 + livery * 53, 32, 15, -2, -11]
     [72, 27 + livery * 53, 22, 20, -2, -10]
-    [95, 27 + livery * 53, 8, 24, -3, -8]
-    [105, 27 + livery * 53, 22, 20, -20, -9]
+    [95, 27 + livery * 53, 8, 24, -3, -2]
+    [105, 27 + livery * 53, 22, 20, -19, -10]
     [130, 27 + livery * 53, 32, 15, -31, -11]
-    [164, 27 + livery * 53, 22, 20, -5, -8]
+    [164, 27 + livery * 53, 22, 20, -9, -11]
 }
 
 template tmpl_vehicle_1CC1_purchase() {
