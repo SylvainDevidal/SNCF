@@ -1,35 +1,35 @@
 template tmpl_vehicle_Z8100_front() {
     //xpos ypos xsize ysize xrel yrel
     [6, 8, 8, 24, -3, -12]
-    [21, 8, 22, 17, -15, -6]
+    [21, 8, 22, 17, -17, -5]
     [52, 8, 32, 12, -16, -8]
     [94, 8, 22, 17, -4, -7]
-    [127, 8, 8, 24, -3, -11]
-    [142, 8, 22, 17, -16, -6]
+    [127, 8, 8, 24, -3, -12]
+    [142, 8, 22, 17, -15, -6]
     [173, 8, 32, 12, -16, -8]
     [214, 8, 22, 17, -4, -7]
 }
 
 template tmpl_vehicle_Z8100_rear() {
     //xpos ypos xsize ysize xrel yrel
-    [127, 38, 8, 24, -3, -11]
-    [142, 38, 22, 17, -16, -6]
+    [127, 38, 8, 24, -3, -12]
+    [142, 38, 22, 17, -15, -6]
     [173, 38, 32, 12, -16, -8]
     [214, 38, 22, 17, -4, -7]
     [6, 38, 8, 24, -3, -12]
-    [21, 38, 22, 17, -15, -6]
+    [21, 38, 22, 17, -17, -5]
     [52, 38, 32, 12, -16, -8]
     [94, 38, 22, 17, -4, -7]
 }
 
-template tmpl_vehicle_Z8100_4_views_coach(livery) {
+template tmpl_vehicle_Z8100_8_views_coach(livery) {
     //xpos ypos xsize ysize xrel yrel
     [6, 69 + livery * 33, 8, 24, -3, -12]
-    [21, 69 + livery * 33, 22, 17, -15, -6]
+    [21, 69 + livery * 33, 22, 17, -17, -5]
     [52, 69 + livery * 33, 32, 15, -16, -11]
     [94, 69 + livery * 33, 22, 17, -4, -11]
-    [127, 69 + livery * 33, 8, 24, -3, -11]
-    [142, 69 + livery * 33, 22, 17, -16, -10]
+    [127, 69 + livery * 33, 8, 24, -3, -12]
+    [142, 69 + livery * 33, 22, 17, -15, -10]
     [173, 69 + livery * 33, 32, 15, -16, -11]
     [214, 69 + livery * 33, 22, 17, -4, -7]
 }
@@ -40,8 +40,8 @@ template tmpl_vehicle_Z8100_purchase() {
 }
 
 spriteset(set_Z8100_graphics_front,    "gfx/Z8100.png") { tmpl_vehicle_Z8100_front() }
-spriteset(set_Z8100_graphics_coach_0,  "gfx/Z8100.png") { tmpl_vehicle_Z8100_4_views_coach(0) }
-spriteset(set_Z8100_graphics_coach_1,  "gfx/Z8100.png") { tmpl_vehicle_Z8100_4_views_coach(1) }
+spriteset(set_Z8100_graphics_coach_0,  "gfx/Z8100.png") { tmpl_vehicle_Z8100_8_views_coach(0) }
+spriteset(set_Z8100_graphics_coach_1,  "gfx/Z8100.png") { tmpl_vehicle_Z8100_8_views_coach(1) }
 spriteset(set_Z8100_graphics_rear,     "gfx/Z8100.png") { tmpl_vehicle_Z8100_rear() }
 spriteset(set_Z8100_graphics_purchase, "gfx/Z8100.png") { tmpl_vehicle_Z8100_purchase() }
 
