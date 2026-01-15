@@ -2,7 +2,7 @@ template tmpl_vehicle_240A_front_8_views(frame, livery) {
     //xpos ypos xsize ysize xrel yrel
     [2 + livery * 204, 4 + frame * 26, 8, 24, -3, -16]
     [12 + livery * 204, 4 + frame * 26, 22, 17, -13, -8]
-    [36 + livery * 204, 4 + frame * 26, 32, 14, -9, -10]
+    [36 + livery * 204, 4 + frame * 26, 32, 14, -9, -9]
     [70 + livery * 204, 4 + frame * 26, 22, 17, -1, -6]
     [94 + livery * 204, 4 + frame * 26, 8, 24, -3, -9]
     [104 + livery * 204, 4 + frame * 26, 22, 17, -18, -7]
