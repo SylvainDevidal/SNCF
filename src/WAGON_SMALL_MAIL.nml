@@ -28,7 +28,7 @@ item(FEAT_TRAINS, item_WAGON_SMALL_MAIL) {
         air_drag_coefficient:         0;
         extra_weight_per_wagon:       0 ton;
         bitmask_vehicle_info:         0;
-        length:                       7;
+        length:                       8;
     }
     graphics {
         default:                      set_vehicle_DUMMY_WAGON_MAIL;
