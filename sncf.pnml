@@ -125,14 +125,17 @@ grf {
 #include "src/BB7200.nml"
 
 // Passengers Coaches
+#include "src/WAGON_SMALL_PASSENGERS.nml"
 #include "src/OCEM.nml"
 #include "src/OCEM_DOUBLE.nml"
 #include "src/UIC.nml"
 #include "src/CORAIL.nml"
 
 // Mail Vans
+#include "src/WAGON_SMALL_MAIL.nml"
 #include "src/FOURGON.nml"
 #include "src/FOURGON_CORAIL.nml"
+
 
 /*
 #include "src/WAGON_ETAT1_covered.nml"
@@ -162,10 +165,6 @@ grf {
 #include "src/WAGON_SNCF_covered.nml"
 #include "src/WAGON_SNCF_bulk.nml"
 #include "src/WAGON_SNCF_flat.nml"
-
-
-#include "src/WAGON_SMALL_PASSENGERS.nml"
-#include "src/WAGON_SMALL_MAIL.nml"
 
 #include "src/WAGON_SMALL_LIQUID.nml"
 #include "src/WAGON_MEDIUM_LIQUID.nml"

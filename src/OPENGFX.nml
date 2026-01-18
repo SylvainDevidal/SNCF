@@ -120,51 +120,60 @@ template tmpl_vehicle_DUMMY_WAGON_purchase(cargo) {
     [48, 0 + (cargo * 25), 32, 12, -7, -7]
 }
 
-spriteset(set_vehicle_DUMMY_purchase_WAGON_ARMOURED,    "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON_purchase(15) }
-spriteset(set_vehicle_DUMMY_purchase_WAGON_BULK,        "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON_purchase(1) }
-spriteset(set_vehicle_DUMMY_purchase_WAGON_COVERED,     "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON_purchase(5) }
-spriteset(set_vehicle_DUMMY_purchase_WAGON_LIQUID,      "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON_purchase(3) }
-spriteset(set_vehicle_DUMMY_purchase_WAGON_PIECE_GOODS, "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON_purchase(7) }
+// Passengers
+spriteset(set_vehicle_DUMMY_purchase_WAGON_PASSENGERS,         "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON_purchase(0) }
+spriteset(set_vehicle_DUMMY_WAGON_PASSENGERS,                  "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(0) }
 
-
-spriteset(set_vehicle_DUMMY_WAGON_ARMOURED,             "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(15) }
-
+// Bulk
+spriteset(set_vehicle_DUMMY_purchase_WAGON_BULK,               "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON_purchase(1) }
 spriteset(set_vehicle_DUMMY_WAGON_BULK_BLACK_EMPTY_1,          "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(1) }
 spriteset(set_vehicle_DUMMY_WAGON_BULK_BLACK_FULL_1,           "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(10) }
 spritegroup spritegroup_vehicle_DUMMY_WAGON_BULK_BLACK_1 {
     loaded: [set_vehicle_DUMMY_WAGON_BULK_BLACK_EMPTY_1, set_vehicle_DUMMY_WAGON_BULK_BLACK_FULL_1];
     loading: [set_vehicle_DUMMY_WAGON_BULK_BLACK_EMPTY_1, set_vehicle_DUMMY_WAGON_BULK_BLACK_FULL_1];
 }
-
-spriteset(set_vehicle_DUMMY_WAGON_BULK_YELLOW_EMPTY_1,          "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(6) }
-spriteset(set_vehicle_DUMMY_WAGON_BULK_YELLOW_FULL_1,           "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(11) }
+spriteset(set_vehicle_DUMMY_WAGON_BULK_YELLOW_EMPTY_1,         "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(6) }
+spriteset(set_vehicle_DUMMY_WAGON_BULK_YELLOW_FULL_1,          "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(11) }
 spritegroup spritegroup_vehicle_DUMMY_WAGON_BULK_YELLOW_1 {
     loaded: [set_vehicle_DUMMY_WAGON_BULK_YELLOW_EMPTY_1, set_vehicle_DUMMY_WAGON_BULK_YELLOW_FULL_1];
     loading: [set_vehicle_DUMMY_WAGON_BULK_YELLOW_EMPTY_1, set_vehicle_DUMMY_WAGON_BULK_YELLOW_FULL_1];
 }
-
-spriteset(set_vehicle_DUMMY_WAGON_BULK_BROWN_EMPTY,          "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(9) }
-spriteset(set_vehicle_DUMMY_WAGON_BULK_BROWN_FULL,           "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(14) }
+spriteset(set_vehicle_DUMMY_WAGON_BULK_BROWN_EMPTY,            "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(9) }
+spriteset(set_vehicle_DUMMY_WAGON_BULK_BROWN_FULL,             "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(14) }
 spritegroup spritegroup_vehicle_DUMMY_WAGON_BULK_BROWN {
     loaded: [set_vehicle_DUMMY_WAGON_BULK_BROWN_EMPTY, set_vehicle_DUMMY_WAGON_BULK_BROWN_FULL];
     loading: [set_vehicle_DUMMY_WAGON_BULK_BROWN_EMPTY, set_vehicle_DUMMY_WAGON_BULK_BROWN_FULL];
 }
 
+// Mail
+spriteset(set_vehicle_DUMMY_purchase_WAGON_MAIL,               "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON_purchase(2) }
+spriteset(set_vehicle_DUMMY_WAGON_MAIL,                        "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(2) }
+
+// Liquid
+spriteset(set_vehicle_DUMMY_purchase_WAGON_LIQUID,      "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON_purchase(3) }
 spriteset(set_vehicle_DUMMY_WAGON_LIQUID_1,        "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(3) }
 
+// Covered
+spriteset(set_vehicle_DUMMY_purchase_WAGON_COVERED,     "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON_purchase(5) }
+
+// Piece goods
+spriteset(set_vehicle_DUMMY_purchase_WAGON_PIECE_GOODS, "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON_purchase(7) }
 spriteset(set_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD_EMPTY_1, "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(7) }
 spriteset(set_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD_FULL_1,  "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(12) }
 spritegroup spritegroup_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD_1 {
     loaded: [set_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD_EMPTY_1, set_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD_FULL_1];
     loading: [set_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD_EMPTY_1, set_vehicle_DUMMY_WAGON_PIECE_GOODS_WOOD_FULL_1];
 }
-
 spriteset(set_vehicle_DUMMY_WAGON_PIECE_GOODS_STEEL_EMPTY, "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(8) }
 spriteset(set_vehicle_DUMMY_WAGON_PIECE_GOODS_STEEL_FULL,  "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(13) }
 spritegroup spritegroup_vehicle_DUMMY_WAGON_PIECE_GOODS_STEEL {
     loaded: [set_vehicle_DUMMY_WAGON_PIECE_GOODS_STEEL_EMPTY, set_vehicle_DUMMY_WAGON_PIECE_GOODS_STEEL_FULL];
     loading: [set_vehicle_DUMMY_WAGON_PIECE_GOODS_STEEL_EMPTY, set_vehicle_DUMMY_WAGON_PIECE_GOODS_STEEL_FULL];
 }
+
+// Armoured
+spriteset(set_vehicle_DUMMY_purchase_WAGON_ARMOURED,    "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON_purchase(15) }
+spriteset(set_vehicle_DUMMY_WAGON_ARMOURED,             "gfx/opengfx/temperate_railwagons.png") { tmpl_vehicle_DUMMY_WAGON(15) }
 
 // Arctic Wagons (7/8 length)
 template tmpl_vehicle_DUMMY_ARCTIC_WAGON(cargo) {
@@ -173,6 +182,7 @@ template tmpl_vehicle_DUMMY_ARCTIC_WAGON(cargo) {
     [48, 0 + (cargo * 25), 32, 12, -16, -8]
     [96, 0 + (cargo * 25), 22, 17, -6, -9]
 }
+
 template tmpl_vehicle_DUMMY_ARCTIC_WAGON_purchase(cargo) {
     [48, 0 + (cargo * 25), 32, 12, -7, -7]
 }
@@ -296,9 +306,6 @@ spritegroup spritegroup_vehicle_DUMMY_WAGON_PIECE_GOODS_GREEN {
     loaded: [set_vehicle_DUMMY_WAGON_PIECE_GOODS_GREEN_EMPTY, set_vehicle_DUMMY_WAGON_PIECE_GOODS_GREEN_FULL];
     loading: [set_vehicle_DUMMY_WAGON_PIECE_GOODS_GREEN_EMPTY, set_vehicle_DUMMY_WAGON_PIECE_GOODS_GREEN_FULL];
 }
-
-
-
 
 random_switch(FEAT_TRAINS, SELF, sw_vehicle_DUMMY_WAGON_BULK_BLACK) {
     1: spritegroup_vehicle_DUMMY_WAGON_BULK_BLACK_1;

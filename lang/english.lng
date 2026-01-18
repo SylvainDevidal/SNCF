@@ -262,7 +262,7 @@ STR_SNCF_WAGON_SMALL_MAIL_NAME                     :{CT_WAGON_SMALL} (mail)
 STR_SNCF_WAGON_SMALL_MAIL_ADDITIONAL_TEXT          :{ORANGE}No graphics
 
 STR_SNCF_WAGON_ETAT1_bulk_ls_NAME                  :{CT_WAGON_ETAT1} bulk (low speed)
-STR_SNCF_WAGON_ETAT1_bulk_hs_NAME                  :{CT_WAGON_ETAT1} bulk (high speed})
+STR_SNCF_WAGON_ETAT1_bulk_hs_NAME                  :{CT_WAGON_ETAT1} bulk (high speed)
 STR_SNCF_WAGON_ETAT1_bulk_ADDITIONAL_TEXT          :{ORANGE}No graphics
 STR_SNCF_WAGON_ETAT2_bulk_ls_NAME                  :{CT_WAGON_ETAT2} bulk (low speed)
 STR_SNCF_WAGON_ETAT2_bulk_hs_NAME                  :{CT_WAGON_ETAT2} bulk (high speed)
